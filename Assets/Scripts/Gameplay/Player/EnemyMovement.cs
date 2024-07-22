@@ -1,54 +1,68 @@
+using System.Collections.Generic;
 using Systems;
 using UnityEngine;
 
 namespace Gameplay.Player
 {
-	[RequireComponent(typeof(Enemy))]
-	public class EnemyMovement : MonoBehaviour {
+    [RequireComponent(typeof(Enemy))]
+    public class EnemyMovement : MonoBehaviour
+    {
 
-		private Transform target;
-		private int wavepointIndex = 0;
+        private Transform target;
+        private int waypointIndex = 0;
 
-		private Enemy enemy;
+        private Enemy enemy;
+        private Transform[] pathPoints;
 
-		void Start()
-		{
-			enemy = GetComponent<Enemy>();
+        void Start()
+        {
+            enemy = GetComponent<Enemy>();
+        }
 
-			target = Waypoints.points[0];
-		}
+        void Update()
+        {
+            if (pathPoints == null || pathPoints.Length == 0) return;
 
-		void Update()
-		{
-			Vector3 dir = target.position - transform.position;
-			transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
+            Vector3 dir = target.position - transform.position;
+            transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
 
-			if (Vector3.Distance(transform.position, target.position) <= 0.4f)
-			{
-				GetNextWaypoint();
-			}
+            if (Vector3.Distance(transform.position, target.position) <= 0.4f)
+            {
+                GetNextWaypoint();
+            }
 
-			enemy.speed = enemy.startSpeed;
-		}
+            enemy.speed = enemy.startSpeed;
+        }
 
-		void GetNextWaypoint()
-		{
-			if (wavepointIndex >= Waypoints.points.Length - 1)
-			{
-				EndPath();
-				return;
-			}
+        public void SetPath(int pathIndex)
+        {
+            if (pathIndex < 0 || pathIndex >= Waypoints.paths.Count)
+            {
+                Debug.LogError("Invalid path index");
+                return;
+            }
+            pathPoints = Waypoints.paths[pathIndex];
+            waypointIndex = 0;
+            target = pathPoints[0];
+        }
 
-			wavepointIndex++;
-			target = Waypoints.points[wavepointIndex];
-		}
+        void GetNextWaypoint()
+        {
+            if (waypointIndex >= pathPoints.Length - 1)
+            {
+                EndPath();
+                return;
+            }
 
-		void EndPath()
-		{
-			PlayerStats.Lives--;
-			WaveSpawner.EnemiesAlive--;
-			Destroy(gameObject);
-		}
+            waypointIndex++;
+            target = pathPoints[waypointIndex];
+        }
 
-	}
+        void EndPath()
+        {
+            PlayerStats.Lives--;
+            WaveSpawner.EnemiesAlive--;
+            Destroy(gameObject);
+        }
+    }
 }
