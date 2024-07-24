@@ -1,5 +1,6 @@
 using Systems;
 using UnityEngine;
+using Utilities;
 
 namespace Managers
 {
@@ -9,12 +10,18 @@ namespace Managers
 
 		public GameObject gameOverUI;
 		public GameObject completeLevelUI;
-
+		private CsvReader csvReader;
 		void Start ()
 		{
 			GameIsOver = false;
+			
+			InitCsvReader();
+			//test
+			var temp = DataManager.Instance.GetSoliderBaseModels();
+			print(temp[1].soliderDes);
 		}
-
+		
+		
 		// Update is called once per frame
 		void Update () {
 			if (GameIsOver)
@@ -38,5 +45,11 @@ namespace Managers
 			completeLevelUI.SetActive(true);
 		}
 
+
+		private void InitCsvReader()
+		{
+			csvReader = new CsvReader();
+			csvReader.OnStart();
+		}
 	}
 }

@@ -8,14 +8,13 @@ using UnityEngine;
 
 namespace Utilities
 {
-    public class CSVReader : MonoBehaviour
+    public class CsvReader 
     {
-        
-        [MenuItem("Tools/CSV To Script")]
-        public static void ReadCSV()
+
+        public void OnStart()
         {
-            //选择路径方法
-            string path = EditorUtility.OpenFilePanel("Select CSV File", Application.dataPath, "csv");
+            string fileNmae = "Solider.csv";
+            string path = Path.Combine(Application.streamingAssetsPath, fileNmae);
             if (path.Length != 0)
             {
                 ReadFile(path);
@@ -23,7 +22,7 @@ namespace Utilities
         }
 
 
-        public static void ReadFile(string path)
+        private void ReadFile(string path)
         {
             if (File.Exists(path))
             {
@@ -32,7 +31,7 @@ namespace Utilities
                 foreach (var line in lines.Skip(2))
                 {
                     string[] value = line.Split(',');
-                    SoliderBaseModel soliderModel = new SoliderBaseModel();
+                    SoliderModelBase soliderModel = new SoliderModelBase();
                     
                     //解析
                     soliderModel.soliderId = ParseInt(value[0]);
@@ -63,11 +62,9 @@ namespace Utilities
                     }
                 }
             }
-            var temp = DataManager.Instance.GetSoliderBaseModels();
-            print(temp[1].soliderName);
         }
         
-        private static int ParseInt(string value)
+        private int ParseInt(string value)
         {
             if (int.TryParse(value, out int result))
             {
@@ -79,7 +76,7 @@ namespace Utilities
             }
         }
 
-        private static float ParseFloat(string value)
+        private float ParseFloat(string value)
         {
             if (float.TryParse(value, out float result))
             {

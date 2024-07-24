@@ -1835,7 +1835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characters: []
   spawnPoint: {fileID: 276980799}
-  startParent: {fileID: 0}
+  SoliderContainer: {fileID: 1084850320}
   selectedCharacter: {fileID: 0}
   pathNum: 0
 --- !u!114 &188839077
@@ -4245,19 +4245,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 441903605}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 188839076}
-        m_TargetAssemblyTypeName: Managers.SpawnManager, Assembly-CSharp
-        m_MethodName: ChangeSpawnCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 146912, guid: e9a85746bae401841b80a742cdb9a891, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &441903605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9272,6 +9260,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 465644, guid: 851230bc3ae7a7f47a465c2a34e1611f, type: 3}
   m_PrefabInstance: {fileID: 1059850073}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1084850320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084850321}
+  m_Layer: 0
+  m_Name: SoliderContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1084850321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084850320}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 61.759995, y: 0, z: -5.11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1088383470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9781,19 +9800,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1133136295}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 188839076}
-        m_TargetAssemblyTypeName: Managers.SpawnManager, Assembly-CSharp
-        m_MethodName: ChangeSpawnCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 146912, guid: 019275f64b969fd4699297cf9d51c36a, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1133136295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14071,50 +14078,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460595291}
   m_CullTransparentMesh: 1
---- !u!1 &1463578130
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1463578132}
-  - component: {fileID: 1463578131}
-  m_Layer: 0
-  m_Name: CsvReader
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1463578131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463578130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f0daca8ba8be854084f514c2f4be398, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1463578132
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463578130}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44.490223, y: -10.135139, z: -19.960594}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1466374415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17691,8 +17654,8 @@ MonoBehaviour:
         m_MethodName: ChangeSpawnCharacter
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 146912, guid: e28a0c6f43750a8418e0d321b41b5f3a, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 4226647057436595221, guid: 6ea1a8a87a486ce4eb6073456b3a1415, type: 3}
+          m_ObjectArgumentAssemblyTypeName: Gameplay.Player.SoliderAgent, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -21241,6 +21204,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1297491550}
+  - {fileID: 1084850321}
   - {fileID: 516638093}
   - {fileID: 1590623341}
   - {fileID: 1819147858}
@@ -21256,4 +21220,3 @@ SceneRoots:
   - {fileID: 1630973524}
   - {fileID: 1641116839}
   - {fileID: 1198648276}
-  - {fileID: 1463578132}

@@ -7,9 +7,9 @@ namespace Managers
 {
     public class DataManager : Singleton<DataManager>
     {
-        private Dictionary<int,SoliderBaseModel> SoliderBaseModels = new Dictionary<int, SoliderBaseModel>();
+        private Dictionary<int,SoliderModelBase> SoliderBaseModels = new Dictionary<int, SoliderModelBase>();
 
-        public Dictionary<int, SoliderBaseModel> GetSoliderBaseModels()
+        public Dictionary<int, SoliderModelBase> GetSoliderBaseModels()
         {
             return SoliderBaseModels;
         }

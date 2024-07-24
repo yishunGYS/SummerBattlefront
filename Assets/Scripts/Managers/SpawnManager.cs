@@ -10,10 +10,10 @@ namespace Managers
 
         public List<GameObject> characters = new List<GameObject>();
         public Transform spawnPoint;
-        public GameObject startParent;
+        public GameObject SoliderContainer;
 
         // 当前选中的角色
-        public GameObject selectedCharacter;
+        public SoliderAgent selectedCharacter;
         public int pathNum;
 
         private void Awake()
@@ -26,7 +26,7 @@ namespace Managers
             instance = this;
         }
 
-        public void ChangeSpawnCharacter(GameObject chara)
+        public void ChangeSpawnCharacter(SoliderAgent chara)
         {
             selectedCharacter = chara;
         }
@@ -35,10 +35,11 @@ namespace Managers
         {
             if (selectedCharacter != null)
             {
-                GameObject spawnedCharacter = Instantiate(selectedCharacter, spawnPoint.position, spawnPoint.rotation);
-                if (startParent != null)
+                SoliderAgent spawnedCharacter = Instantiate(selectedCharacter, spawnPoint.position, spawnPoint.rotation);
+                if (SoliderContainer != null)
                 {
-                    spawnedCharacter.transform.SetParent(startParent.transform);
+                    spawnedCharacter.transform.SetParent(SoliderContainer.transform);
+                    spawnedCharacter.OnInit();
                 }
 
                 // 设置路径编号

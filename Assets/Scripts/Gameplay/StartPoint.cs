@@ -11,7 +11,7 @@ namespace Gameplay
         private Renderer rend;
 
         public Color hoverColor;
-        [Header("Â·¾¶±àºÅ")]
+        [Header("è·¯å¾„ç¼–å·")]
         public int pathNum;
 
         void Start()
