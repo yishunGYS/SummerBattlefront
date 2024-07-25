@@ -1,21 +1,13 @@
-using UnityEngine;
+using Gameplay.Player;
 
-namespace Gameplay.Player
+namespace Gameplay.Enemy
 {
-    public enum UnitType
+    public class EnemyModelBase
     {
-        Ground,
-        Air,
-        Tower,
-    }
-
-    public class SoliderModelBase
-    {
-        public int soliderId;
-        public string soliderName;
-        public string soliderDes;
-        public UnitType soliderType;
-        public int cost;
+        public int enemyId;
+        public string enemyName;
+        public string enemyDes;
+        public UnitType enemyType;
         public float maxHp;
         public int spawnNum;
         public int attackPoint;
@@ -27,8 +19,8 @@ namespace Gameplay.Player
         public float attackRange;
         public int attackNum;
         public UnitType attackEnemyType;
-
-        public float moveSpeed;
+        public int blockNum;
+        
         public string scenePrefabPath;
         public string uiPrefabPath;
     }

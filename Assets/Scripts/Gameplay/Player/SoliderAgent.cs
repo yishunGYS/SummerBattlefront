@@ -26,8 +26,6 @@ namespace Gameplay.Player
         {
             fsm.OnUpdate();
         }
-
-        
         
         private void InitData()
         {

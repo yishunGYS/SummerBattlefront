@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using Gameplay.Enemy;
 using Gameplay.Player;
 using Managers;
 using UnityEditor;
@@ -13,20 +14,29 @@ namespace Utilities
 
         public void OnStart()
         {
-            string fileNmae = "Solider.csv";
-            string path = Path.Combine(Application.streamingAssetsPath, fileNmae);
-            if (path.Length != 0)
+            //Solider
+            string soliderFileName = "Solider.csv";
+            string soliderFilePath = Path.Combine(Application.streamingAssetsPath, soliderFileName);
+            if (soliderFilePath.Length != 0)
             {
-                ReadFile(path);
+                ReadSoliderFile(soliderFilePath);
+            }
+            
+            //Enemy
+            string enemyFileName = "Enemies.csv";
+            string enemyFilePath = Path.Combine(Application.streamingAssetsPath, enemyFileName);
+            if (enemyFilePath.Length != 0){
+                ReadEnemyFile(enemyFilePath);
             }
         }
 
 
-        private void ReadFile(string path)
+
+
+        private void ReadSoliderFile(string path)
         {
             if (File.Exists(path))
             {
-                
                 string[] lines = File.ReadAllLines(path);
                 foreach (var line in lines.Skip(2))
                 {
@@ -56,14 +66,49 @@ namespace Utilities
                     soliderModel.uiPrefabPath = value[17];
 
                     var soliderDatabase = DataManager.Instance.GetSoliderBaseModels();
-                    if (!soliderDatabase.ContainsKey(soliderModel.soliderId))
-                    {
-                        soliderDatabase[soliderModel.soliderId] = soliderModel;
-                    }
+                    soliderDatabase.TryAdd(soliderModel.soliderId, soliderModel);
                 }
             }
         }
-        
+
+        private void ReadEnemyFile(string enemyFilePath)
+        {
+            if (File.Exists(enemyFilePath))
+            {
+                string[] lines = File.ReadAllLines(enemyFilePath);
+                foreach (var line in lines.Skip(2))
+                {
+                    string[] value = line.Split(',');
+                    EnemyModelBase enemyModel = new EnemyModelBase();
+
+                    //解析
+                    enemyModel.enemyId = ParseInt(value[0]);
+                    enemyModel.enemyName = value[1];
+                    enemyModel.enemyDes = value[2];
+
+                    enemyModel.enemyType = (UnitType)ParseInt(value[3]);
+                    enemyModel.maxHp = ParseFloat(value[4]);
+                    enemyModel.spawnNum = ParseInt(value[5]);
+                    enemyModel.attackPoint = ParseInt(value[6]);
+                    enemyModel.magicAttackPoint = ParseInt(value[7]);
+                    enemyModel.defendPoint = ParseInt(value[8]);
+                    enemyModel.magicDefendPoint = ParseInt(value[9]);
+                    
+                    enemyModel.attackInterval = ParseFloat(value[10]);
+                    enemyModel.attackRange = ParseFloat(value[11]);
+                    enemyModel.attackNum = ParseInt(value[12]);
+                    enemyModel.attackEnemyType = (UnitType)ParseInt(value[13]);
+                    enemyModel.blockNum = ParseInt(value[14]);
+                    
+                    enemyModel.scenePrefabPath = value[15];
+                    enemyModel.uiPrefabPath = value[16];
+                    
+                    var enemyDatabase = DataManager.Instance.GetEnemyBaseModels();
+                    enemyDatabase.TryAdd(enemyModel.enemyId, enemyModel);
+                }
+            }
+        }
+
         private int ParseInt(string value)
         {
             if (int.TryParse(value, out int result))

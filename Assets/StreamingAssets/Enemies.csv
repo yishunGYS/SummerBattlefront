@@ -1,0 +1,3 @@
+﻿敌人Id,敌人名称,敌人简介,敌人类型,血量,个体数量,物攻,魔攻,物防,魔防,攻击间隔（秒）,攻击范围,攻击目标数量,攻击目标类型,阻挡数,场景模型路径,UI模型路径
+int,string,string,UnitType,float,int,int,int,int,int,float,float,int,UnitType,int,string,string
+1001,小怪怪,最基础的敌人,0,150,1,20,0,5,5,2.5,2,1,0,1,,
