@@ -134,5 +134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac953d788f0a053448b2a32e2628d1dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateList:
-  - {fileID: 11400000, guid: 84eff5f6000f84144b16b5ed1413c318, type: 2}
+  stateDicts:
+    list:
+    - Key: 0
+      Value: {fileID: 11400000, guid: 84eff5f6000f84144b16b5ed1413c318, type: 2}
+    - Key: 1
+      Value: {fileID: 11400000, guid: cbe63a50b10a6c3448cd6f786b10ce5c, type: 2}

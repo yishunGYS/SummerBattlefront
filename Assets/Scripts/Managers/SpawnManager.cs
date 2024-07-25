@@ -41,13 +41,8 @@ namespace Managers
                     spawnedCharacter.transform.SetParent(SoliderContainer.transform);
                     spawnedCharacter.OnInit();
                 }
-
                 // …Ë÷√¬∑æ∂±‡∫≈
-                EnemyMovement enemyMovement = spawnedCharacter.GetComponent<EnemyMovement>();
-                if (enemyMovement != null)
-                {
-                    enemyMovement.SetPath(pathNum);
-                }
+                spawnedCharacter.soliderLogic.SetPath(pathNum);
             }
             else
             {

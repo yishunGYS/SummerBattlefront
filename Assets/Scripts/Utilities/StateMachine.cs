@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using Gameplay.Player;
 using ScriptableObjects;
+using ScriptableObjects.SoliderStateTypeSO;
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UnityEngine;
 
 namespace Utilities
@@ -9,8 +12,8 @@ namespace Utilities
     public enum UnitStateType
     {
         Idle,
-        Attack,
         Move,
+        Attack,
         Slow,
         Die
     }
@@ -21,8 +24,9 @@ namespace Utilities
         protected IAgent agent;
         protected UnitStateSO curState;
 
-        public List<UnitStateSO> stateList = new List<UnitStateSO>();
-
+        
+        
+        [SerializeField]private SerializableDictionary<UnitStateType, UnitStateSO> stateDicts = new SerializableDictionary<UnitStateType, UnitStateSO>();
 
         private void Awake()
         {
@@ -31,12 +35,17 @@ namespace Utilities
 
         public void OnInit()
         {
-            foreach (var item in stateList)
+            foreach (var item in stateDicts.Values)
             {
                 item.OnLogin(this,agent);
             }
 
-            curState = stateList[0];
+            if (!stateDicts.ContainsKey(UnitStateType.Idle))
+            {
+                stateDicts.Add(UnitStateType.Idle,ScriptableObject.CreateInstance<SoliderState_IdleSO>());
+            }
+            
+            curState = stateDicts[UnitStateType.Idle];
         }
 
         // protected void AddState(UnitState state)
@@ -52,7 +61,7 @@ namespace Utilities
                 return;
             }
             curState.OnExit();
-            curState = stateList[(int)stateType];
+            curState = stateDicts[stateType];
             curState.OnEnter();
         }
 
