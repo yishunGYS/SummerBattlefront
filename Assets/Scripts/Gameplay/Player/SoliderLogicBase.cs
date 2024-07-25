@@ -4,6 +4,17 @@ using UnityEngine;
 
 namespace Gameplay.Player
 {
+    class AttackEnemyTarget
+    {
+        public float dis;
+        public EnemyAgent target;
+
+        public AttackEnemyTarget(float dis,EnemyAgent target)
+        {
+            this.dis = dis;
+            this.target = target;
+        }
+    }
     public class SoliderLogicBase
     {
         private SoliderAgent soliderAgent;
@@ -141,39 +152,44 @@ namespace Gameplay.Player
 
             //若是单攻
             var minDis = 10000f;
-            EnemyAgent tempSingleTarget = null;
+            EnemyAgent singleTarget = null;
             List<EnemyAgent> tempMultiTarget = new List<EnemyAgent>();
+            List<AttackEnemyTarget> tempAttackTargets = new List<AttackEnemyTarget>();
             if (soliderModel.attackNum == 1)
             {
                 foreach (var collider in hitColliders)
                 {
                     var tempDis = Vector3.Distance(soliderAgent.transform.position, collider.transform.position);
+                    var temp = collider.GetComponent<EnemyAgent>();
+                    if (!CheckMatchAttackType(temp))
+                    {
+                        continue;
+                    }
                     if (tempDis <= minDis)
                     {
                         minDis = tempDis;
-                        tempSingleTarget = collider.GetComponent<EnemyAgent>();
+                        singleTarget = temp;
                     }
+  
                 }
-
-                attackTargets.Add(tempSingleTarget);
+                attackTargets.Add(singleTarget);
             }
 
-            //若是群攻
-            else
+            //若是多个目标
+            else if(soliderModel.attackNum > 1)
             {
                 foreach (var collider in hitColliders)
                 {
                     var tempDis = Vector3.Distance(soliderAgent.transform.position, collider.transform.position);
-                    if (tempDis <= minDis)
+                    var temp = collider.GetComponent<EnemyAgent>();
+                    if (!CheckMatchAttackType(temp))
                     {
-                        minDis = tempDis;
-                        tempSingleTarget = collider.GetComponent<EnemyAgent>();
+                        continue;
                     }
-
-
-                    tempMultiTarget.Insert(0, tempSingleTarget);
+                    var tempTarget = new AttackEnemyTarget(tempDis,temp);
+                    tempAttackTargets.Add(tempTarget);
                 }
-
+                SortMultiTargetsByDistance(tempAttackTargets);
                 for (int i = 0; i < soliderModel.attackNum; i++)
                 {
                     attackTargets.Add(tempMultiTarget[i]);
@@ -181,6 +197,22 @@ namespace Gameplay.Player
             }
         }
 
+        private bool CheckMatchAttackType(EnemyAgent target)
+        {
+            //todo 若attackEnemyType是多种，那么----待扩展
+            if (target.enemyModel.enemyType != soliderModel.attackEnemyType )
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private void SortMultiTargetsByDistance(List<AttackEnemyTarget> attackTargets)
+        {
+            attackTargets.Sort((a, b) => a.dis.CompareTo(b.dis));
+        }
+        
         #endregion
     }
 }

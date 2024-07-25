@@ -18,7 +18,7 @@ namespace Gameplay.Enemy
         public float attackInterval;
         public float attackRange;
         public int attackNum;
-        public UnitType attackEnemyType;
+        public UnitType attackEnemyType;  //若attackEnemyType是多种，那么待扩展
         public int blockNum;
         
         public string scenePrefabPath;
