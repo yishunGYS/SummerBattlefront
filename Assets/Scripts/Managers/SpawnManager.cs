@@ -1,3 +1,4 @@
+using Gameplay.Enemy;
 using Gameplay.Player;
 using System.Collections.Generic;
 using UnityEngine;
@@ -58,6 +59,11 @@ namespace Managers
         public void SetPathNum(int num)
         {
             pathNum = num;
+        }
+
+        public SoliderAgent GetSolider()
+        {
+            return selectedCharacter;
         }
     }
 }

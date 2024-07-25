@@ -1615,7 +1615,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 247
 --- !u!114 &176524177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1959,8 +1959,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499b17d53dc5ad745821cf58aaacc103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 99999
+  startMoney: 0
   startLives: 20
+  currentRegainRate: 0
+  currentLimit: 0
+  switchPhase: 10
+  regainPhase: 64000000c8000000
+  limitPhase: f4010000e8030000
+  switchTimer: 0
 --- !u!114 &196616391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14171,7 +14177,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 247
 --- !u!114 &1472121490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15877,7 +15883,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 247
 --- !u!114 &1649567679
 MonoBehaviour:
   m_ObjectHideFlags: 0
