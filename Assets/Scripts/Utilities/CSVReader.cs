@@ -60,10 +60,13 @@ namespace Utilities
                     soliderModel.attackInterval = ParseFloat(value[11]);
                     soliderModel.attackRange = ParseFloat(value[12]);
                     soliderModel.attackNum = ParseInt(value[13]);
-                    soliderModel.attackEnemyType = (UnitType)ParseInt(value[14]);
-                    soliderModel.moveSpeed = ParseFloat(value[15]);
-                    soliderModel.scenePrefabPath = value[16];
-                    soliderModel.uiPrefabPath = value[17];
+                    soliderModel.attackAoeRange = ParseFloat(value[14]);
+                    soliderModel.attackTargetType = (AttackTargetType)ParseInt(value[15]);
+                    soliderModel.attackEnemyType = (UnitType)ParseInt(value[16]);
+                    
+                    soliderModel.moveSpeed = ParseFloat(value[17]);
+                    soliderModel.scenePrefabPath = value[18];
+                    soliderModel.uiPrefabPath = value[19];
 
                     var soliderDatabase = DataManager.Instance.GetSoliderBaseModels();
                     soliderDatabase.TryAdd(soliderModel.soliderId, soliderModel);
@@ -97,11 +100,13 @@ namespace Utilities
                     enemyModel.attackInterval = ParseFloat(value[10]);
                     enemyModel.attackRange = ParseFloat(value[11]);
                     enemyModel.attackNum = ParseInt(value[12]);
-                    enemyModel.attackEnemyType = (UnitType)ParseInt(value[13]);
-                    enemyModel.blockNum = ParseInt(value[14]);
+                    enemyModel.attackAoeRange = ParseFloat(value[13]);
+                    enemyModel.attackTargetType = (AttackTargetType)ParseInt(value[14]);
+                    enemyModel.attackSoliderType = (UnitType)ParseInt(value[15]);
+                    enemyModel.blockNum = ParseInt(value[16]);
                     
-                    enemyModel.scenePrefabPath = value[15];
-                    enemyModel.uiPrefabPath = value[16];
+                    enemyModel.scenePrefabPath = value[17];
+                    enemyModel.uiPrefabPath = value[18];
                     
                     var enemyDatabase = DataManager.Instance.GetEnemyBaseModels();
                     enemyDatabase.TryAdd(enemyModel.enemyId, enemyModel);

@@ -13,19 +13,19 @@ namespace Systems
 
         public static int Rounds;
 
-        [Header("µ±Ç°»Ø¸´ËÙÂÊ")]
+        [Header("å½“å‰å›å¤é€Ÿç‡")]
         public int currentRegainRate;
 
-        [Header("µ±Ç°µÄÉÏÏŞ")]
+        [Header("å½“å‰çš„ä¸Šé™")]
         public int currentLimit;
 
-        [Header("¾­¹ı¶à³¤Ê±¼äÇĞ»»µ½ÏÂÒ»¸ö½×¶Î")]
+        [Header("ç»è¿‡å¤šé•¿æ—¶é—´åˆ‡æ¢åˆ°ä¸‹ä¸€ä¸ªé˜¶æ®µ")]
         public int switchPhase;
 
-        [Header("»Ø¸´ËÙ¶È")]
+        [Header("å›å¤é€Ÿåº¦")]
         public List<int> regainPhase;
 
-        [Header("×ÊÔ´ÉÏÏŞ")]
+        [Header("èµ„æºä¸Šé™")]
         public List<int> limitPhase;
 
         private float switchTimer;
@@ -45,7 +45,7 @@ namespace Systems
             }
             else
             {
-                Debug.LogError("Ã»ÓĞÉèÖÃ»Ø¸´ËÙ¶ÈºÍÉÏÏŞ");
+                Debug.LogError("æ²¡æœ‰è®¾ç½®å›å¤é€Ÿåº¦å’Œä¸Šé™");
             }
 
             Rounds = 0;

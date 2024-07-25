@@ -1,6 +1,7 @@
 using Gameplay.Enemy;
 using Gameplay.Player;
 using System.Collections.Generic;
+using Systems;
 using UnityEngine;
 
 namespace Managers
@@ -34,6 +35,7 @@ namespace Managers
 
         public void SpawnCharacter()
         {
+            
             if (selectedCharacter != null)
             {
                 SoliderAgent spawnedCharacter = Instantiate(selectedCharacter, spawnPoint.position, spawnPoint.rotation);
@@ -42,6 +44,13 @@ namespace Managers
                     spawnedCharacter.transform.SetParent(SoliderContainer.transform);
                     spawnedCharacter.OnInit();
                 }
+                if (PlayerStats.Money < spawnedCharacter.soliderModel.cost)
+                {
+                    Debug.Log("资源不够!");
+                    return;
+                }
+
+                PlayerStats.Money -= spawnedCharacter.soliderModel.cost;
                 // 设置路径编号
                 spawnedCharacter.soliderLogic.SetPath(pathNum);
             }

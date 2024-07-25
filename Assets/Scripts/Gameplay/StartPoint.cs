@@ -44,13 +44,7 @@ namespace Gameplay
 
         private void SpawnCharacter(SoliderAgent chara)
         {
-            if (PlayerStats.Money < chara.soliderModel.cost)
-            {
-                Debug.Log("资源不够!");
-                return;
-            }
 
-            PlayerStats.Money -= chara.soliderModel.cost;
 
             SpawnManager.instance.ChangeSpawnPoint(this.transform);
             SpawnManager.instance.SetPathNum(pathNum);

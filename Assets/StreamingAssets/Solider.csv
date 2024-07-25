@@ -1,3 +1,3 @@
-角色Id,角色名称,角色简介,角色类型,耗能,血量,个体数量,物攻,魔攻,物防,魔防,攻击间隔（秒）,攻击范围,攻击目标数量,攻击目标类型,移速（m/s）,场景模型路径,UI模型路径
-int,string,string,UnitType,int,float,int,int,int,int,int,float,float,int,UnitType,float,string,string
-1,小兵兵,最基础的士兵,0,1,150,1,20,0,5,5,2.5,2,1,0,3,,
+角色Id,角色名称,角色简介,角色类型,耗能,血量,个体数量,物攻,魔攻,物防,魔防,攻击间隔（秒）,攻击范围,攻击目标数量,攻击Aoe范围,攻击作用对象,攻击目标类型,移速（m/s）,场景模型路径,UI模型路径
+int,string,string,UnitType,int,float,int,int,int,int,int,float,float,int,float,AttackTargetType,UnitType,float,string,string
+1,小兵兵,最基础的士兵,0,1,150,1,20,0,5,5,2.5,2,1,0,0,0,3,,

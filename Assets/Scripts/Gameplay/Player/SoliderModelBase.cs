@@ -9,6 +9,12 @@ namespace Gameplay.Player
         Tower,
     }
 
+    public enum AttackTargetType
+    {
+        OtherSide,
+        SelfSide,
+    }
+
     public class SoliderModelBase
     {
         public int soliderId;
@@ -26,6 +32,9 @@ namespace Gameplay.Player
         public float attackInterval;
         public float attackRange;
         public int attackNum;
+        public float attackAoeRange;
+        public AttackTargetType attackTargetType;       //攻击目标是敌方还是友方（辅助角色的攻击目标是己方）
+        
         public UnitType attackEnemyType;  //若attackEnemyType是多种，那么待扩展
 
         public float moveSpeed;
