@@ -1,5 +1,6 @@
 using Gameplay.Player;
 using Managers;
+using Systems;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,9 +9,12 @@ namespace Gameplay
     public class StartPoint : MonoBehaviour
     {
         private Color startColor;
+        private Color notEnoughMoneyColor;
+
         private Renderer rend;
 
         public Color hoverColor;
+
         [Header("路径编号")]
         public int pathNum;
 
@@ -35,6 +39,19 @@ namespace Gameplay
 
         private void OnMouseDown()
         {
+            SpawnCharacter(SpawnManager.instance.GetSolider());
+        }
+
+        private void SpawnCharacter(SoliderAgent chara)
+        {
+            if (PlayerStats.Money < chara.soliderModel.cost)
+            {
+                Debug.Log("资源不够!");
+                return;
+            }
+
+            PlayerStats.Money -= chara.soliderModel.cost;
+
             SpawnManager.instance.ChangeSpawnPoint(this.transform);
             SpawnManager.instance.SetPathNum(pathNum);
             SpawnManager.instance.SpawnCharacter();
