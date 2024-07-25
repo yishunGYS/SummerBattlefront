@@ -35,7 +35,6 @@ namespace Managers
 
         public void SpawnCharacter()
         {
-            
             if (selectedCharacter != null)
             {
                 SoliderAgent spawnedCharacter = Instantiate(selectedCharacter, spawnPoint.position, spawnPoint.rotation);

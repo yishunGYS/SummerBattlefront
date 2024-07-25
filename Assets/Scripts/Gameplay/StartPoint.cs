@@ -44,8 +44,6 @@ namespace Gameplay
 
         private void SpawnCharacter(SoliderAgent chara)
         {
-
-
             SpawnManager.instance.ChangeSpawnPoint(this.transform);
             SpawnManager.instance.SetPathNum(pathNum);
             SpawnManager.instance.SpawnCharacter();
