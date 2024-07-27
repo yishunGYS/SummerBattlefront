@@ -5,6 +5,7 @@ using ScriptableObjects;
 using ScriptableObjects.SoliderStateTypeSO;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
+using UnityEditor;
 using UnityEngine;
 
 namespace Utilities
@@ -23,29 +24,40 @@ namespace Utilities
     {
         protected IAgent agent;
         protected UnitStateSO curState;
-
-        
-        
         [SerializeField]private SerializableDictionary<UnitStateType, UnitStateSO> stateDicts = new SerializableDictionary<UnitStateType, UnitStateSO>();
 
+        private Dictionary<UnitStateType, UnitStateSO> runtimeStateDict = new Dictionary<UnitStateType, UnitStateSO>();
         private void Awake()
         {
             agent = GetComponent<IAgent>();
+            
+            
         }
 
         public void OnInit()
         {
-            foreach (var item in stateDicts.Values)
+            CopeStateSo();
+            foreach (var item in runtimeStateDict.Values)
             {
                 item.OnLogin(this,agent);
             }
 
-            if (!stateDicts.ContainsKey(UnitStateType.Idle))
+            if (!runtimeStateDict.ContainsKey(UnitStateType.Idle))
             {
-                stateDicts.Add(UnitStateType.Idle,ScriptableObject.CreateInstance<SoliderState_IdleSO>());
+                runtimeStateDict.Add(UnitStateType.Idle,ScriptableObject.CreateInstance<SoliderState_IdleSO>());
             }
             
-            curState = stateDicts[UnitStateType.Idle];
+            curState = runtimeStateDict[UnitStateType.Idle];
+        }
+
+        private void CopeStateSo()
+        {
+            
+            foreach (var item in stateDicts.Values)
+            {
+                var tempSo = StateSoIndustry.CreateStateSo(item.stateType);
+                runtimeStateDict.Add(item.stateType,tempSo);
+            }
         }
 
         // protected void AddState(UnitState state)
@@ -61,7 +73,7 @@ namespace Utilities
                 return;
             }
             curState.OnExit();
-            curState = stateDicts[stateType];
+            curState = runtimeStateDict[stateType];
             curState.OnEnter();
         }
 
@@ -78,6 +90,23 @@ namespace Utilities
         public UnitStateSO GetCurState()
         {
             return curState;
+        }
+    }
+    
+    public class StateSoIndustry
+    {
+        public static UnitStateSO CreateStateSo(UnitStateType stateType)
+        {
+            if (stateType == UnitStateType.Idle)
+            {
+                return ScriptableObject.CreateInstance<SoliderState_IdleSO>();
+            }
+            else if (stateType == UnitStateType.Move)
+            {
+                return ScriptableObject.CreateInstance<SoliderState_MoveSO>();
+            }
+
+            return null;
         }
     }
 }

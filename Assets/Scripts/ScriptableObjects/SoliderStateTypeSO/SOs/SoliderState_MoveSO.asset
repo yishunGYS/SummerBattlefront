@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b42d623ab843ef801c19ae9c5e016a, type: 3}
   m_Name: SoliderState_MoveSO
   m_EditorClassIdentifier: 
-  stateType: 2
+  stateType: 1

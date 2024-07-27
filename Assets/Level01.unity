@@ -1966,7 +1966,6 @@ MonoBehaviour:
   switchPhase: 10
   regainPhase: 64000000c8000000
   limitPhase: f4010000e8030000
-  switchTimer: 0
 --- !u!114 &196616391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6603,6 +6602,10 @@ PrefabInstance:
     - target: {fileID: 1239107217020288, guid: bf71c92a2333dd847b76d90dcdebb3cc, type: 3}
       propertyPath: m_Name
       value: Tower_Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 1239107217020288, guid: bf71c92a2333dd847b76d90dcdebb3cc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4537856016892564, guid: bf71c92a2333dd847b76d90dcdebb3cc, type: 3}
       propertyPath: m_LocalScale.x
