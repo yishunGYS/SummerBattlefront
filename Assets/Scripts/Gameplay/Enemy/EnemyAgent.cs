@@ -16,7 +16,7 @@ namespace Gameplay.Enemy
         private StateMachine fsm;
         
         //关卡开始一开始/第x阶段更新敌方防线的时候调用
-        private void Start()
+        public void OnStart()
         {
             InitData();
             
