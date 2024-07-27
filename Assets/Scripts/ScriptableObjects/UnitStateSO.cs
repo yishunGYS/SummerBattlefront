@@ -8,7 +8,7 @@ namespace ScriptableObjects
     {
         protected IAgent agent;
         protected StateMachine fsm;
-        public UnitStateType stateType;
+        [HideInInspector]public UnitStateType stateType;
 
         public virtual void OnLogin(StateMachine stateMachine,IAgent iAgent)
         {

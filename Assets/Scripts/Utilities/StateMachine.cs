@@ -30,8 +30,6 @@ namespace Utilities
         private void Awake()
         {
             agent = GetComponent<IAgent>();
-            
-            
         }
 
         public void OnInit()
@@ -42,6 +40,7 @@ namespace Utilities
                 item.OnLogin(this,agent);
             }
 
+            //确保一定有idle状态
             if (!runtimeStateDict.ContainsKey(UnitStateType.Idle))
             {
                 runtimeStateDict.Add(UnitStateType.Idle,ScriptableObject.CreateInstance<SoliderState_IdleSO>());
