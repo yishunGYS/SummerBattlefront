@@ -1,3 +1,4 @@
+using Gameplay.Enemy;
 using Systems;
 using UnityEngine;
 using Utilities;
@@ -11,14 +12,14 @@ namespace Managers
 		public GameObject gameOverUI;
 		public GameObject completeLevelUI;
 		private CsvReader csvReader;
+
+		public GameObject EnemyContainer;
 		void Start ()
 		{
 			GameIsOver = false;
 			
 			InitCsvReader();
-			//test
-			var temp = DataManager.Instance.GetSoliderBaseModels();
-			print(temp[1].soliderDes);
+			InitEnemy();
 		}
 		
 		
@@ -50,6 +51,14 @@ namespace Managers
 		{
 			csvReader = new CsvReader();
 			csvReader.OnStart();
+		}
+
+		private void InitEnemy()
+		{
+			foreach (var item in EnemyContainer.GetComponentsInChildren<EnemyAgent>())
+			{
+				item.OnStart();
+			}
 		}
 	}
 }
