@@ -19,14 +19,16 @@ namespace Utilities
         Die
     }
 
-
-    public class StateMachine: MonoBehaviour
+    public class StateMachine : MonoBehaviour
     {
         protected IAgent agent;
+        [ShowInInspector]
         protected UnitStateSO curState;
-        [SerializeField]private SerializableDictionary<UnitStateType, UnitStateSO> stateDicts = new SerializableDictionary<UnitStateType, UnitStateSO>();
+        [SerializeField]
+        protected SerializableDictionary<UnitStateType, UnitStateSO> stateDicts = new SerializableDictionary<UnitStateType, UnitStateSO>();
 
-        private Dictionary<UnitStateType, UnitStateSO> runtimeStateDict = new Dictionary<UnitStateType, UnitStateSO>();
+        protected Dictionary<UnitStateType, UnitStateSO> runtimeStateDict = new Dictionary<UnitStateType, UnitStateSO>();
+
         private void Awake()
         {
             agent = GetComponent<IAgent>();
@@ -37,33 +39,31 @@ namespace Utilities
             CopeStateSo();
             foreach (var item in runtimeStateDict.Values)
             {
-                item.OnLogin(this,agent);
+                if (item == null)
+                {
+                    Debug.LogError("StateSO is null in runtimeStateDict.");
+                    continue;
+                }
+                item.OnLogin(this, agent);
             }
 
-            //确保一定有idle状态
+            // 确保一定有 idle 状态
             if (!runtimeStateDict.ContainsKey(UnitStateType.Idle))
             {
-                runtimeStateDict.Add(UnitStateType.Idle,ScriptableObject.CreateInstance<SoliderState_IdleSO>());
+                runtimeStateDict.Add(UnitStateType.Idle, ScriptableObject.CreateInstance<SoliderState_IdleSO>());
             }
-            
+
             curState = runtimeStateDict[UnitStateType.Idle];
-        }
-
-        private void CopeStateSo()
-        {
-            
-            foreach (var item in stateDicts.Values)
+            if (curState == null)
             {
-                var tempSo = StateSoIndustry.CreateStateSo(item.stateType);
-                runtimeStateDict.Add(item.stateType,tempSo);
+                Debug.LogError("curState is null after initialization.");
             }
         }
 
-        // protected void AddState(UnitState state)
-        // {
-        //     //stateDict[state.stateType] = state;
-        //     state.OnLogin(this,agent);
-        // }
+        public virtual void CopeStateSo()
+        {
+
+        }
 
         public void ChangeState(UnitStateType stateType)
         {
@@ -73,6 +73,12 @@ namespace Utilities
             }
             curState.OnExit();
             curState = runtimeStateDict[stateType];
+            if (curState == null)
+            {
+                Debug.LogError($"StateSO for {stateType} is null.");
+                return;
+            }
+            Debug.Log("切换状态");
             curState.OnEnter();
         }
 
@@ -80,7 +86,7 @@ namespace Utilities
         {
             curState.OnUpdate();
         }
-        
+
         public void OnFixedUpdate()
         {
             curState.OnFixedUpdate();
@@ -89,23 +95,6 @@ namespace Utilities
         public UnitStateSO GetCurState()
         {
             return curState;
-        }
-    }
-    
-    public class StateSoIndustry
-    {
-        public static UnitStateSO CreateStateSo(UnitStateType stateType)
-        {
-            if (stateType == UnitStateType.Idle)
-            {
-                return ScriptableObject.CreateInstance<SoliderState_IdleSO>();
-            }
-            else if (stateType == UnitStateType.Move)
-            {
-                return ScriptableObject.CreateInstance<SoliderState_MoveSO>();
-            }
-
-            return null;
         }
     }
 }

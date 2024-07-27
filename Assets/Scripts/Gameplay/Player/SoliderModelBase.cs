@@ -26,8 +26,8 @@ namespace Gameplay.Player
         public int spawnNum;
         public int attackPoint;
         public int magicAttackPoint;
-        public int defendPoint;
-        public int magicDefendPoint;
+        public float defendReducePercent;
+        public float magicDefendReducePercent;
 
         public float attackInterval;
         public float attackRange;

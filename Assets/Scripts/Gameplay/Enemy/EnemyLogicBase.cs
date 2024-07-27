@@ -32,36 +32,33 @@ namespace Gameplay.Enemy
         }
         
         
-        
-        
-        
         #region 攻击判定
 
         public bool CheckCanAttack()
         {
             Collider[] hitColliders =
                 Physics.OverlapSphere(enemyAgent.transform.position, frontCheckDistance,
-                    LayerMask.GetMask("Enemy"));
+                    LayerMask.GetMask("Solider"));
 
-            int enemyCount = 0;
+            int soliderCount = 0;
             foreach (var hitCollider in hitColliders)
             {
                 // 过滤掉自己的碰撞体
                 if (hitCollider.gameObject != enemyAgent.gameObject)
                 {
-                    enemyCount++;
-                    Debug.Log("Enemy detected: " + hitCollider.gameObject.name);
+                    soliderCount++;
+                    Debug.Log("Soilder detected: " + hitCollider.gameObject.name);
                     // 在这里可以实现攻击逻辑
                 }
             }
 
-            if (enemyCount <= 0)
+            if (soliderCount <= 0)
             {
-                Debug.Log("附近没敌人");
+                Debug.Log("附近没士兵");
                 return false;
             }
 
-            Debug.Log($"附近有{enemyCount}个敌人");
+            Debug.Log($"附近有{soliderCount}个士兵");
             return true;
         }
 

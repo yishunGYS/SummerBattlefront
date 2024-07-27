@@ -54,8 +54,8 @@ namespace Utilities
                     soliderModel.spawnNum = ParseInt(value[6]);
                     soliderModel.attackPoint = ParseInt(value[7]);
                     soliderModel.magicAttackPoint = ParseInt(value[8]);
-                    soliderModel.defendPoint = ParseInt(value[9]);
-                    soliderModel.magicDefendPoint = ParseInt(value[10]);
+                    soliderModel.defendReducePercent = ParseFloat(value[9]);
+                    soliderModel.magicDefendReducePercent = ParseFloat(value[10]);
 
                     soliderModel.attackInterval = ParseFloat(value[11]);
                     soliderModel.attackRange = ParseFloat(value[12]);
@@ -94,8 +94,8 @@ namespace Utilities
                     enemyModel.spawnNum = ParseInt(value[5]);
                     enemyModel.attackPoint = ParseInt(value[6]);
                     enemyModel.magicAttackPoint = ParseInt(value[7]);
-                    enemyModel.defendPoint = ParseInt(value[8]);
-                    enemyModel.magicDefendPoint = ParseInt(value[9]);
+                    enemyModel.defendReducePercent = ParseFloat(value[8]);
+                    enemyModel.magicDefendReducePercent = ParseFloat(value[9]);
                     
                     enemyModel.attackInterval = ParseFloat(value[10]);
                     enemyModel.attackRange = ParseFloat(value[11]);

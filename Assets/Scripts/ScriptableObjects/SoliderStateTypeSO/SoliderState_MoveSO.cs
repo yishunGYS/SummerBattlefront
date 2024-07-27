@@ -1,3 +1,4 @@
+using Gameplay.Player;
 using UnityEngine;
 using Utilities;
 
@@ -19,8 +20,18 @@ namespace ScriptableObjects.SoliderStateTypeSO
         public override void OnUpdate()
         {
             //移动逻辑
-            Debug.Log($"{soliderAgent.soliderModel.soliderName}SoliderStateMove OnUpdate");
-            soliderAgent.soliderLogic.Move();
+            //Debug.Log($"{soliderAgent.soliderModel.soliderName}SoliderStateMove OnUpdate");
+            if (soliderAgent.soliderModel.soliderType == UnitType.Ground)
+            {
+                if (soliderAgent.soliderLogic.CheckObstacle() == false)
+                {
+                    soliderAgent.soliderLogic.Move();
+                }
+            }
+            else if (soliderAgent.soliderModel.soliderType == UnitType.Air)
+            {
+
+            }
         }
 
         public override void OnFixedUpdate()

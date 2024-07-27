@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7882222648099927651}
   - component: {fileID: 8771021107945816260}
   - component: {fileID: 7474211548765971127}
-  - component: {fileID: 738194766364831705}
-  m_Layer: 28
+  - component: {fileID: 689205183479590946}
+  m_Layer: 7
   m_Name: Tower_Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyId: 1001
---- !u!114 &738194766364831705
+--- !u!114 &689205183479590946
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,11 +79,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 323472046004155178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac953d788f0a053448b2a32e2628d1dc, type: 3}
+  m_Script: {fileID: 11500000, guid: 078b6bc1e2ede2047a8e30ce07c60969, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stateDicts:
-    list: []
+    list:
+    - Key: 0
+      Value: {fileID: 11400000, guid: bafe3a3c8f6486243be6a11b858a084e, type: 2}
+    - Key: 2
+      Value: {fileID: 11400000, guid: 7132f25e7a3967743894cb6c70bbc897, type: 2}
 --- !u!1 &3672624748330504435
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +97,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8326564383006268223}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: StaticMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +131,7 @@ GameObject:
   - component: {fileID: 5186846763302568325}
   - component: {fileID: 2364837366369629303}
   - component: {fileID: 4243120104697462129}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TowerBase3_Alt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +215,7 @@ GameObject:
   - component: {fileID: 8516339043699311231}
   - component: {fileID: 8507648963257987848}
   - component: {fileID: 7969503090171581504}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TowerTurret6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7409279165009606827}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TargetPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

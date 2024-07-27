@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5730968595712689144}
   - component: {fileID: 7232267343251646796}
   - component: {fileID: 4226647057436595221}
-  - component: {fileID: 1244985174465145719}
+  - component: {fileID: 2038313592217871387}
   m_Layer: 0
   m_Name: SmallBingBing
   m_TagString: Untagged
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soliderId: 1
---- !u!114 &1244985174465145719
+--- !u!114 &2038313592217871387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2667904319312543711}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac953d788f0a053448b2a32e2628d1dc, type: 3}
+  m_Script: {fileID: 11500000, guid: 34c5f647ed954d148879c4375c6537ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stateDicts:
@@ -140,3 +140,5 @@ MonoBehaviour:
       Value: {fileID: 11400000, guid: 84eff5f6000f84144b16b5ed1413c318, type: 2}
     - Key: 1
       Value: {fileID: 11400000, guid: cbe63a50b10a6c3448cd6f786b10ce5c, type: 2}
+    - Key: 2
+      Value: {fileID: 11400000, guid: 0e52b69940ce2774293d22128b125f03, type: 2}

@@ -56,6 +56,7 @@ namespace Gameplay.Player
             if (pathPoints == null || pathPoints.Length == 0) return;
 
             Vector3 dir = moveTarget.position - soliderAgent.transform.position;
+
             soliderAgent.transform.Translate(soliderModel.moveSpeed * Time.deltaTime * dir.normalized, Space.World);
 
             if (Vector3.Distance(soliderAgent.transform.position, moveTarget.position) <= 0.4f)
@@ -63,6 +64,8 @@ namespace Gameplay.Player
                 GetNextWaypoint();
             }
         }
+
+
 
         private void GetNextWaypoint()
         {
@@ -82,12 +85,24 @@ namespace Gameplay.Player
             // WaveSpawner.EnemiesAlive--;
             // Destroy(gameObject);
         }
-        
+
         //判断障碍
         public bool CheckObstacle()
         {
+            if (pathPoints == null || pathPoints.Length == 0) return false;
+
+            Vector3 dir = moveTarget.position - soliderAgent.transform.position;
             RaycastHit hit;
-            if (Physics.Raycast(soliderAgent.transform.position, soliderAgent.transform.forward, out hit, frontCheckDistance))
+
+            if (soliderAgent == null)
+            {
+                Debug.LogError("soliderAgent is not initialized.");
+                return false;
+            }
+
+            Debug.DrawRay(soliderAgent.transform.position, dir.normalized * frontCheckDistance, Color.red);
+
+            if (Physics.Raycast(soliderAgent.transform.position, dir.normalized, out hit, frontCheckDistance))
             {
                 if (hit.collider.CompareTag("Obstacle"))
                 {
@@ -97,20 +112,26 @@ namespace Gameplay.Player
 
             return false;
         }
-        
-        
 
         public void Stop()
         {
             
         }
-        
+
+        public bool CheckCanBeBlock()
+        {
+            return true;
+        }
+
         #region 攻击判定
 
         public bool CheckCanAttack()
         {
+            // 绘制攻击判定范围的可视化效果
+            DrawAttackRange();
+
             Collider[] hitColliders =
-                Physics.OverlapSphere(soliderAgent.transform.position, frontCheckDistance,
+                Physics.OverlapSphere(soliderAgent.transform.position, soliderModel.attackRange,
                     LayerMask.GetMask("Enemy"));
 
             int enemyCount = 0;
@@ -134,6 +155,27 @@ namespace Gameplay.Player
             Debug.Log($"附近有{enemyCount}个敌人");
             return true;
         }
+
+        private void DrawAttackRange()
+        {
+            Vector3 start = soliderAgent.transform.position;
+            Vector3 end = start + Vector3.up * 0.1f;
+
+            int segments = 20;
+            float angle = 0f;
+            float angleStep = 360f / segments;
+            for (int i = 0; i < segments; i++)
+            {
+                Vector3 offset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * angle), 0, Mathf.Cos(Mathf.Deg2Rad * angle)) * soliderModel.attackRange;
+                Vector3 nextOffset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * (angle + angleStep)), 0, Mathf.Cos(Mathf.Deg2Rad * (angle + angleStep))) * soliderModel.attackRange;
+
+                Debug.DrawLine(start + offset, start + nextOffset, Color.blue);
+
+                angle += angleStep;
+            }
+        }
+
+
 
         private void ClearTarget()
         {
