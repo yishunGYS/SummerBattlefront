@@ -18,13 +18,11 @@ namespace ScriptableObjects.SoliderStateTypeSO
 
         public override void OnUpdate()
         {
-            Debug.Log($"{soliderAgent.soliderModel.soliderName}SoliderStateIdle OnUpdate");
             //idle to move
             if (soliderAgent.soliderLogic.CheckObstacle()==false && soliderAgent.soliderLogic.CheckCanAttack()==false)
             {
                 fsm.ChangeState(UnitStateType.Move);
             }
-            
         }
 
         public override void OnFixedUpdate()
