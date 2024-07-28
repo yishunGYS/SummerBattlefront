@@ -1,3 +1,4 @@
+using Gameplay.Player;
 using UnityEngine;
 using Utilities;
 
@@ -18,7 +19,7 @@ namespace ScriptableObjects.EnemyStateTypeSO
 
         public override void OnUpdate()
         {
-            //idle to move
+            Debug.Log("1");
         }
 
         public override void OnFixedUpdate()

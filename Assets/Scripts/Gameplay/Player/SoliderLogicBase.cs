@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Gameplay.Enemy;
 using UnityEngine;
@@ -21,7 +22,7 @@ namespace Gameplay.Player
         private SoliderModelBase soliderModel;
 
         private const float frontCheckDistance = 2f;
-        private List<EnemyAgent> attackTargets = new List<EnemyAgent>();
+        public List<EnemyAgent> attackTargets = new List<EnemyAgent>();
 
 
         //移动路径
@@ -29,14 +30,25 @@ namespace Gameplay.Player
         private int waypointIndex = 0;
         private Transform[] pathPoints;
 
-
         public SoliderLogicBase(SoliderAgent agent)
         {
             soliderAgent = agent;
             soliderModel = soliderAgent.soliderModel;
         }
 
-        
+        public void RemoveTarget(EnemyAgent target)
+        {
+            if (attackTargets.Contains(target))
+            {
+                attackTargets.Remove(target);
+                Debug.Log($"Target removed: {target.enemyModel.enemyName}");
+            }
+            else
+            {
+                Debug.Log("Target not found in the list.");
+            }
+        }
+
         //移动
         public void SetPath(int pathIndex)
         {
@@ -104,14 +116,31 @@ namespace Gameplay.Player
 
             if (Physics.Raycast(soliderAgent.transform.position, dir.normalized, out hit, frontCheckDistance))
             {
-                if (hit.collider.CompareTag("Obstacle"))
+                EnemyAgent enemyAgent = hit.collider.gameObject.GetComponent<EnemyAgent>();
+                if (enemyAgent != null)
                 {
-                    return true;
+                    int blockNum = enemyAgent.enemyModel.blockNum;
+                    if (blockNum > 0)
+                    {
+                        // 可以被阻挡，减少 blockNum
+                        enemyAgent.enemyModel.blockNum--;
+                        return true;
+                    }
+                    else
+                    {
+                        // 不能被阻挡，blockNum 小于等于零
+                        return false;
+                    }
+                }
+                else if (hit.collider.CompareTag("Obstacle"))
+                {
+                    return true; // 其他障碍物阻挡
                 }
             }
 
             return false;
         }
+
 
         public void Stop()
         {
@@ -175,15 +204,13 @@ namespace Gameplay.Player
             }
         }
 
-
-
         private void ClearTarget()
         {
             attackTargets.Clear();
         }
 
 
-        private void GetTarget()
+        public void GetTarget()
         {
             //每次获取新的目标前，先把已有的目标清除
             ClearTarget();
@@ -254,7 +281,52 @@ namespace Gameplay.Player
         {
             attackTargets.Sort((a, b) => a.dis.CompareTo(b.dis));
         }
-        
+
         #endregion
+
+        public void OnTakeDamage(float damage, float magicDamage)
+        {
+            // 减少士兵的生命值
+            soliderModel.maxHp = soliderModel.maxHp - (damage * (1 - soliderModel.defendReducePercent)) - (magicDamage * (1 - soliderModel.magicDefendReducePercent));
+
+            Debug.Log("士兵目前的血量是：" + soliderModel.maxHp);
+            Debug.Log("士兵受到的物理伤害为：" + (damage * (1 - soliderModel.defendReducePercent)));
+            Debug.Log("士兵受到的法术伤害为：" + (magicDamage * (1 - soliderModel.magicDefendReducePercent)));
+
+            soliderAgent.StartCoroutine(FlashRed());
+
+            if (soliderModel.maxHp <= 0)
+            {
+                Die();
+            }
+        }
+
+        private IEnumerator FlashRed()
+        {
+            Renderer renderer = soliderAgent.GetComponent<Renderer>();
+            if (renderer == null)
+            {
+                Debug.LogError("Renderer component not found.");
+                yield break;
+            }
+
+            Color originalColor = renderer.material.color;
+            renderer.material.color = Color.red;
+
+            yield return new WaitForSeconds(0.1f); // 控制闪烁时间
+
+            renderer.material.color = originalColor;
+        }
+
+        private void Die()
+        {
+            Debug.Log($"{soliderModel.soliderName} has died!");
+
+            // 播放死亡动画或特效
+            // 可以在这里添加更多死亡处理逻辑，例如从场景中移除士兵，更新分数等
+
+            Object.Destroy(soliderAgent.gameObject);
+        }
+
     }
 }

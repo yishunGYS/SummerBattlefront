@@ -12,14 +12,12 @@ namespace Gameplay.Enemy
         public EnemyLogicBase enemyLogic;
         public int enemyId;
 
-
         private StateMachine fsm;
         
         //关卡开始一开始/第x阶段更新敌方防线的时候调用
         public void OnStart()
         {
             InitData();
-            
             fsm = GetComponent<StateMachine>();
             fsm.OnInit();
             enemyLogic = new EnemyLogicBase(this);

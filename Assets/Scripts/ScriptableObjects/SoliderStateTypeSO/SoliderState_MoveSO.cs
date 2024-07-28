@@ -23,9 +23,13 @@ namespace ScriptableObjects.SoliderStateTypeSO
             //Debug.Log($"{soliderAgent.soliderModel.soliderName}SoliderStateMove OnUpdate");
             if (soliderAgent.soliderModel.soliderType == UnitType.Ground)
             {
-                if (soliderAgent.soliderLogic.CheckObstacle() == false)
+                if (soliderAgent.soliderLogic.CheckObstacle())
                 {
                     soliderAgent.soliderLogic.Move();
+                }
+                else
+                {
+                    fsm.ChangeState(UnitStateType.Attack);
                 }
             }
             else if (soliderAgent.soliderModel.soliderType == UnitType.Air)

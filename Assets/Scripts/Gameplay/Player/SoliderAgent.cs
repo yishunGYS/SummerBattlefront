@@ -16,6 +16,7 @@ namespace Gameplay.Player
         //instantiate时
         public void OnInit()
         {
+
             InitData();
             fsm = GetComponent<StateMachine>();
             fsm.OnInit();
