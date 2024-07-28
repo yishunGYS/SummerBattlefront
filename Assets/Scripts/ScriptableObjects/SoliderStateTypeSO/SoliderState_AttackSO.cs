@@ -22,7 +22,7 @@ namespace ScriptableObjects.SoliderStateTypeSO
             soliderAgent.soliderLogic.GetTarget();
             foreach (var target in soliderAgent.soliderLogic.attackTargets)
             {
-                Debug.Log(target.gameObject.name);
+                //Debug.Log(target.gameObject.name);
             }
         }
 

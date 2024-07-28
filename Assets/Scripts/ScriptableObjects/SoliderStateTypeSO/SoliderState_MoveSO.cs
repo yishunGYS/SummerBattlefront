@@ -23,7 +23,7 @@ namespace ScriptableObjects.SoliderStateTypeSO
             //Debug.Log($"{soliderAgent.soliderModel.soliderName}SoliderStateMove OnUpdate");
             if (soliderAgent.soliderModel.soliderType == UnitType.Ground)
             {
-                if (soliderAgent.soliderLogic.CheckObstacle())
+                if (!soliderAgent.soliderLogic.CheckObstacle())
                 {
                     soliderAgent.soliderLogic.Move();
                 }
