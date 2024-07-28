@@ -67,10 +67,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7df651d8101597e4bb10100bcec3117d, type: 3}
-    m_FontSize: 51
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 75
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: Test01
 --- !u!1 &1536874239302838
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +201,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114972149198859642}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SelectLevel_UImanager, Assembly-CSharp
+        m_MethodName: SelectLevelBtnClick
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 30ccdeb785dcf404e8ca8547782a2ea8, type: 2}
+          m_ObjectArgumentAssemblyTypeName: ScriptableObjects.LevelInformationSO,
+            Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &114676574955619604
 MonoBehaviour:
   m_ObjectHideFlags: 0

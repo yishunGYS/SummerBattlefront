@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,11 @@ namespace Systems.Level
 		public Image img;
 		public AnimationCurve curve;
 
+		private void Awake()
+		{
+			DontDestroyOnLoad(this);
+		}
+
 		void Start ()
 		{
 			StartCoroutine(FadeIn());
@@ -20,6 +26,25 @@ namespace Systems.Level
 			StartCoroutine(FadeOut(scene));
 		}
 
+		public void ChangeScene(String scene)
+		{
+			StartCoroutine(ChangeSceneProcess(scene));
+		}
+
+		
+		IEnumerator ChangeSceneProcess(string scene)
+		{
+			float t = 1f;
+
+			while (t > 0f)
+			{
+				t -= Time.deltaTime;
+				float a = curve.Evaluate(t);
+				img.color = new Color (0f, 0f, 0f, a);
+				yield return 0;
+			}
+			SceneManager.LoadScene(scene);
+		}
 		IEnumerator FadeIn ()
 		{
 			float t = 1f;
