@@ -5,6 +5,7 @@ namespace Gameplay.Player
     public enum UnitType
     {
         Ground,
+        Range,
         Air,
         Tower,
     }
@@ -13,6 +14,7 @@ namespace Gameplay.Player
     {
         OtherSide,
         SelfSide,
+        None,
     }
 
     public class SoliderModelBase

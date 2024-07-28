@@ -4,10 +4,10 @@ using Utilities;
 
 namespace ScriptableObjects.EnemyStateTypeSO
 {
-    [CreateAssetMenu(fileName = "EnemytState_IdleSO", menuName = "ScriptableObjects/EnemyStateTypeSO/EnemytState_IdleSO")]
-    public class EnemytState_IdleSO : EnemyStateSO
+    [CreateAssetMenu(fileName = "EnemyState_IdleSO", menuName = "ScriptableObjects/EnemyStateTypeSO/EnemyState_IdleSO")]
+    public class EnemyState_IdleSO : EnemyStateSO
     {
-        public EnemytState_IdleSO()
+        public EnemyState_IdleSO()
         {
             stateType = UnitStateType.Idle;
         }
@@ -19,7 +19,10 @@ namespace ScriptableObjects.EnemyStateTypeSO
 
         public override void OnUpdate()
         {
-            Debug.Log("1");
+            if (enemyAgent.enemyLogic.CheckCanAttack())
+            {
+                fsm.ChangeState(UnitStateType.Attack);
+            }
         }
 
         public override void OnFixedUpdate()

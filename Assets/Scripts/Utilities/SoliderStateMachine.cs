@@ -15,7 +15,7 @@ public class SoliderStateMachine : StateMachine
                 Debug.LogError("StateSO in stateDicts is null.");
                 continue;
             }
-            var tempSo = StateSoIndustry.CreateSolideStateSo(item.stateType);
+            var tempSo = StateSoIndustry.Clone(item);
             if (tempSo == null)
             {
                 Debug.LogError($"Failed to create StateSO for {item.stateType}.");

@@ -8,38 +8,11 @@ using ScriptableObjects.EnemyStateTypeSO;
 
 public class StateSoIndustry
 {
-    public static UnitStateSO CreateSolideStateSo(UnitStateType stateType)
+    
+    public static T Clone<T>(T original) where T : ScriptableObject
     {
-        if (stateType == UnitStateType.Idle)
-        {
-            return ScriptableObject.CreateInstance<SoliderState_IdleSO>();
-        }
-        else if (stateType == UnitStateType.Move)
-        {
-            return ScriptableObject.CreateInstance<SoliderState_MoveSO>();
-        }
-        else if (stateType == UnitStateType.Attack)
-        {
-            return ScriptableObject.CreateInstance<SoliderState_AttackSO>();
-        }
-
-        Debug.LogError($"Unsupported UnitStateType: {stateType}");
-        return null;
+        T clone = ScriptableObject.Instantiate(original);
+        return clone;
     }
-
-
-    public static UnitStateSO CreateEnemyStateSo(UnitStateType stateType)
-    {
-        if (stateType == UnitStateType.Idle)
-        {
-            return ScriptableObject.CreateInstance<EnemytState_IdleSO>();
-        }
-        else if (stateType == UnitStateType.Attack)
-        {
-            return ScriptableObject.CreateInstance<EnemyState_AttackSO>();
-        }
-
-        Debug.LogError($"Unsupported UnitStateType: {stateType}");
-        return null;
-    }
+    
 }

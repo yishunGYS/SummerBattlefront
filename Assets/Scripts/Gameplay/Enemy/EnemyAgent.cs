@@ -37,6 +37,11 @@ namespace Gameplay.Enemy
                 print("没有获取到该数据");
             }
         }
-        
+
+
+        private void Update()
+        {
+            fsm.OnUpdate();
+        }
     }
 }

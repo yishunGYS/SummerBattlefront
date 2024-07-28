@@ -14,13 +14,13 @@ namespace Gameplay.Player
         private StateMachine fsm;
 
         //instantiate时
-        public void OnInit()
+        public virtual void OnInit()
         {
 
             InitData();
             fsm = GetComponent<StateMachine>();
             fsm.OnInit();
-            soliderLogic = new SoliderLogicBase(this);
+            
         }
 
         private void Update()

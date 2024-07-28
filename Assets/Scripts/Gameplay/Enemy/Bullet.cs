@@ -71,12 +71,12 @@ namespace Gameplay.Enemy
 
 		void Damage (Transform enemy)
 		{
-			Player.Enemy e = enemy.GetComponent<Player.Enemy>();
-
-			if (e != null)
-			{
-				e.TakeDamage(damage);
-			}
+			// Player.Enemy e = enemy.GetComponent<Player.Enemy>();
+			//
+			// if (e != null)
+			// {
+			// 	e.TakeDamage(damage);
+			// }
 		}
 
 		void OnDrawGizmosSelected ()

@@ -5,7 +5,7 @@ using Utilities;
 
 namespace Managers
 {
-	public class GameManager : MonoBehaviour {
+	public class GameManager : Singleton<GameManager> {
 
 		public static bool GameIsOver;
 
