@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f34d706aedb6254fbfe4aca0b68b80d, type: 3}
-  m_Name: SoliderState_AttackSO
+  m_Name: SoliderState_MeleeAttackSO
   m_EditorClassIdentifier: 
   stateType: 2

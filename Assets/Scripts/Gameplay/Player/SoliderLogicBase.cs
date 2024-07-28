@@ -10,26 +10,30 @@ namespace Gameplay.Player
         public float dis;
         public EnemyAgent target;
 
-        public AttackEnemyTarget(float dis,EnemyAgent target)
+        public AttackEnemyTarget(float dis, EnemyAgent target)
         {
             this.dis = dis;
             this.target = target;
         }
     }
+
     public class SoliderLogicBase
     {
-        private SoliderAgent soliderAgent;
-        private SoliderModelBase soliderModel;
+        protected SoliderAgent soliderAgent;
+        protected SoliderModelBase soliderModel;
 
         private const float frontCheckDistance = 2f;
         public List<EnemyAgent> attackTargets = new List<EnemyAgent>();
-
+        private HashSet<EnemyAgent> attackers = new HashSet<EnemyAgent>(); //在对自己攻击的敌方
 
         //移动路径
         private Transform moveTarget;
         private int waypointIndex = 0;
         private Transform[] pathPoints;
 
+        //攻击
+        private float attackTimer;
+        public bool isAttackReady = true;
         public SoliderLogicBase(SoliderAgent agent)
         {
             soliderAgent = agent;
@@ -49,7 +53,9 @@ namespace Gameplay.Player
             }
         }
 
-        //移动
+
+        #region 移动
+
         public void SetPath(int pathIndex)
         {
             if (pathIndex < 0 || pathIndex >= Waypoints.paths.Count)
@@ -78,7 +84,6 @@ namespace Gameplay.Player
         }
 
 
-
         private void GetNextWaypoint()
         {
             if (waypointIndex >= pathPoints.Length - 1)
@@ -98,7 +103,10 @@ namespace Gameplay.Player
             // Destroy(gameObject);
         }
 
-        //判断障碍
+        #endregion
+
+        #region 判断障碍
+
         public bool CheckObstacle()
         {
             if (pathPoints == null || pathPoints.Length == 0) return false;
@@ -141,20 +149,30 @@ namespace Gameplay.Player
             return false;
         }
 
-
-        public void Stop()
-        {
-            
-        }
-
-        public bool CheckCanBeBlock()
+        #endregion
+        
+        //有些士兵会穿透
+        public virtual bool CheckCanBeBlock()
         {
             return true;
         }
 
+        
         #region 攻击判定
 
         public bool CheckCanAttack()
+        {
+            if (HasAttackTarget() && isAttackReady)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        
+        //有攻击目标
+        public bool HasAttackTarget()
         {
             // 绘制攻击判定范围的可视化效果
             DrawAttackRange();
@@ -184,7 +202,7 @@ namespace Gameplay.Player
             Debug.Log($"附近有{enemyCount}个敌人");
             return true;
         }
-
+        
         private void DrawAttackRange()
         {
             Vector3 start = soliderAgent.transform.position;
@@ -195,8 +213,10 @@ namespace Gameplay.Player
             float angleStep = 360f / segments;
             for (int i = 0; i < segments; i++)
             {
-                Vector3 offset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * angle), 0, Mathf.Cos(Mathf.Deg2Rad * angle)) * soliderModel.attackRange;
-                Vector3 nextOffset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * (angle + angleStep)), 0, Mathf.Cos(Mathf.Deg2Rad * (angle + angleStep))) * soliderModel.attackRange;
+                Vector3 offset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * angle), 0, Mathf.Cos(Mathf.Deg2Rad * angle)) *
+                                 soliderModel.attackRange;
+                Vector3 nextOffset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * (angle + angleStep)), 0,
+                    Mathf.Cos(Mathf.Deg2Rad * (angle + angleStep))) * soliderModel.attackRange;
 
                 Debug.DrawLine(start + offset, start + nextOffset, Color.blue);
 
@@ -210,66 +230,85 @@ namespace Gameplay.Player
         }
 
 
-        public void GetTarget()
+        public virtual void GetTarget()
         {
             //每次获取新的目标前，先把已有的目标清除
             ClearTarget();
+            //子类override
+        }
+
+
+        //单攻获取目标
+        protected void SingleAttackSoliderGetTarget()
+        {
+            var minDis = 10000f;
+            EnemyAgent singleTarget = null;
+
+            Collider[] hitColliders =
+                Physics.OverlapSphere(soliderAgent.transform.position, soliderModel.attackRange,
+                    LayerMask.GetMask("Enemy"));
+            foreach (var collider in hitColliders)
+            {
+                var tempDis = Vector3.Distance(soliderAgent.transform.position, collider.transform.position);
+                var temp = collider.GetComponent<EnemyAgent>();
+                if (!CheckMatchAttackType(temp))
+                {
+                    continue;
+                }
+
+                if (tempDis <= minDis)
+                {
+                    minDis = tempDis;
+                    singleTarget = temp;
+                }
+            }
+
+            attackTargets.Add(singleTarget);
+            
+            
+        }
+
+        //群攻获取目标
+        protected void MultiAttackSoliderGetTarget()
+        {
+            List<EnemyAgent> tempMultiTarget = new List<EnemyAgent>();
+            List<AttackEnemyTarget> tempAttackTargets = new List<AttackEnemyTarget>();
 
             Collider[] hitColliders =
                 Physics.OverlapSphere(soliderAgent.transform.position, soliderModel.attackRange,
                     LayerMask.GetMask("Enemy"));
 
-            //若是单攻
-            var minDis = 10000f;
-            EnemyAgent singleTarget = null;
-            List<EnemyAgent> tempMultiTarget = new List<EnemyAgent>();
-            List<AttackEnemyTarget> tempAttackTargets = new List<AttackEnemyTarget>();
-            if (soliderModel.attackNum == 1)
+            foreach (var collider in hitColliders)
             {
-                foreach (var collider in hitColliders)
+                var tempDis = Vector3.Distance(soliderAgent.transform.position, collider.transform.position);
+                var temp = collider.GetComponent<EnemyAgent>();
+                if (!CheckMatchAttackType(temp))
                 {
-                    var tempDis = Vector3.Distance(soliderAgent.transform.position, collider.transform.position);
-                    var temp = collider.GetComponent<EnemyAgent>();
-                    if (!CheckMatchAttackType(temp))
-                    {
-                        continue;
-                    }
-                    if (tempDis <= minDis)
-                    {
-                        minDis = tempDis;
-                        singleTarget = temp;
-                    }
-  
+                    continue;
                 }
-                attackTargets.Add(singleTarget);
+
+                var tempTarget = new AttackEnemyTarget(tempDis, temp);
+                tempAttackTargets.Add(tempTarget);
             }
 
-            //若是多个目标
-            else if(soliderModel.attackNum > 1)
+            SortMultiTargetsByDistance(tempAttackTargets);
+            for (int i = 0; i < soliderModel.attackNum; i++)
             {
-                foreach (var collider in hitColliders)
-                {
-                    var tempDis = Vector3.Distance(soliderAgent.transform.position, collider.transform.position);
-                    var temp = collider.GetComponent<EnemyAgent>();
-                    if (!CheckMatchAttackType(temp))
-                    {
-                        continue;
-                    }
-                    var tempTarget = new AttackEnemyTarget(tempDis,temp);
-                    tempAttackTargets.Add(tempTarget);
-                }
-                SortMultiTargetsByDistance(tempAttackTargets);
-                for (int i = 0; i < soliderModel.attackNum; i++)
-                {
-                    attackTargets.Add(tempMultiTarget[i]);
-                }
+                attackTargets.Add(tempMultiTarget[i]);
             }
         }
+
+        //辅助/治疗获取目标
+        protected void AssistSoliderGetTarget()
+        {
+            
+        }
+        
 
         private bool CheckMatchAttackType(EnemyAgent target)
         {
             //todo 若attackEnemyType是多种，那么----待扩展
-            if (target.enemyModel.enemyType != soliderModel.attackEnemyType )
+            if (target.enemyModel.enemyType != soliderModel.attackEnemyType)
             {
                 return false;
             }
@@ -284,10 +323,60 @@ namespace Gameplay.Player
 
         #endregion
 
-        public void OnTakeDamage(float damage, float magicDamage)
+
+        #region 攻击
+
+        public virtual void Attack()
         {
+            CalculateCd();
+        }
+
+        private void CalculateCd()
+        {
+            attackTimer += Time.deltaTime;
+
+            if (attackTimer >= soliderModel.attackInterval)
+            {
+                isAttackReady = true;
+                attackTimer = 0f; // 重置计时器
+            }
+            else
+            {
+                isAttackReady = false;
+            }
+        }
+
+        //最基础的近战
+        protected void MeleeAttack()
+        {
+            if (isAttackReady)
+            {
+                foreach (var target in soliderAgent.soliderLogic.attackTargets)
+                {
+                    target.enemyLogic.OnTakeDamage(soliderAgent.soliderModel.attackPoint,
+                        soliderAgent.soliderModel.magicAttackPoint, soliderAgent);
+                }
+            }
+        }
+
+
+        //最基础的远战
+        protected void RangeAttack()
+        {
+            
+        }
+
+        #endregion
+
+        
+        
+        //受击
+        public void OnTakeDamage(float damage, float magicDamage,EnemyAgent enemyAgent)
+        {
+            AddAttacker(enemyAgent);
             // 减少士兵的生命值
-            soliderModel.maxHp = soliderModel.maxHp - (damage * (1 - soliderModel.defendReducePercent)) - (magicDamage * (1 - soliderModel.magicDefendReducePercent));
+            soliderModel.maxHp = soliderModel.maxHp - (damage * (1 - soliderModel.defendReducePercent)) -
+                                 (magicDamage * (1 - soliderModel.magicDefendReducePercent));
 
             Debug.Log("士兵目前的血量是：" + soliderModel.maxHp);
             Debug.Log("士兵受到的物理伤害为：" + (damage * (1 - soliderModel.defendReducePercent)));
@@ -300,7 +389,14 @@ namespace Gameplay.Player
                 Die();
             }
         }
-
+        private void AddAttacker(EnemyAgent attacker)
+        {
+            if (!attackers.Contains(attacker))
+            {
+                attackers.Add(attacker);
+                Debug.Log($"{attacker.enemyModel.enemyName} started attacking Me!");
+            }
+        }
         private IEnumerator FlashRed()
         {
             Renderer renderer = soliderAgent.GetComponent<Renderer>();
@@ -318,7 +414,15 @@ namespace Gameplay.Player
             renderer.material.color = originalColor;
         }
 
-        private void Die()
+        
+        //召唤
+        public virtual void Summon()
+        {
+            
+        }
+
+        //死亡
+        public virtual void Die()
         {
             Debug.Log($"{soliderModel.soliderName} has died!");
 
@@ -327,6 +431,5 @@ namespace Gameplay.Player
 
             Object.Destroy(soliderAgent.gameObject);
         }
-
     }
 }

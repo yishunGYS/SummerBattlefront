@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3367976}
   - component: {fileID: 6569566}
   - component: {fileID: 2371668}
-  - component: {fileID: 114000010605076798}
   m_Layer: 0
   m_Name: Node
   m_TagString: Untagged
@@ -106,25 +105,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &114000010605076798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217be8ffc06a7cc47ae5ab39c759b026, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverColor: {r: 0.6397059, g: 0.6397059, b: 0.6397059, a: 1}
-  notEnoughMoneyColor: {r: 0.9044118, g: 0.17955235, b: 0.17955235, a: 1}
-  positionOffset: {x: 0, y: 0.5, z: 0}
-  turret: {fileID: 0}
-  turretBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-  isUpgraded: 0

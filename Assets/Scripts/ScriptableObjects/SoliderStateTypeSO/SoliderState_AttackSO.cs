@@ -8,7 +8,7 @@ namespace ScriptableObjects.SoliderStateTypeSO
     [CreateAssetMenu(fileName = "SoliderState_AttackSO", menuName = "ScriptableObjects/SoliderStateTypeSO/SoliderState_AttackSO")]
     public class SoliderState_AttackSO : SoliderStateSO
     {
-        private float attackTimer;
+        
 
         public SoliderState_AttackSO()
         {
@@ -18,36 +18,19 @@ namespace ScriptableObjects.SoliderStateTypeSO
         public override void OnEnter()
         {
             Debug.Log("进入攻击状态");
-            attackTimer = 0f; // 重置计时器
+            //attackTimer = 0f; // 重置计时器
             soliderAgent.soliderLogic.GetTarget();
-            foreach (var target in soliderAgent.soliderLogic.attackTargets)
-            {
-                //Debug.Log(target.gameObject.name);
-            }
         }
 
         public override void OnUpdate()
         {
-            // 有敌人时攻击
-            if (soliderAgent.soliderLogic.attackTargets != null && soliderAgent.soliderLogic.attackTargets.Count > 0)
+            // attack to idle
+            if (!soliderAgent.soliderLogic.HasAttackTarget())
             {
-                attackTimer += Time.deltaTime;
-
-                if (attackTimer >= soliderAgent.soliderModel.attackInterval)
-                {
-                    // 创建一个副本来进行枚举
-                    var targetsCopy = new List<EnemyAgent>(soliderAgent.soliderLogic.attackTargets);
-                    foreach (var target in targetsCopy)
-                    {
-                        target.enemyLogic.OnTakeDamage(soliderAgent.soliderModel.attackPoint, soliderAgent.soliderModel.magicAttackPoint, soliderAgent);
-                    }
-                    attackTimer = 0f; // 重置计时器
-                }
+                fsm.ChangeState(UnitStateType.Idle);
             }
-            else
-            {
-                fsm.ChangeState(UnitStateType.Move);
-            }
+            
+            soliderAgent.soliderLogic.Attack();
         }
 
 

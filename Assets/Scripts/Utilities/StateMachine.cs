@@ -46,13 +46,7 @@ namespace Utilities
                 }
                 item.OnLogin(this, agent);
             }
-
-            // 确保一定有 idle 状态
-            if (!runtimeStateDict.ContainsKey(UnitStateType.Idle))
-            {
-                runtimeStateDict.Add(UnitStateType.Idle, ScriptableObject.CreateInstance<SoliderState_IdleSO>());
-            }
-
+            
             curState = runtimeStateDict[UnitStateType.Idle];
             if (curState == null)
             {

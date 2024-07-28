@@ -19,23 +19,19 @@ namespace ScriptableObjects.SoliderStateTypeSO
 
         public override void OnUpdate()
         {
-            //移动逻辑
-            //Debug.Log($"{soliderAgent.soliderModel.soliderName}SoliderStateMove OnUpdate");
-            if (soliderAgent.soliderModel.soliderType == UnitType.Ground)
+            //逻辑切换
+            if (soliderAgent.soliderLogic.CheckCanAttack())
             {
-                if (!soliderAgent.soliderLogic.CheckObstacle())
-                {
-                    soliderAgent.soliderLogic.Move();
-                }
-                else
-                {
-                    fsm.ChangeState(UnitStateType.Attack);
-                }
+                fsm.ChangeState(UnitStateType.Attack);
             }
-            else if (soliderAgent.soliderModel.soliderType == UnitType.Air)
-            {
 
+            //辅助角色？？？？
+            if (soliderAgent.soliderLogic.CheckObstacle())
+            {
+                fsm.ChangeState(UnitStateType.Idle);
             }
+            
+            soliderAgent.soliderLogic.Move();
         }
 
         public override void OnFixedUpdate()
