@@ -1,7 +1,9 @@
+using UnityEngine;
 using Utilities;
 
 namespace ScriptableObjects.SoliderStateTypeSO
 {
+    [CreateAssetMenu(fileName = "SoliderState_RangeIdleSO", menuName = "ScriptableObjects/SoliderStateTypeSO/SoliderState_RangeIdleSO")]
     public class SoliderState_RangeIdleSO: SoliderState_IdleBaseSO
     {
         public override void OnUpdate()

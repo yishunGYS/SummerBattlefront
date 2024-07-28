@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4221039637250498506}
   - component: {fileID: 1133122149253624418}
   - component: {fileID: 4811349893932386337}
-  - component: {fileID: 7443307897292832561}
   - component: {fileID: 5447982034920911513}
+  - component: {fileID: 1954448989288956259}
   m_Layer: 7
   m_Name: SmallGuaiGuai
   m_TagString: Obstacle
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 62e1496d4b277c245874606969358fbd, type: 2}
+  - {fileID: 2100000, guid: c95a6ae7cd067004c99fb88dd34ea16a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,19 +107,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7443307897292832561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6855114071636747005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28cbfabb3725fb541b8b9fe962d98698, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyId: 1001
 --- !u!114 &5447982034920911513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,3 +125,16 @@ MonoBehaviour:
       Value: {fileID: 11400000, guid: bafe3a3c8f6486243be6a11b858a084e, type: 2}
     - Key: 2
       Value: {fileID: 11400000, guid: 7132f25e7a3967743894cb6c70bbc897, type: 2}
+--- !u!114 &1954448989288956259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855114071636747005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdec71822649d4f41814e92a45931cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyId: 1001

@@ -57,7 +57,7 @@ namespace Managers
 		{
 			foreach (var item in EnemyContainer.GetComponentsInChildren<EnemyAgent>())
 			{
-				item.OnStart();
+				item.OnInit();
 			}
 		}
 	}

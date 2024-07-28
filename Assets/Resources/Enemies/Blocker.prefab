@@ -12,15 +12,15 @@ GameObject:
   - component: {fileID: 4221039637250498506}
   - component: {fileID: 1133122149253624418}
   - component: {fileID: 4811349893932386337}
-  - component: {fileID: 7443307897292832561}
   - component: {fileID: 5447982034920911513}
+  - component: {fileID: 626401645341450155}
   m_Layer: 7
   m_Name: Blocker
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8744579409802178309
 Transform:
   m_ObjectHideFlags: 0
@@ -107,19 +107,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7443307897292832561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6855114071636747005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28cbfabb3725fb541b8b9fe962d98698, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyId: 1002
 --- !u!114 &5447982034920911513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,3 +123,16 @@ MonoBehaviour:
     list:
     - Key: 0
       Value: {fileID: 11400000, guid: bafe3a3c8f6486243be6a11b858a084e, type: 2}
+--- !u!114 &626401645341450155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855114071636747005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87a4cf4cd8a3d14cb783debe3a8fb62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyId: 1002

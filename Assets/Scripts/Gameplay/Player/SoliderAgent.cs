@@ -16,11 +16,9 @@ namespace Gameplay.Player
         //instantiate时
         public virtual void OnInit()
         {
-
             InitData();
             fsm = GetComponent<StateMachine>();
             fsm.OnInit();
-            
         }
 
         private void Update()
@@ -41,5 +39,7 @@ namespace Gameplay.Player
                 print("没有获取到该数据");
             }
         }
+        
+        
     }
 }

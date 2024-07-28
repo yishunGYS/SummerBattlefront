@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Gameplay.Player;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Gameplay.Enemy
@@ -68,7 +69,7 @@ namespace Gameplay.Enemy
             DrawAttackRange();
 
             Collider[] hitColliders =
-                Physics.OverlapSphere(enemyAgent.transform.position, frontCheckDistance,
+                Physics.OverlapSphere(enemyAgent.transform.position, enemyModel.attackRange,
                     LayerMask.GetMask("Solider"));
 
             int soliderCount = 0;
@@ -102,13 +103,12 @@ namespace Gameplay.Enemy
 
             for (int i = 0; i < segments; i++)
             {
-                float rad = Mathf.Deg2Rad * angle;
-                float nextRad = Mathf.Deg2Rad * (angle + angleStep);
+                Vector3 offset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * angle), 0, Mathf.Cos(Mathf.Deg2Rad * angle)) *
+                                 enemyModel.attackRange;
+                Vector3 nextOffset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * (angle + angleStep)), 0,
+                    Mathf.Cos(Mathf.Deg2Rad * (angle + angleStep))) * enemyModel.attackRange;
 
-                Vector3 point1 = new Vector3(Mathf.Sin(rad), 0, Mathf.Cos(rad)) * frontCheckDistance + start;
-                Vector3 point2 = new Vector3(Mathf.Sin(nextRad), 0, Mathf.Cos(nextRad)) * frontCheckDistance + start;
-
-                Debug.DrawLine(point1, point2, Color.red);
+                Debug.DrawLine(start + offset, start + nextOffset, Color.red);
 
                 angle += angleStep;
             }
@@ -317,5 +317,8 @@ namespace Gameplay.Enemy
             enemyAgent.StopAllCoroutines();
             Object.Destroy(enemyAgent.gameObject);
         }
+        
+        
+        
     }
 }

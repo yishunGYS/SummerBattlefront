@@ -240,10 +240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec756b43a7b10f04a95d2ba7095065e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardTurret: {prefab: {fileID: 174700, guid: 64f2ae8c83ee6bb49a47a2d3f43d307e, type: 3}, cost: 100, upgradedPrefab: {fileID: 174700, guid: af7198115d2e53d48a7310dc6579fdfe, type: 3}, upgradeCost: 60}
-  missileLauncher: {prefab: {fileID: 1000010346017410, guid: 28886474c13dfff4cb183350df126081, type: 3}, cost: 250, upgradedPrefab: {fileID: 1000010346017410, guid: 45e67aee8990d9642b349d207af550ee, type: 3}, upgradeCost: 150}
-  laserBeamer: {prefab: {fileID: 1000013152263656, guid: c51804966ab0f8544b70b0e9dcae1623, type: 3}, cost: 350, upgradedPrefab: {fileID: 1000013152263656, guid: d1a44c91881cde9468c03bf6f05718f7, type: 3}, upgradeCost: 250}
-  buildManager: {fileID: 0}
 --- !u!1 &10531147
 GameObject:
   m_ObjectHideFlags: 0
@@ -15258,11 +15254,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a491a4301369fce479ab693860b0641d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ui: {fileID: 1925605835}
-  upgradeCost: {fileID: 1316364228}
-  upgradeButton: {fileID: 1850547940}
-  sellAmount: {fileID: 1108497545}
-  target: {fileID: 0}
 --- !u!1001 &1602183966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17725,7 +17716,7 @@ MonoBehaviour:
         m_MethodName: ChangeSpawnCharacter
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4226647057436595221, guid: 6ea1a8a87a486ce4eb6073456b3a1415, type: 3}
+          m_ObjectArgument: {fileID: 2302560973402218857, guid: f85b5ac4e5c37a547b3783b5dfcf9e68, type: 3}
           m_ObjectArgumentAssemblyTypeName: Gameplay.Player.SoliderAgent, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -21278,10 +21269,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 47755917}
     m_Modifications:
-    - target: {fileID: 1133122149253624418, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c95a6ae7cd067004c99fb88dd34ea16a, type: 2}
     - target: {fileID: 6855114071636747005, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
       propertyPath: m_Name
       value: SmallGuaiGuai

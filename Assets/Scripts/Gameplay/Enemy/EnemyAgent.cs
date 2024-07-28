@@ -15,12 +15,12 @@ namespace Gameplay.Enemy
         private StateMachine fsm;
         
         //关卡开始一开始/第x阶段更新敌方防线的时候调用
-        public void OnStart()
+        public virtual void OnInit()
         {
             InitData();
             fsm = GetComponent<StateMachine>();
             fsm.OnInit();
-            enemyLogic = new EnemyLogicBase(this);
+            //enemyLogic = new EnemyLogicBase(this);
         }
         
         
@@ -43,5 +43,6 @@ namespace Gameplay.Enemy
         {
             fsm.OnUpdate();
         }
+        
     }
 }

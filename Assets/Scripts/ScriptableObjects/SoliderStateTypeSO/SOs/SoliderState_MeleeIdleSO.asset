@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f34d706aedb6254fbfe4aca0b68b80d, type: 3}
-  m_Name: SoliderState_MeleeAttackSO
+  m_Script: {fileID: 11500000, guid: 70ea398d49676384aa6c5d95942d7c7e, type: 3}
+  m_Name: SoliderState_MeleeIdleSO
   m_EditorClassIdentifier: 
-  stateType: 2
+  stateType: 0
