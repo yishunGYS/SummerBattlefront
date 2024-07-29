@@ -30,7 +30,7 @@ namespace Gameplay.Player
         {
             if (DataManager.Instance.GetSoliderBaseModels().TryGetValue(soliderId, out SoliderModelBase model))
             {
-                soliderModel = model;
+                soliderModel = model.DeepCopy();
                 print(soliderModel.soliderName);
                 print("获取到该数据");
             }

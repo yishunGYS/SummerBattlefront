@@ -28,7 +28,7 @@ namespace Gameplay.Enemy
         {
             if (DataManager.Instance.GetEnemyBaseModels().TryGetValue(enemyId, out EnemyModelBase model))
             {
-                enemyModel = model;
+                enemyModel = model.DeepCopy();
                 print(enemyModel.enemyName);
                 print("获取到该数据");
             }

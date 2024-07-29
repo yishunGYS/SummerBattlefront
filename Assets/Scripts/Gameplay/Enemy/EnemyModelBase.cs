@@ -26,5 +26,30 @@ namespace Gameplay.Enemy
         
         public string scenePrefabPath;
         public string uiPrefabPath;
+        public EnemyModelBase DeepCopy()
+        {
+            return new EnemyModelBase
+            {
+                enemyId = this.enemyId,
+                enemyName = this.enemyName,
+                enemyDes = this.enemyDes,
+                enemyType = this.enemyType,
+                maxHp = this.maxHp,
+                spawnNum = this.spawnNum,
+                attackPoint = this.attackPoint,
+                magicAttackPoint = this.magicAttackPoint,
+                defendReducePercent = this.defendReducePercent,
+                magicDefendReducePercent = this.magicDefendReducePercent,
+                attackInterval = this.attackInterval,
+                attackRange = this.attackRange,
+                attackNum = this.attackNum,
+                attackAoeRange = this.attackAoeRange,
+                attackTargetType = this.attackTargetType,
+                attackSoliderType = this.attackSoliderType,
+                blockNum = this.blockNum,
+                scenePrefabPath = this.scenePrefabPath,
+                uiPrefabPath = this.uiPrefabPath
+            };
+        }
     }
 }

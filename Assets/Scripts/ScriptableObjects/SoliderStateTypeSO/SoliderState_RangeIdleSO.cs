@@ -9,11 +9,12 @@ namespace ScriptableObjects.SoliderStateTypeSO
         public override void OnUpdate()
         {
             //idle to move
-            if ((soliderAgent.soliderLogic.CheckObstacle()==false && soliderAgent.soliderLogic.HasAttackTarget()==false)||
-                 (soliderAgent.soliderLogic.CheckObstacle()==false && soliderAgent.soliderLogic.isAttackReady == false )) //在攻击cd也会走
+            if (soliderAgent.soliderLogic.CheckObstacle()==false && soliderAgent.soliderLogic.HasAttackTarget()==false) 
             {
                 fsm.ChangeState(UnitStateType.Move);
             }
+
+            
             //idle to attack
             if (soliderAgent.soliderLogic.CheckCanAttack())
             {

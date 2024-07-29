@@ -14,6 +14,7 @@ namespace ScriptableObjects.SoliderStateTypeSO
 
         public override void OnUpdate()
         {
+            Debug.Log("SoliderStateIdle OnUpdate");
             //idle to move
             if (soliderAgent.soliderLogic.CheckObstacle()==false && soliderAgent.soliderLogic.HasAttackTarget()==false)
             {

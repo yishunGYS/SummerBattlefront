@@ -1,8 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Gameplay.Player;
+using ScriptableObjects.SoliderStateTypeSO;
 using Unity.VisualScripting;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Gameplay.Enemy
 {
@@ -30,6 +34,9 @@ namespace Gameplay.Enemy
         //攻击
         private float attackTimer = 1000f;
         public bool isAttackReady = true;
+
+        //阻挡
+        public HashSet<SoliderAgent> blockSoilders = new HashSet<SoliderAgent>();
 
         public EnemyLogicBase(EnemyAgent agent)
         {
@@ -79,18 +86,15 @@ namespace Gameplay.Enemy
                 if (hitCollider.gameObject != enemyAgent.gameObject)
                 {
                     soliderCount++;
-                    Debug.Log("Solider detected: " + hitCollider.gameObject.name);
                     // 在这里可以实现攻击逻辑
                 }
             }
 
             if (soliderCount <= 0)
             {
-                Debug.Log("附近没士兵");
                 return false;
             }
 
-            Debug.Log($"附近有{soliderCount}个士兵");
             return true;
         }
 
@@ -125,7 +129,6 @@ namespace Gameplay.Enemy
             //每次获取新的目标前，先把已有的目标清除
             ClearTarget();
             //子类override
-            
         }
 
         //若是单攻
@@ -162,7 +165,7 @@ namespace Gameplay.Enemy
         {
             List<SoliderAgent> tempMultiTarget = new List<SoliderAgent>();
             List<AttackSoliderTarget> tempAttackTargets = new List<AttackSoliderTarget>();
-            
+
             Collider[] hitColliders =
                 Physics.OverlapSphere(enemyAgent.transform.position, enemyModel.attackRange,
                     LayerMask.GetMask("Solider"));
@@ -189,10 +192,9 @@ namespace Gameplay.Enemy
         //辅助/治疗获取目标
         protected void AssistEnemyGetTarget()
         {
-            
         }
 
-        
+
         private bool CheckMatchAttackType(SoliderAgent target)
         {
             //若attackEnemyType是多种，那么----待扩展
@@ -215,22 +217,13 @@ namespace Gameplay.Enemy
 
         public virtual void Attack()
         {
-            CalculateCd();
         }
 
-        private void CalculateCd()
+        protected async void CalculateCd()
         {
-            attackTimer += Time.deltaTime;
-
-            if (attackTimer >= enemyModel.attackInterval)
-            {
-                isAttackReady = true;
-                attackTimer = 0f; // 重置计时器
-            }
-            else
-            {
-                isAttackReady = false;
-            }
+            isAttackReady = false;
+            await Task.Delay(TimeSpan.FromSeconds(enemyModel.attackInterval));
+            isAttackReady = true;
         }
 
         //最基础的近战
@@ -238,11 +231,14 @@ namespace Gameplay.Enemy
         {
             if (isAttackReady)
             {
-                foreach (var target in enemyAgent.enemyLogic.attackTargets)
+                for (int i = enemyAgent.enemyLogic.attackTargets.Count-1; i >= 0; i--)
                 {
-                    target.soliderLogic.OnTakeDamage(enemyAgent.enemyModel.attackPoint,
+                    enemyAgent.enemyLogic.attackTargets[i].soliderLogic.OnTakeDamage(enemyAgent.enemyModel.attackPoint,
                         enemyAgent.enemyModel.magicAttackPoint, enemyAgent);
+                    Debug.Log("敌人攻击");
                 }
+
+                CalculateCd();
             }
         }
 
@@ -250,12 +246,11 @@ namespace Gameplay.Enemy
         //最基础的远战
         protected void RangeAttack()
         {
-            
         }
 
         #endregion
-        
-        
+
+
         public void OnTakeDamage(float damage, float magicDamage, SoliderAgent soliderAgent)
         {
             AddAttacker(soliderAgent);
@@ -273,11 +268,6 @@ namespace Gameplay.Enemy
 
             if (enemyAgent.enemyModel.maxHp <= 0)
             {
-                foreach (var agent in attackers)
-                {
-                    agent.soliderLogic.RemoveTarget(enemyAgent);
-                }
-
                 Die();
             }
         }
@@ -312,13 +302,20 @@ namespace Gameplay.Enemy
         {
             Debug.Log($"{enemyModel.enemyName} has died!");
 
-            // 播放死亡动画或特效
-            // 可以在这里添加更多死亡处理逻辑，例如从场景中移除敌人，更新分数等
+            //通知在打他的士兵，他死了
+            foreach (var agent in attackers)
+            {
+                agent.soliderLogic.RemoveTarget(enemyAgent);
+            }
+
+            //通知被他阻挡的士兵，他死了
+            foreach (var agent in blockSoilders)
+            {
+                agent.soliderLogic.blocker = null;
+            }
+
             enemyAgent.StopAllCoroutines();
             Object.Destroy(enemyAgent.gameObject);
         }
-        
-        
-        
     }
 }

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39b42d623ab843ef801c19ae9c5e016a, type: 3}
-  m_Name: SoliderState_MoveSO
+  m_Script: {fileID: 11500000, guid: 9194c3d14f1a469fbb84d3aca2410af0, type: 3}
+  m_Name: SoliderState_RangeAttackSO
   m_EditorClassIdentifier: 
-  stateType: 1
+  stateType: 2

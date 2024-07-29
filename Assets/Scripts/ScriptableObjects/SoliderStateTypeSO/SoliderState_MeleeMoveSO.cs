@@ -4,11 +4,11 @@ using Utilities;
 
 namespace ScriptableObjects.SoliderStateTypeSO
 {
-    [CreateAssetMenu(fileName = "SoliderState_MoveSO", menuName = "ScriptableObjects/SoliderStateTypeSO/SoliderState_MoveSO")]
-    public class SoliderState_MoveSO: SoliderStateSO
+    [CreateAssetMenu(fileName = "SoliderState_MeleeMoveSO", menuName = "ScriptableObjects/SoliderStateTypeSO/SoliderState_MeleeMoveSO")]
+    public class SoliderState_MeleeMoveSO: SoliderStateSO
     {
 
-        public SoliderState_MoveSO()
+        public SoliderState_MeleeMoveSO()
         {
             stateType = UnitStateType.Move;
         }

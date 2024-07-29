@@ -1,4 +1,7 @@
+using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Gameplay.Player.Solider
 {
@@ -16,18 +19,38 @@ namespace Gameplay.Player.Solider
             MultiAttackSoliderGetTarget();
         }
 
+        // public override void Attack()
+        // {
+        //     base.Attack();
+        //     if (isAttackReady)
+        //     {
+        //         //发射投掷物
+        //         foreach (var target in soliderAgent.soliderLogic.attackTargets)
+        //         {
+        //             var go =  GameObject.Instantiate(rangeGodlingAgent.projectile, rangeGodlingAgent.transform.position, Quaternion.identity);
+        //             go.OnInit(target.transform.position,rangeGodlingAgent);
+        //         }
+        //     }
+        //
+        //     CalculateCd();
+        // }
+
         public override void Attack()
         {
             base.Attack();
             if (isAttackReady)
             {
                 //发射投掷物
-                foreach (var target in soliderAgent.soliderLogic.attackTargets)
+                for (int i = soliderAgent.soliderLogic.attackTargets.Count-1; i >= 0; i--)
                 {
+                    Debug.Log("攻击！！！");
                     var go =  GameObject.Instantiate(rangeGodlingAgent.projectile, rangeGodlingAgent.transform.position, Quaternion.identity);
-                    go.OnInit(target.transform.position,rangeGodlingAgent);
+                    go.OnInit(soliderAgent.soliderLogic.attackTargets[i].transform.position,rangeGodlingAgent);
                 }
+                
+                CalculateCd();
             }
+            
         }
     }
 }

@@ -19,7 +19,7 @@ namespace ScriptableObjects.EnemyStateTypeSO
 
         public override void OnUpdate()
         {
-            if (!enemyAgent.enemyLogic.HasAttackTarget())
+            if (!enemyAgent.enemyLogic.CheckCanAttack())
             {
                 fsm.ChangeState(UnitStateType.Idle);
             }

@@ -5,12 +5,12 @@ using Utilities;
 
 namespace ScriptableObjects.SoliderStateTypeSO
 {
-    [CreateAssetMenu(fileName = "SoliderState_AttackSO", menuName = "ScriptableObjects/SoliderStateTypeSO/SoliderState_AttackSO")]
-    public class SoliderState_AttackSO : SoliderStateSO
+    [CreateAssetMenu(fileName = "SoliderState_MeleeAttackSO", menuName = "ScriptableObjects/SoliderStateTypeSO/SoliderState_MeleeAttackSO")]
+    public class SoliderState_MeleeAttackSO : SoliderStateSO
     {
         
 
-        public SoliderState_AttackSO()
+        public SoliderState_MeleeAttackSO()
         {
             stateType = UnitStateType.Attack;
         }
@@ -18,18 +18,18 @@ namespace ScriptableObjects.SoliderStateTypeSO
         public override void OnEnter()
         {
             Debug.Log("进入攻击状态");
-            //attackTimer = 0f; // 重置计时器
             soliderAgent.soliderLogic.GetTarget();
         }
 
         public override void OnUpdate()
         {
+            
             // attack to idle
-            if (!soliderAgent.soliderLogic.HasAttackTarget())
+            if (!soliderAgent.soliderLogic.CheckCanAttack())
             {
                 fsm.ChangeState(UnitStateType.Idle);
             }
-            //正在攻击的敌人死了，也切回idle（放置远程兵在范围内是有目标的，但依然罚站
+            Debug.Log("攻击状态 update");
             
             soliderAgent.soliderLogic.Attack();
         }

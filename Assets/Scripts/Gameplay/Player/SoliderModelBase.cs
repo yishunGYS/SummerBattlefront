@@ -42,5 +42,33 @@ namespace Gameplay.Player
         public float moveSpeed;
         public string scenePrefabPath;
         public string uiPrefabPath;
+
+        public SoliderModelBase DeepCopy()
+        {
+            return new SoliderModelBase
+            {
+                soliderId = this.soliderId,
+                soliderName = this.soliderName,
+                soliderDes = this.soliderDes,
+                soliderType = this.soliderType,
+                cost = this.cost,
+                maxHp = this.maxHp,
+                spawnNum = this.spawnNum,
+                attackPoint = this.attackPoint,
+                magicAttackPoint = this.magicAttackPoint,
+                defendReducePercent = this.defendReducePercent,
+                magicDefendReducePercent = this.magicDefendReducePercent,
+                attackInterval = this.attackInterval,
+                attackRange = this.attackRange,
+                attackNum = this.attackNum,
+                attackAoeRange = this.attackAoeRange,
+                attackTargetType = this.attackTargetType,
+                attackEnemyType = this.attackEnemyType,
+                moveSpeed = this.moveSpeed,
+                scenePrefabPath = this.scenePrefabPath,
+                uiPrefabPath = this.uiPrefabPath
+            };
+        }
     }
+    
 }

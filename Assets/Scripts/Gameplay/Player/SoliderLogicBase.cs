@@ -1,7 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Gameplay.Enemy;
 using UnityEngine;
+using UnityEngine.Events;
+using Object = UnityEngine.Object;
 
 namespace Gameplay.Player
 {
@@ -34,6 +38,9 @@ namespace Gameplay.Player
         //攻击
         private float attackTimer = 1000f;
         public bool isAttackReady = true;
+
+        //阻挡的敌人
+        public EnemyAgent blocker;
 
         public SoliderLogicBase(SoliderAgent agent)
         {
@@ -110,17 +117,15 @@ namespace Gameplay.Player
 
         public bool CheckObstacle()
         {
+            if (blocker != null)
+            {
+                return true;
+            }
+
             if (pathPoints == null || pathPoints.Length == 0) return false;
 
             Vector3 dir = moveTarget.position - soliderAgent.transform.position;
             RaycastHit hit;
-
-            if (soliderAgent == null)
-            {
-                Debug.LogError("soliderAgent is not initialized.");
-                return false;
-            }
-
             Debug.DrawRay(soliderAgent.transform.position, dir.normalized * frontCheckDistance, Color.red);
 
             if (Physics.Raycast(soliderAgent.transform.position, dir.normalized, out hit, frontCheckDistance))
@@ -128,23 +133,25 @@ namespace Gameplay.Player
                 EnemyAgent enemyAgent = hit.collider.gameObject.GetComponent<EnemyAgent>();
                 if (enemyAgent != null)
                 {
-                    int blockNum = enemyAgent.enemyModel.blockNum;
-                    if (blockNum > 0)
+                    int enemyBlockNum = enemyAgent.enemyModel.blockNum;
+                    if (enemyAgent.enemyLogic.blockSoilders.Count < enemyBlockNum &&
+                        !enemyAgent.enemyLogic.blockSoilders.Contains(soliderAgent))
                     {
-                        // 可以被阻挡，减少 blockNum
-                        enemyAgent.enemyModel.blockNum--;
+                        // 可以被阻挡，
+                        enemyAgent.enemyLogic.blockSoilders.Add(soliderAgent);
+                        blocker = enemyAgent;
                         return true;
                     }
                     else
                     {
-                        // 不能被阻挡，blockNum 小于等于零
+                        // 不能被阻挡
                         return false;
                     }
                 }
-                else if (hit.collider.CompareTag("Enemy"))
-                {
-                    return true; // 其他障碍物阻挡
-                }
+                // else if (hit.collider.CompareTag("Enemy"))
+                // {
+                //     return true; // 其他障碍物阻挡
+                // }
             }
 
             return false;
@@ -189,18 +196,14 @@ namespace Gameplay.Player
                 if (hitCollider.gameObject != soliderAgent.gameObject)
                 {
                     enemyCount++;
-                    Debug.Log("Enemy detected: " + hitCollider.gameObject.name);
-                    // 在这里可以实现攻击逻辑
                 }
             }
 
             if (enemyCount <= 0)
             {
-                Debug.Log("附近没敌人");
                 return false;
             }
 
-            Debug.Log($"附近有{enemyCount}个敌人");
             return true;
         }
 
@@ -325,34 +328,30 @@ namespace Gameplay.Player
 
         public virtual void Attack()
         {
-            CalculateCd();
         }
 
-        private void CalculateCd()
+        protected async void CalculateCd()
         {
-            attackTimer += Time.deltaTime;
-
-            if (attackTimer >= soliderModel.attackInterval)
-            {
-                isAttackReady = true;
-                attackTimer = 0f; // 重置计时器
-            }
-            else
-            {
-                isAttackReady = false;
-            }
+            isAttackReady = false;
+            await Task.Delay(TimeSpan.FromSeconds(soliderModel.attackInterval));
+            isAttackReady = true;
         }
+
 
         //最基础的近战
         protected void MeleeAttack()
         {
             if (isAttackReady)
             {
-                foreach (var target in soliderAgent.soliderLogic.attackTargets)
+                for (int i = soliderAgent.soliderLogic.attackTargets.Count - 1; i >= 0; i--)
                 {
-                    target.enemyLogic.OnTakeDamage(soliderAgent.soliderModel.attackPoint,
+                    Debug.Log("攻击！！！");
+                    soliderAgent.soliderLogic.attackTargets[i].enemyLogic.OnTakeDamage(
+                        soliderAgent.soliderModel.attackPoint,
                         soliderAgent.soliderModel.magicAttackPoint, soliderAgent);
                 }
+
+                CalculateCd();
             }
         }
 
@@ -360,7 +359,6 @@ namespace Gameplay.Player
         //远程写在子类
         protected void RangeAttack()
         {
-            
         }
 
         #endregion
@@ -422,10 +420,18 @@ namespace Gameplay.Player
         public virtual void Die()
         {
             Debug.Log($"{soliderModel.soliderName} has died!");
+            //通知在打他的敌人，他死了
+            foreach (var agent in attackers)
+            {
+                agent.enemyLogic.RemoveTarget(soliderAgent);
+            }
+            //若该士兵是被阻挡的，通知被阻挡的人，他死了
+            if (blocker != null)
+            {
+                blocker.enemyLogic.blockSoilders.Remove(soliderAgent);
+            }
 
-            // 播放死亡动画或特效
-            // 可以在这里添加更多死亡处理逻辑，例如从场景中移除士兵，更新分数等
-
+            soliderAgent.StopAllCoroutines();
             Object.Destroy(soliderAgent.gameObject);
         }
     }
