@@ -5,7 +5,6 @@ namespace Gameplay.Player
     public enum UnitType
     {
         Ground,
-        Range,
         Air,
         Tower,
     }
