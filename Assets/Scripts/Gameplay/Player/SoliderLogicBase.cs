@@ -343,6 +343,7 @@ namespace Gameplay.Player
         {
             if (isAttackReady)
             {
+                CalculateCd();
                 for (int i = soliderAgent.soliderLogic.attackTargets.Count - 1; i >= 0; i--)
                 {
                     Debug.Log("攻击！！！");
@@ -350,8 +351,7 @@ namespace Gameplay.Player
                         soliderAgent.soliderModel.attackPoint,
                         soliderAgent.soliderModel.magicAttackPoint, soliderAgent);
                 }
-
-                CalculateCd();
+                
             }
         }
 

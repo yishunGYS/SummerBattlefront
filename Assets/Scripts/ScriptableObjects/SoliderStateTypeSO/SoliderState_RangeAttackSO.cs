@@ -8,6 +8,7 @@ namespace ScriptableObjects.SoliderStateTypeSO
     {
 
         
+        
         public SoliderState_RangeAttackSO()
         {
             stateType = UnitStateType.Attack;
@@ -25,13 +26,12 @@ namespace ScriptableObjects.SoliderStateTypeSO
             {
                 fsm.ChangeState(UnitStateType.Idle);
             }
-            Debug.Log("攻击状态 update");
-            //应该是远程的attack逻辑
-            if (soliderAgent.soliderLogic.CheckObstacle() == false && soliderAgent.soliderLogic.isAttackReady == false)
-            {
-                fsm.ChangeState(UnitStateType.Move);
-            }
             
+            //应该是远程的attack逻辑
+            // if (soliderAgent.soliderLogic.CheckObstacle() == false && soliderAgent.soliderLogic.isAttackReady == false)
+            // {
+            //     fsm.ChangeState(UnitStateType.Move);
+            // }
             soliderAgent.soliderLogic.Attack();
         }
 

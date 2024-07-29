@@ -40,6 +40,7 @@ namespace Gameplay.Player.Solider
             base.Attack();
             if (isAttackReady)
             {
+                CalculateCd();
                 //发射投掷物
                 for (int i = soliderAgent.soliderLogic.attackTargets.Count-1; i >= 0; i--)
                 {
@@ -47,8 +48,6 @@ namespace Gameplay.Player.Solider
                     var go =  GameObject.Instantiate(rangeGodlingAgent.projectile, rangeGodlingAgent.transform.position, Quaternion.identity);
                     go.OnInit(soliderAgent.soliderLogic.attackTargets[i].transform.position,rangeGodlingAgent);
                 }
-                
-                CalculateCd();
             }
             
         }

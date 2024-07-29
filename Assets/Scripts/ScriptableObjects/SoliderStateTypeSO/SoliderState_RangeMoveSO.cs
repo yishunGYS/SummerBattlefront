@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using Utilities;
 
@@ -6,40 +9,49 @@ namespace ScriptableObjects.SoliderStateTypeSO
     [CreateAssetMenu(fileName = "SoliderState_RangeMoveSO", menuName = "ScriptableObjects/SoliderStateTypeSO/SoliderState_RangeMoveSO")]
     public class SoliderState_RangeMoveSO: SoliderStateSO
     {
-        private float timer;
-        private const float moveTime = 1.2f;
-
+        private const float enterToMoveTime = 0.2f;
+        private const float movePerTime = 1f;
+        
+        private bool canMove = false;
+        
+       
         public SoliderState_RangeMoveSO()
         {
             stateType = UnitStateType.Move;
         }
-        public override void OnEnter()
+        public override async void OnEnter()
         {
-            timer = 0;
+            Debug.Log("½øÈëÒÆ¶¯×´Ì¬");
+            await Delay(enterToMoveTime);
+            canMove = true;
         }
 
-        public override void OnUpdate()
+        public override async void OnUpdate()
         {
-
-            
+            Debug.Log("ÒÆ¶¯×´Ì¬ update");
             //¸¨Öú½ÇÉ«£¿£¿£¿£¿
             if (soliderAgent.soliderLogic.CheckObstacle())
             {
                 fsm.ChangeState(UnitStateType.Idle);
             }
             //×ß×ßÍ£Í£
-            timer += Time.deltaTime;
-            if (timer>moveTime)
-            {
-                fsm.ChangeState(UnitStateType.Idle);
-            }
+            // if (!soliderAgent.soliderLogic.isAttackReady&& soliderAgent.soliderLogic.HasAttackTarget())
+            // {
+            //     fsm.ChangeState(UnitStateType.Idle);
+            // }
+            
+
             //Âß¼­ÇÐ»»
             if (soliderAgent.soliderLogic.CheckCanAttack())
             {
                 fsm.ChangeState(UnitStateType.Attack);
             }
 
-            soliderAgent.soliderLogic.Move();
+            if (canMove)
+            {
+                soliderAgent.soliderLogic.Move();
+            }
+            
         }
 
         public override void OnFixedUpdate()
@@ -49,7 +61,14 @@ namespace ScriptableObjects.SoliderStateTypeSO
 
         public override void OnExit()
         {
-            timer = 0;
+            canMove = false;
         }
+
+        private async Task Delay(float time)
+        {
+            await Task.Delay(TimeSpan.FromSeconds(time));
+        }
+
+
     }
 }

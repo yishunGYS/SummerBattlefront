@@ -1,3 +1,4 @@
+using UnityEngine;
 using Utilities;
 
 namespace ScriptableObjects.SoliderStateTypeSO
@@ -11,6 +12,7 @@ namespace ScriptableObjects.SoliderStateTypeSO
         public override void OnEnter()
         {
             //¶¯»­
+            Debug.Log("½øÈëIdle×´Ì¬");
         }
 
         public override void OnUpdate()
