@@ -1,0 +1,62 @@
+using System;
+using ScriptableObjects;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using Utilities;
+
+namespace Systems.Level
+{
+	public class LevelManager : Singleton<LevelManager>
+	{
+		public int levelReached = 0;//通过的关卡数
+		public int maxLevelId = 0;//通过的最大关卡Id数
+		
+		public int nowLevelId;
+		public string nowLevelName;
+		
+		public SceneFader fader;
+
+		private void Awake()
+		{
+			base.Awake();
+			DontDestroyOnLoad(this);
+			
+			PlayerPrefs.SetInt("LevelReached",0);//测试用
+			
+			fader.FadeTo("LevelSelect");
+		}
+		//开始关卡按钮被按下,切换场景
+		public void EnterLevel()
+		{
+			if (nowLevelName == null)
+			{
+				return;
+			}
+			SelectLevel_UImanager.Instance.enterLevelBtn.onClick.RemoveListener(this.EnterLevel);
+			fader.ChangeScene(nowLevelName);
+		}
+		//展示当前所选关卡的介绍,记录当前选择的关卡id与关卡名(感觉不应该放这,之后再改
+		public void ShowLevelIntro(LevelInformationSO levelInfo)
+		{
+			//出现关卡简介页面UI,将Info中的信息展示上去
+			SelectLevel_UImanager.Instance.Init(levelInfo);
+
+			nowLevelId = levelInfo.levelID;
+			nowLevelName = levelInfo.levelName;
+		}
+		//关卡通过,切换场景
+		public void LevelEnd()
+		{
+			if (nowLevelId > maxLevelId)
+			{
+				levelReached++;
+				maxLevelId = nowLevelId;
+				PlayerPrefs.SetInt("LevelReached",levelReached);
+				
+				Debug.Log(PlayerPrefs.GetInt("LevelReached"));
+			}
+			fader.ChangeScene("LevelSelect");
+		}
+	}
+}
