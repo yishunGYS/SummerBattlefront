@@ -34,7 +34,12 @@ namespace Gameplay.Player
             {
                 var enemyCmpt =  other.GetComponent<EnemyAgent>();
                 enemyCmpt.enemyLogic.OnTakeDamage(soliderAgent.soliderModel.attackPoint,soliderAgent.soliderModel.magicAttackPoint,soliderAgent);
+                Destroy(gameObject);
             }
+            
+            
         }
+        
+        
     }
 }

@@ -28,7 +28,7 @@ namespace Gameplay.Enemy
         private HashSet<SoliderAgent> attackers = new HashSet<SoliderAgent>(); //在对自己攻击的士兵
 
         //攻击
-        private float attackTimer;
+        private float attackTimer = 1000f;
         public bool isAttackReady = true;
 
         public EnemyLogicBase(EnemyAgent agent)

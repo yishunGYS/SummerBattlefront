@@ -32,8 +32,9 @@ namespace Gameplay.Player
         private Transform[] pathPoints;
 
         //攻击
-        private float attackTimer;
+        private float attackTimer = 1000f;
         public bool isAttackReady = true;
+
         public SoliderLogicBase(SoliderAgent agent)
         {
             soliderAgent = agent;
@@ -140,7 +141,7 @@ namespace Gameplay.Player
                         return false;
                     }
                 }
-                else if (hit.collider.CompareTag("Obstacle"))
+                else if (hit.collider.CompareTag("Enemy"))
                 {
                     return true; // 其他障碍物阻挡
                 }
@@ -150,14 +151,14 @@ namespace Gameplay.Player
         }
 
         #endregion
-        
+
         //有些士兵会穿透
         public virtual bool CheckCanBeBlock()
         {
             return true;
         }
 
-        
+
         #region 攻击判定
 
         public bool CheckCanAttack()
@@ -170,7 +171,7 @@ namespace Gameplay.Player
             return false;
         }
 
-        
+
         //有攻击目标
         public bool HasAttackTarget()
         {
@@ -202,7 +203,7 @@ namespace Gameplay.Player
             Debug.Log($"附近有{enemyCount}个敌人");
             return true;
         }
-        
+
         private void DrawAttackRange()
         {
             Vector3 start = soliderAgent.transform.position;
@@ -264,14 +265,11 @@ namespace Gameplay.Player
             }
 
             attackTargets.Add(singleTarget);
-            
-            
         }
 
         //群攻获取目标
         protected void MultiAttackSoliderGetTarget()
         {
-            List<EnemyAgent> tempMultiTarget = new List<EnemyAgent>();
             List<AttackEnemyTarget> tempAttackTargets = new List<AttackEnemyTarget>();
 
             Collider[] hitColliders =
@@ -294,16 +292,15 @@ namespace Gameplay.Player
             SortMultiTargetsByDistance(tempAttackTargets);
             for (int i = 0; i < soliderModel.attackNum; i++)
             {
-                attackTargets.Add(tempMultiTarget[i]);
+                attackTargets.Add(tempAttackTargets[i].target);
             }
         }
 
         //辅助/治疗获取目标
         protected void AssistSoliderGetTarget()
         {
-            
         }
-        
+
 
         private bool CheckMatchAttackType(EnemyAgent target)
         {
@@ -360,7 +357,7 @@ namespace Gameplay.Player
         }
 
 
-        //最基础的远战
+        //远程写在子类
         protected void RangeAttack()
         {
             
@@ -368,10 +365,9 @@ namespace Gameplay.Player
 
         #endregion
 
-        
-        
+
         //受击
-        public void OnTakeDamage(float damage, float magicDamage,EnemyAgent enemyAgent)
+        public void OnTakeDamage(float damage, float magicDamage, EnemyAgent enemyAgent)
         {
             AddAttacker(enemyAgent);
             // 减少士兵的生命值
@@ -389,6 +385,7 @@ namespace Gameplay.Player
                 Die();
             }
         }
+
         private void AddAttacker(EnemyAgent attacker)
         {
             if (!attackers.Contains(attacker))
@@ -397,6 +394,7 @@ namespace Gameplay.Player
                 Debug.Log($"{attacker.enemyModel.enemyName} started attacking Me!");
             }
         }
+
         private IEnumerator FlashRed()
         {
             Renderer renderer = soliderAgent.GetComponent<Renderer>();
@@ -414,11 +412,10 @@ namespace Gameplay.Player
             renderer.material.color = originalColor;
         }
 
-        
+
         //召唤
         public virtual void Summon()
         {
-            
         }
 
         //死亡

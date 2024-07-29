@@ -29,6 +29,7 @@ namespace ScriptableObjects.SoliderStateTypeSO
             {
                 fsm.ChangeState(UnitStateType.Idle);
             }
+            //正在攻击的敌人死了，也切回idle（放置远程兵在范围内是有目标的，但依然罚站
             
             soliderAgent.soliderLogic.Attack();
         }
