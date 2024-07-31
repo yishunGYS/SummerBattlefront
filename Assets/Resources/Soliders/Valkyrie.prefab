@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 5022474881247193319}
   - component: {fileID: 5536557329824037928}
   - component: {fileID: 7242060906805538017}
-  - component: {fileID: 3258390813702686429}
-  - component: {fileID: -7747116291038743707}
+  - component: {fileID: -7174182815858978331}
   - component: {fileID: 6425060511249867181}
+  - component: {fileID: 1835549487973573158}
   m_Layer: 6
-  m_Name: RangeGoding
+  m_Name: Valkyrie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8861984038093239496}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &7242060906805538017
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b2051f2370fbe3748903453043a22aa0, type: 2}
+  - {fileID: 2100000, guid: 53d7b298e12c70144a97e0961987f4ae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,28 +86,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3258390813702686429
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8861984038093239496}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-7747116291038743707
+--- !u!114 &-7174182815858978331
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,11 +95,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8861984038093239496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e7df5d1e0f7454686f6fff61d53f85c, type: 3}
+  m_Script: {fileID: 11500000, guid: d49787f3aee990f4e9b17204d99d71ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soliderId: 2
-  projectile: {fileID: -3618351148407141835, guid: 2db63ad894e9b1a47913e3d331d1144b, type: 3}
+  soliderId: 6
 --- !u!114 &6425060511249867181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,8 +114,31 @@ MonoBehaviour:
   stateDicts:
     list:
     - Key: 0
-      Value: {fileID: 11400000, guid: 949823a3e6f26f44e9f4777f553d302c, type: 2}
+      Value: {fileID: 11400000, guid: 84eff5f6000f84144b16b5ed1413c318, type: 2}
     - Key: 1
-      Value: {fileID: 11400000, guid: dc875fd9222753b42bc74f56db9bf392, type: 2}
+      Value: {fileID: 11400000, guid: cbe63a50b10a6c3448cd6f786b10ce5c, type: 2}
     - Key: 2
-      Value: {fileID: 11400000, guid: 2803274da1b08604aaa52f3ea9b3b03e, type: 2}
+      Value: {fileID: 11400000, guid: 0e52b69940ce2774293d22128b125f03, type: 2}
+--- !u!136 &1835549487973573158
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8861984038093239496}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
