@@ -57,6 +57,26 @@ namespace Gameplay.Enemy
             }
         }
 
+        private void DrawRange(EnemyAgent enemyAgent, float range)
+        {
+            Vector3 start = enemyAgent.transform.position;
+            Vector3 end = start + Vector3.up * 0.1f;
+
+            int segments = 20;
+            float angle = 0f;
+            float angleStep = 360f / segments;
+            for (int i = 0; i < segments; i++)
+            {
+                Vector3 offset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * angle), 0, Mathf.Cos(Mathf.Deg2Rad * angle)) *
+                                 range;
+                Vector3 nextOffset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * (angle + angleStep)), 0,
+                    Mathf.Cos(Mathf.Deg2Rad * (angle + angleStep))) * range;
+
+                Debug.DrawLine(start + offset, start + nextOffset, Color.blue);
+
+                angle += angleStep;
+            }
+        }
 
         #region 攻击判定
 
@@ -271,6 +291,56 @@ namespace Gameplay.Enemy
                 Die();
             }
         }
+
+        public List<EnemyAgent> GetAOETargets(Vector3 position, float aoeRange)
+        {
+            List<EnemyAgent> aoeTargets = new List<EnemyAgent>();
+            Collider[] hitColliders = Physics.OverlapSphere(position, aoeRange, LayerMask.GetMask("Enemy"));
+
+            foreach (var collider in hitColliders)
+            {
+                var enemy = collider.GetComponent<EnemyAgent>();
+                if (enemy != null && enemy != enemyAgent) // 确保不是当前的敌人
+                {
+                    aoeTargets.Add(enemy);
+                }
+            }
+
+            return aoeTargets;
+        }
+
+
+        public void OnTakeAOEDamage(float damage, float magicDamage, SoliderAgent soliderAgent, float aoeRange)
+        {
+            // 当前敌人受到伤害
+            OnTakeDamage(damage, magicDamage, soliderAgent);
+
+            // 获取 aoeRange 范围内的所有敌人
+            List<EnemyAgent> aoeTargets = GetAOETargets(enemyAgent.transform.position, aoeRange);
+
+            if(aoeTargets != null)
+            {
+                Debug.Log("不为空");
+            }
+            else
+            {
+                Debug.Log("为空");
+                foreach(var item in aoeTargets)
+                {
+                    Debug.Log(item.gameObject.name);
+                }
+            }
+
+            foreach (var enemy in aoeTargets)
+            {
+                enemy.enemyLogic.OnTakeDamage(damage, magicDamage, soliderAgent);
+            }
+
+            DrawRange(enemyAgent, aoeRange);
+        }
+
+
+
 
         private void AddAttacker(SoliderAgent attacker)
         {

@@ -2,3 +2,5 @@
 int,string,string,UnitType,int,float,int,int,int,float,float,float,float,int,float,AttackTargetType,UnitType,float,string,string
 1,哥布林,跑得快的脆皮近战,0,1,100,1,25,0,0,0,3.5,3,1,0,0,0,4,,
 2,哥布林投手,跑得快的脆皮远程,0,1,100,1,25,0,0,0,1,50,1,0,0,0,4,,
+6,女武神,会aoe的士兵,0,2,180,1,25,0,5,5,4,2,1,1,0,0,3,,
+26,骷髅军团,堆量的脆皮士兵团,0,3,30,6,10,0,5,0,2,2,1,0,0,0,4,,
