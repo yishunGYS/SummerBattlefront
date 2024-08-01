@@ -19,5 +19,13 @@ namespace Managers
         {
             return EnemyBaseModels;
         }
+
+
+        public SoliderModelBase GetSoliderDataById(int id) 
+        {
+
+            SoliderBaseModels.TryGetValue(id,out SoliderModelBase model);
+            return model;
+        }
     }
 }
