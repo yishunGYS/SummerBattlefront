@@ -1,0 +1,315 @@
+fileFormatVersion: 2
+guid: d89ff82b2b934e74286c2d452e65dc7e
+timeCreated: 1564462234
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: card
+    100002: card 1
+    100004: card 2
+    100006: card 3
+    100008: card 4
+    100010: card 5
+    100012: card_kuosan
+    100014: card_kuosan 1
+    100016: card_kuosan 2
+    100018: card_kuosan 3
+    100020: card_kuosan 4
+    100022: card_kuosan 5
+    100024: card_open
+    100026: card_open 1
+    100028: card_open 2
+    100030: card_open 3
+    100032: card_open 4
+    100034: card_open 5
+    100036: card_wfg
+    100038: card_wfg 1
+    100040: card_wfg 10
+    100042: card_wfg 11
+    100044: card_wfg 2
+    100046: card_wfg 3
+    100048: card_wfg 4
+    100050: card_wfg 5
+    100052: card_wfg 6
+    100054: card_wfg 7
+    100056: card_wfg 8
+    100058: card_wfg 9
+    100060: cj_kuosan
+    100062: cj_light
+    100064: cj_lizi
+    100066: cj_mfcj
+    100068: cj_mfcj (1)
+    100070: Effect_card
+    100072: Effect_card 1
+    100074: Effect_card 2
+    100076: Effect_card 3
+    100078: Effect_card 4
+    100080: Effect_card 5
+    100082: Effect_choujiang
+    100084: fan
+    100086: fan 1
+    100088: fan 2
+    100090: fan 3
+    100092: fan 4
+    100094: fan 5
+    100096: houdu
+    100098: houdu 1
+    100100: houdu 2
+    100102: houdu 3
+    100104: houdu 4
+    100106: houdu 5
+    100108: houdu_0
+    100110: houdu_0 1
+    100112: houdu_0 2
+    100114: houdu_0 3
+    100116: houdu_0 4
+    100118: houdu_0 5
+    100120: icon
+    100122: icon 1
+    100124: icon 2
+    100126: icon 3
+    100128: icon 4
+    100130: icon 5
+    100132: kuosan
+    100134: kuosan 1
+    100136: kuosan 2
+    100138: kuosan 3
+    100140: kuosan 4
+    100142: kuosan 5
+    100144: light
+    100146: light 1
+    100148: light 2
+    100150: light 3
+    100152: light 4
+    100154: light 5
+    100156: lizi
+    100158: lizi 1
+    100160: lizi 2
+    100162: lizi 3
+    100164: lizi 4
+    100166: lizi 5
+    100168: name
+    100170: name 1
+    100172: name 2
+    100174: name 3
+    100176: name 4
+    100178: name 5
+    100180: num
+    100182: num 1
+    100184: num 2
+    100186: num 3
+    100188: num 4
+    100190: num 5
+    100192: ui_card1
+    100194: ui_card2
+    100196: ui_card3
+    100198: ui_card4
+    100200: ui_card5
+    100202: ui_card6
+    100204: //RootNode
+    100206: ui_choujiang
+    100208: zheng
+    100210: zheng 1
+    100212: zheng 2
+    100214: zheng 3
+    100216: zheng 4
+    100218: zheng 5
+    400000: card
+    400002: card 1
+    400004: card 2
+    400006: card 3
+    400008: card 4
+    400010: card 5
+    400012: card_kuosan
+    400014: card_kuosan 1
+    400016: card_kuosan 2
+    400018: card_kuosan 3
+    400020: card_kuosan 4
+    400022: card_kuosan 5
+    400024: card_open
+    400026: card_open 1
+    400028: card_open 2
+    400030: card_open 3
+    400032: card_open 4
+    400034: card_open 5
+    400036: card_wfg
+    400038: card_wfg 1
+    400040: card_wfg 10
+    400042: card_wfg 11
+    400044: card_wfg 2
+    400046: card_wfg 3
+    400048: card_wfg 4
+    400050: card_wfg 5
+    400052: card_wfg 6
+    400054: card_wfg 7
+    400056: card_wfg 8
+    400058: card_wfg 9
+    400060: cj_kuosan
+    400062: cj_light
+    400064: cj_lizi
+    400066: cj_mfcj
+    400068: cj_mfcj (1)
+    400070: Effect_card
+    400072: Effect_card 1
+    400074: Effect_card 2
+    400076: Effect_card 3
+    400078: Effect_card 4
+    400080: Effect_card 5
+    400082: Effect_choujiang
+    400084: fan
+    400086: fan 1
+    400088: fan 2
+    400090: fan 3
+    400092: fan 4
+    400094: fan 5
+    400096: houdu
+    400098: houdu 1
+    400100: houdu 2
+    400102: houdu 3
+    400104: houdu 4
+    400106: houdu 5
+    400108: houdu_0
+    400110: houdu_0 1
+    400112: houdu_0 2
+    400114: houdu_0 3
+    400116: houdu_0 4
+    400118: houdu_0 5
+    400120: icon
+    400122: icon 1
+    400124: icon 2
+    400126: icon 3
+    400128: icon 4
+    400130: icon 5
+    400132: kuosan
+    400134: kuosan 1
+    400136: kuosan 2
+    400138: kuosan 3
+    400140: kuosan 4
+    400142: kuosan 5
+    400144: light
+    400146: light 1
+    400148: light 2
+    400150: light 3
+    400152: light 4
+    400154: light 5
+    400156: lizi
+    400158: lizi 1
+    400160: lizi 2
+    400162: lizi 3
+    400164: lizi 4
+    400166: lizi 5
+    400168: name
+    400170: name 1
+    400172: name 2
+    400174: name 3
+    400176: name 4
+    400178: name 5
+    400180: num
+    400182: num 1
+    400184: num 2
+    400186: num 3
+    400188: num 4
+    400190: num 5
+    400192: ui_card1
+    400194: ui_card2
+    400196: ui_card3
+    400198: ui_card4
+    400200: ui_card5
+    400202: ui_card6
+    400204: //RootNode
+    400206: ui_choujiang
+    400208: zheng
+    400210: zheng 1
+    400212: zheng 2
+    400214: zheng 3
+    400216: zheng 4
+    400218: zheng 5
+    2300000: houdu_0
+    2300002: houdu_0 1
+    2300004: houdu_0 2
+    2300006: houdu_0 3
+    2300008: houdu_0 4
+    2300010: houdu_0 5
+    3300000: houdu_0
+    3300002: houdu_0 1
+    3300004: houdu_0 2
+    3300006: houdu_0 3
+    3300008: houdu_0 4
+    3300010: houdu_0 5
+    4300000: houdu_0
+    4300002: houdu_0
+    4300004: houdu_0
+    4300006: houdu_0
+    4300008: houdu_0
+    4300010: houdu_0
+    7400000: ui_choujiang2
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

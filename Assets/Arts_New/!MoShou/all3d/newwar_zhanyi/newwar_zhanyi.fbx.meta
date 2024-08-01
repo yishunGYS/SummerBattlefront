@@ -1,0 +1,966 @@
+fileFormatVersion: 2
+guid: 2b18349554587134cb0df4691fbab3e7
+timeCreated: 1564462080
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 101
+    100002: 102
+    100004: 103
+    100006: 104
+    100008: 105
+    100010: aim_layer
+    100012: arrow_bg
+    100014: arrow_btn
+    100016: arrowicon
+    100018: baojin_pos
+    100020: baoxianglong_dir
+    100022: base
+    100024: beilv
+    100026: bg
+    100028: bg (1)
+    100030: bg 1
+    100032: bg 2
+    100034: bigicon
+    100036: bigicon 1
+    100038: boss_dir
+    100040: boss_left_time
+    100042: boss_time
+    100044: boss_time_panel
+    100046: boss_title
+    100048: btn
+    100050: btn_0
+    100052: bullet
+    100054: Button
+    100056: button
+    100058: Button 1
+    100060: button 1
+    100062: button 2
+    100064: button 3
+    100066: button 4
+    100068: can_draw_panel
+    100070: can_unlock_panel
+    100072: cancel_arrow_btn
+    100074: cant_draw_panel
+    100076: cant_unlock_panel
+    100078: cant_use_btn
+    100080: card
+    100082: card1
+    100084: card2
+    100086: card3
+    100088: cards
+    100090: choujiang
+    100092: choujiang_bg
+    100094: content
+    100096: cost
+    100098: crown_btn
+    100100: dh_btn
+    100102: di
+    100104: di 1
+    100106: di_0
+    100108: di_0 1
+    100110: disable_btn
+    100112: djImage
+    100114: djText
+    100116: down
+    100118: down 1
+    100120: down 2
+    100122: down 3
+    100124: down 4
+    100126: effect
+    100128: effect 1
+    100130: effect 2
+    100132: egg
+    100134: embz_xbl
+    100136: enable_btn
+    100138: fangshe
+    100140: fangshe 1
+    100142: fangshe 2
+    100144: fangshe2
+    100146: fangshe2 1
+    100148: fangshe2 2
+    100150: fb_beishu
+    100152: fb_beishu2
+    100154: Fill
+    100156: Fill 1
+    100158: finger
+    100160: finger 1
+    100162: finger_choujiang
+    100164: finger_wuqi
+    100166: finger_wuqi 1
+    100168: freebullet
+    100170: freebullet 1
+    100172: fuben_btn
+    100174: fuwen
+    100176: fuwen_info
+    100178: GameObject
+    100180: ggtj_light
+    100182: ggtj_light 1
+    100184: ggtj_light 2
+    100186: ggtj_light_0
+    100188: ggtj_light_0 1
+    100190: ggtj_light_0 2
+    100192: glow
+    100194: glow_01
+    100196: glow_01 1
+    100198: glow_01_0
+    100200: glow_01_0 1
+    100202: godArrowTips
+    100204: gold
+    100206: gold 1
+    100208: gold_bg
+    100210: gold_img
+    100212: guang
+    100214: guanghuan_choujiang
+    100216: guanghuan_wuqi
+    100218: guid_choujiang_bg
+    100220: guid_wuqi_bg
+    100222: guide_aim_btn
+    100224: hammer_bar
+    100226: hammer_icon
+    100228: hammer_img
+    100230: hammer_num
+    100232: Handle
+    100234: Handle 1
+    100236: handle_image
+    100238: has_horn
+    100240: headicon
+    100242: headicon_img
+    100244: headiconBG
+    100246: headiconframe_img
+    100248: heal
+    100250: huafei
+    100252: huafeiquanBG
+    100254: icon
+    100256: icon 1
+    100258: icon 2
+    100260: icon0
+    100262: icon1
+    100264: icon2
+    100266: icon3
+    100268: icon4
+    100270: Image
+    100272: image
+    100274: Image (1)
+    100276: Image (1) 1
+    100278: Image (1) 2
+    100280: Image (1) 3
+    100282: Image (1) 4
+    100284: Image (1) 5
+    100286: Image (1) 6
+    100288: Image (1) 7
+    100290: Image (2)
+    100292: Image (3)
+    100294: Image 1
+    100296: Image 10
+    100298: Image 11
+    100300: Image 12
+    100302: Image 13
+    100304: Image 14
+    100306: Image 15
+    100308: Image 16
+    100310: Image 17
+    100312: Image 18
+    100314: Image 19
+    100316: Image 2
+    100318: Image 20
+    100320: Image 21
+    100322: Image 22
+    100324: Image 23
+    100326: Image 24
+    100328: Image 25
+    100330: Image 26
+    100332: Image 27
+    100334: Image 28
+    100336: Image 29
+    100338: Image 3
+    100340: Image 30
+    100342: Image 31
+    100344: Image 32
+    100346: Image 33
+    100348: Image 34
+    100350: Image 4
+    100352: Image 5
+    100354: Image 6
+    100356: Image 7
+    100358: Image 8
+    100360: Image 9
+    100362: img
+    100364: item
+    100366: item 1
+    100368: IX
+    100370: jinbi
+    100372: jinbi 1
+    100374: jinbiBG
+    100376: jindu
+    100378: jindu 1
+    100380: jindu_bg
+    100382: jindu_text
+    100384: jindu_text 1
+    100386: jiujijin
+    100388: kuosan_1
+    100390: layer
+    100392: left
+    100394: left 1
+    100396: light
+    100398: light 1
+    100400: light 2
+    100402: light 3
+    100404: light_effect
+    100406: lizi
+    100408: lizi 1
+    100410: lizi 2
+    100412: lizi 3
+    100414: lizi 4
+    100416: lizi 5
+    100418: lizi 6
+    100420: lizi01
+    100422: lizi01 1
+    100424: lizi02
+    100426: lizi02 1
+    100428: lizi1
+    100430: lizi2
+    100432: lord
+    100434: lord 1
+    100436: lord_btn
+    100438: lostremains
+    100440: lostremains 1
+    100442: Mask
+    100444: mojingBG
+    100446: mojingchang
+    100448: mojingchang 1
+    100450: name
+    100452: name 1
+    100454: //RootNode
+    100456: newwar_zhanyi
+    100458: next_rate
+    100460: next_rate (1)
+    100462: next_rate (2)
+    100464: next_rate 1
+    100466: next_rate 2
+    100468: next_stage
+    100470: no_horn
+    100472: NoDrawingRayCast
+    100474: NoDrawingRayCast 1
+    100476: NoDrawingRayCast 2
+    100478: NoDrawingRayCast 3
+    100480: num
+    100482: num (1)
+    100484: num 1
+    100486: num 2
+    100488: num 3
+    100490: num 4
+    100492: num 5
+    100494: num 6
+    100496: num 7
+    100498: num 8
+    100500: num 9
+    100502: num0
+    100504: num1
+    100506: num2
+    100508: num3
+    100510: num4
+    100512: num_add
+    100514: number
+    100516: object
+    100518: override
+    100520: p_boss
+    100522: p_monster
+    100524: p_rate
+    100526: Panel
+    100528: panel
+    100530: Panel 1
+    100532: panel 1
+    100534: pass
+    100536: pass_boss
+    100538: pass_boss_img
+    100540: pass_boss_now
+    100542: pass_boss_now (1)
+    100544: pass_boss_num
+    100546: pass_boss_text
+    100548: pass_monster
+    100550: pass_monster_img
+    100552: pass_monster_now
+    100554: pass_monster_now/
+    100556: pass_monster_now/ (1)
+    100558: pass_monster_num
+    100560: pass_monster_text
+    100562: pass_rate
+    100564: pass_rate_img
+    100566: pass_rate_now
+    100568: pass_rate_num
+    100570: pass_rate_text
+    100572: pic1
+    100574: pic2
+    100576: pic3
+    100578: pic4
+    100580: point
+    100582: points
+    100584: prize_pool
+    100586: prop1
+    100588: prop1_num
+    100590: prop2
+    100592: prop2_num
+    100594: reward_img
+    100596: reward_img 1
+    100598: reward_text
+    100600: reward_text 1
+    100602: right
+    100604: right 1
+    100606: role_item
+    100608: runes_1
+    100610: runes_2
+    100612: runes_3
+    100614: rw_flash
+    100616: rw_flash 1
+    100618: rw_liuguang
+    100620: rw_liuguang 1
+    100622: shengji_paobei
+    100624: shengji_paobei 1
+    100626: shilian
+    100628: shilian 1
+    100630: shineLight
+    100632: sidai
+    100634: sidai 1
+    100636: Slider
+    100638: stage_name
+    100640: switch
+    100642: target_img
+    100644: target_img 1
+    100646: target_text
+    100648: target_text 1
+    100650: Text
+    100652: Text (1)
+    100654: Text (1) 1
+    100656: Text 1
+    100658: Text 10
+    100660: Text 11
+    100662: Text 12
+    100664: Text 13
+    100666: Text 14
+    100668: Text 15
+    100670: Text 16
+    100672: Text 17
+    100674: Text 18
+    100676: Text 19
+    100678: Text 2
+    100680: Text 20
+    100682: Text 21
+    100684: Text 22
+    100686: Text 3
+    100688: Text 4
+    100690: Text 5
+    100692: Text 6
+    100694: Text 7
+    100696: Text 8
+    100698: Text 9
+    100700: text1
+    100702: text2
+    100704: Text_Add
+    100706: Text_Add 1
+    100708: Text_Add 2
+    100710: Text_Add 3
+    100712: texteffect
+    100714: thunder
+    100716: thunder 1
+    100718: thunder_btn1
+    100720: thunder_btn2
+    100722: thunder_icon
+    100724: thunder_icon 1
+    100726: tiaojian
+    100728: tiaojian_btn
+    100730: tiaojianeffect
+    100732: time
+    100734: tips
+    100736: TipsGroup
+    100738: title
+    100740: title 1
+    100742: title 2
+    100744: title 3
+    100746: title 4
+    100748: title 5
+    100750: title 6
+    100752: title 7
+    100754: tongguantiaojian
+    100756: top
+    100758: top 1
+    100760: top2
+    100762: tujian_btn
+    100764: ui_lottery
+    100766: ui_lottery 1
+    100768: ui_lsjl_btn
+    100770: ui_wuqi_02
+    100772: ui_wuqi_02 1
+    100774: ui_wuqi_02_0
+    100776: ui_wuqi_02_0 1
+    100778: ui_wuqi_03
+    100780: ui_wuqi_03 1
+    100782: ui_wuqi_03_0
+    100784: ui_wuqi_03_0 1
+    100786: ui_xyg
+    100788: ui_zhuanpan_mini
+    100790: ui_zhuanpan_mini 1
+    100792: up
+    100794: up 1
+    100796: up 2
+    100798: up 3
+    100800: up 4
+    100802: use_hammer_btn
+    100804: using_hammer_btn
+    100806: vip_lv
+    100808: VIPText
+    100810: wancheng
+    100812: wancheng 1
+    100814: wuqi_bg
+    100816: wuqi_btn
+    100818: wuqi_btn_parent
+    100820: xinshou
+    100822: xinshou 1
+    100824: xsxg_time
+    100826: xsxgPack_btn
+    100828: zd_cjz_02
+    100830: zd_cjz_02 1
+    100832: zd_light
+    100834: zd_light 1
+    100836: zd_zhuanpan
+    100838: zd_zhuanpan 1
+    100840: zhuanpan
+    100842: zhuanpan_dishwheel
+    100844: zhuanpan_embz
+    100846: zp_huan
+    100848: zp_huan 1
+    100850: zuanshi
+    100852: zuanshiBG
+    400000: 101
+    400002: 102
+    400004: 103
+    400006: 104
+    400008: 105
+    400010: aim_layer
+    400012: arrow_bg
+    400014: arrow_btn
+    400016: arrowicon
+    400018: baojin_pos
+    400020: baoxianglong_dir
+    400022: base
+    400024: beilv
+    400026: bg
+    400028: bg (1)
+    400030: bg 1
+    400032: bg 2
+    400034: bigicon
+    400036: bigicon 1
+    400038: boss_dir
+    400040: boss_left_time
+    400042: boss_time
+    400044: boss_time_panel
+    400046: boss_title
+    400048: btn
+    400050: btn_0
+    400052: bullet
+    400054: Button
+    400056: button
+    400058: Button 1
+    400060: button 1
+    400062: button 2
+    400064: button 3
+    400066: button 4
+    400068: can_draw_panel
+    400070: can_unlock_panel
+    400072: cancel_arrow_btn
+    400074: cant_draw_panel
+    400076: cant_unlock_panel
+    400078: cant_use_btn
+    400080: card
+    400082: card1
+    400084: card2
+    400086: card3
+    400088: cards
+    400090: choujiang
+    400092: choujiang_bg
+    400094: content
+    400096: cost
+    400098: crown_btn
+    400100: dh_btn
+    400102: di
+    400104: di 1
+    400106: di_0
+    400108: di_0 1
+    400110: disable_btn
+    400112: djImage
+    400114: djText
+    400116: down
+    400118: down 1
+    400120: down 2
+    400122: down 3
+    400124: down 4
+    400126: effect
+    400128: effect 1
+    400130: effect 2
+    400132: egg
+    400134: embz_xbl
+    400136: enable_btn
+    400138: fangshe
+    400140: fangshe 1
+    400142: fangshe 2
+    400144: fangshe2
+    400146: fangshe2 1
+    400148: fangshe2 2
+    400150: fb_beishu
+    400152: fb_beishu2
+    400154: Fill
+    400156: Fill 1
+    400158: finger
+    400160: finger 1
+    400162: finger_choujiang
+    400164: finger_wuqi
+    400166: finger_wuqi 1
+    400168: freebullet
+    400170: freebullet 1
+    400172: fuben_btn
+    400174: fuwen
+    400176: fuwen_info
+    400178: GameObject
+    400180: ggtj_light
+    400182: ggtj_light 1
+    400184: ggtj_light 2
+    400186: ggtj_light_0
+    400188: ggtj_light_0 1
+    400190: ggtj_light_0 2
+    400192: glow
+    400194: glow_01
+    400196: glow_01 1
+    400198: glow_01_0
+    400200: glow_01_0 1
+    400202: godArrowTips
+    400204: gold
+    400206: gold 1
+    400208: gold_bg
+    400210: gold_img
+    400212: guang
+    400214: guanghuan_choujiang
+    400216: guanghuan_wuqi
+    400218: guid_choujiang_bg
+    400220: guid_wuqi_bg
+    400222: guide_aim_btn
+    400224: hammer_bar
+    400226: hammer_icon
+    400228: hammer_img
+    400230: hammer_num
+    400232: Handle
+    400234: Handle 1
+    400236: handle_image
+    400238: has_horn
+    400240: headicon
+    400242: headicon_img
+    400244: headiconBG
+    400246: headiconframe_img
+    400248: heal
+    400250: huafei
+    400252: huafeiquanBG
+    400254: icon
+    400256: icon 1
+    400258: icon 2
+    400260: icon0
+    400262: icon1
+    400264: icon2
+    400266: icon3
+    400268: icon4
+    400270: Image
+    400272: image
+    400274: Image (1)
+    400276: Image (1) 1
+    400278: Image (1) 2
+    400280: Image (1) 3
+    400282: Image (1) 4
+    400284: Image (1) 5
+    400286: Image (1) 6
+    400288: Image (1) 7
+    400290: Image (2)
+    400292: Image (3)
+    400294: Image 1
+    400296: Image 10
+    400298: Image 11
+    400300: Image 12
+    400302: Image 13
+    400304: Image 14
+    400306: Image 15
+    400308: Image 16
+    400310: Image 17
+    400312: Image 18
+    400314: Image 19
+    400316: Image 2
+    400318: Image 20
+    400320: Image 21
+    400322: Image 22
+    400324: Image 23
+    400326: Image 24
+    400328: Image 25
+    400330: Image 26
+    400332: Image 27
+    400334: Image 28
+    400336: Image 29
+    400338: Image 3
+    400340: Image 30
+    400342: Image 31
+    400344: Image 32
+    400346: Image 33
+    400348: Image 34
+    400350: Image 4
+    400352: Image 5
+    400354: Image 6
+    400356: Image 7
+    400358: Image 8
+    400360: Image 9
+    400362: img
+    400364: item
+    400366: item 1
+    400368: IX
+    400370: jinbi
+    400372: jinbi 1
+    400374: jinbiBG
+    400376: jindu
+    400378: jindu 1
+    400380: jindu_bg
+    400382: jindu_text
+    400384: jindu_text 1
+    400386: jiujijin
+    400388: kuosan_1
+    400390: layer
+    400392: left
+    400394: left 1
+    400396: light
+    400398: light 1
+    400400: light 2
+    400402: light 3
+    400404: light_effect
+    400406: lizi
+    400408: lizi 1
+    400410: lizi 2
+    400412: lizi 3
+    400414: lizi 4
+    400416: lizi 5
+    400418: lizi 6
+    400420: lizi01
+    400422: lizi01 1
+    400424: lizi02
+    400426: lizi02 1
+    400428: lizi1
+    400430: lizi2
+    400432: lord
+    400434: lord 1
+    400436: lord_btn
+    400438: lostremains
+    400440: lostremains 1
+    400442: Mask
+    400444: mojingBG
+    400446: mojingchang
+    400448: mojingchang 1
+    400450: name
+    400452: name 1
+    400454: newwar_zhanyi
+    400456: //RootNode
+    400458: next_rate
+    400460: next_rate (1)
+    400462: next_rate (2)
+    400464: next_rate 1
+    400466: next_rate 2
+    400468: next_stage
+    400470: no_horn
+    400472: NoDrawingRayCast
+    400474: NoDrawingRayCast 1
+    400476: NoDrawingRayCast 2
+    400478: NoDrawingRayCast 3
+    400480: num
+    400482: num (1)
+    400484: num 1
+    400486: num 2
+    400488: num 3
+    400490: num 4
+    400492: num 5
+    400494: num 6
+    400496: num 7
+    400498: num 8
+    400500: num 9
+    400502: num0
+    400504: num1
+    400506: num2
+    400508: num3
+    400510: num4
+    400512: num_add
+    400514: number
+    400516: object
+    400518: override
+    400520: p_boss
+    400522: p_monster
+    400524: p_rate
+    400526: Panel
+    400528: panel
+    400530: Panel 1
+    400532: panel 1
+    400534: pass
+    400536: pass_boss
+    400538: pass_boss_img
+    400540: pass_boss_now
+    400542: pass_boss_now (1)
+    400544: pass_boss_num
+    400546: pass_boss_text
+    400548: pass_monster
+    400550: pass_monster_img
+    400552: pass_monster_now
+    400554: pass_monster_now/
+    400556: pass_monster_now/ (1)
+    400558: pass_monster_num
+    400560: pass_monster_text
+    400562: pass_rate
+    400564: pass_rate_img
+    400566: pass_rate_now
+    400568: pass_rate_num
+    400570: pass_rate_text
+    400572: pic1
+    400574: pic2
+    400576: pic3
+    400578: pic4
+    400580: point
+    400582: points
+    400584: prize_pool
+    400586: prop1
+    400588: prop1_num
+    400590: prop2
+    400592: prop2_num
+    400594: reward_img
+    400596: reward_img 1
+    400598: reward_text
+    400600: reward_text 1
+    400602: right
+    400604: right 1
+    400606: role_item
+    400608: runes_1
+    400610: runes_2
+    400612: runes_3
+    400614: rw_flash
+    400616: rw_flash 1
+    400618: rw_liuguang
+    400620: rw_liuguang 1
+    400622: shengji_paobei
+    400624: shengji_paobei 1
+    400626: shilian
+    400628: shilian 1
+    400630: shineLight
+    400632: sidai
+    400634: sidai 1
+    400636: Slider
+    400638: stage_name
+    400640: switch
+    400642: target_img
+    400644: target_img 1
+    400646: target_text
+    400648: target_text 1
+    400650: Text
+    400652: Text (1)
+    400654: Text (1) 1
+    400656: Text 1
+    400658: Text 10
+    400660: Text 11
+    400662: Text 12
+    400664: Text 13
+    400666: Text 14
+    400668: Text 15
+    400670: Text 16
+    400672: Text 17
+    400674: Text 18
+    400676: Text 19
+    400678: Text 2
+    400680: Text 20
+    400682: Text 21
+    400684: Text 22
+    400686: Text 3
+    400688: Text 4
+    400690: Text 5
+    400692: Text 6
+    400694: Text 7
+    400696: Text 8
+    400698: Text 9
+    400700: text1
+    400702: text2
+    400704: Text_Add
+    400706: Text_Add 1
+    400708: Text_Add 2
+    400710: Text_Add 3
+    400712: texteffect
+    400714: thunder
+    400716: thunder 1
+    400718: thunder_btn1
+    400720: thunder_btn2
+    400722: thunder_icon
+    400724: thunder_icon 1
+    400726: tiaojian
+    400728: tiaojian_btn
+    400730: tiaojianeffect
+    400732: time
+    400734: tips
+    400736: TipsGroup
+    400738: title
+    400740: title 1
+    400742: title 2
+    400744: title 3
+    400746: title 4
+    400748: title 5
+    400750: title 6
+    400752: title 7
+    400754: tongguantiaojian
+    400756: top
+    400758: top 1
+    400760: top2
+    400762: tujian_btn
+    400764: ui_lottery
+    400766: ui_lottery 1
+    400768: ui_lsjl_btn
+    400770: ui_wuqi_02
+    400772: ui_wuqi_02 1
+    400774: ui_wuqi_02_0
+    400776: ui_wuqi_02_0 1
+    400778: ui_wuqi_03
+    400780: ui_wuqi_03 1
+    400782: ui_wuqi_03_0
+    400784: ui_wuqi_03_0 1
+    400786: ui_xyg
+    400788: ui_zhuanpan_mini
+    400790: ui_zhuanpan_mini 1
+    400792: up
+    400794: up 1
+    400796: up 2
+    400798: up 3
+    400800: up 4
+    400802: use_hammer_btn
+    400804: using_hammer_btn
+    400806: vip_lv
+    400808: VIPText
+    400810: wancheng
+    400812: wancheng 1
+    400814: wuqi_bg
+    400816: wuqi_btn
+    400818: wuqi_btn_parent
+    400820: xinshou
+    400822: xinshou 1
+    400824: xsxg_time
+    400826: xsxgPack_btn
+    400828: zd_cjz_02
+    400830: zd_cjz_02 1
+    400832: zd_light
+    400834: zd_light 1
+    400836: zd_zhuanpan
+    400838: zd_zhuanpan 1
+    400840: zhuanpan
+    400842: zhuanpan_dishwheel
+    400844: zhuanpan_embz
+    400846: zp_huan
+    400848: zp_huan 1
+    400850: zuanshi
+    400852: zuanshiBG
+    2300000: btn_0
+    2300002: di_0
+    2300004: di_0 1
+    2300006: ggtj_light_0
+    2300008: ggtj_light_0 1
+    2300010: ggtj_light_0 2
+    2300012: glow_01_0
+    2300014: glow_01_0 1
+    2300016: ui_wuqi_02_0
+    2300018: ui_wuqi_02_0 1
+    2300020: ui_wuqi_03_0
+    2300022: ui_wuqi_03_0 1
+    3300000: btn_0
+    3300002: di_0
+    3300004: di_0 1
+    3300006: ggtj_light_0
+    3300008: ggtj_light_0 1
+    3300010: ggtj_light_0 2
+    3300012: glow_01_0
+    3300014: glow_01_0 1
+    3300016: ui_wuqi_02_0
+    3300018: ui_wuqi_02_0 1
+    3300020: ui_wuqi_03_0
+    3300022: ui_wuqi_03_0 1
+    4300000: di_0
+    4300002: glow_01_0
+    4300004: ui_wuqi_03_0
+    4300006: ui_wuqi_02_0
+    4300008: di_0
+    4300010: glow_01_0
+    4300012: ui_wuqi_03_0
+    4300014: ui_wuqi_02_0
+    4300016: ggtj_light_0
+    4300018: ggtj_light_0
+    4300020: btn_0
+    4300022: ggtj_light_0
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

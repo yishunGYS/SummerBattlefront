@@ -1,0 +1,330 @@
+fileFormatVersion: 2
+guid: cab1e0af243e5e74ba6a0199789e9960
+timeCreated: 1564462218
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ability
+    100002: basic_info
+    100004: big_Button
+    100006: Bip
+    100008: Bip001
+    100010: Bip001 Head
+    100012: Bip001 L Calf
+    100014: Bip001 L Clavicle
+    100016: Bip001 L Finger0
+    100018: Bip001 L Finger01
+    100020: Bip001 L Finger1
+    100022: Bip001 L Finger11
+    100024: Bip001 L Foot
+    100026: Bip001 L Forearm
+    100028: Bip001 L Hand
+    100030: Bip001 L Thigh
+    100032: Bip001 L Toe0
+    100034: Bip001 L UpperArm
+    100036: Bip001 Neck
+    100038: Bip001 Pelvis
+    100040: Bip001 R Calf
+    100042: Bip001 R Clavicle
+    100044: Bip001 R Finger0
+    100046: Bip001 R Finger01
+    100048: Bip001 R Finger1
+    100050: Bip001 R Finger11
+    100052: Bip001 R Foot
+    100054: Bip001 R Forearm
+    100056: Bip001 R Hand
+    100058: Bip001 R Thigh
+    100060: Bip001 R Toe0
+    100062: Bip001 R UpperArm
+    100064: Bip001 Spine
+    100066: Bip001 Spine1
+    100068: Bip_0
+    100070: block
+    100072: block 1
+    100074: block_text
+    100076: body
+    100078: Bone001
+    100080: Bone001(mirrored)
+    100082: Bone002
+    100084: Bone002(mirrored)
+    100086: Bone004
+    100088: Bone004(mirrored)
+    100090: Bone005
+    100092: Bone005(mirrored)
+    100094: Bone006
+    100096: Bone006(mirrored)
+    100098: Bone008
+    100100: Bone009
+    100102: Bone011
+    100104: Bone012
+    100106: Bone014
+    100108: Bone015
+    100110: boock
+    100112: btn
+    100114: Camera
+    100116: change_name
+    100118: change_name 1
+    100120: close
+    100122: content
+    100124: defense
+    100126: defense 1
+    100128: defense_text
+    100130: denfense
+    100132: Directional light
+    100134: dodge
+    100136: dodge 1
+    100138: dodge 2
+    100140: dodge_text
+    100142: foot
+    100144: gong
+    100146: gongjianshou
+    100148: guild
+    100150: guild_text
+    100152: head
+    100154: headicon_time
+    100156: headicon_time_text
+    100158: ID
+    100160: ID_text
+    100162: Image
+    100164: Image (1)
+    100166: Image 1
+    100168: Image 2
+    100170: Image 3
+    100172: Image 4
+    100174: Image 5
+    100176: Image 6
+    100178: info_bg
+    100180: lhand
+    100182: life
+    100184: life 1
+    100186: life 2
+    100188: life_text
+    100190: lv_text
+    100192: modify_btn
+    100194: name
+    100196: namepanel
+    100198: Object003
+    100200: Object003_0
+    100202: Object003_1
+    100204: PersonalInfo
+    100206: //RootNode
+    100208: potrait
+    100210: potrait_bg
+    100212: property_map_pos
+    100214: RawImage
+    100216: recovery
+    100218: recovery 1
+    100220: recovery 2
+    100222: recovery_text
+    100224: rhand
+    100226: security_centre_btn
+    100228: shadow
+    100230: shadow_0
+    100232: text
+    100234: underwrite
+    100236: underwrite 1
+    100238: vip_lv
+    100240: weapon_lv
+    100242: weapon_lv_text
+    400000: ability
+    400002: basic_info
+    400004: big_Button
+    400006: Bip
+    400008: Bip001
+    400010: Bip001 Head
+    400012: Bip001 L Calf
+    400014: Bip001 L Clavicle
+    400016: Bip001 L Finger0
+    400018: Bip001 L Finger01
+    400020: Bip001 L Finger1
+    400022: Bip001 L Finger11
+    400024: Bip001 L Foot
+    400026: Bip001 L Forearm
+    400028: Bip001 L Hand
+    400030: Bip001 L Thigh
+    400032: Bip001 L Toe0
+    400034: Bip001 L UpperArm
+    400036: Bip001 Neck
+    400038: Bip001 Pelvis
+    400040: Bip001 R Calf
+    400042: Bip001 R Clavicle
+    400044: Bip001 R Finger0
+    400046: Bip001 R Finger01
+    400048: Bip001 R Finger1
+    400050: Bip001 R Finger11
+    400052: Bip001 R Foot
+    400054: Bip001 R Forearm
+    400056: Bip001 R Hand
+    400058: Bip001 R Thigh
+    400060: Bip001 R Toe0
+    400062: Bip001 R UpperArm
+    400064: Bip001 Spine
+    400066: Bip001 Spine1
+    400068: Bip_0
+    400070: block
+    400072: block 1
+    400074: block_text
+    400076: body
+    400078: Bone001
+    400080: Bone001(mirrored)
+    400082: Bone002
+    400084: Bone002(mirrored)
+    400086: Bone004
+    400088: Bone004(mirrored)
+    400090: Bone005
+    400092: Bone005(mirrored)
+    400094: Bone006
+    400096: Bone006(mirrored)
+    400098: Bone008
+    400100: Bone009
+    400102: Bone011
+    400104: Bone012
+    400106: Bone014
+    400108: Bone015
+    400110: boock
+    400112: btn
+    400114: Camera
+    400116: change_name
+    400118: change_name 1
+    400120: close
+    400122: content
+    400124: defense
+    400126: defense 1
+    400128: defense_text
+    400130: denfense
+    400132: Directional light
+    400134: dodge
+    400136: dodge 1
+    400138: dodge 2
+    400140: dodge_text
+    400142: foot
+    400144: gong
+    400146: gongjianshou
+    400148: guild
+    400150: guild_text
+    400152: head
+    400154: headicon_time
+    400156: headicon_time_text
+    400158: ID
+    400160: ID_text
+    400162: Image
+    400164: Image (1)
+    400166: Image 1
+    400168: Image 2
+    400170: Image 3
+    400172: Image 4
+    400174: Image 5
+    400176: Image 6
+    400178: info_bg
+    400180: lhand
+    400182: life
+    400184: life 1
+    400186: life 2
+    400188: life_text
+    400190: lv_text
+    400192: modify_btn
+    400194: name
+    400196: namepanel
+    400198: Object003
+    400200: Object003_0
+    400202: Object003_1
+    400204: //RootNode
+    400206: PersonalInfo
+    400208: potrait
+    400210: potrait_bg
+    400212: property_map_pos
+    400214: RawImage
+    400216: recovery
+    400218: recovery 1
+    400220: recovery 2
+    400222: recovery_text
+    400224: rhand
+    400226: security_centre_btn
+    400228: shadow
+    400230: shadow_0
+    400232: text
+    400234: underwrite
+    400236: underwrite 1
+    400238: vip_lv
+    400240: weapon_lv
+    400242: weapon_lv_text
+    2300000: Bip_0
+    2300002: shadow_0
+    3300000: Bip_0
+    3300002: shadow_0
+    4300000: Bip_0
+    4300002: Object003_0
+    4300004: Object003_1
+    4300006: shadow_0
+    9500000: //RootNode
+    13700000: Object003_0
+    13700002: Object003_1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

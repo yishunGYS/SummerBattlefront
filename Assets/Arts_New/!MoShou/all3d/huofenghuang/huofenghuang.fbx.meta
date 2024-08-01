@@ -1,0 +1,336 @@
+fileFormatVersion: 2
+guid: bea7448f154e91644b8907cba5a4e512
+timeCreated: 1564462207
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: _polySurface4
+    100002: _polySurface4_0
+    100004: Bip001
+    100006: Bip001 Footsteps
+    100008: Bip001 Head
+    100010: Bip001 HeadNub
+    100012: Bip001 L Clavicle
+    100014: Bip001 L Finger0
+    100016: Bip001 L Finger0Nub
+    100018: Bip001 L Forearm
+    100020: Bip001 L Hand
+    100022: Bip001 L UpperArm
+    100024: Bip001 Neck
+    100026: Bip001 Neck1
+    100028: Bip001 Pelvis
+    100030: Bip001 R Calf
+    100032: Bip001 R Foot
+    100034: Bip001 R Thigh
+    100036: Bip001 R Toe0
+    100038: Bip001 R Toe01
+    100040: Bip001 R Toe02
+    100042: Bip001 R Toe0Nub
+    100044: Bip001 Spine
+    100046: Bip001 Spine1
+    100048: Bone001
+    100050: Bone002
+    100052: Bone003
+    100054: Bone004
+    100056: Bone026
+    100058: Bone026(mirrored)
+    100060: Bone027
+    100062: Bone027(mirrored)
+    100064: Bone031
+    100066: Bone031(mirrored)
+    100068: Bone035
+    100070: Bone035(mirrored)
+    100072: Bone038
+    100074: Bone044
+    100076: Bone044(mirrored)
+    100078: Bone048
+    100080: Bone049
+    100082: Bone050
+    100084: Bone053
+    100086: Bone060
+    100088: Bone060(mirrored)
+    100090: Bone061
+    100092: Bone061(mirrored)
+    100094: Bone062
+    100096: Bone062(mirrored)
+    100098: Bone063
+    100100: Bone063(mirrored)
+    100102: Bone064
+    100104: Bone064(mirrored)
+    100106: Bone065
+    100108: Bone065(mirrored)
+    100110: Bone066
+    100112: Bone066(mirrored)
+    100114: Bone067
+    100116: Bone067(mirrored)
+    100118: Bone068
+    100120: Bone068(mirrored)
+    100122: Bone069
+    100124: Bone069(mirrored)
+    100126: Bone070
+    100128: Bone070(mirrored)
+    100130: Bone071
+    100132: Bone071(mirrored)
+    100134: //RootNode
+    100136: huofenghuang
+    100138: jiao00
+    100140: jiao01
+    100142: jiao02
+    100144: jiao03
+    100146: jiao04
+    100148: jiao05
+    100150: jiao06
+    100152: jiao07
+    100154: jiao08
+    100156: jiao09
+    100158: jiao10
+    100160: jiao11
+    100162: jiao12
+    100164: jiao13
+    100166: jiao14
+    100168: jiao15
+    100170: jiao16
+    100172: jiao17
+    100174: jiao18
+    100176: jiao19
+    100178: jiao20
+    100180: jiao21
+    100182: jiao22
+    100184: jiao23
+    100186: jiao24
+    100188: jiao25
+    100190: jiao26
+    100192: jiao27
+    100194: jiao28
+    100196: jiao29
+    100198: tou00
+    100200: tou01
+    100202: tou02
+    100204: tou03
+    100206: tou04
+    100208: tou05
+    100210: tou06
+    100212: tou07
+    100214: tou08
+    100216: tou09
+    100218: tou10
+    100220: tou11
+    100222: weiba00
+    100224: weiba01
+    100226: weiba02
+    100228: weiba03
+    100230: weiba04
+    100232: weiba05
+    100234: weiba06
+    100236: weiba07
+    100238: weiba08
+    100240: weiba09
+    100242: weiba10
+    100244: weiba11
+    100246: weiba12
+    100248: weiba13
+    100250: weiba14
+    100252: weiba15
+    100254: weiba16
+    100256: weiba17
+    400000: _polySurface4
+    400002: _polySurface4_0
+    400004: Bip001
+    400006: Bip001 Footsteps
+    400008: Bip001 Head
+    400010: Bip001 HeadNub
+    400012: Bip001 L Clavicle
+    400014: Bip001 L Finger0
+    400016: Bip001 L Finger0Nub
+    400018: Bip001 L Forearm
+    400020: Bip001 L Hand
+    400022: Bip001 L UpperArm
+    400024: Bip001 Neck
+    400026: Bip001 Neck1
+    400028: Bip001 Pelvis
+    400030: Bip001 R Calf
+    400032: Bip001 R Foot
+    400034: Bip001 R Thigh
+    400036: Bip001 R Toe0
+    400038: Bip001 R Toe01
+    400040: Bip001 R Toe02
+    400042: Bip001 R Toe0Nub
+    400044: Bip001 Spine
+    400046: Bip001 Spine1
+    400048: Bone001
+    400050: Bone002
+    400052: Bone003
+    400054: Bone004
+    400056: Bone026
+    400058: Bone026(mirrored)
+    400060: Bone027
+    400062: Bone027(mirrored)
+    400064: Bone031
+    400066: Bone031(mirrored)
+    400068: Bone035
+    400070: Bone035(mirrored)
+    400072: Bone038
+    400074: Bone044
+    400076: Bone044(mirrored)
+    400078: Bone048
+    400080: Bone049
+    400082: Bone050
+    400084: Bone053
+    400086: Bone060
+    400088: Bone060(mirrored)
+    400090: Bone061
+    400092: Bone061(mirrored)
+    400094: Bone062
+    400096: Bone062(mirrored)
+    400098: Bone063
+    400100: Bone063(mirrored)
+    400102: Bone064
+    400104: Bone064(mirrored)
+    400106: Bone065
+    400108: Bone065(mirrored)
+    400110: Bone066
+    400112: Bone066(mirrored)
+    400114: Bone067
+    400116: Bone067(mirrored)
+    400118: Bone068
+    400120: Bone068(mirrored)
+    400122: Bone069
+    400124: Bone069(mirrored)
+    400126: Bone070
+    400128: Bone070(mirrored)
+    400130: Bone071
+    400132: Bone071(mirrored)
+    400134: huofenghuang
+    400136: //RootNode
+    400138: jiao00
+    400140: jiao01
+    400142: jiao02
+    400144: jiao03
+    400146: jiao04
+    400148: jiao05
+    400150: jiao06
+    400152: jiao07
+    400154: jiao08
+    400156: jiao09
+    400158: jiao10
+    400160: jiao11
+    400162: jiao12
+    400164: jiao13
+    400166: jiao14
+    400168: jiao15
+    400170: jiao16
+    400172: jiao17
+    400174: jiao18
+    400176: jiao19
+    400178: jiao20
+    400180: jiao21
+    400182: jiao22
+    400184: jiao23
+    400186: jiao24
+    400188: jiao25
+    400190: jiao26
+    400192: jiao27
+    400194: jiao28
+    400196: jiao29
+    400198: tou00
+    400200: tou01
+    400202: tou02
+    400204: tou03
+    400206: tou04
+    400208: tou05
+    400210: tou06
+    400212: tou07
+    400214: tou08
+    400216: tou09
+    400218: tou10
+    400220: tou11
+    400222: weiba00
+    400224: weiba01
+    400226: weiba02
+    400228: weiba03
+    400230: weiba04
+    400232: weiba05
+    400234: weiba06
+    400236: weiba07
+    400238: weiba08
+    400240: weiba09
+    400242: weiba10
+    400244: weiba11
+    400246: weiba12
+    400248: weiba13
+    400250: weiba14
+    400252: weiba15
+    400254: weiba16
+    400256: weiba17
+    4300000: _polySurface4_0
+    9500000: //RootNode
+    13700000: _polySurface4_0
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

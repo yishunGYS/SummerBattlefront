@@ -1,0 +1,120 @@
+fileFormatVersion: 2
+guid: ff731d7e761b04045b3189b7c3a5b8b2
+timeCreated: 1564462271
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: chuangsongmen_13
+    100002: //RootNode
+    100004: csm
+    100006: dise_liang
+    100008: dise_liang_0
+    100010: dise_liang_1
+    100012: dise_liang_1_0
+    100014: fazhen
+    100016: fenshen
+    100018: fenshen (1)
+    100020: fenshen_shifa_lizi
+    100022: fenshen_shifa_shuxian
+    100024: frantic _4
+    100026: glow
+    100028: glow (1)
+    100030: glow 1
+    100032: guang
+    100034: Lightshafts_Magic
+    100036: Lightshafts_Magic (1)
+    400000: chuangsongmen_13
+    400002: //RootNode
+    400004: csm
+    400006: dise_liang
+    400008: dise_liang_0
+    400010: dise_liang_1
+    400012: dise_liang_1_0
+    400014: fazhen
+    400016: fenshen
+    400018: fenshen (1)
+    400020: fenshen_shifa_lizi
+    400022: fenshen_shifa_shuxian
+    400024: frantic _4
+    400026: glow
+    400028: glow (1)
+    400030: glow 1
+    400032: guang
+    400034: Lightshafts_Magic
+    400036: Lightshafts_Magic (1)
+    2300000: dise_liang_0
+    2300002: dise_liang_1_0
+    3300000: dise_liang_0
+    3300002: dise_liang_1_0
+    4300000: dise_liang_1_0
+    4300002: dise_liang_0
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

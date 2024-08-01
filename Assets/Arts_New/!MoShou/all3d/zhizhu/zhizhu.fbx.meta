@@ -1,0 +1,186 @@
+fileFormatVersion: 2
+guid: ab3b7c980a8764344b4d58065a36b45f
+timeCreated: 1564462189
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bone001
+    100002: Bone002
+    100004: Bone003
+    100006: Bone004
+    100008: Bone004(mirrored)
+    100010: Bone005
+    100012: Bone005(mirrored)
+    100014: Bone006
+    100016: Bone006(mirrored)
+    100018: Bone007
+    100020: Bone007(mirrored)
+    100022: Bone008
+    100024: Bone008(mirrored)
+    100026: Bone009
+    100028: Bone009(mirrored)
+    100030: Bone010
+    100032: Bone010(mirrored)
+    100034: Bone011
+    100036: Bone011(mirrored)
+    100038: Bone012
+    100040: Bone012(mirrored)
+    100042: Bone013
+    100044: Bone013(mirrored)
+    100046: Bone014
+    100048: Bone014(mirrored)
+    100050: Bone015
+    100052: Bone015(mirrored)
+    100054: Bone016
+    100056: Bone016(mirrored)
+    100058: Bone017
+    100060: Bone017(mirrored)
+    100062: Bone018
+    100064: Bone018(mirrored)
+    100066: Bone019
+    100068: Bone020
+    100070: Bone021
+    100072: Dummy001
+    100074: IK Chain001
+    100076: IK Chain002
+    100078: IK Chain003
+    100080: IK Chain004
+    100082: IK Chain005
+    100084: IK Chain006
+    100086: IK Chain007
+    100088: IK Chain008
+    100090: IK Chain009
+    100092: IK Chain010
+    100094: IK Chain011
+    100096: IK Chain012
+    100098: IK Chain013
+    100100: zhizhu
+    100102: //RootNode
+    100104: zhizhu 1
+    100106: zhizhu_0
+    400000: Bone001
+    400002: Bone002
+    400004: Bone003
+    400006: Bone004
+    400008: Bone004(mirrored)
+    400010: Bone005
+    400012: Bone005(mirrored)
+    400014: Bone006
+    400016: Bone006(mirrored)
+    400018: Bone007
+    400020: Bone007(mirrored)
+    400022: Bone008
+    400024: Bone008(mirrored)
+    400026: Bone009
+    400028: Bone009(mirrored)
+    400030: Bone010
+    400032: Bone010(mirrored)
+    400034: Bone011
+    400036: Bone011(mirrored)
+    400038: Bone012
+    400040: Bone012(mirrored)
+    400042: Bone013
+    400044: Bone013(mirrored)
+    400046: Bone014
+    400048: Bone014(mirrored)
+    400050: Bone015
+    400052: Bone015(mirrored)
+    400054: Bone016
+    400056: Bone016(mirrored)
+    400058: Bone017
+    400060: Bone017(mirrored)
+    400062: Bone018
+    400064: Bone018(mirrored)
+    400066: Bone019
+    400068: Bone020
+    400070: Bone021
+    400072: Dummy001
+    400074: IK Chain001
+    400076: IK Chain002
+    400078: IK Chain003
+    400080: IK Chain004
+    400082: IK Chain005
+    400084: IK Chain006
+    400086: IK Chain007
+    400088: IK Chain008
+    400090: IK Chain009
+    400092: IK Chain010
+    400094: IK Chain011
+    400096: IK Chain012
+    400098: IK Chain013
+    400100: //RootNode
+    400102: zhizhu
+    400104: zhizhu 1
+    400106: zhizhu_0
+    4300000: zhizhu_0
+    9500000: //RootNode
+    13700000: zhizhu_0
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
