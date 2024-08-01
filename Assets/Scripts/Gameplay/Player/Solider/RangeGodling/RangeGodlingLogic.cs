@@ -16,7 +16,7 @@ namespace Gameplay.Player.Solider
         public override void GetTarget()
         {
             base.GetTarget();
-            MultiAttackSoliderGetTarget();
+            DistanceBasedGetTarget();
         }
 
         // public override void Attack()

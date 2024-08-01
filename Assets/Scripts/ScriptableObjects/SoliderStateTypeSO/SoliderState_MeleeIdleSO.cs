@@ -16,7 +16,7 @@ namespace ScriptableObjects.SoliderStateTypeSO
         {
             Debug.Log("SoliderStateIdle OnUpdate");
             //idle to move
-            if (soliderAgent.soliderLogic.CheckObstacle()==false && soliderAgent.soliderLogic.HasAttackTarget()==false)
+            if (soliderAgent.soliderLogic.CheckObstacle()==false)
             {
                 fsm.ChangeState(UnitStateType.Move);
             }
