@@ -30,6 +30,7 @@ namespace Gameplay.Enemy
         private const float frontCheckDistance = 2f;
         private List<SoliderAgent> attackTargets = new List<SoliderAgent>(); //自己的攻击目标
         private HashSet<SoliderAgent> attackers = new HashSet<SoliderAgent>(); //在对自己攻击的士兵
+        private SoliderAgent focusTarget;
 
         //攻击
         private float attackTimer = 1000f;
@@ -151,37 +152,8 @@ namespace Gameplay.Enemy
             //子类override
         }
 
-        //若是单攻
-        protected void SingleAttackEnemyGetTarget()
-        {
-            var minDis = 10000f;
-            SoliderAgent singleTarget = null;
-            Collider[] hitColliders =
-                Physics.OverlapSphere(enemyAgent.transform.position, enemyModel.attackRange,
-                    LayerMask.GetMask("Solider"));
 
-
-            foreach (var collider in hitColliders)
-            {
-                var tempDis = Vector3.Distance(enemyAgent.transform.position, collider.transform.position);
-                var temp = collider.GetComponent<SoliderAgent>();
-                if (!CheckMatchAttackType(temp))
-                {
-                    continue;
-                }
-
-                if (tempDis <= minDis)
-                {
-                    minDis = tempDis;
-                    singleTarget = temp;
-                }
-            }
-
-            attackTargets.Add(singleTarget);
-        }
-
-
-        protected void MultiAttackEnemyGetTarget()
+        protected void DistanceBasedEnemyGetTarget()
         {
             List<SoliderAgent> tempMultiTarget = new List<SoliderAgent>();
             List<AttackSoliderTarget> tempAttackTargets = new List<AttackSoliderTarget>();
@@ -207,6 +179,44 @@ namespace Gameplay.Enemy
             {
                 attackTargets.Add(tempMultiTarget[i]);
             }
+        }
+
+        public void GetFocusTarget()
+        {
+            if (HasFocusTarget())
+                return;
+
+            var minDis = 10000f;
+            SoliderAgent singleTarget = null;
+            Collider[] hitColliders =
+                Physics.OverlapSphere(enemyAgent.transform.position, enemyModel.attackRange,
+                    LayerMask.GetMask("Solider"));
+
+
+            foreach (var collider in hitColliders)
+            {
+                var tempDis = Vector3.Distance(enemyAgent.transform.position, collider.transform.position);
+                var temp = collider.GetComponent<SoliderAgent>();
+                if (!CheckMatchAttackType(temp))
+                {
+                    continue;
+                }
+
+                if (tempDis <= minDis)
+                {
+                    minDis = tempDis;
+                    singleTarget = temp;
+                }
+            }
+
+            focusTarget = singleTarget;
+        }
+
+        public bool HasFocusTarget()
+        {
+            if (focusTarget != null)
+                return true;
+            return false;
         }
 
         //辅助/治疗获取目标
@@ -257,6 +267,18 @@ namespace Gameplay.Enemy
                         enemyAgent.enemyModel.magicAttackPoint, enemyAgent);
                     Debug.Log("敌人攻击");
                 }
+
+                CalculateCd();
+            }
+        }
+
+        protected void FocusAttack()
+        {
+            if (isAttackReady)
+            {
+                enemyAgent.enemyLogic.focusTarget.soliderLogic.OnTakeDamage(enemyAgent.enemyModel.attackPoint,
+                    enemyAgent.enemyModel.magicAttackPoint, enemyAgent);
+                Debug.Log("敌人专注攻击");
 
                 CalculateCd();
             }

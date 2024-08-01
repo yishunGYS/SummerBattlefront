@@ -12,7 +12,7 @@ namespace Gameplay.Player.Solider.MeleeGodling
         public override void GetTarget()
         {
             base.GetTarget();
-            SingleAttackSoliderGetTarget();
+            DistanceBasedGetTarget();
         }
 
  
