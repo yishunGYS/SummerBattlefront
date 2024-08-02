@@ -189,17 +189,7 @@ namespace Gameplay.Player
                 Physics.OverlapSphere(soliderAgent.transform.position, soliderModel.attackRange,
                     LayerMask.GetMask("Enemy"));
 
-            int enemyCount = 0;
-            foreach (var hitCollider in hitColliders)
-            {
-                // 过滤掉自己的碰撞体
-                if (hitCollider.gameObject != soliderAgent.gameObject)
-                {
-                    enemyCount++;
-                }
-            }
-
-            if (enemyCount <= 0)
+            if (hitColliders.Length <= 0)
             {
                 return false;
             }
@@ -242,36 +232,10 @@ namespace Gameplay.Player
         }
 
 
-        //单攻获取目标
-        protected void SingleAttackSoliderGetTarget()
-        {
-            var minDis = 10000f;
-            EnemyAgent singleTarget = null;
-
-            Collider[] hitColliders =
-                Physics.OverlapSphere(soliderAgent.transform.position, soliderModel.attackRange,
-                    LayerMask.GetMask("Enemy"));
-            foreach (var collider in hitColliders)
-            {
-                var tempDis = Vector3.Distance(soliderAgent.transform.position, collider.transform.position);
-                var temp = collider.GetComponent<EnemyAgent>();
-                if (!CheckMatchAttackType(temp))
-                {
-                    continue;
-                }
-
-                if (tempDis <= minDis)
-                {
-                    minDis = tempDis;
-                    singleTarget = temp;
-                }
-            }
-
-            attackTargets.Add(singleTarget);
-        }
+       
 
         //群攻获取目标
-        protected void MultiAttackSoliderGetTarget()
+        protected void DistanceBasedGetTarget()
         {
             List<AttackEnemyTarget> tempAttackTargets = new List<AttackEnemyTarget>();
 

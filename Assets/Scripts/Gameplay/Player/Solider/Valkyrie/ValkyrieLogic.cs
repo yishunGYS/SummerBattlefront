@@ -13,7 +13,7 @@ namespace Gameplay.Player.Solider.Valkyrie
         public override void GetTarget()
         {
             base.GetTarget();
-            SingleAttackSoliderGetTarget();
+            DistanceBasedGetTarget();
         }
 
         public override void Attack()

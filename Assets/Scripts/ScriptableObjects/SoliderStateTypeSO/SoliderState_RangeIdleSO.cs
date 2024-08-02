@@ -13,10 +13,10 @@ namespace ScriptableObjects.SoliderStateTypeSO
         public override void OnUpdate()
         {
             //idle to move
-            if (soliderAgent.soliderLogic.CheckObstacle()==false && soliderAgent.soliderLogic.HasAttackTarget()==false) 
-            {
-                fsm.ChangeState(UnitStateType.Move);
-            }
+            //if (soliderAgent.soliderLogic.CheckObstacle()==false && soliderAgent.soliderLogic.HasAttackTarget()==false) 
+            //{
+            //    fsm.ChangeState(UnitStateType.Move);
+            //}
             //应该是远程的attack逻辑
             if (soliderAgent.soliderLogic.CheckObstacle() == false && soliderAgent.soliderLogic.isAttackReady == false)
             {
