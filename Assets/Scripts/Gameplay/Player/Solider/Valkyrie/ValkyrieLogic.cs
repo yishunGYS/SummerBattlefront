@@ -29,7 +29,7 @@ namespace Gameplay.Player.Solider.Valkyrie
                 CalculateCd();
                 for (int i = soliderAgent.soliderLogic.attackTargets.Count - 1; i >= 0; i--)
                 {
-                    Debug.Log("µ¥ÌåAOE¹¥»÷£¡£¡£¡");
+                    Debug.Log("å•ä½“AOEæ”»å‡»ï¼ï¼ï¼");
                     soliderAgent.soliderLogic.attackTargets[i].enemyLogic.OnTakeAOEDamage(
                         soliderAgent.soliderModel.attackPoint,
                         soliderAgent.soliderModel.magicAttackPoint, 
