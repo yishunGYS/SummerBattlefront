@@ -65,8 +65,10 @@ namespace Utilities
                     soliderModel.attackEnemyType = (UnitType)ParseInt(value[16]);
                     
                     soliderModel.moveSpeed = ParseFloat(value[17]);
-                    soliderModel.scenePrefabPath = value[18];
-                    soliderModel.uiPrefabPath = value[19];
+                    soliderModel.relocateCd = ParseFloat(value[18]);
+                    
+                    soliderModel.scenePrefabPath = value[19];
+                    soliderModel.uiPrefabPath = value[20];
 
                     var soliderDatabase = DataManager.Instance.GetSoliderBaseModels();
                     soliderDatabase.TryAdd(soliderModel.soliderId, soliderModel);
@@ -104,9 +106,11 @@ namespace Utilities
                     enemyModel.attackTargetType = (AttackTargetType)ParseInt(value[14]);
                     enemyModel.attackSoliderType = (UnitType)ParseInt(value[15]);
                     enemyModel.blockNum = ParseInt(value[16]);
+
+                    enemyModel.deadCoin = ParseInt(value[17]);
                     
-                    enemyModel.scenePrefabPath = value[17];
-                    enemyModel.uiPrefabPath = value[18];
+                    enemyModel.scenePrefabPath = value[18];
+                    enemyModel.uiPrefabPath = value[19];
                     
                     var enemyDatabase = DataManager.Instance.GetEnemyBaseModels();
                     enemyDatabase.TryAdd(enemyModel.enemyId, enemyModel);

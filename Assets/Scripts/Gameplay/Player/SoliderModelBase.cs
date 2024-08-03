@@ -39,6 +39,8 @@ namespace Gameplay.Player
         public UnitType attackEnemyType;  //若attackEnemyType是多种，那么待扩展
 
         public float moveSpeed;
+        public float relocateCd;
+        
         public string scenePrefabPath;
         public string uiPrefabPath;
 
@@ -64,6 +66,7 @@ namespace Gameplay.Player
                 attackTargetType = this.attackTargetType,
                 attackEnemyType = this.attackEnemyType,
                 moveSpeed = this.moveSpeed,
+                relocateCd = this.relocateCd,
                 scenePrefabPath = this.scenePrefabPath,
                 uiPrefabPath = this.uiPrefabPath
             };
