@@ -12,7 +12,5 @@ namespace Gameplay.Player.Solider
             base.OnInit();
             soliderLogic = new RangeGodlingLogic(this);
         }
-        
-        
     }
 }
