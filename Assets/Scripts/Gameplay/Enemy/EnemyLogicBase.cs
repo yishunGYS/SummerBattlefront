@@ -366,6 +366,10 @@ namespace Gameplay.Enemy
 
         private void AddAttacker(SoliderAgent attacker)
         {
+            if (!attacker)
+            {
+                return;
+            }
             if (!attackers.Contains(attacker))
             {
                 attackers.Add(attacker);

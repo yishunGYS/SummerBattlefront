@@ -6537,7 +6537,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Valkyrie
+  m_text: Exploder
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7176,7 +7176,7 @@ MonoBehaviour:
         m_MethodName: ChangeSpawnCharacter
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: -7174182815858978331, guid: b90e320bbc756f240b9e586dbd43f8f4, type: 3}
+          m_ObjectArgument: {fileID: 4606150940562005678, guid: 88016f7c2a977314f9d65b3a82fc5306, type: 3}
           m_ObjectArgumentAssemblyTypeName: Gameplay.Player.SoliderAgent, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0

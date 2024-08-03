@@ -49,6 +49,7 @@ namespace Gameplay.Player.Solider
                     go.OnInit(soliderAgent.soliderLogic.attackTargets[i].transform.position,rangeGodlingAgent);
                 }
             }
+            
         }
     }
 }

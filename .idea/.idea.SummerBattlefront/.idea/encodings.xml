@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/Projectile.cs" charset="GBK" />
-<<<<<<< HEAD
-    <file url="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Player/Solider/Valkyrie/ValkyrieLogic.cs" charset="GBK" />
-=======
->>>>>>> 8473e817102804c0b660766370f122228142a329
-    <file url="file://$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/SoliderStateTypeSO/SoliderState_AttackSO.cs" charset="GBK" />
-    <file url="PROJECT" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/3DlevelEditor_GYS/LevelEditorWindow.cs" charset="GBK" />
   </component>
 </project>
