@@ -2,8 +2,10 @@ using UnityEngine;
 
 namespace Gameplay.Player
 {
-    public interface IAgent 
+    public interface IAgent
     {
-
+        UnitAttackData GetAttackPoint();
+        
+        UnitDefendData GetDefendPoint();
     }
 }

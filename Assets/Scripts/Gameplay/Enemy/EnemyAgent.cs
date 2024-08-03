@@ -43,6 +43,15 @@ namespace Gameplay.Enemy
         {
             fsm.OnUpdate();
         }
-        
+
+        public UnitAttackData GetAttackPoint()
+        {
+            return new UnitAttackData(enemyModel.attackPoint, enemyModel.magicAttackPoint);
+        }
+
+        public UnitDefendData GetDefendPoint()
+        {
+            return new UnitDefendData(enemyModel.defendReducePercent, enemyModel.magicDefendReducePercent);
+        }
     }
 }

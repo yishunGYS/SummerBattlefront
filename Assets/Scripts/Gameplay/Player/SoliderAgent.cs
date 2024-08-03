@@ -24,6 +24,8 @@ namespace Gameplay.Player
         private void Update()
         {
             fsm.OnUpdate();
+            
+            soliderLogic.OnUpdateBuff();
         }
         
         private void InitData()
@@ -40,6 +42,15 @@ namespace Gameplay.Player
             }
         }
         
+        public UnitAttackData GetAttackPoint()
+        {
+            return new UnitAttackData(soliderModel.attackPoint, soliderModel.magicAttackPoint);
+        }
+
+        public UnitDefendData GetDefendPoint()
+        {
+            return new UnitDefendData(soliderModel.defendReducePercent, soliderModel.magicDefendReducePercent);
+        }
         
     }
 }
