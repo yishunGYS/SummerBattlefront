@@ -10,7 +10,6 @@ namespace _3DlevelEditor_GYS
         private Vector2Int gridSize = new Vector2Int(10, 10);
         private float cellSize = 1f;
         private GridCell[,] grid;
-        //private Vector3 gridOffset = Vector3.zero; // 偏移量
 
         [MenuItem("Window/Level Editor")]
         public static void ShowWindow()
@@ -23,7 +22,6 @@ namespace _3DlevelEditor_GYS
             GUILayout.Label("Grid Settings", EditorStyles.boldLabel);
             gridSize = EditorGUILayout.Vector2IntField("Grid Size", gridSize);
             cellSize = EditorGUILayout.FloatField("Cell Size", cellSize);
-            //gridOffset = EditorGUILayout.Vector2Field("Grid Offset", gridOffset);
             
             
             GUILayout.Label("Block Settings", EditorStyles.boldLabel);
@@ -70,7 +68,6 @@ namespace _3DlevelEditor_GYS
             if ((e.type == EventType.MouseDown && (e.button == 0 || e.button == 1)))
             {
                 Vector2 mousePosition = e.mousePosition;
-                //mousePosition.y = SceneView.currentDrawingSceneView.camera.pixelHeight - mousePosition.y;
 
                 Ray ray = HandleUtility.GUIPointToWorldRay(mousePosition);
                 Plane plane = new Plane(Vector3.up, Vector3.zero); // 创建与世界坐标的 (0,0) 对齐的平面

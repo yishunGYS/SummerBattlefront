@@ -39,13 +39,22 @@ namespace Gameplay.Player
         private float attackTimer = 1000f;
         public bool isAttackReady = true;
 
+        //血量
+        public float curHp;
+
         //阻挡的敌人
         public EnemyAgent blocker;
 
-        public SoliderLogicBase(SoliderAgent agent)
+        //BuffManager
+        protected BuffManager playerBuffManager;
+
+        protected SoliderLogicBase(SoliderAgent agent)
         {
             soliderAgent = agent;
             soliderModel = soliderAgent.soliderModel;
+            curHp = soliderModel.maxHp;
+
+            playerBuffManager = new BuffManager(soliderAgent);
         }
 
         public void RemoveTarget(EnemyAgent target)
@@ -232,8 +241,6 @@ namespace Gameplay.Player
         }
 
 
-       
-
         //群攻获取目标
         protected void DistanceBasedGetTarget()
         {
@@ -315,7 +322,6 @@ namespace Gameplay.Player
                         soliderAgent.soliderModel.attackPoint,
                         soliderAgent.soliderModel.magicAttackPoint, soliderAgent);
                 }
-                
             }
         }
 
@@ -333,16 +339,24 @@ namespace Gameplay.Player
         {
             AddAttacker(enemyAgent);
             // 减少士兵的生命值
-            soliderModel.maxHp = soliderModel.maxHp - (damage * (1 - soliderModel.defendReducePercent)) -
-                                 (magicDamage * (1 - soliderModel.magicDefendReducePercent));
+            var damageAmout = (int)playerBuffManager.CalculateDamage(new DamageInfo(enemyAgent, soliderAgent));
+            curHp -= damageAmout;
+            // soliderModel.maxHp = soliderModel.maxHp - (damage * (1 - soliderModel.defendReducePercent)) -
+            //                      (magicDamage * (1 - soliderModel.magicDefendReducePercent));
 
-            Debug.Log("士兵目前的血量是：" + soliderModel.maxHp);
-            Debug.Log("士兵受到的物理伤害为：" + (damage * (1 - soliderModel.defendReducePercent)));
-            Debug.Log("士兵受到的法术伤害为：" + (magicDamage * (1 - soliderModel.magicDefendReducePercent)));
+            Debug.Log("士兵目前的血量是：" + curHp);
+            // Debug.Log("士兵受到的物理伤害为：" + (damage * (1 - soliderModel.defendReducePercent)));
+            // Debug.Log("士兵受到的法术伤害为：" + (magicDamage * (1 - soliderModel.magicDefendReducePercent)));
+
+            if (damageAmout == 0)
+            {
+                Debug.Log("伤害为0，无敌");
+                return;
+            }
 
             soliderAgent.StartCoroutine(FlashRed());
 
-            if (soliderModel.maxHp <= 0)
+            if (curHp <= 0)
             {
                 Die();
             }
@@ -389,6 +403,7 @@ namespace Gameplay.Player
             {
                 agent.enemyLogic.RemoveTarget(soliderAgent);
             }
+
             //若该士兵是被阻挡的，通知被阻挡的人，他死了
             if (blocker != null)
             {
@@ -397,6 +412,12 @@ namespace Gameplay.Player
 
             soliderAgent.StopAllCoroutines();
             Object.Destroy(soliderAgent.gameObject);
+        }
+
+        
+        public void OnUpdateBuff()
+        {
+            playerBuffManager.UpdateBuff();
         }
     }
 }

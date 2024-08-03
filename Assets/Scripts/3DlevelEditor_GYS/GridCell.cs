@@ -7,6 +7,7 @@ namespace _3DlevelEditor_GYS
         public GridCell previousCell;
         public GridCell nextCell;
 
+        
         private void OnDrawGizmos()
         {
             if (previousCell != null)
