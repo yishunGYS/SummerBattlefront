@@ -1,0 +1,258 @@
+fileFormatVersion: 2
+guid: 6ece8e2facede75498c5ce93e862427c
+timeCreated: 1564462138
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bip001
+    100002: Bip001 Footsteps
+    100004: Bip001 Head
+    100006: Bip001 L Clavicle
+    100008: Bip001 L Finger0
+    100010: Bip001 L Finger01
+    100012: Bip001 L Finger1
+    100014: Bip001 L Finger11
+    100016: Bip001 L Forearm
+    100018: Bip001 L Hand
+    100020: Bip001 L UpperArm
+    100022: Bip001 Neck
+    100024: Bip001 Pelvis
+    100026: Bip001 R Clavicle
+    100028: Bip001 R Finger0
+    100030: Bip001 R Finger01
+    100032: Bip001 R Finger1
+    100034: Bip001 R Finger11
+    100036: Bip001 R Forearm
+    100038: Bip001 R Hand
+    100040: Bip001 R UpperArm
+    100042: Bip001 Spine
+    100044: Bip001 Spine1
+    100046: body
+    100048: Bone001
+    100050: Bone004
+    100052: Bone005
+    100054: Bone006
+    100056: Bone007
+    100058: Bone008
+    100060: Bone009
+    100062: Bone010
+    100064: Bone011
+    100066: Bone012
+    100068: Bone013
+    100070: Bone014
+    100072: Bone015
+    100074: Bone022
+    100076: diangun
+    100078: //RootNode
+    100080: diangun 1
+    100082: diangun 2
+    100084: diangun_0
+    100086: Dummy001
+    100088: Dummy002
+    100090: Dummy003
+    100092: Dummy004
+    100094: Dummy005
+    100096: Dummy006
+    100098: Dummy007
+    100100: Dummy008
+    100102: Dummy009
+    100104: Dummy010
+    100106: Dummy011
+    100108: Dummy012
+    100110: foot
+    100112: Fx_monster_diangun_bip001Spine_eff
+    100114: Fx_monster_diangun_Bone001_eff
+    100116: Fx_monster_diangun_Forearm
+    100118: Fx_monster_diangun_Forearm 1
+    100120: Fx_monster_diangun_Head
+    100122: Fx_monster_diangun_UpperArm
+    100124: Fx_monster_diangun_UpperArm 1
+    100126: head
+    100128: ice
+    100130: lhand
+    100132: light
+    100134: lizi
+    100136: poker1
+    100138: poker2
+    100140: poker3
+    100142: poker_paimian
+    100144: qi (1)
+    100146: qi (1) 1
+    100148: qi (1) 2
+    100150: qi (1) 3
+    100152: qi (2)
+    100154: qi (2) 1
+    100156: qipao
+    100158: rhand
+    100160: shandian
+    100162: shandian (1)
+    100164: shandian (1) 1
+    100166: shandian (1) 2
+    100168: shandian (1) 3
+    100170: stars
+    100172: ui_qipao_03
+    400000: Bip001
+    400002: Bip001 Footsteps
+    400004: Bip001 Head
+    400006: Bip001 L Clavicle
+    400008: Bip001 L Finger0
+    400010: Bip001 L Finger01
+    400012: Bip001 L Finger1
+    400014: Bip001 L Finger11
+    400016: Bip001 L Forearm
+    400018: Bip001 L Hand
+    400020: Bip001 L UpperArm
+    400022: Bip001 Neck
+    400024: Bip001 Pelvis
+    400026: Bip001 R Clavicle
+    400028: Bip001 R Finger0
+    400030: Bip001 R Finger01
+    400032: Bip001 R Finger1
+    400034: Bip001 R Finger11
+    400036: Bip001 R Forearm
+    400038: Bip001 R Hand
+    400040: Bip001 R UpperArm
+    400042: Bip001 Spine
+    400044: Bip001 Spine1
+    400046: body
+    400048: Bone001
+    400050: Bone004
+    400052: Bone005
+    400054: Bone006
+    400056: Bone007
+    400058: Bone008
+    400060: Bone009
+    400062: Bone010
+    400064: Bone011
+    400066: Bone012
+    400068: Bone013
+    400070: Bone014
+    400072: Bone015
+    400074: Bone022
+    400076: //RootNode
+    400078: diangun
+    400080: diangun 1
+    400082: diangun 2
+    400084: diangun_0
+    400086: Dummy001
+    400088: Dummy002
+    400090: Dummy003
+    400092: Dummy004
+    400094: Dummy005
+    400096: Dummy006
+    400098: Dummy007
+    400100: Dummy008
+    400102: Dummy009
+    400104: Dummy010
+    400106: Dummy011
+    400108: Dummy012
+    400110: foot
+    400112: Fx_monster_diangun_bip001Spine_eff
+    400114: Fx_monster_diangun_Bone001_eff
+    400116: Fx_monster_diangun_Forearm
+    400118: Fx_monster_diangun_Forearm 1
+    400120: Fx_monster_diangun_Head
+    400122: Fx_monster_diangun_UpperArm
+    400124: Fx_monster_diangun_UpperArm 1
+    400126: head
+    400128: ice
+    400130: lhand
+    400132: light
+    400134: lizi
+    400136: poker1
+    400138: poker2
+    400140: poker3
+    400142: poker_paimian
+    400144: qi (1)
+    400146: qi (1) 1
+    400148: qi (1) 2
+    400150: qi (1) 3
+    400152: qi (2)
+    400154: qi (2) 1
+    400156: qipao
+    400158: rhand
+    400160: shandian
+    400162: shandian (1)
+    400164: shandian (1) 1
+    400166: shandian (1) 2
+    400168: shandian (1) 3
+    400170: stars
+    400172: ui_qipao_03
+    4300000: diangun_0
+    7400000: attack
+    7400002: dead
+    7400004: skill
+    7400006: show
+    7400008: idle
+    7400010: walk
+    9500000: //RootNode
+    13700000: diangun_0
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

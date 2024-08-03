@@ -1,0 +1,209 @@
+fileFormatVersion: 2
+guid: 1953fa83b3d5cea498fc994e39a40296
+timeCreated: 1564462065
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: anyingzhiwang
+    100002: anyingzhiwang_0
+    100004: anyingzhiwang_1
+    100006: //RootNode
+    100008: anyingzhiwang_2
+    100010: ayzw_loop
+    100012: ayzw_loop2
+    100014: Bip001
+    100016: Bip001 Footsteps
+    100018: Bip001 Head
+    100020: Bip001 L Clavicle
+    100022: Bip001 L Finger0
+    100024: Bip001 L Finger01
+    100026: Bip001 L Finger1
+    100028: Bip001 L Finger11
+    100030: Bip001 L Finger2
+    100032: Bip001 L Finger21
+    100034: Bip001 L Finger3
+    100036: Bip001 L Finger31
+    100038: Bip001 L Forearm
+    100040: Bip001 L Hand
+    100042: Bip001 L UpperArm
+    100044: Bip001 Neck
+    100046: Bip001 Pelvis
+    100048: Bip001 R Clavicle
+    100050: Bip001 R Finger0
+    100052: Bip001 R Finger01
+    100054: Bip001 R Finger1
+    100056: Bip001 R Finger11
+    100058: Bip001 R Finger2
+    100060: Bip001 R Finger21
+    100062: Bip001 R Finger3
+    100064: Bip001 R Finger31
+    100066: Bip001 R Forearm
+    100068: Bip001 R Hand
+    100070: Bip001 R UpperArm
+    100072: Bip001 Spine
+    100074: Bip001 Spine1
+    100076: body
+    100078: Bone001
+    100080: Bone002
+    100082: Bone003
+    100084: Bone004
+    100086: Bone005
+    100088: dark
+    100090: foot
+    100092: head
+    100094: ice
+    100096: item1
+    100098: item2
+    100100: lhand
+    100102: light
+    100104: lizi
+    100106: lizi_juji
+    100108: lizi_juji 1
+    100110: qipao
+    100112: rhand
+    100114: smoke_kuosan
+    100116: smoke_kuosan 1
+    100118: stars
+    100120: tou
+    100122: ui_qipao_12
+    100124: xuanzhuan
+    400000: anyingzhiwang
+    400002: anyingzhiwang_0
+    400004: anyingzhiwang_1
+    400006: //RootNode
+    400008: anyingzhiwang_2
+    400010: ayzw_loop
+    400012: ayzw_loop2
+    400014: Bip001
+    400016: Bip001 Footsteps
+    400018: Bip001 Head
+    400020: Bip001 L Clavicle
+    400022: Bip001 L Finger0
+    400024: Bip001 L Finger01
+    400026: Bip001 L Finger1
+    400028: Bip001 L Finger11
+    400030: Bip001 L Finger2
+    400032: Bip001 L Finger21
+    400034: Bip001 L Finger3
+    400036: Bip001 L Finger31
+    400038: Bip001 L Forearm
+    400040: Bip001 L Hand
+    400042: Bip001 L UpperArm
+    400044: Bip001 Neck
+    400046: Bip001 Pelvis
+    400048: Bip001 R Clavicle
+    400050: Bip001 R Finger0
+    400052: Bip001 R Finger01
+    400054: Bip001 R Finger1
+    400056: Bip001 R Finger11
+    400058: Bip001 R Finger2
+    400060: Bip001 R Finger21
+    400062: Bip001 R Finger3
+    400064: Bip001 R Finger31
+    400066: Bip001 R Forearm
+    400068: Bip001 R Hand
+    400070: Bip001 R UpperArm
+    400072: Bip001 Spine
+    400074: Bip001 Spine1
+    400076: body
+    400078: Bone001
+    400080: Bone002
+    400082: Bone003
+    400084: Bone004
+    400086: Bone005
+    400088: dark
+    400090: foot
+    400092: head
+    400094: ice
+    400096: item1
+    400098: item2
+    400100: lhand
+    400102: light
+    400104: lizi
+    400106: lizi_juji
+    400108: lizi_juji 1
+    400110: qipao
+    400112: rhand
+    400114: smoke_kuosan
+    400116: smoke_kuosan 1
+    400118: stars
+    400120: tou
+    400122: ui_qipao_12
+    400124: xuanzhuan
+    4300000: anyingzhiwang_0
+    7400000: attack
+    7400002: dead
+    7400004: skill
+    7400006: idle
+    7400008: walk
+    9500000: //RootNode
+    13700000: anyingzhiwang_0
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

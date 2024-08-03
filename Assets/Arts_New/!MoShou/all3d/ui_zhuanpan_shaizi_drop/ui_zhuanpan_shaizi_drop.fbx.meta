@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: e0503b4c0f1ebc6479f2c6f3114deb85
+timeCreated: 1564462238
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: bigicon
+    100002: gold_num
+    100004: guang
+    100006: huan
+    100008: Image
+    100010: Image 1
+    100012: juji
+    100014: juji2
+    100016: juji2_0
+    100018: juji3
+    100020: juji3_0
+    100022: juji_0
+    100024: light
+    100026: lizi
+    100028: mohe_jifen
+    100030: monster_name
+    100032: prop_num
+    100034: rotation
+    100036: rotation (1)
+    100038: rotation (1) 1
+    100040: rotation (2)
+    100042: rotation_1
+    100044: sidai
+    100046: sidai_1
+    100048: Text
+    100050: //RootNode
+    100052: ui_zhuanpan_shaizi_drop
+    100054: ui_zhuanpan_shaizi_drop 1
+    100056: zd_sidai
+    100058: zd_zhuanpan
+    100060: zhuanpan_1
+    400000: bigicon
+    400002: gold_num
+    400004: guang
+    400006: huan
+    400008: Image
+    400010: Image 1
+    400012: juji
+    400014: juji2
+    400016: juji2_0
+    400018: juji3
+    400020: juji3_0
+    400022: juji_0
+    400024: light
+    400026: lizi
+    400028: mohe_jifen
+    400030: monster_name
+    400032: prop_num
+    400034: rotation
+    400036: rotation (1)
+    400038: rotation (1) 1
+    400040: rotation (2)
+    400042: rotation_1
+    400044: sidai
+    400046: sidai_1
+    400048: Text
+    400050: //RootNode
+    400052: ui_zhuanpan_shaizi_drop
+    400054: ui_zhuanpan_shaizi_drop 1
+    400056: zd_sidai
+    400058: zd_zhuanpan
+    400060: zhuanpan_1
+    2300000: juji2_0
+    2300002: juji3_0
+    2300004: juji_0
+    3300000: juji2_0
+    3300002: juji3_0
+    3300004: juji_0
+    4300000: juji_0
+    4300002: juji2_0
+    4300004: juji3_0
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

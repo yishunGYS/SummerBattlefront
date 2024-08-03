@@ -1,0 +1,680 @@
+fileFormatVersion: 2
+guid: 832e9073c0c59554898b345b622afc0e
+timeCreated: 1564462155
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bone001
+    100002: Bone001 1
+    100004: Bone002
+    100006: Bone002 1
+    100008: Bone003
+    100010: Bone003 1
+    100012: Bone004
+    100014: Bone004 1
+    100016: Bone005
+    100018: Bone005 1
+    100020: Bone006
+    100022: Bone006 1
+    100024: Bone007
+    100026: Bone007 1
+    100028: Bone008
+    100030: Bone008 1
+    100032: Bone009
+    100034: Bone009 1
+    100036: Bone010
+    100038: Bone010 1
+    100040: Bone011
+    100042: Bone011 1
+    100044: Bone012
+    100046: Bone012 1
+    100048: Bone013
+    100050: Bone013 1
+    100052: Bone014
+    100054: Bone014 1
+    100056: Bone015
+    100058: Bone015 1
+    100060: Bone016
+    100062: Bone016 1
+    100064: Bone017
+    100066: Bone017 1
+    100068: Bone018
+    100070: Bone018 1
+    100072: Bone019
+    100074: Bone019 1
+    100076: Bone020
+    100078: Bone020 1
+    100080: Bone021
+    100082: Bone021 1
+    100084: Bone022
+    100086: Bone022 1
+    100088: Bone023
+    100090: Bone023 1
+    100092: Bone024
+    100094: Bone024 1
+    100096: Bone025
+    100098: Bone025 1
+    100100: Bone026
+    100102: Bone026 1
+    100104: Bone027
+    100106: Bone027 1
+    100108: Bone028
+    100110: Bone028 1
+    100112: Bone029
+    100114: Bone029 1
+    100116: Bone030
+    100118: Bone030 1
+    100120: Bone031
+    100122: Bone031 1
+    100124: Bone032
+    100126: Bone032 1
+    100128: Bone033
+    100130: Bone033 1
+    100132: Bone034
+    100134: Bone034 1
+    100136: Bone035
+    100138: Bone035 1
+    100140: Bone036
+    100142: Bone036 1
+    100144: Bone037
+    100146: Bone037 1
+    100148: Bone038
+    100150: Bone038 1
+    100152: Bone039
+    100154: Bone039 1
+    100156: Bone040
+    100158: Bone040 1
+    100160: Bone041
+    100162: Bone041 1
+    100164: Bone042
+    100166: Bone042 1
+    100168: Bone043
+    100170: Bone043 1
+    100172: Bone044
+    100174: Bone044 1
+    100176: Bone045
+    100178: Bone045 1
+    100180: Bone046
+    100182: Bone046 1
+    100184: Bone047
+    100186: Bone047 1
+    100188: Bone048
+    100190: Bone048 1
+    100192: Bone049
+    100194: Bone049 1
+    100196: Bone050
+    100198: Bone050 1
+    100200: Bone051
+    100202: Bone051 1
+    100204: Bone052
+    100206: Bone052 1
+    100208: Bone053
+    100210: Bone053 1
+    100212: Bone054
+    100214: Bone054 1
+    100216: Bone055
+    100218: Bone055 1
+    100220: Bone056
+    100222: Bone056 1
+    100224: Bone057
+    100226: Bone057 1
+    100228: Bone058
+    100230: Bone058 1
+    100232: Bone059
+    100234: Bone059 1
+    100236: Bone060
+    100238: Bone060 1
+    100240: Bone061
+    100242: Bone061 1
+    100244: Bone062
+    100246: Bone062 1
+    100248: Bone063
+    100250: Bone063 1
+    100252: Bone064
+    100254: Bone064 1
+    100256: Bone065
+    100258: Bone065 1
+    100260: Bone066
+    100262: Bone066 1
+    100264: Bone067
+    100266: Bone067 1
+    100268: Bone068
+    100270: Bone068 1
+    100272: Bone069
+    100274: Bone069 1
+    100276: Bone070
+    100278: Bone070 1
+    100280: Bone071
+    100282: Bone071 1
+    100284: Bone072
+    100286: Bone072 1
+    100288: Bone073
+    100290: Bone073 1
+    100292: Bone074
+    100294: Bone074 1
+    100296: Bone075
+    100298: Bone075 1
+    100300: Bone076
+    100302: Bone076 1
+    100304: Bone077
+    100306: Bone077 1
+    100308: Bone078
+    100310: Bone078 1
+    100312: Bone079
+    100314: Bone079 1
+    100316: Bone080
+    100318: Bone080 1
+    100320: Bone081
+    100322: Bone081 1
+    100324: Bone082
+    100326: Bone082 1
+    100328: Bone083
+    100330: Bone083 1
+    100332: Bone084
+    100334: Bone084 1
+    100336: Bone085
+    100338: Bone085 1
+    100340: Bone086
+    100342: Bone086 1
+    100344: Bone087
+    100346: Bone087 1
+    100348: Bone088
+    100350: Bone088 1
+    100352: Bone089
+    100354: Bone089 1
+    100356: Bone090
+    100358: Bone090 1
+    100360: Bone091
+    100362: Bone091 1
+    100364: Bone092
+    100366: Bone092 1
+    100368: Bone093
+    100370: Bone093 1
+    100372: Bone094
+    100374: Bone094 1
+    100376: Bone095
+    100378: Bone095 1
+    100380: Bone096
+    100382: Bone096 1
+    100384: Bone097
+    100386: Bone097 1
+    100388: Bone098
+    100390: Bone098 1
+    100392: Bone099
+    100394: Bone099 1
+    100396: Bone100
+    100398: Bone100 1
+    100400: Bone101
+    100402: Bone101 1
+    100404: Bone102
+    100406: Bone102 1
+    100408: Bone103
+    100410: Bone103 1
+    100412: Bone104
+    100414: Bone104 1
+    100416: Bone105
+    100418: Bone105 1
+    100420: boom
+    100422: Cone001
+    100424: Cone001 1
+    100426: Cone001_0
+    100428: Cone001_0 1
+    100430: Cone003
+    100432: Cone003 1
+    100434: Cone003_0
+    100436: Cone003_0 1
+    100438: Cone004
+    100440: Cone004 1
+    100442: Cone004_0
+    100444: Cone004_0 1
+    100446: Cone005
+    100448: Cone005 1
+    100450: Cone005_0
+    100452: Cone005_0 1
+    100454: Cone006
+    100456: Cone006 1
+    100458: Cone006_0
+    100460: Cone006_0 1
+    100462: Cone007
+    100464: Cone007 1
+    100466: Cone007_0
+    100468: Cone007_0 1
+    100470: dimian_hei
+    100472: dimian_hei 1
+    100474: dimian_hei_wenli
+    100476: dimian_hei_wenli 1
+    100478: dimian_hei_wenli 2
+    100480: dimian_hei_wenli_02
+    100482: 'dixia '
+    100484: dixia  1
+    100486: eff_tongman_1
+    100488: //RootNode
+    100490: guanshu
+    100492: Helix001
+    100494: Helix001 1
+    100496: Helix002
+    100498: Helix002 1
+    100500: Helix003
+    100502: Helix003 1
+    100504: Helix004
+    100506: Helix004 1
+    100508: Helix005
+    100510: Helix005 1
+    100512: Helix006
+    100514: Helix006 1
+    100516: huan
+    100518: IK Chain001
+    100520: IK Chain001 1
+    100522: IK Chain002
+    100524: IK Chain002 1
+    100526: IK Chain003
+    100528: IK Chain003 1
+    100530: IK Chain004
+    100532: IK Chain004 1
+    100534: IK Chain005
+    100536: IK Chain005 1
+    100538: IK Chain006
+    100540: IK Chain006 1
+    100542: light
+    100544: light (1)
+    100546: light (2)
+    100548: light_1 (1)
+    100550: penjian
+    100552: penjian (1)
+    100554: shuibo
+    100556: shuibo_kuosanbowen_02
+    100558: shuibo_kuosanbowen_03
+    100560: shuibo_paopao
+    100562: shuibo_paopao_h
+    100564: shuibo_paopao_h1
+    100566: smoke
+    100568: smoke02
+    100570: tongman1
+    100572: tongman2
+    100574: tongman_zong
+    100576: zong
+    100578: zong_001
+    400000: Bone001
+    400002: Bone001 1
+    400004: Bone002
+    400006: Bone002 1
+    400008: Bone003
+    400010: Bone003 1
+    400012: Bone004
+    400014: Bone004 1
+    400016: Bone005
+    400018: Bone005 1
+    400020: Bone006
+    400022: Bone006 1
+    400024: Bone007
+    400026: Bone007 1
+    400028: Bone008
+    400030: Bone008 1
+    400032: Bone009
+    400034: Bone009 1
+    400036: Bone010
+    400038: Bone010 1
+    400040: Bone011
+    400042: Bone011 1
+    400044: Bone012
+    400046: Bone012 1
+    400048: Bone013
+    400050: Bone013 1
+    400052: Bone014
+    400054: Bone014 1
+    400056: Bone015
+    400058: Bone015 1
+    400060: Bone016
+    400062: Bone016 1
+    400064: Bone017
+    400066: Bone017 1
+    400068: Bone018
+    400070: Bone018 1
+    400072: Bone019
+    400074: Bone019 1
+    400076: Bone020
+    400078: Bone020 1
+    400080: Bone021
+    400082: Bone021 1
+    400084: Bone022
+    400086: Bone022 1
+    400088: Bone023
+    400090: Bone023 1
+    400092: Bone024
+    400094: Bone024 1
+    400096: Bone025
+    400098: Bone025 1
+    400100: Bone026
+    400102: Bone026 1
+    400104: Bone027
+    400106: Bone027 1
+    400108: Bone028
+    400110: Bone028 1
+    400112: Bone029
+    400114: Bone029 1
+    400116: Bone030
+    400118: Bone030 1
+    400120: Bone031
+    400122: Bone031 1
+    400124: Bone032
+    400126: Bone032 1
+    400128: Bone033
+    400130: Bone033 1
+    400132: Bone034
+    400134: Bone034 1
+    400136: Bone035
+    400138: Bone035 1
+    400140: Bone036
+    400142: Bone036 1
+    400144: Bone037
+    400146: Bone037 1
+    400148: Bone038
+    400150: Bone038 1
+    400152: Bone039
+    400154: Bone039 1
+    400156: Bone040
+    400158: Bone040 1
+    400160: Bone041
+    400162: Bone041 1
+    400164: Bone042
+    400166: Bone042 1
+    400168: Bone043
+    400170: Bone043 1
+    400172: Bone044
+    400174: Bone044 1
+    400176: Bone045
+    400178: Bone045 1
+    400180: Bone046
+    400182: Bone046 1
+    400184: Bone047
+    400186: Bone047 1
+    400188: Bone048
+    400190: Bone048 1
+    400192: Bone049
+    400194: Bone049 1
+    400196: Bone050
+    400198: Bone050 1
+    400200: Bone051
+    400202: Bone051 1
+    400204: Bone052
+    400206: Bone052 1
+    400208: Bone053
+    400210: Bone053 1
+    400212: Bone054
+    400214: Bone054 1
+    400216: Bone055
+    400218: Bone055 1
+    400220: Bone056
+    400222: Bone056 1
+    400224: Bone057
+    400226: Bone057 1
+    400228: Bone058
+    400230: Bone058 1
+    400232: Bone059
+    400234: Bone059 1
+    400236: Bone060
+    400238: Bone060 1
+    400240: Bone061
+    400242: Bone061 1
+    400244: Bone062
+    400246: Bone062 1
+    400248: Bone063
+    400250: Bone063 1
+    400252: Bone064
+    400254: Bone064 1
+    400256: Bone065
+    400258: Bone065 1
+    400260: Bone066
+    400262: Bone066 1
+    400264: Bone067
+    400266: Bone067 1
+    400268: Bone068
+    400270: Bone068 1
+    400272: Bone069
+    400274: Bone069 1
+    400276: Bone070
+    400278: Bone070 1
+    400280: Bone071
+    400282: Bone071 1
+    400284: Bone072
+    400286: Bone072 1
+    400288: Bone073
+    400290: Bone073 1
+    400292: Bone074
+    400294: Bone074 1
+    400296: Bone075
+    400298: Bone075 1
+    400300: Bone076
+    400302: Bone076 1
+    400304: Bone077
+    400306: Bone077 1
+    400308: Bone078
+    400310: Bone078 1
+    400312: Bone079
+    400314: Bone079 1
+    400316: Bone080
+    400318: Bone080 1
+    400320: Bone081
+    400322: Bone081 1
+    400324: Bone082
+    400326: Bone082 1
+    400328: Bone083
+    400330: Bone083 1
+    400332: Bone084
+    400334: Bone084 1
+    400336: Bone085
+    400338: Bone085 1
+    400340: Bone086
+    400342: Bone086 1
+    400344: Bone087
+    400346: Bone087 1
+    400348: Bone088
+    400350: Bone088 1
+    400352: Bone089
+    400354: Bone089 1
+    400356: Bone090
+    400358: Bone090 1
+    400360: Bone091
+    400362: Bone091 1
+    400364: Bone092
+    400366: Bone092 1
+    400368: Bone093
+    400370: Bone093 1
+    400372: Bone094
+    400374: Bone094 1
+    400376: Bone095
+    400378: Bone095 1
+    400380: Bone096
+    400382: Bone096 1
+    400384: Bone097
+    400386: Bone097 1
+    400388: Bone098
+    400390: Bone098 1
+    400392: Bone099
+    400394: Bone099 1
+    400396: Bone100
+    400398: Bone100 1
+    400400: Bone101
+    400402: Bone101 1
+    400404: Bone102
+    400406: Bone102 1
+    400408: Bone103
+    400410: Bone103 1
+    400412: Bone104
+    400414: Bone104 1
+    400416: Bone105
+    400418: Bone105 1
+    400420: boom
+    400422: Cone001
+    400424: Cone001 1
+    400426: Cone001_0
+    400428: Cone001_0 1
+    400430: Cone003
+    400432: Cone003 1
+    400434: Cone003_0
+    400436: Cone003_0 1
+    400438: Cone004
+    400440: Cone004 1
+    400442: Cone004_0
+    400444: Cone004_0 1
+    400446: Cone005
+    400448: Cone005 1
+    400450: Cone005_0
+    400452: Cone005_0 1
+    400454: Cone006
+    400456: Cone006 1
+    400458: Cone006_0
+    400460: Cone006_0 1
+    400462: Cone007
+    400464: Cone007 1
+    400466: Cone007_0
+    400468: Cone007_0 1
+    400470: dimian_hei
+    400472: dimian_hei 1
+    400474: dimian_hei_wenli
+    400476: dimian_hei_wenli 1
+    400478: dimian_hei_wenli 2
+    400480: dimian_hei_wenli_02
+    400482: 'dixia '
+    400484: dixia  1
+    400486: //RootNode
+    400488: eff_tongman_1
+    400490: guanshu
+    400492: Helix001
+    400494: Helix001 1
+    400496: Helix002
+    400498: Helix002 1
+    400500: Helix003
+    400502: Helix003 1
+    400504: Helix004
+    400506: Helix004 1
+    400508: Helix005
+    400510: Helix005 1
+    400512: Helix006
+    400514: Helix006 1
+    400516: huan
+    400518: IK Chain001
+    400520: IK Chain001 1
+    400522: IK Chain002
+    400524: IK Chain002 1
+    400526: IK Chain003
+    400528: IK Chain003 1
+    400530: IK Chain004
+    400532: IK Chain004 1
+    400534: IK Chain005
+    400536: IK Chain005 1
+    400538: IK Chain006
+    400540: IK Chain006 1
+    400542: light
+    400544: light (1)
+    400546: light (2)
+    400548: light_1 (1)
+    400550: penjian
+    400552: penjian (1)
+    400554: shuibo
+    400556: shuibo_kuosanbowen_02
+    400558: shuibo_kuosanbowen_03
+    400560: shuibo_paopao
+    400562: shuibo_paopao_h
+    400564: shuibo_paopao_h1
+    400566: smoke
+    400568: smoke02
+    400570: tongman1
+    400572: tongman2
+    400574: tongman_zong
+    400576: zong
+    400578: zong_001
+    4300000: Cone001_0
+    4300002: Cone003_0
+    4300004: Cone004_0
+    4300006: Cone005_0
+    4300008: Cone006_0
+    4300010: Cone007_0
+    4300012: Cone001_0
+    4300014: Cone003_0
+    4300016: Cone004_0
+    4300018: Cone005_0
+    4300020: Cone006_0
+    4300022: Cone007_0
+    9500000: //RootNode
+    13700000: Cone001_0
+    13700002: Cone001_0 1
+    13700004: Cone003_0
+    13700006: Cone003_0 1
+    13700008: Cone004_0
+    13700010: Cone004_0 1
+    13700012: Cone005_0
+    13700014: Cone005_0 1
+    13700016: Cone006_0
+    13700018: Cone006_0 1
+    13700020: Cone007_0
+    13700022: Cone007_0 1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

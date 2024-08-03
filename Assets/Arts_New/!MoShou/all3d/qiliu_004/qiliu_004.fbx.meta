@@ -1,0 +1,192 @@
+fileFormatVersion: 2
+guid: aedb1143dc2c8fa4a95340e87c9b85c2
+timeCreated: 1564462193
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 31yuan2
+    100002: 31yuan2_0
+    100004: cachu (1)
+    100006: dilei
+    100008: dilei (1)
+    100010: dilei (2)
+    100012: dilei_1
+    100014: dilei_wenli
+    100016: Directional Light
+    100018: distort
+    100020: dixia_bowen (1)
+    100022: fire
+    100024: firelight
+    100026: glow
+    100028: guandian
+    100030: guandian1
+    100032: guandian1 (1)
+    100034: guanshu
+    100036: huoxiang
+    100038: k1
+    100040: k1_0
+    100042: k3
+    100044: k3_0
+    100046: light (1)
+    100048: light (2)
+    100050: light_1 (1)
+    100052: nw_nlq
+    100054: out1
+    100056: out2
+    100058: Particle System
+    100060: Particle System (1)
+    100062: penjian (1)
+    100064: qilang
+    100066: qilang (1)
+    100068: //RootNode
+    100070: qiliu_004
+    100072: qiu
+    100074: shitou
+    100076: smoke
+    100078: smoke 1
+    100080: trails
+    100082: trails2
+    100084: yanchen1
+    100086: yanchen1.1
+    100088: yanchen1.1_0
+    100090: yanchen1.2
+    100092: yanchen1.2_0
+    100094: yanchen1_0
+    100096: zong
+    400000: 31yuan2
+    400002: 31yuan2_0
+    400004: cachu (1)
+    400006: dilei
+    400008: dilei (1)
+    400010: dilei (2)
+    400012: dilei_1
+    400014: dilei_wenli
+    400016: Directional Light
+    400018: distort
+    400020: dixia_bowen (1)
+    400022: fire
+    400024: firelight
+    400026: glow
+    400028: guandian
+    400030: guandian1
+    400032: guandian1 (1)
+    400034: guanshu
+    400036: huoxiang
+    400038: k1
+    400040: k1_0
+    400042: k3
+    400044: k3_0
+    400046: light (1)
+    400048: light (2)
+    400050: light_1 (1)
+    400052: nw_nlq
+    400054: out1
+    400056: out2
+    400058: Particle System
+    400060: Particle System (1)
+    400062: penjian (1)
+    400064: qilang
+    400066: qilang (1)
+    400068: //RootNode
+    400070: qiliu_004
+    400072: qiu
+    400074: shitou
+    400076: smoke
+    400078: smoke 1
+    400080: trails
+    400082: trails2
+    400084: yanchen1
+    400086: yanchen1.1
+    400088: yanchen1.1_0
+    400090: yanchen1.2
+    400092: yanchen1.2_0
+    400094: yanchen1_0
+    400096: zong
+    2300000: 31yuan2_0
+    2300002: k1_0
+    2300004: k3_0
+    2300006: yanchen1.1_0
+    2300008: yanchen1.2_0
+    2300010: yanchen1_0
+    3300000: 31yuan2_0
+    3300002: k1_0
+    3300004: k3_0
+    3300006: yanchen1.1_0
+    3300008: yanchen1.2_0
+    3300010: yanchen1_0
+    4300000: yanchen1_0
+    4300002: yanchen1.1_0
+    4300004: yanchen1.2_0
+    4300006: 31yuan2_0
+    4300008: k1_0
+    4300010: k3_0
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,674 @@
+fileFormatVersion: 2
+guid: b35435ef3260ed44e9c43c5bc5bac16d
+timeCreated: 1564462198
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Background
+    100002: Background (1)
+    100004: Background (1) 1
+    100006: Background (1) 2
+    100008: Background (1) 3
+    100010: Background (1) 4
+    100012: Background (1) 5
+    100014: Background 1
+    100016: Background 2
+    100018: Background 3
+    100020: Background 4
+    100022: Background 5
+    100024: bg1
+    100026: bg2
+    100028: card
+    100030: card 1
+    100032: card 10
+    100034: card 11
+    100036: card 2
+    100038: card 3
+    100040: card 4
+    100042: card 5
+    100044: card 6
+    100046: card 7
+    100048: card 8
+    100050: card 9
+    100052: card_kuosan
+    100054: card_kuosan 1
+    100056: card_kuosan 10
+    100058: card_kuosan 11
+    100060: card_kuosan 12
+    100062: card_kuosan 13
+    100064: card_kuosan 14
+    100066: card_kuosan 15
+    100068: card_kuosan 16
+    100070: card_kuosan 2
+    100072: card_kuosan 3
+    100074: card_kuosan 4
+    100076: card_kuosan 5
+    100078: card_kuosan 6
+    100080: card_kuosan 7
+    100082: card_kuosan 8
+    100084: card_kuosan 9
+    100086: card_open
+    100088: card_open 1
+    100090: card_open 2
+    100092: card_open 3
+    100094: card_open 4
+    100096: card_open 5
+    100098: card_wfg
+    100100: card_wfg 1
+    100102: card_wfg 10
+    100104: card_wfg 11
+    100106: card_wfg 12
+    100108: card_wfg 13
+    100110: card_wfg 14
+    100112: card_wfg 15
+    100114: card_wfg 16
+    100116: card_wfg 17
+    100118: card_wfg 18
+    100120: card_wfg 19
+    100122: card_wfg 2
+    100124: card_wfg 20
+    100126: card_wfg 21
+    100128: card_wfg 22
+    100130: card_wfg 3
+    100132: card_wfg 4
+    100134: card_wfg 5
+    100136: card_wfg 6
+    100138: card_wfg 7
+    100140: card_wfg 8
+    100142: card_wfg 9
+    100144: //RootNode
+    100146: choujiang
+    100148: choujiang_type
+    100150: choujiang_type (1)
+    100152: cj_btn
+    100154: cj_kuosan
+    100156: cj_kuosan 1
+    100158: cj_light
+    100160: cj_light 1
+    100162: cj_lizi
+    100164: cj_lizi 1
+    100166: cj_mfcj
+    100168: cj_mfcj (1)
+    100170: cj_mfcj 1
+    100172: close
+    100174: content
+    100176: Effect_card
+    100178: Effect_card 1
+    100180: Effect_card 10
+    100182: Effect_card 11
+    100184: Effect_card 12
+    100186: Effect_card 13
+    100188: Effect_card 14
+    100190: Effect_card 15
+    100192: Effect_card 16
+    100194: Effect_card 2
+    100196: Effect_card 3
+    100198: Effect_card 4
+    100200: Effect_card 5
+    100202: Effect_card 6
+    100204: Effect_card 7
+    100206: Effect_card 8
+    100208: Effect_card 9
+    100210: Effect_choujiang
+    100212: Effect_choujiang 1
+    100214: fan
+    100216: fan 1
+    100218: fan 10
+    100220: fan 11
+    100222: fan 2
+    100224: fan 3
+    100226: fan 4
+    100228: fan 5
+    100230: fan 6
+    100232: fan 7
+    100234: fan 8
+    100236: fan 9
+    100238: GameObject
+    100240: guai_btn
+    100242: houdu
+    100244: houdu 1
+    100246: houdu 10
+    100248: houdu 11
+    100250: houdu 2
+    100252: houdu 3
+    100254: houdu 4
+    100256: houdu 5
+    100258: houdu 6
+    100260: houdu 7
+    100262: houdu 8
+    100264: houdu 9
+    100266: houdu_0
+    100268: houdu_0 1
+    100270: houdu_0 10
+    100272: houdu_0 11
+    100274: houdu_0 2
+    100276: houdu_0 3
+    100278: houdu_0 4
+    100280: houdu_0 5
+    100282: houdu_0 6
+    100284: houdu_0 7
+    100286: houdu_0 8
+    100288: houdu_0 9
+    100290: icon
+    100292: icon 1
+    100294: icon 10
+    100296: icon 11
+    100298: icon 12
+    100300: icon 2
+    100302: icon 3
+    100304: icon 4
+    100306: icon 5
+    100308: icon 6
+    100310: icon 7
+    100312: icon 8
+    100314: icon 9
+    100316: Image
+    100318: Image (1)
+    100320: Image (1) 1
+    100322: Image (1) 2
+    100324: Image (1) 3
+    100326: Image (1) 4
+    100328: Image (1) 5
+    100330: Image (1) 6
+    100332: Image (2)
+    100334: Image (3)
+    100336: Image 1
+    100338: Image 10
+    100340: Image 11
+    100342: Image 12
+    100344: Image 13
+    100346: Image 14
+    100348: Image 15
+    100350: Image 16
+    100352: Image 17
+    100354: Image 18
+    100356: Image 19
+    100358: Image 2
+    100360: Image 20
+    100362: Image 21
+    100364: Image 22
+    100366: Image 3
+    100368: Image 4
+    100370: Image 5
+    100372: Image 6
+    100374: Image 7
+    100376: Image 8
+    100378: Image 9
+    100380: item
+    100382: jindu
+    100384: jindu_text
+    100386: kuosan
+    100388: kuosan 1
+    100390: kuosan 2
+    100392: kuosan 3
+    100394: kuosan 4
+    100396: kuosan 5
+    100398: light
+    100400: light 1
+    100402: light 2
+    100404: light 3
+    100406: light 4
+    100408: light 5
+    100410: lizi
+    100412: lizi 1
+    100414: lizi 2
+    100416: lizi 3
+    100418: lizi 4
+    100420: lizi 5
+    100422: my_gold
+    100424: name
+    100426: name 1
+    100428: name 10
+    100430: name 11
+    100432: name 12
+    100434: name 2
+    100436: name 3
+    100438: name 4
+    100440: name 5
+    100442: name 6
+    100444: name 7
+    100446: name 8
+    100448: name 9
+    100450: NoDrawingRayCast
+    100452: num
+    100454: num 1
+    100456: num 10
+    100458: num 11
+    100460: num 12
+    100462: num 2
+    100464: num 3
+    100466: num 4
+    100468: num 5
+    100470: num 6
+    100472: num 7
+    100474: num 8
+    100476: num 9
+    100478: Panel
+    100480: panel
+    100482: Toggle1
+    100484: Toggle1 1
+    100486: Toggle2
+    100488: Toggle2 1
+    100490: Toggle3
+    100492: Toggle3 1
+    100494: Toggle4
+    100496: Toggle4 1
+    100498: Toggle5
+    100500: Toggle5 1
+    100502: Toggle6
+    100504: Toggle6 1
+    100506: toggles
+    100508: toggles_bg
+    100510: ui_card1
+    100512: ui_card1 1
+    100514: ui_card2
+    100516: ui_card2 1
+    100518: ui_card3
+    100520: ui_card3 1
+    100522: ui_card4
+    100524: ui_card4 1
+    100526: ui_card5
+    100528: ui_card5 1
+    100530: ui_card6
+    100532: ui_card6 1
+    100534: ui_choujiang
+    100536: ui_choujiang 1
+    100538: zheng
+    100540: zheng 1
+    100542: zheng 10
+    100544: zheng 11
+    100546: zheng 2
+    100548: zheng 3
+    100550: zheng 4
+    100552: zheng 5
+    100554: zheng 6
+    100556: zheng 7
+    100558: zheng 8
+    100560: zheng 9
+    400000: Background
+    400002: Background (1)
+    400004: Background (1) 1
+    400006: Background (1) 2
+    400008: Background (1) 3
+    400010: Background (1) 4
+    400012: Background (1) 5
+    400014: Background 1
+    400016: Background 2
+    400018: Background 3
+    400020: Background 4
+    400022: Background 5
+    400024: bg1
+    400026: bg2
+    400028: card
+    400030: card 1
+    400032: card 10
+    400034: card 11
+    400036: card 2
+    400038: card 3
+    400040: card 4
+    400042: card 5
+    400044: card 6
+    400046: card 7
+    400048: card 8
+    400050: card 9
+    400052: card_kuosan
+    400054: card_kuosan 1
+    400056: card_kuosan 10
+    400058: card_kuosan 11
+    400060: card_kuosan 12
+    400062: card_kuosan 13
+    400064: card_kuosan 14
+    400066: card_kuosan 15
+    400068: card_kuosan 16
+    400070: card_kuosan 2
+    400072: card_kuosan 3
+    400074: card_kuosan 4
+    400076: card_kuosan 5
+    400078: card_kuosan 6
+    400080: card_kuosan 7
+    400082: card_kuosan 8
+    400084: card_kuosan 9
+    400086: card_open
+    400088: card_open 1
+    400090: card_open 2
+    400092: card_open 3
+    400094: card_open 4
+    400096: card_open 5
+    400098: card_wfg
+    400100: card_wfg 1
+    400102: card_wfg 10
+    400104: card_wfg 11
+    400106: card_wfg 12
+    400108: card_wfg 13
+    400110: card_wfg 14
+    400112: card_wfg 15
+    400114: card_wfg 16
+    400116: card_wfg 17
+    400118: card_wfg 18
+    400120: card_wfg 19
+    400122: card_wfg 2
+    400124: card_wfg 20
+    400126: card_wfg 21
+    400128: card_wfg 22
+    400130: card_wfg 3
+    400132: card_wfg 4
+    400134: card_wfg 5
+    400136: card_wfg 6
+    400138: card_wfg 7
+    400140: card_wfg 8
+    400142: card_wfg 9
+    400144: //RootNode
+    400146: choujiang
+    400148: choujiang_type
+    400150: choujiang_type (1)
+    400152: cj_btn
+    400154: cj_kuosan
+    400156: cj_kuosan 1
+    400158: cj_light
+    400160: cj_light 1
+    400162: cj_lizi
+    400164: cj_lizi 1
+    400166: cj_mfcj
+    400168: cj_mfcj (1)
+    400170: cj_mfcj 1
+    400172: close
+    400174: content
+    400176: Effect_card
+    400178: Effect_card 1
+    400180: Effect_card 10
+    400182: Effect_card 11
+    400184: Effect_card 12
+    400186: Effect_card 13
+    400188: Effect_card 14
+    400190: Effect_card 15
+    400192: Effect_card 16
+    400194: Effect_card 2
+    400196: Effect_card 3
+    400198: Effect_card 4
+    400200: Effect_card 5
+    400202: Effect_card 6
+    400204: Effect_card 7
+    400206: Effect_card 8
+    400208: Effect_card 9
+    400210: Effect_choujiang
+    400212: Effect_choujiang 1
+    400214: fan
+    400216: fan 1
+    400218: fan 10
+    400220: fan 11
+    400222: fan 2
+    400224: fan 3
+    400226: fan 4
+    400228: fan 5
+    400230: fan 6
+    400232: fan 7
+    400234: fan 8
+    400236: fan 9
+    400238: GameObject
+    400240: guai_btn
+    400242: houdu
+    400244: houdu 1
+    400246: houdu 10
+    400248: houdu 11
+    400250: houdu 2
+    400252: houdu 3
+    400254: houdu 4
+    400256: houdu 5
+    400258: houdu 6
+    400260: houdu 7
+    400262: houdu 8
+    400264: houdu 9
+    400266: houdu_0
+    400268: houdu_0 1
+    400270: houdu_0 10
+    400272: houdu_0 11
+    400274: houdu_0 2
+    400276: houdu_0 3
+    400278: houdu_0 4
+    400280: houdu_0 5
+    400282: houdu_0 6
+    400284: houdu_0 7
+    400286: houdu_0 8
+    400288: houdu_0 9
+    400290: icon
+    400292: icon 1
+    400294: icon 10
+    400296: icon 11
+    400298: icon 12
+    400300: icon 2
+    400302: icon 3
+    400304: icon 4
+    400306: icon 5
+    400308: icon 6
+    400310: icon 7
+    400312: icon 8
+    400314: icon 9
+    400316: Image
+    400318: Image (1)
+    400320: Image (1) 1
+    400322: Image (1) 2
+    400324: Image (1) 3
+    400326: Image (1) 4
+    400328: Image (1) 5
+    400330: Image (1) 6
+    400332: Image (2)
+    400334: Image (3)
+    400336: Image 1
+    400338: Image 10
+    400340: Image 11
+    400342: Image 12
+    400344: Image 13
+    400346: Image 14
+    400348: Image 15
+    400350: Image 16
+    400352: Image 17
+    400354: Image 18
+    400356: Image 19
+    400358: Image 2
+    400360: Image 20
+    400362: Image 21
+    400364: Image 22
+    400366: Image 3
+    400368: Image 4
+    400370: Image 5
+    400372: Image 6
+    400374: Image 7
+    400376: Image 8
+    400378: Image 9
+    400380: item
+    400382: jindu
+    400384: jindu_text
+    400386: kuosan
+    400388: kuosan 1
+    400390: kuosan 2
+    400392: kuosan 3
+    400394: kuosan 4
+    400396: kuosan 5
+    400398: light
+    400400: light 1
+    400402: light 2
+    400404: light 3
+    400406: light 4
+    400408: light 5
+    400410: lizi
+    400412: lizi 1
+    400414: lizi 2
+    400416: lizi 3
+    400418: lizi 4
+    400420: lizi 5
+    400422: my_gold
+    400424: name
+    400426: name 1
+    400428: name 10
+    400430: name 11
+    400432: name 12
+    400434: name 2
+    400436: name 3
+    400438: name 4
+    400440: name 5
+    400442: name 6
+    400444: name 7
+    400446: name 8
+    400448: name 9
+    400450: NoDrawingRayCast
+    400452: num
+    400454: num 1
+    400456: num 10
+    400458: num 11
+    400460: num 12
+    400462: num 2
+    400464: num 3
+    400466: num 4
+    400468: num 5
+    400470: num 6
+    400472: num 7
+    400474: num 8
+    400476: num 9
+    400478: Panel
+    400480: panel
+    400482: Toggle1
+    400484: Toggle1 1
+    400486: Toggle2
+    400488: Toggle2 1
+    400490: Toggle3
+    400492: Toggle3 1
+    400494: Toggle4
+    400496: Toggle4 1
+    400498: Toggle5
+    400500: Toggle5 1
+    400502: Toggle6
+    400504: Toggle6 1
+    400506: toggles
+    400508: toggles_bg
+    400510: ui_card1
+    400512: ui_card1 1
+    400514: ui_card2
+    400516: ui_card2 1
+    400518: ui_card3
+    400520: ui_card3 1
+    400522: ui_card4
+    400524: ui_card4 1
+    400526: ui_card5
+    400528: ui_card5 1
+    400530: ui_card6
+    400532: ui_card6 1
+    400534: ui_choujiang
+    400536: ui_choujiang 1
+    400538: zheng
+    400540: zheng 1
+    400542: zheng 10
+    400544: zheng 11
+    400546: zheng 2
+    400548: zheng 3
+    400550: zheng 4
+    400552: zheng 5
+    400554: zheng 6
+    400556: zheng 7
+    400558: zheng 8
+    400560: zheng 9
+    2300000: houdu_0
+    2300002: houdu_0 1
+    2300004: houdu_0 10
+    2300006: houdu_0 11
+    2300008: houdu_0 2
+    2300010: houdu_0 3
+    2300012: houdu_0 4
+    2300014: houdu_0 5
+    2300016: houdu_0 6
+    2300018: houdu_0 7
+    2300020: houdu_0 8
+    2300022: houdu_0 9
+    3300000: houdu_0
+    3300002: houdu_0 1
+    3300004: houdu_0 10
+    3300006: houdu_0 11
+    3300008: houdu_0 2
+    3300010: houdu_0 3
+    3300012: houdu_0 4
+    3300014: houdu_0 5
+    3300016: houdu_0 6
+    3300018: houdu_0 7
+    3300020: houdu_0 8
+    3300022: houdu_0 9
+    4300000: houdu_0
+    4300002: houdu_0
+    4300004: houdu_0
+    4300006: houdu_0
+    4300008: houdu_0
+    4300010: houdu_0
+    4300012: houdu_0
+    4300014: houdu_0
+    4300016: houdu_0
+    4300018: houdu_0
+    4300020: houdu_0
+    4300022: houdu_0
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

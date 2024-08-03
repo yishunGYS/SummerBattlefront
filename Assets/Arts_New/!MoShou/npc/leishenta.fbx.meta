@@ -1,0 +1,196 @@
+fileFormatVersion: 2
+guid: 0745670743731bd41a8d0cca6ae4ab4c
+timeCreated: 1564462052
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: body
+    100002: foot
+    100004: head
+    100006: //RootNode
+    100008: leishenta
+    100010: leishenta 1
+    100012: leishenta_0
+    100014: light
+    100016: lightning_ball
+    100018: lightning_ball2
+    100020: lightning_ball3
+    100022: lightning_ball4
+    100024: lightning_loop
+    100026: lszt_atk
+    100028: lszt_atk2
+    100030: Object005
+    100032: Object005_0
+    100034: Object006
+    100036: Object006_0
+    100038: Object007
+    100040: Object007_0
+    100042: Object008
+    100044: Object008_0
+    100046: Object009
+    100048: Object009_0
+    100050: Object010
+    100052: Object010_0
+    100054: Object011
+    100056: Object011_0
+    100058: Object012
+    100060: Object012_0
+    100062: Object013
+    100064: Object013_0
+    100066: shot_point
+    100068: SubEmitter0
+    100070: SubEmitter0 1
+    100072: SubEmitter0 2
+    100074: SubEmitter0 3
+    100076: SubEmitter0 4
+    100078: SubEmitter1
+    100080: SubEmitter1 1
+    100082: SubEmitter1 2
+    100084: SubEmitter1 3
+    100086: SubEmitter1 4
+    400000: body
+    400002: foot
+    400004: head
+    400006: leishenta
+    400008: //RootNode
+    400010: leishenta 1
+    400012: leishenta_0
+    400014: light
+    400016: lightning_ball
+    400018: lightning_ball2
+    400020: lightning_ball3
+    400022: lightning_ball4
+    400024: lightning_loop
+    400026: lszt_atk
+    400028: lszt_atk2
+    400030: Object005
+    400032: Object005_0
+    400034: Object006
+    400036: Object006_0
+    400038: Object007
+    400040: Object007_0
+    400042: Object008
+    400044: Object008_0
+    400046: Object009
+    400048: Object009_0
+    400050: Object010
+    400052: Object010_0
+    400054: Object011
+    400056: Object011_0
+    400058: Object012
+    400060: Object012_0
+    400062: Object013
+    400064: Object013_0
+    400066: shot_point
+    400068: SubEmitter0
+    400070: SubEmitter0 1
+    400072: SubEmitter0 2
+    400074: SubEmitter0 3
+    400076: SubEmitter0 4
+    400078: SubEmitter1
+    400080: SubEmitter1 1
+    400082: SubEmitter1 2
+    400084: SubEmitter1 3
+    400086: SubEmitter1 4
+    2300000: leishenta_0
+    2300002: Object005_0
+    2300004: Object006_0
+    2300006: Object007_0
+    2300008: Object008_0
+    2300010: Object009_0
+    2300012: Object010_0
+    2300014: Object011_0
+    2300016: Object012_0
+    2300018: Object013_0
+    3300000: leishenta_0
+    3300002: Object005_0
+    3300004: Object006_0
+    3300006: Object007_0
+    3300008: Object008_0
+    3300010: Object009_0
+    3300012: Object010_0
+    3300014: Object011_0
+    3300016: Object012_0
+    3300018: Object013_0
+    4300000: leishenta_0
+    4300002: Object005_0
+    4300004: Object006_0
+    4300006: Object007_0
+    4300008: Object008_0
+    4300010: Object009_0
+    4300012: Object010_0
+    4300014: Object011_0
+    4300016: Object012_0
+    4300018: Object013_0
+    7400000: attack
+    7400002: idle
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

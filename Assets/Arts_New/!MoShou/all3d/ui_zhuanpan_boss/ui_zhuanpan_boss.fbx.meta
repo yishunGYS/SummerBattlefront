@@ -1,0 +1,228 @@
+fileFormatVersion: 2
+guid: c1a7a4e1a09a67c41a4357d471e1c41e
+timeCreated: 1564462212
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: bigicon
+    100002: boss
+    100004: effect
+    100006: gold_num
+    100008: huan
+    100010: huan 1
+    100012: huan 2
+    100014: img_rolling
+    100016: juji
+    100018: juji 1
+    100020: juji 2
+    100022: juji2
+    100024: juji2 1
+    100026: juji2 2
+    100028: juji2_0
+    100030: juji2_0 1
+    100032: juji2_0 2
+    100034: juji3
+    100036: juji3 1
+    100038: juji3 2
+    100040: juji3_0
+    100042: juji3_0 1
+    100044: juji3_0 2
+    100046: juji_0
+    100048: juji_0 1
+    100050: juji_0 2
+    100052: light
+    100054: light 1
+    100056: light 2
+    100058: lizi
+    100060: lizi 1
+    100062: lizi 2
+    100064: monster_name
+    100066: prop_num
+    100068: rotation
+    100070: rotation (1)
+    100072: rotation (1) 1
+    100074: rotation (1) 2
+    100076: rotation (1) 3
+    100078: rotation (2)
+    100080: rotation 1
+    100082: rotation 2
+    100084: rotation 3
+    100086: rotation_1
+    100088: sidai
+    100090: sidai_1
+    100092: //RootNode
+    100094: ui_zhuanpan_boss
+    100096: yoyo
+    100098: yoyo 1
+    100100: zd_light
+    100102: zd_light (1)
+    100104: zd_sidai
+    100106: zhuanpan
+    100108: zhuanpan_1
+    100110: zhuanpan_2
+    100112: zhuanpan_2 1
+    100114: zhuanpan_3
+    100116: zhuanpan_3 1
+    100118: zhuanpan_4
+    100120: zhuanpan_6
+    100122: zp_light
+    400000: bigicon
+    400002: boss
+    400004: effect
+    400006: gold_num
+    400008: huan
+    400010: huan 1
+    400012: huan 2
+    400014: img_rolling
+    400016: juji
+    400018: juji 1
+    400020: juji 2
+    400022: juji2
+    400024: juji2 1
+    400026: juji2 2
+    400028: juji2_0
+    400030: juji2_0 1
+    400032: juji2_0 2
+    400034: juji3
+    400036: juji3 1
+    400038: juji3 2
+    400040: juji3_0
+    400042: juji3_0 1
+    400044: juji3_0 2
+    400046: juji_0
+    400048: juji_0 1
+    400050: juji_0 2
+    400052: light
+    400054: light 1
+    400056: light 2
+    400058: lizi
+    400060: lizi 1
+    400062: lizi 2
+    400064: monster_name
+    400066: prop_num
+    400068: rotation
+    400070: rotation (1)
+    400072: rotation (1) 1
+    400074: rotation (1) 2
+    400076: rotation (1) 3
+    400078: rotation (2)
+    400080: rotation 1
+    400082: rotation 2
+    400084: rotation 3
+    400086: rotation_1
+    400088: sidai
+    400090: sidai_1
+    400092: //RootNode
+    400094: ui_zhuanpan_boss
+    400096: yoyo
+    400098: yoyo 1
+    400100: zd_light
+    400102: zd_light (1)
+    400104: zd_sidai
+    400106: zhuanpan
+    400108: zhuanpan_1
+    400110: zhuanpan_2
+    400112: zhuanpan_2 1
+    400114: zhuanpan_3
+    400116: zhuanpan_3 1
+    400118: zhuanpan_4
+    400120: zhuanpan_6
+    400122: zp_light
+    2300000: juji2_0
+    2300002: juji2_0 1
+    2300004: juji2_0 2
+    2300006: juji3_0
+    2300008: juji3_0 1
+    2300010: juji3_0 2
+    2300012: juji_0
+    2300014: juji_0 1
+    2300016: juji_0 2
+    3300000: juji2_0
+    3300002: juji2_0 1
+    3300004: juji2_0 2
+    3300006: juji3_0
+    3300008: juji3_0 1
+    3300010: juji3_0 2
+    3300012: juji_0
+    3300014: juji_0 1
+    3300016: juji_0 2
+    4300000: juji_0
+    4300002: juji2_0
+    4300004: juji3_0
+    4300006: juji_0
+    4300008: juji2_0
+    4300010: juji3_0
+    4300012: juji_0
+    4300014: juji2_0
+    4300016: juji3_0
+    7400000: ui_zhuanpan_boss
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
