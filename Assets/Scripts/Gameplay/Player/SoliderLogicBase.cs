@@ -50,8 +50,7 @@ namespace Gameplay.Player
             currentBlock  = block;
             nextBlock = block.nextCells;
         }
-
-        public SoliderLogicBase(SoliderAgent agent)
+        
         //BuffManager
         protected BuffManager playerBuffManager;
 
