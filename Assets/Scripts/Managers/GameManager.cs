@@ -7,16 +7,16 @@ namespace Managers
 {
 	public class GameManager : Singleton<GameManager> {
 
-		public static bool GameIsOver;
+		//public static bool GameIsOver;
 
-		public GameObject gameOverUI;
-		public GameObject completeLevelUI;
+		//public GameObject gameOverUI;
+		//public GameObject completeLevelUI;
 		private CsvReader csvReader;
 
 		public GameObject EnemyContainer;
 		void Start ()
 		{
-			GameIsOver = false;
+			//GameIsOver = false;
 			
 			InitCsvReader();
 			InitEnemy();
@@ -25,25 +25,25 @@ namespace Managers
 		
 		// Update is called once per frame
 		void Update () {
-			if (GameIsOver)
-				return;
+			//if (GameIsOver)
+			//	return;
 
-			if (PlayerStats.Lives <= 0)
-			{
-				EndGame();
-			}
+			//if (PlayerStats.Lives <= 0)
+			//{
+			//	EndGame();
+			//}
 		}
 
 		void EndGame ()
 		{
-			GameIsOver = true;
-			gameOverUI.SetActive(true);
+			//GameIsOver = true;
+			//gameOverUI.SetActive(true);
 		}
 
 		public void WinLevel ()
 		{
-			GameIsOver = true;
-			completeLevelUI.SetActive(true);
+			//GameIsOver = true;
+			//completeLevelUI.SetActive(true);
 		}
 
 
@@ -55,6 +55,7 @@ namespace Managers
 
 		private void InitEnemy()
 		{
+			if (!EnemyContainer ) { return; }
 			foreach (var item in EnemyContainer.GetComponentsInChildren<EnemyAgent>())
 			{
 				item.OnInit();

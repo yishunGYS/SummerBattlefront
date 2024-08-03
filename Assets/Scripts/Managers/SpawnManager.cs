@@ -1,3 +1,5 @@
+using _3DlevelEditor_GYS;
+using Gameplay;
 using Gameplay.Enemy;
 using Gameplay.Player;
 using System.Collections;
@@ -12,12 +14,10 @@ namespace Managers
         public static SpawnManager instance;
 
         public List<GameObject> characters = new List<GameObject>();
-        public Transform spawnPoint;
         public GameObject SoliderContainer;
 
         // 当前选中的角色
         public SoliderAgent selectedCharacter;
-        public int pathNum;
 
         private void Awake()
         {
@@ -34,7 +34,7 @@ namespace Managers
             selectedCharacter = chara;
         }
 
-        public void SpawnCharacter()
+        public void SpawnCharacter(GridCell block)
         {
             if (selectedCharacter != null)
             {
@@ -42,12 +42,12 @@ namespace Managers
                 var tempSoliderModel = DataManager.Instance.GetSoliderDataById(id);
                 if (tempSoliderModel.spawnNum <= 1)
                 {
-                    SpawnSingle(tempSoliderModel.cost);
+                    SpawnSingle(block, tempSoliderModel.cost);
                 }
                 else
                 {
                     var tempSolider = selectedCharacter;
-                    StartCoroutine(SpawnMultiple(tempSolider, tempSoliderModel.spawnNum, tempSoliderModel.cost));
+                    StartCoroutine(SpawnMultiple(block, tempSolider, tempSoliderModel.spawnNum, tempSoliderModel.cost));
                 }
             }
             else
@@ -56,7 +56,7 @@ namespace Managers
             }
         }
 
-        private void SpawnSingle(int cost)
+        private void SpawnSingle(GridCell block, int cost)
         {
             if (PlayerStats.Money < cost)
             {
@@ -64,19 +64,19 @@ namespace Managers
                 return;
             }
 
-            SoliderAgent spawnedCharacter = Instantiate(selectedCharacter, spawnPoint.position, spawnPoint.rotation);
+            SoliderAgent spawnedCharacter = Instantiate(selectedCharacter, block.transform.position + Vector3.up, block.transform.rotation);
             if (SoliderContainer != null)
             {
                 spawnedCharacter.transform.SetParent(SoliderContainer.transform);
                 spawnedCharacter.OnInit();
+                spawnedCharacter.soliderLogic.InitBlockData(block);
             }
 
             PlayerStats.Money -= cost;
             // 设置路径编号
-            spawnedCharacter.soliderLogic.SetPath(pathNum);
         }
 
-        private IEnumerator SpawnMultiple(SoliderAgent soliderAgent , int spawnNum, int cost)
+        private IEnumerator SpawnMultiple(GridCell block, SoliderAgent soliderAgent , int spawnNum, int cost)
         {
             for (int i = 0; i < spawnNum; i++)
             {
@@ -86,16 +86,17 @@ namespace Managers
                     yield break;
                 }
 
-                SoliderAgent spawnedCharacter = Instantiate(soliderAgent, spawnPoint.position, spawnPoint.rotation);
+                SoliderAgent spawnedCharacter = Instantiate(selectedCharacter, block.transform.position + new Vector3(0f, block.transform.localScale.y, 0f), block.transform.rotation);
                 if (SoliderContainer != null)
                 {
                     spawnedCharacter.transform.SetParent(SoliderContainer.transform);
                     spawnedCharacter.OnInit();
+                    spawnedCharacter.soliderLogic.InitBlockData(block);
                 }
 
                 PlayerStats.Money -= cost;
                 // 设置路径编号
-                spawnedCharacter.soliderLogic.SetPath(pathNum);
+                //spawnedCharacter.soliderLogic.SetPath(pathNum);
 
                 yield return new WaitForSeconds(0.5f); // 延时0.5秒
             }
@@ -103,12 +104,12 @@ namespace Managers
 
         public void ChangeSpawnPoint(Transform transform)
         {
-            spawnPoint = transform;
+            //spawnPoint = transform;
         }
 
         public void SetPathNum(int num)
         {
-            pathNum = num;
+            //pathNum = num;
         }
 
         public SoliderAgent GetSolider()

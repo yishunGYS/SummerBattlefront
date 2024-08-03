@@ -1,5 +1,7 @@
+using _3DlevelEditor_GYS;
 using Gameplay.Player;
 using Managers;
+using System.Collections.Generic;
 using Systems;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -15,38 +17,33 @@ namespace Gameplay
 
         public Color hoverColor;
 
-        [Header("路径编号")]
-        public int pathNum;
+
+        public List<GridCell> spawnBlocks = new List<GridCell>();
 
         void Start()
         {
+            OnInit();
+        }
+
+        private void OnInit()
+        {
             rend = GetComponent<Renderer>();
             startColor = rend.material.color;
-        }
 
-        void OnMouseEnter()
-        {
-            if (EventSystem.current.IsPointerOverGameObject())
-                return;
+            var blocks = transform.GetComponentsInChildren<GridCell>();
+            foreach (GridCell cell in blocks)
+            {
+                spawnBlocks.Add(cell);
+            }
 
-            rend.material.color = hoverColor;
-        }
-
-        void OnMouseExit()
-        {
-            rend.material.color = startColor;
-        }
-
-        private void OnMouseDown()
-        {
-            SpawnCharacter(SpawnManager.instance.GetSolider());
+            BlockManager.instance.startPointBlocks.Add(this, spawnBlocks);
         }
 
         private void SpawnCharacter(SoliderAgent chara)
         {
             SpawnManager.instance.ChangeSpawnPoint(this.transform);
-            SpawnManager.instance.SetPathNum(pathNum);
-            SpawnManager.instance.SpawnCharacter();
+            //SpawnManager.instance.SetPathNum(pathNum);
+            //SpawnManager.instance.SpawnCharacter();
         }
     }
 }
