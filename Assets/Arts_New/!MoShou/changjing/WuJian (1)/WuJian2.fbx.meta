@@ -1,0 +1,584 @@
+fileFormatVersion: 2
+guid: e72e8750fae4a1b43bb23cee637c888f
+timeCreated: 1564462243
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: WuJian
+    100004: ZhuCheng_LanGan_01
+    100006: ZhuCheng_LanGan_01 (1)
+    100008: ZhuCheng_LanGan_01 (1)_0
+    100010: ZhuCheng_LanGan_01 (10)
+    100012: ZhuCheng_LanGan_01 (10)_0
+    100014: ZhuCheng_LanGan_01 (11)
+    100016: ZhuCheng_LanGan_01 (11)_0
+    100018: ZhuCheng_LanGan_01 (12)
+    100020: ZhuCheng_LanGan_01 (12)_0
+    100022: ZhuCheng_LanGan_01 (13)
+    100024: ZhuCheng_LanGan_01 (13)_0
+    100026: ZhuCheng_LanGan_01 (14)
+    100028: ZhuCheng_LanGan_01 (14)_0
+    100030: ZhuCheng_LanGan_01 (15)
+    100032: ZhuCheng_LanGan_01 (15)_0
+    100034: ZhuCheng_LanGan_01 (2)
+    100036: ZhuCheng_LanGan_01 (2)_0
+    100038: ZhuCheng_LanGan_01 (3)
+    100040: ZhuCheng_LanGan_01 (3)_0
+    100042: ZhuCheng_LanGan_01 (4)
+    100044: ZhuCheng_LanGan_01 (4)_0
+    100046: ZhuCheng_LanGan_01 (5)
+    100048: ZhuCheng_LanGan_01 (5)_0
+    100050: ZhuCheng_LanGan_01 (6)
+    100052: ZhuCheng_LanGan_01 (6)_0
+    100054: ZhuCheng_LanGan_01 (7)
+    100056: ZhuCheng_LanGan_01 (7)_0
+    100058: ZhuCheng_LanGan_01 (8)
+    100060: ZhuCheng_LanGan_01 (8)_0
+    100062: ZhuCheng_LanGan_01 (9)
+    100064: ZhuCheng_LanGan_01 (9)_0
+    100066: ZhuCheng_LanGan_01_0
+    100068: ZhuCheng_MuBan_01
+    100070: ZhuCheng_MuBan_01 (1)
+    100072: ZhuCheng_MuBan_01 (1)_0
+    100074: ZhuCheng_MuBan_01 (2)
+    100076: ZhuCheng_MuBan_01 (2)_0
+    100078: ZhuCheng_MuBan_01 (3)
+    100080: ZhuCheng_MuBan_01 (3)_0
+    100082: ZhuCheng_MuBan_01 (4)
+    100084: ZhuCheng_MuBan_01 (4)_0
+    100086: ZhuCheng_MuBan_01 (5)
+    100088: ZhuCheng_MuBan_01 (5)_0
+    100090: ZhuCheng_MuBan_01 (6)
+    100092: ZhuCheng_MuBan_01 (6)_0
+    100094: ZhuCheng_MuBan_01 (7)
+    100096: ZhuCheng_MuBan_01 (7)_0
+    100098: ZhuCheng_MuBan_01 (8)
+    100100: ZhuCheng_MuBan_01 (8)_0
+    100102: ZhuCheng_MuBan_01_0
+    100104: ZhuCheng_MuBan_02
+    100106: ZhuCheng_MuBan_02 (1)
+    100108: ZhuCheng_MuBan_02 (1)_0
+    100110: ZhuCheng_MuBan_02 (2)
+    100112: ZhuCheng_MuBan_02 (2)_0
+    100114: ZhuCheng_MuBan_02 (3)
+    100116: ZhuCheng_MuBan_02 (3)_0
+    100118: ZhuCheng_MuBan_02_0
+    100120: ZhuCheng_MuBan_03
+    100122: ZhuCheng_MuBan_03 (1)
+    100124: ZhuCheng_MuBan_03 (1)_0
+    100126: ZhuCheng_MuBan_03 (2)
+    100128: ZhuCheng_MuBan_03 (2)_0
+    100130: ZhuCheng_MuBan_03_0
+    100132: ZhuCheng_Shitou_01
+    100134: ZhuCheng_Shitou_01 (1)
+    100136: ZhuCheng_Shitou_01 (1)_0
+    100138: ZhuCheng_Shitou_01 (2)
+    100140: ZhuCheng_Shitou_01 (2)_0
+    100142: ZhuCheng_Shitou_01_0
+    100144: ZhuCheng_Shitou_02
+    100146: ZhuCheng_Shitou_02 (1)
+    100148: ZhuCheng_Shitou_02 (1)_0
+    100150: ZhuCheng_Shitou_02 (2)
+    100152: ZhuCheng_Shitou_02 (2)_0
+    100154: ZhuCheng_Shitou_02 (3)
+    100156: ZhuCheng_Shitou_02 (3)_0
+    100158: ZhuCheng_Shitou_02 (4)
+    100160: ZhuCheng_Shitou_02 (4)_0
+    100162: ZhuCheng_Shitou_02 (5)
+    100164: ZhuCheng_Shitou_02 (5)_0
+    100166: ZhuCheng_Shitou_02_0
+    100168: ZhuCheng_Shitou_03
+    100170: ZhuCheng_Shitou_03_0
+    100172: ZhuCheng_ShuiJing_01
+    100174: ZhuCheng_ShuiJing_01_0
+    100176: ZhuCheng_XiangZi_01
+    100178: ZhuCheng_XiangZi_01 (1)
+    100180: ZhuCheng_XiangZi_01 (1)_0
+    100182: ZhuCheng_XiangZi_01 (10)
+    100184: ZhuCheng_XiangZi_01 (10)_0
+    100186: ZhuCheng_XiangZi_01 (11)
+    100188: ZhuCheng_XiangZi_01 (11)_0
+    100190: ZhuCheng_XiangZi_01 (12)
+    100192: ZhuCheng_XiangZi_01 (12)_0
+    100194: ZhuCheng_XiangZi_01 (13)
+    100196: ZhuCheng_XiangZi_01 (13)_0
+    100198: ZhuCheng_XiangZi_01 (14)
+    100200: ZhuCheng_XiangZi_01 (14)_0
+    100202: ZhuCheng_XiangZi_01 (15)
+    100204: ZhuCheng_XiangZi_01 (15)_0
+    100206: ZhuCheng_XiangZi_01 (16)
+    100208: ZhuCheng_XiangZi_01 (16)_0
+    100210: ZhuCheng_XiangZi_01 (17)
+    100212: ZhuCheng_XiangZi_01 (17)_0
+    100214: ZhuCheng_XiangZi_01 (18)
+    100216: ZhuCheng_XiangZi_01 (18)_0
+    100218: ZhuCheng_XiangZi_01 (19)
+    100220: ZhuCheng_XiangZi_01 (19)_0
+    100222: ZhuCheng_XiangZi_01 (2)
+    100224: ZhuCheng_XiangZi_01 (2)_0
+    100226: ZhuCheng_XiangZi_01 (20)
+    100228: ZhuCheng_XiangZi_01 (20)_0
+    100230: ZhuCheng_XiangZi_01 (21)
+    100232: ZhuCheng_XiangZi_01 (21)_0
+    100234: ZhuCheng_XiangZi_01 (22)
+    100236: ZhuCheng_XiangZi_01 (22)_0
+    100238: ZhuCheng_XiangZi_01 (23)
+    100240: ZhuCheng_XiangZi_01 (23)_0
+    100242: ZhuCheng_XiangZi_01 (24)
+    100244: ZhuCheng_XiangZi_01 (24)_0
+    100246: ZhuCheng_XiangZi_01 (25)
+    100248: ZhuCheng_XiangZi_01 (25)_0
+    100250: ZhuCheng_XiangZi_01 (26)
+    100252: ZhuCheng_XiangZi_01 (26)_0
+    100254: ZhuCheng_XiangZi_01 (27)
+    100256: ZhuCheng_XiangZi_01 (27)_0
+    100258: ZhuCheng_XiangZi_01 (28)
+    100260: ZhuCheng_XiangZi_01 (28)_0
+    100262: ZhuCheng_XiangZi_01 (3)
+    100264: ZhuCheng_XiangZi_01 (3)_0
+    100266: ZhuCheng_XiangZi_01 (4)
+    100268: ZhuCheng_XiangZi_01 (4)_0
+    100270: ZhuCheng_XiangZi_01 (5)
+    100272: ZhuCheng_XiangZi_01 (5)_0
+    100274: ZhuCheng_XiangZi_01 (6)
+    100276: ZhuCheng_XiangZi_01 (6)_0
+    100278: ZhuCheng_XiangZi_01 (7)
+    100280: ZhuCheng_XiangZi_01 (7)_0
+    100282: ZhuCheng_XiangZi_01 (8)
+    100284: ZhuCheng_XiangZi_01 (8)_0
+    100286: ZhuCheng_XiangZi_01 (9)
+    100288: ZhuCheng_XiangZi_01 (9)_0
+    100290: ZhuCheng_XiangZi_01_0
+    400000: //RootNode
+    400002: WuJian
+    400004: ZhuCheng_LanGan_01
+    400006: ZhuCheng_LanGan_01 (1)
+    400008: ZhuCheng_LanGan_01 (1)_0
+    400010: ZhuCheng_LanGan_01 (10)
+    400012: ZhuCheng_LanGan_01 (10)_0
+    400014: ZhuCheng_LanGan_01 (11)
+    400016: ZhuCheng_LanGan_01 (11)_0
+    400018: ZhuCheng_LanGan_01 (12)
+    400020: ZhuCheng_LanGan_01 (12)_0
+    400022: ZhuCheng_LanGan_01 (13)
+    400024: ZhuCheng_LanGan_01 (13)_0
+    400026: ZhuCheng_LanGan_01 (14)
+    400028: ZhuCheng_LanGan_01 (14)_0
+    400030: ZhuCheng_LanGan_01 (15)
+    400032: ZhuCheng_LanGan_01 (15)_0
+    400034: ZhuCheng_LanGan_01 (2)
+    400036: ZhuCheng_LanGan_01 (2)_0
+    400038: ZhuCheng_LanGan_01 (3)
+    400040: ZhuCheng_LanGan_01 (3)_0
+    400042: ZhuCheng_LanGan_01 (4)
+    400044: ZhuCheng_LanGan_01 (4)_0
+    400046: ZhuCheng_LanGan_01 (5)
+    400048: ZhuCheng_LanGan_01 (5)_0
+    400050: ZhuCheng_LanGan_01 (6)
+    400052: ZhuCheng_LanGan_01 (6)_0
+    400054: ZhuCheng_LanGan_01 (7)
+    400056: ZhuCheng_LanGan_01 (7)_0
+    400058: ZhuCheng_LanGan_01 (8)
+    400060: ZhuCheng_LanGan_01 (8)_0
+    400062: ZhuCheng_LanGan_01 (9)
+    400064: ZhuCheng_LanGan_01 (9)_0
+    400066: ZhuCheng_LanGan_01_0
+    400068: ZhuCheng_MuBan_01
+    400070: ZhuCheng_MuBan_01 (1)
+    400072: ZhuCheng_MuBan_01 (1)_0
+    400074: ZhuCheng_MuBan_01 (2)
+    400076: ZhuCheng_MuBan_01 (2)_0
+    400078: ZhuCheng_MuBan_01 (3)
+    400080: ZhuCheng_MuBan_01 (3)_0
+    400082: ZhuCheng_MuBan_01 (4)
+    400084: ZhuCheng_MuBan_01 (4)_0
+    400086: ZhuCheng_MuBan_01 (5)
+    400088: ZhuCheng_MuBan_01 (5)_0
+    400090: ZhuCheng_MuBan_01 (6)
+    400092: ZhuCheng_MuBan_01 (6)_0
+    400094: ZhuCheng_MuBan_01 (7)
+    400096: ZhuCheng_MuBan_01 (7)_0
+    400098: ZhuCheng_MuBan_01 (8)
+    400100: ZhuCheng_MuBan_01 (8)_0
+    400102: ZhuCheng_MuBan_01_0
+    400104: ZhuCheng_MuBan_02
+    400106: ZhuCheng_MuBan_02 (1)
+    400108: ZhuCheng_MuBan_02 (1)_0
+    400110: ZhuCheng_MuBan_02 (2)
+    400112: ZhuCheng_MuBan_02 (2)_0
+    400114: ZhuCheng_MuBan_02 (3)
+    400116: ZhuCheng_MuBan_02 (3)_0
+    400118: ZhuCheng_MuBan_02_0
+    400120: ZhuCheng_MuBan_03
+    400122: ZhuCheng_MuBan_03 (1)
+    400124: ZhuCheng_MuBan_03 (1)_0
+    400126: ZhuCheng_MuBan_03 (2)
+    400128: ZhuCheng_MuBan_03 (2)_0
+    400130: ZhuCheng_MuBan_03_0
+    400132: ZhuCheng_Shitou_01
+    400134: ZhuCheng_Shitou_01 (1)
+    400136: ZhuCheng_Shitou_01 (1)_0
+    400138: ZhuCheng_Shitou_01 (2)
+    400140: ZhuCheng_Shitou_01 (2)_0
+    400142: ZhuCheng_Shitou_01_0
+    400144: ZhuCheng_Shitou_02
+    400146: ZhuCheng_Shitou_02 (1)
+    400148: ZhuCheng_Shitou_02 (1)_0
+    400150: ZhuCheng_Shitou_02 (2)
+    400152: ZhuCheng_Shitou_02 (2)_0
+    400154: ZhuCheng_Shitou_02 (3)
+    400156: ZhuCheng_Shitou_02 (3)_0
+    400158: ZhuCheng_Shitou_02 (4)
+    400160: ZhuCheng_Shitou_02 (4)_0
+    400162: ZhuCheng_Shitou_02 (5)
+    400164: ZhuCheng_Shitou_02 (5)_0
+    400166: ZhuCheng_Shitou_02_0
+    400168: ZhuCheng_Shitou_03
+    400170: ZhuCheng_Shitou_03_0
+    400172: ZhuCheng_ShuiJing_01
+    400174: ZhuCheng_ShuiJing_01_0
+    400176: ZhuCheng_XiangZi_01
+    400178: ZhuCheng_XiangZi_01 (1)
+    400180: ZhuCheng_XiangZi_01 (1)_0
+    400182: ZhuCheng_XiangZi_01 (10)
+    400184: ZhuCheng_XiangZi_01 (10)_0
+    400186: ZhuCheng_XiangZi_01 (11)
+    400188: ZhuCheng_XiangZi_01 (11)_0
+    400190: ZhuCheng_XiangZi_01 (12)
+    400192: ZhuCheng_XiangZi_01 (12)_0
+    400194: ZhuCheng_XiangZi_01 (13)
+    400196: ZhuCheng_XiangZi_01 (13)_0
+    400198: ZhuCheng_XiangZi_01 (14)
+    400200: ZhuCheng_XiangZi_01 (14)_0
+    400202: ZhuCheng_XiangZi_01 (15)
+    400204: ZhuCheng_XiangZi_01 (15)_0
+    400206: ZhuCheng_XiangZi_01 (16)
+    400208: ZhuCheng_XiangZi_01 (16)_0
+    400210: ZhuCheng_XiangZi_01 (17)
+    400212: ZhuCheng_XiangZi_01 (17)_0
+    400214: ZhuCheng_XiangZi_01 (18)
+    400216: ZhuCheng_XiangZi_01 (18)_0
+    400218: ZhuCheng_XiangZi_01 (19)
+    400220: ZhuCheng_XiangZi_01 (19)_0
+    400222: ZhuCheng_XiangZi_01 (2)
+    400224: ZhuCheng_XiangZi_01 (2)_0
+    400226: ZhuCheng_XiangZi_01 (20)
+    400228: ZhuCheng_XiangZi_01 (20)_0
+    400230: ZhuCheng_XiangZi_01 (21)
+    400232: ZhuCheng_XiangZi_01 (21)_0
+    400234: ZhuCheng_XiangZi_01 (22)
+    400236: ZhuCheng_XiangZi_01 (22)_0
+    400238: ZhuCheng_XiangZi_01 (23)
+    400240: ZhuCheng_XiangZi_01 (23)_0
+    400242: ZhuCheng_XiangZi_01 (24)
+    400244: ZhuCheng_XiangZi_01 (24)_0
+    400246: ZhuCheng_XiangZi_01 (25)
+    400248: ZhuCheng_XiangZi_01 (25)_0
+    400250: ZhuCheng_XiangZi_01 (26)
+    400252: ZhuCheng_XiangZi_01 (26)_0
+    400254: ZhuCheng_XiangZi_01 (27)
+    400256: ZhuCheng_XiangZi_01 (27)_0
+    400258: ZhuCheng_XiangZi_01 (28)
+    400260: ZhuCheng_XiangZi_01 (28)_0
+    400262: ZhuCheng_XiangZi_01 (3)
+    400264: ZhuCheng_XiangZi_01 (3)_0
+    400266: ZhuCheng_XiangZi_01 (4)
+    400268: ZhuCheng_XiangZi_01 (4)_0
+    400270: ZhuCheng_XiangZi_01 (5)
+    400272: ZhuCheng_XiangZi_01 (5)_0
+    400274: ZhuCheng_XiangZi_01 (6)
+    400276: ZhuCheng_XiangZi_01 (6)_0
+    400278: ZhuCheng_XiangZi_01 (7)
+    400280: ZhuCheng_XiangZi_01 (7)_0
+    400282: ZhuCheng_XiangZi_01 (8)
+    400284: ZhuCheng_XiangZi_01 (8)_0
+    400286: ZhuCheng_XiangZi_01 (9)
+    400288: ZhuCheng_XiangZi_01 (9)_0
+    400290: ZhuCheng_XiangZi_01_0
+    2300000: ZhuCheng_LanGan_01 (1)_0
+    2300002: ZhuCheng_LanGan_01 (10)_0
+    2300004: ZhuCheng_LanGan_01 (11)_0
+    2300006: ZhuCheng_LanGan_01 (12)_0
+    2300008: ZhuCheng_LanGan_01 (13)_0
+    2300010: ZhuCheng_LanGan_01 (14)_0
+    2300012: ZhuCheng_LanGan_01 (15)_0
+    2300014: ZhuCheng_LanGan_01 (2)_0
+    2300016: ZhuCheng_LanGan_01 (3)_0
+    2300018: ZhuCheng_LanGan_01 (4)_0
+    2300020: ZhuCheng_LanGan_01 (5)_0
+    2300022: ZhuCheng_LanGan_01 (6)_0
+    2300024: ZhuCheng_LanGan_01 (7)_0
+    2300026: ZhuCheng_LanGan_01 (8)_0
+    2300028: ZhuCheng_LanGan_01 (9)_0
+    2300030: ZhuCheng_LanGan_01_0
+    2300032: ZhuCheng_MuBan_01 (1)_0
+    2300034: ZhuCheng_MuBan_01 (2)_0
+    2300036: ZhuCheng_MuBan_01 (3)_0
+    2300038: ZhuCheng_MuBan_01 (4)_0
+    2300040: ZhuCheng_MuBan_01 (5)_0
+    2300042: ZhuCheng_MuBan_01 (6)_0
+    2300044: ZhuCheng_MuBan_01 (7)_0
+    2300046: ZhuCheng_MuBan_01 (8)_0
+    2300048: ZhuCheng_MuBan_01_0
+    2300050: ZhuCheng_MuBan_02 (1)_0
+    2300052: ZhuCheng_MuBan_02 (2)_0
+    2300054: ZhuCheng_MuBan_02 (3)_0
+    2300056: ZhuCheng_MuBan_02_0
+    2300058: ZhuCheng_MuBan_03 (1)_0
+    2300060: ZhuCheng_MuBan_03 (2)_0
+    2300062: ZhuCheng_MuBan_03_0
+    2300064: ZhuCheng_Shitou_01 (1)_0
+    2300066: ZhuCheng_Shitou_01 (2)_0
+    2300068: ZhuCheng_Shitou_01_0
+    2300070: ZhuCheng_Shitou_02 (1)_0
+    2300072: ZhuCheng_Shitou_02 (2)_0
+    2300074: ZhuCheng_Shitou_02 (3)_0
+    2300076: ZhuCheng_Shitou_02 (4)_0
+    2300078: ZhuCheng_Shitou_02 (5)_0
+    2300080: ZhuCheng_Shitou_02_0
+    2300082: ZhuCheng_Shitou_03_0
+    2300084: ZhuCheng_ShuiJing_01_0
+    2300086: ZhuCheng_XiangZi_01 (1)_0
+    2300088: ZhuCheng_XiangZi_01 (10)_0
+    2300090: ZhuCheng_XiangZi_01 (11)_0
+    2300092: ZhuCheng_XiangZi_01 (12)_0
+    2300094: ZhuCheng_XiangZi_01 (13)_0
+    2300096: ZhuCheng_XiangZi_01 (14)_0
+    2300098: ZhuCheng_XiangZi_01 (15)_0
+    2300100: ZhuCheng_XiangZi_01 (16)_0
+    2300102: ZhuCheng_XiangZi_01 (17)_0
+    2300104: ZhuCheng_XiangZi_01 (18)_0
+    2300106: ZhuCheng_XiangZi_01 (19)_0
+    2300108: ZhuCheng_XiangZi_01 (2)_0
+    2300110: ZhuCheng_XiangZi_01 (20)_0
+    2300112: ZhuCheng_XiangZi_01 (21)_0
+    2300114: ZhuCheng_XiangZi_01 (22)_0
+    2300116: ZhuCheng_XiangZi_01 (23)_0
+    2300118: ZhuCheng_XiangZi_01 (24)_0
+    2300120: ZhuCheng_XiangZi_01 (25)_0
+    2300122: ZhuCheng_XiangZi_01 (26)_0
+    2300124: ZhuCheng_XiangZi_01 (27)_0
+    2300126: ZhuCheng_XiangZi_01 (28)_0
+    2300128: ZhuCheng_XiangZi_01 (3)_0
+    2300130: ZhuCheng_XiangZi_01 (4)_0
+    2300132: ZhuCheng_XiangZi_01 (5)_0
+    2300134: ZhuCheng_XiangZi_01 (6)_0
+    2300136: ZhuCheng_XiangZi_01 (7)_0
+    2300138: ZhuCheng_XiangZi_01 (8)_0
+    2300140: ZhuCheng_XiangZi_01 (9)_0
+    2300142: ZhuCheng_XiangZi_01_0
+    3300000: ZhuCheng_LanGan_01 (1)_0
+    3300002: ZhuCheng_LanGan_01 (10)_0
+    3300004: ZhuCheng_LanGan_01 (11)_0
+    3300006: ZhuCheng_LanGan_01 (12)_0
+    3300008: ZhuCheng_LanGan_01 (13)_0
+    3300010: ZhuCheng_LanGan_01 (14)_0
+    3300012: ZhuCheng_LanGan_01 (15)_0
+    3300014: ZhuCheng_LanGan_01 (2)_0
+    3300016: ZhuCheng_LanGan_01 (3)_0
+    3300018: ZhuCheng_LanGan_01 (4)_0
+    3300020: ZhuCheng_LanGan_01 (5)_0
+    3300022: ZhuCheng_LanGan_01 (6)_0
+    3300024: ZhuCheng_LanGan_01 (7)_0
+    3300026: ZhuCheng_LanGan_01 (8)_0
+    3300028: ZhuCheng_LanGan_01 (9)_0
+    3300030: ZhuCheng_LanGan_01_0
+    3300032: ZhuCheng_MuBan_01 (1)_0
+    3300034: ZhuCheng_MuBan_01 (2)_0
+    3300036: ZhuCheng_MuBan_01 (3)_0
+    3300038: ZhuCheng_MuBan_01 (4)_0
+    3300040: ZhuCheng_MuBan_01 (5)_0
+    3300042: ZhuCheng_MuBan_01 (6)_0
+    3300044: ZhuCheng_MuBan_01 (7)_0
+    3300046: ZhuCheng_MuBan_01 (8)_0
+    3300048: ZhuCheng_MuBan_01_0
+    3300050: ZhuCheng_MuBan_02 (1)_0
+    3300052: ZhuCheng_MuBan_02 (2)_0
+    3300054: ZhuCheng_MuBan_02 (3)_0
+    3300056: ZhuCheng_MuBan_02_0
+    3300058: ZhuCheng_MuBan_03 (1)_0
+    3300060: ZhuCheng_MuBan_03 (2)_0
+    3300062: ZhuCheng_MuBan_03_0
+    3300064: ZhuCheng_Shitou_01 (1)_0
+    3300066: ZhuCheng_Shitou_01 (2)_0
+    3300068: ZhuCheng_Shitou_01_0
+    3300070: ZhuCheng_Shitou_02 (1)_0
+    3300072: ZhuCheng_Shitou_02 (2)_0
+    3300074: ZhuCheng_Shitou_02 (3)_0
+    3300076: ZhuCheng_Shitou_02 (4)_0
+    3300078: ZhuCheng_Shitou_02 (5)_0
+    3300080: ZhuCheng_Shitou_02_0
+    3300082: ZhuCheng_Shitou_03_0
+    3300084: ZhuCheng_ShuiJing_01_0
+    3300086: ZhuCheng_XiangZi_01 (1)_0
+    3300088: ZhuCheng_XiangZi_01 (10)_0
+    3300090: ZhuCheng_XiangZi_01 (11)_0
+    3300092: ZhuCheng_XiangZi_01 (12)_0
+    3300094: ZhuCheng_XiangZi_01 (13)_0
+    3300096: ZhuCheng_XiangZi_01 (14)_0
+    3300098: ZhuCheng_XiangZi_01 (15)_0
+    3300100: ZhuCheng_XiangZi_01 (16)_0
+    3300102: ZhuCheng_XiangZi_01 (17)_0
+    3300104: ZhuCheng_XiangZi_01 (18)_0
+    3300106: ZhuCheng_XiangZi_01 (19)_0
+    3300108: ZhuCheng_XiangZi_01 (2)_0
+    3300110: ZhuCheng_XiangZi_01 (20)_0
+    3300112: ZhuCheng_XiangZi_01 (21)_0
+    3300114: ZhuCheng_XiangZi_01 (22)_0
+    3300116: ZhuCheng_XiangZi_01 (23)_0
+    3300118: ZhuCheng_XiangZi_01 (24)_0
+    3300120: ZhuCheng_XiangZi_01 (25)_0
+    3300122: ZhuCheng_XiangZi_01 (26)_0
+    3300124: ZhuCheng_XiangZi_01 (27)_0
+    3300126: ZhuCheng_XiangZi_01 (28)_0
+    3300128: ZhuCheng_XiangZi_01 (3)_0
+    3300130: ZhuCheng_XiangZi_01 (4)_0
+    3300132: ZhuCheng_XiangZi_01 (5)_0
+    3300134: ZhuCheng_XiangZi_01 (6)_0
+    3300136: ZhuCheng_XiangZi_01 (7)_0
+    3300138: ZhuCheng_XiangZi_01 (8)_0
+    3300140: ZhuCheng_XiangZi_01 (9)_0
+    3300142: ZhuCheng_XiangZi_01_0
+    4300000: ZhuCheng_XiangZi_01_0
+    4300002: ZhuCheng_ShuiJing_01_0
+    4300004: ZhuCheng_XiangZi_01 (1)_0
+    4300006: ZhuCheng_XiangZi_01 (2)_0
+    4300008: ZhuCheng_XiangZi_01 (3)_0
+    4300010: ZhuCheng_XiangZi_01 (4)_0
+    4300012: ZhuCheng_XiangZi_01 (5)_0
+    4300014: ZhuCheng_XiangZi_01 (6)_0
+    4300016: ZhuCheng_XiangZi_01 (7)_0
+    4300018: ZhuCheng_XiangZi_01 (8)_0
+    4300020: ZhuCheng_XiangZi_01 (9)_0
+    4300022: ZhuCheng_XiangZi_01 (10)_0
+    4300024: ZhuCheng_XiangZi_01 (11)_0
+    4300026: ZhuCheng_XiangZi_01 (12)_0
+    4300028: ZhuCheng_XiangZi_01 (13)_0
+    4300030: ZhuCheng_XiangZi_01 (14)_0
+    4300032: ZhuCheng_XiangZi_01 (15)_0
+    4300034: ZhuCheng_MuBan_01_0
+    4300036: ZhuCheng_MuBan_02_0
+    4300038: ZhuCheng_MuBan_03_0
+    4300040: ZhuCheng_Shitou_01_0
+    4300042: ZhuCheng_Shitou_02_0
+    4300044: ZhuCheng_Shitou_03_0
+    4300046: ZhuCheng_LanGan_01_0
+    4300048: ZhuCheng_Shitou_02 (1)_0
+    4300050: ZhuCheng_LanGan_01 (1)_0
+    4300052: ZhuCheng_MuBan_03 (1)_0
+    4300054: ZhuCheng_MuBan_01 (1)_0
+    4300056: ZhuCheng_LanGan_01 (2)_0
+    4300058: ZhuCheng_LanGan_01 (3)_0
+    4300060: ZhuCheng_LanGan_01 (4)_0
+    4300062: ZhuCheng_MuBan_01 (2)_0
+    4300064: ZhuCheng_MuBan_02 (1)_0
+    4300066: ZhuCheng_MuBan_01 (3)_0
+    4300068: ZhuCheng_MuBan_02 (2)_0
+    4300070: ZhuCheng_Shitou_01 (1)_0
+    4300072: ZhuCheng_Shitou_02 (2)_0
+    4300074: ZhuCheng_Shitou_01 (2)_0
+    4300076: ZhuCheng_Shitou_02 (3)_0
+    4300078: ZhuCheng_LanGan_01 (5)_0
+    4300080: ZhuCheng_LanGan_01 (6)_0
+    4300082: ZhuCheng_LanGan_01 (7)_0
+    4300084: ZhuCheng_LanGan_01 (8)_0
+    4300086: ZhuCheng_LanGan_01 (9)_0
+    4300088: ZhuCheng_XiangZi_01 (16)_0
+    4300090: ZhuCheng_XiangZi_01 (17)_0
+    4300092: ZhuCheng_XiangZi_01 (18)_0
+    4300094: ZhuCheng_XiangZi_01 (19)_0
+    4300096: ZhuCheng_MuBan_01 (4)_0
+    4300098: ZhuCheng_Shitou_02 (4)_0
+    4300100: ZhuCheng_XiangZi_01 (20)_0
+    4300102: ZhuCheng_XiangZi_01 (21)_0
+    4300104: ZhuCheng_XiangZi_01 (22)_0
+    4300106: ZhuCheng_XiangZi_01 (23)_0
+    4300108: ZhuCheng_LanGan_01 (10)_0
+    4300110: ZhuCheng_LanGan_01 (11)_0
+    4300112: ZhuCheng_LanGan_01 (12)_0
+    4300114: ZhuCheng_LanGan_01 (13)_0
+    4300116: ZhuCheng_LanGan_01 (14)_0
+    4300118: ZhuCheng_MuBan_01 (5)_0
+    4300120: ZhuCheng_MuBan_01 (6)_0
+    4300122: ZhuCheng_XiangZi_01 (24)_0
+    4300124: ZhuCheng_XiangZi_01 (25)_0
+    4300126: ZhuCheng_XiangZi_01 (26)_0
+    4300128: ZhuCheng_XiangZi_01 (27)_0
+    4300130: ZhuCheng_XiangZi_01 (28)_0
+    4300132: ZhuCheng_MuBan_01 (7)_0
+    4300134: ZhuCheng_MuBan_02 (3)_0
+    4300136: ZhuCheng_MuBan_03 (2)_0
+    4300138: ZhuCheng_Shitou_02 (5)_0
+    4300140: ZhuCheng_MuBan_01 (8)_0
+    4300142: ZhuCheng_LanGan_01 (15)_0
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,383 @@
+fileFormatVersion: 2
+guid: 7e691921a183a2d45aa9770b36dde831
+timeCreated: 1564462153
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: arrow
+    100002: arrow 1
+    100004: arrow_bg
+    100006: arrow_num
+    100008: bg (1)
+    100010: bigicon
+    100012: can_draw_panel
+    100014: cant_draw_panel
+    100016: choujiang
+    100018: choujiang_bg
+    100020: content
+    100022: cost
+    100024: di
+    100026: di_0
+    100028: djImage
+    100030: djText
+    100032: effect
+    100034: fangshe
+    100036: fangshe2
+    100038: Fill
+    100040: finger
+    100042: finger_choujiang
+    100044: ggtj_light
+    100046: ggtj_light 1
+    100048: ggtj_light 2
+    100050: ggtj_light_0
+    100052: ggtj_light_0 1
+    100054: ggtj_light_0 2
+    100056: glow_01
+    100058: glow_01_0
+    100060: gold_bg
+    100062: guanghuan_choujiang
+    100064: guid_choujiang_bg
+    100066: Handle
+    100068: handle_image
+    100070: headicon
+    100072: headicon_img
+    100074: headiconBG
+    100076: headiconframe_img
+    100078: Image
+    100080: Image (1)
+    100082: Image (1) 1
+    100084: Image (1) 2
+    100086: Image (1) 3
+    100088: Image 1
+    100090: Image 2
+    100092: Image 3
+    100094: Image 4
+    100096: Image 5
+    100098: Image 6
+    100100: img
+    100102: item
+    100104: IX
+    100106: jinbi
+    100108: jinbiBG
+    100110: jindu
+    100112: jindu_bg
+    100114: jindu_text
+    100116: left
+    100118: light
+    100120: lizi
+    100122: lizi 1
+    100124: lizi01
+    100126: lizi02
+    100128: name
+    100130: name 1
+    100132: //RootNode
+    100134: newwar_bigreward
+    100136: next_rate
+    100138: next_rate 1
+    100140: NoDrawingRayCast
+    100142: NoDrawingRayCast 1
+    100144: num
+    100146: num (1)
+    100148: num 1
+    100150: Panel
+    100152: rank_text
+    100154: reward_img
+    100156: reward_img 1
+    100158: reward_text
+    100160: reward_text 1
+    100162: right
+    100164: role_item
+    100166: rw_flash
+    100168: rw_flash 1
+    100170: rw_flash 2
+    100172: rw_liuguang
+    100174: rw_liuguang 1
+    100176: rw_liuguang 2
+    100178: score
+    100180: score_bg
+    100182: score_num
+    100184: scroe
+    100186: sidai
+    100188: Slider
+    100190: stage_name
+    100192: switch
+    100194: target_img
+    100196: target_img 1
+    100198: target_img1
+    100200: target_img2
+    100202: target_img3
+    100204: target_text
+    100206: target_text 1
+    100208: target_text1
+    100210: target_text2
+    100212: target_text3
+    100214: task
+    100216: task_rank
+    100218: task_reward_score
+    100220: Text
+    100222: Text (1)
+    100224: Text (1) 1
+    100226: Text (1) 2
+    100228: Text 1
+    100230: Text 2
+    100232: Text 3
+    100234: Text 4
+    100236: Text_Add
+    100238: Text_Add 1
+    100240: Text_Add 2
+    100242: time
+    100244: title
+    100246: title 1
+    100248: title 2
+    100250: top
+    100252: ui_lottery
+    100254: ui_wuqi_02
+    100256: ui_wuqi_02_0
+    100258: ui_wuqi_03
+    100260: ui_wuqi_03_0
+    100262: ui_zhuanpan_mini
+    100264: vip_lv
+    100266: VIPText
+    100268: wancheng
+    100270: wancheng 1
+    100272: wancheng 2
+    100274: zd_light
+    100276: zd_zhuanpan
+    100278: zhuanpan
+    100280: zp_huan
+    100282: zuanshi
+    100284: zuanshiBG
+    400000: arrow
+    400002: arrow 1
+    400004: arrow_bg
+    400006: arrow_num
+    400008: bg (1)
+    400010: bigicon
+    400012: can_draw_panel
+    400014: cant_draw_panel
+    400016: choujiang
+    400018: choujiang_bg
+    400020: content
+    400022: cost
+    400024: di
+    400026: di_0
+    400028: djImage
+    400030: djText
+    400032: effect
+    400034: fangshe
+    400036: fangshe2
+    400038: Fill
+    400040: finger
+    400042: finger_choujiang
+    400044: ggtj_light
+    400046: ggtj_light 1
+    400048: ggtj_light 2
+    400050: ggtj_light_0
+    400052: ggtj_light_0 1
+    400054: ggtj_light_0 2
+    400056: glow_01
+    400058: glow_01_0
+    400060: gold_bg
+    400062: guanghuan_choujiang
+    400064: guid_choujiang_bg
+    400066: Handle
+    400068: handle_image
+    400070: headicon
+    400072: headicon_img
+    400074: headiconBG
+    400076: headiconframe_img
+    400078: Image
+    400080: Image (1)
+    400082: Image (1) 1
+    400084: Image (1) 2
+    400086: Image (1) 3
+    400088: Image 1
+    400090: Image 2
+    400092: Image 3
+    400094: Image 4
+    400096: Image 5
+    400098: Image 6
+    400100: img
+    400102: item
+    400104: IX
+    400106: jinbi
+    400108: jinbiBG
+    400110: jindu
+    400112: jindu_bg
+    400114: jindu_text
+    400116: left
+    400118: light
+    400120: lizi
+    400122: lizi 1
+    400124: lizi01
+    400126: lizi02
+    400128: name
+    400130: name 1
+    400132: //RootNode
+    400134: newwar_bigreward
+    400136: next_rate
+    400138: next_rate 1
+    400140: NoDrawingRayCast
+    400142: NoDrawingRayCast 1
+    400144: num
+    400146: num (1)
+    400148: num 1
+    400150: Panel
+    400152: rank_text
+    400154: reward_img
+    400156: reward_img 1
+    400158: reward_text
+    400160: reward_text 1
+    400162: right
+    400164: role_item
+    400166: rw_flash
+    400168: rw_flash 1
+    400170: rw_flash 2
+    400172: rw_liuguang
+    400174: rw_liuguang 1
+    400176: rw_liuguang 2
+    400178: score
+    400180: score_bg
+    400182: score_num
+    400184: scroe
+    400186: sidai
+    400188: Slider
+    400190: stage_name
+    400192: switch
+    400194: target_img
+    400196: target_img 1
+    400198: target_img1
+    400200: target_img2
+    400202: target_img3
+    400204: target_text
+    400206: target_text 1
+    400208: target_text1
+    400210: target_text2
+    400212: target_text3
+    400214: task
+    400216: task_rank
+    400218: task_reward_score
+    400220: Text
+    400222: Text (1)
+    400224: Text (1) 1
+    400226: Text (1) 2
+    400228: Text 1
+    400230: Text 2
+    400232: Text 3
+    400234: Text 4
+    400236: Text_Add
+    400238: Text_Add 1
+    400240: Text_Add 2
+    400242: time
+    400244: title
+    400246: title 1
+    400248: title 2
+    400250: top
+    400252: ui_lottery
+    400254: ui_wuqi_02
+    400256: ui_wuqi_02_0
+    400258: ui_wuqi_03
+    400260: ui_wuqi_03_0
+    400262: ui_zhuanpan_mini
+    400264: vip_lv
+    400266: VIPText
+    400268: wancheng
+    400270: wancheng 1
+    400272: wancheng 2
+    400274: zd_light
+    400276: zd_zhuanpan
+    400278: zhuanpan
+    400280: zp_huan
+    400282: zuanshi
+    400284: zuanshiBG
+    2300000: di_0
+    2300002: ggtj_light_0
+    2300004: ggtj_light_0 1
+    2300006: ggtj_light_0 2
+    2300008: glow_01_0
+    2300010: ui_wuqi_02_0
+    2300012: ui_wuqi_03_0
+    3300000: di_0
+    3300002: ggtj_light_0
+    3300004: ggtj_light_0 1
+    3300006: ggtj_light_0 2
+    3300008: glow_01_0
+    3300010: ui_wuqi_02_0
+    3300012: ui_wuqi_03_0
+    4300000: di_0
+    4300002: glow_01_0
+    4300004: ui_wuqi_03_0
+    4300006: ui_wuqi_02_0
+    4300008: ggtj_light_0
+    4300010: ggtj_light_0
+    4300012: ggtj_light_0
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

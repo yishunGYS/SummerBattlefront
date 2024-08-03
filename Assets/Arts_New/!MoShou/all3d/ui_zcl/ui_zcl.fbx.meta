@@ -1,0 +1,206 @@
+fileFormatVersion: 2
+guid: 66dd4cbb42c9296409c0aba73bcfde3c
+timeCreated: 1564462132
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: bao
+    100002: bao2
+    100004: bao3
+    100006: baoxiang
+    100008: baoxiang_0
+    100010: baoxiangtou
+    100012: baoxiangtou_0
+    100014: bx
+    100016: caidai_lizi
+    100018: caidai_lizi 1
+    100020: caidai_lizi 2
+    100022: caidai_lizi 3
+    100024: caidai_lizi 4
+    100026: Directional Light
+    100028: fangshe
+    100030: fangshe_biaozhun_0
+    100032: huan
+    100034: huanrao
+    100036: huiguang_0
+    100038: huiguang_1
+    100040: jinbi_lizi
+    100042: jinbi_lizi1
+    100044: jinbi_lizi2
+    100046: kuosan
+    100048: laba_light
+    100050: laba_light2
+    100052: laba_light3
+    100054: laba_light4
+    100056: light
+    100058: light_lizi
+    100060: light_lizi2
+    100062: light_lizi3
+    100064: shuzi_1
+    100066: shuzi_1_0
+    100068: shuzi_2
+    100070: shuzi_2_0
+    100072: shuzi_3
+    100074: shuzi_3_0
+    100076: shuzi_4
+    100078: shuzi_4_0
+    100080: smoke
+    100082: text
+    100084: //RootNode
+    100086: ui_zcl
+    100088: ui_zcl 1
+    100090: zcl_baofula
+    100092: zcl_baoxiang
+    100094: zcl_bfl
+    100096: zcl_cibang
+    100098: zcl_cibang1
+    100100: zcl_laba_0
+    100102: zcl_laba_1
+    100104: zcl_laba_2
+    100106: zcl_laba_3
+    100108: zcl_sidai
+    100110: zcl_wangguan
+    400000: bao
+    400002: bao2
+    400004: bao3
+    400006: baoxiang
+    400008: baoxiang_0
+    400010: baoxiangtou
+    400012: baoxiangtou_0
+    400014: bx
+    400016: caidai_lizi
+    400018: caidai_lizi 1
+    400020: caidai_lizi 2
+    400022: caidai_lizi 3
+    400024: caidai_lizi 4
+    400026: Directional Light
+    400028: fangshe
+    400030: fangshe_biaozhun_0
+    400032: huan
+    400034: huanrao
+    400036: huiguang_0
+    400038: huiguang_1
+    400040: jinbi_lizi
+    400042: jinbi_lizi1
+    400044: jinbi_lizi2
+    400046: kuosan
+    400048: laba_light
+    400050: laba_light2
+    400052: laba_light3
+    400054: laba_light4
+    400056: light
+    400058: light_lizi
+    400060: light_lizi2
+    400062: light_lizi3
+    400064: shuzi_1
+    400066: shuzi_1_0
+    400068: shuzi_2
+    400070: shuzi_2_0
+    400072: shuzi_3
+    400074: shuzi_3_0
+    400076: shuzi_4
+    400078: shuzi_4_0
+    400080: smoke
+    400082: text
+    400084: //RootNode
+    400086: ui_zcl
+    400088: ui_zcl 1
+    400090: zcl_baofula
+    400092: zcl_baoxiang
+    400094: zcl_bfl
+    400096: zcl_cibang
+    400098: zcl_cibang1
+    400100: zcl_laba_0
+    400102: zcl_laba_1
+    400104: zcl_laba_2
+    400106: zcl_laba_3
+    400108: zcl_sidai
+    400110: zcl_wangguan
+    2300000: baoxiang_0
+    2300002: baoxiangtou_0
+    2300004: shuzi_1_0
+    2300006: shuzi_2_0
+    2300008: shuzi_3_0
+    2300010: shuzi_4_0
+    3300000: baoxiang_0
+    3300002: baoxiangtou_0
+    3300004: shuzi_1_0
+    3300006: shuzi_2_0
+    3300008: shuzi_3_0
+    3300010: shuzi_4_0
+    4300000: baoxiang_0
+    4300002: shuzi_1_0
+    4300004: shuzi_2_0
+    4300006: shuzi_3_0
+    4300008: shuzi_4_0
+    4300010: baoxiangtou_0
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

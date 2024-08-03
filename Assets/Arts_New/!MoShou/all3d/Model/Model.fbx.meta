@@ -1,0 +1,909 @@
+fileFormatVersion: 2
+guid: 1f262596c3708044f8b2396574e6dbdd
+timeCreated: 1564462072
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Model
+    100004: Shitou
+    100006: TKZC_Cao_01
+    100008: TKZC_Cao_01 (1)
+    100010: TKZC_Cao_01 (1)_0
+    100012: TKZC_Cao_01 (10)
+    100014: TKZC_Cao_01 (10)_0
+    100016: TKZC_Cao_01 (11)
+    100018: TKZC_Cao_01 (11)_0
+    100020: TKZC_Cao_01 (12)
+    100022: TKZC_Cao_01 (12)_0
+    100024: TKZC_Cao_01 (13)
+    100026: TKZC_Cao_01 (13)_0
+    100028: TKZC_Cao_01 (14)
+    100030: TKZC_Cao_01 (14)_0
+    100032: TKZC_Cao_01 (15)
+    100034: TKZC_Cao_01 (15)_0
+    100036: TKZC_Cao_01 (2)
+    100038: TKZC_Cao_01 (2)_0
+    100040: TKZC_Cao_01 (3)
+    100042: TKZC_Cao_01 (3)_0
+    100044: TKZC_Cao_01 (4)
+    100046: TKZC_Cao_01 (4)_0
+    100048: TKZC_Cao_01 (5)
+    100050: TKZC_Cao_01 (5)_0
+    100052: TKZC_Cao_01 (6)
+    100054: TKZC_Cao_01 (6)_0
+    100056: TKZC_Cao_01 (7)
+    100058: TKZC_Cao_01 (7)_0
+    100060: TKZC_Cao_01 (8)
+    100062: TKZC_Cao_01 (8)_0
+    100064: TKZC_Cao_01 (9)
+    100066: TKZC_Cao_01 (9)_0
+    100068: TKZC_Cao_01_0
+    100070: TKZC_Cao_02 (1)
+    100072: TKZC_Cao_02 (1)_0
+    100074: TKZC_Cao_02 (10)
+    100076: TKZC_Cao_02 (10)_0
+    100078: TKZC_Cao_02 (11)
+    100080: TKZC_Cao_02 (11)_0
+    100082: TKZC_Cao_02 (12)
+    100084: TKZC_Cao_02 (12)_0
+    100086: TKZC_Cao_02 (13)
+    100088: TKZC_Cao_02 (13)_0
+    100090: TKZC_Cao_02 (14)
+    100092: TKZC_Cao_02 (14)_0
+    100094: TKZC_Cao_02 (15)
+    100096: TKZC_Cao_02 (15)_0
+    100098: TKZC_Cao_02 (16)
+    100100: TKZC_Cao_02 (16)_0
+    100102: TKZC_Cao_02 (17)
+    100104: TKZC_Cao_02 (17)_0
+    100106: TKZC_Cao_02 (18)
+    100108: TKZC_Cao_02 (18)_0
+    100110: TKZC_Cao_02 (19)
+    100112: TKZC_Cao_02 (19)_0
+    100114: TKZC_Cao_02 (2)
+    100116: TKZC_Cao_02 (2)_0
+    100118: TKZC_Cao_02 (20)
+    100120: TKZC_Cao_02 (20)_0
+    100122: TKZC_Cao_02 (21)
+    100124: TKZC_Cao_02 (21)_0
+    100126: TKZC_Cao_02 (22)
+    100128: TKZC_Cao_02 (22)_0
+    100130: TKZC_Cao_02 (23)
+    100132: TKZC_Cao_02 (23)_0
+    100134: TKZC_Cao_02 (24)
+    100136: TKZC_Cao_02 (24)_0
+    100138: TKZC_Cao_02 (25)
+    100140: TKZC_Cao_02 (25)_0
+    100142: TKZC_Cao_02 (26)
+    100144: TKZC_Cao_02 (26)_0
+    100146: TKZC_Cao_02 (27)
+    100148: TKZC_Cao_02 (27)_0
+    100150: TKZC_Cao_02 (28)
+    100152: TKZC_Cao_02 (28)_0
+    100154: TKZC_Cao_02 (29)
+    100156: TKZC_Cao_02 (29)_0
+    100158: TKZC_Cao_02 (3)
+    100160: TKZC_Cao_02 (3)_0
+    100162: TKZC_Cao_02 (30)
+    100164: TKZC_Cao_02 (30)_0
+    100166: TKZC_Cao_02 (31)
+    100168: TKZC_Cao_02 (31)_0
+    100170: TKZC_Cao_02 (32)
+    100172: TKZC_Cao_02 (32)_0
+    100174: TKZC_Cao_02 (4)
+    100176: TKZC_Cao_02 (4)_0
+    100178: TKZC_Cao_02 (5)
+    100180: TKZC_Cao_02 (5)_0
+    100182: TKZC_Cao_02 (6)
+    100184: TKZC_Cao_02 (6)_0
+    100186: TKZC_Cao_02 (7)
+    100188: TKZC_Cao_02 (7)_0
+    100190: TKZC_Cao_02 (8)
+    100192: TKZC_Cao_02 (8)_0
+    100194: TKZC_Cao_02 (9)
+    100196: TKZC_Cao_02 (9)_0
+    100198: TKZC_DaShu_01 (1)
+    100200: TKZC_DaShu_01 (1) 1
+    100202: TKZC_DaShu_01 (1)_0
+    100204: TKZC_DaShu_01 (1)_0 1
+    100206: TKZC_DaShu_01 (2)
+    100208: TKZC_DaShu_01 (2)_0
+    100210: TKZC_DaShu_01 (3)
+    100212: TKZC_DaShu_01 (3)_0
+    100214: TKZC_DaShu_01 (4)
+    100216: TKZC_DaShu_01 (4)_0
+    100218: TKZC_DaShu_01 (5)
+    100220: TKZC_DaShu_01 (5)_0
+    100222: TKZC_DaShu_02
+    100224: TKZC_DaShu_02 (1)
+    100226: TKZC_DaShu_02 (1)_0
+    100228: TKZC_DaShu_02 (2)
+    100230: TKZC_DaShu_02 (2)_0
+    100232: TKZC_DaShu_02 (3)
+    100234: TKZC_DaShu_02 (3)_0
+    100236: TKZC_DaShu_02 (4)
+    100238: TKZC_DaShu_02 (4)_0
+    100240: TKZC_DaShu_02_0
+    100242: TKZC_DiZuo_01
+    100244: TKZC_DiZuo_01_01
+    100246: TKZC_DiZuo_01_01_0
+    100248: TKZC_DiZuo_01_02
+    100250: TKZC_DiZuo_01_02_0
+    100252: TKZC_FeiChuan_01 (1)
+    100254: TKZC_FeiChuan_01 (1)_0
+    100256: TKZC_FeiChuan_01 (2)
+    100258: TKZC_FeiChuan_01 (2)_0
+    100260: TKZC_FeiChuan_01 (3)
+    100262: TKZC_FeiChuan_01 (3)_0
+    100264: TKZC_FeiChuan_01 (4)
+    100266: TKZC_FeiChuan_01 (4)_0
+    100268: TKZC_FeiChuan_01 (5)
+    100270: TKZC_FeiChuan_01 (5)_0
+    100272: TKZC_HuaPen_01
+    100274: TKZC_HuaPen_01 (1)
+    100276: TKZC_HuaPen_01 (1)_0
+    100278: TKZC_HuaPen_01 (2)
+    100280: TKZC_HuaPen_01 (2)_0
+    100282: TKZC_HuaPen_01 (3)
+    100284: TKZC_HuaPen_01 (3)_0
+    100286: TKZC_HuaPen_01_0
+    100288: TKZC_LuoYe_01
+    100290: TKZC_LuoYe_01 (1)
+    100292: TKZC_LuoYe_01 (1)_0
+    100294: TKZC_LuoYe_01 (10)
+    100296: TKZC_LuoYe_01 (10)_0
+    100298: TKZC_LuoYe_01 (11)
+    100300: TKZC_LuoYe_01 (11)_0
+    100302: TKZC_LuoYe_01 (2)
+    100304: TKZC_LuoYe_01 (2)_0
+    100306: TKZC_LuoYe_01 (4)
+    100308: TKZC_LuoYe_01 (4)_0
+    100310: TKZC_LuoYe_01 (5)
+    100312: TKZC_LuoYe_01 (5)_0
+    100314: TKZC_LuoYe_01 (6)
+    100316: TKZC_LuoYe_01 (6)_0
+    100318: TKZC_LuoYe_01 (7)
+    100320: TKZC_LuoYe_01 (7)_0
+    100322: TKZC_LuoYe_01 (8)
+    100324: TKZC_LuoYe_01 (8)_0
+    100326: TKZC_LuoYe_01 (9)
+    100328: TKZC_LuoYe_01 (9)_0
+    100330: TKZC_LuoYe_01_0
+    100332: TKZC_ReQiQiu_01
+    100334: TKZC_ReQiQiu_01 (1)
+    100336: TKZC_ReQiQiu_01 (1)_0
+    100338: TKZC_ReQiQiu_01 (2)
+    100340: TKZC_ReQiQiu_01 (2)_0
+    100342: TKZC_ReQiQiu_01 (3)
+    100344: TKZC_ReQiQiu_01 (3)_0
+    100346: TKZC_ReQiQiu_01 (4)
+    100348: TKZC_ReQiQiu_01 (4)_0
+    100350: TKZC_ReQiQiu_01 (5)
+    100352: TKZC_ReQiQiu_01 (5)_0
+    100354: TKZC_ReQiQiu_01_0
+    100356: TKZC_ShiTou_01 (1)
+    100358: TKZC_ShiTou_01 (1)_0
+    100360: TKZC_ShiTou_01 (2)
+    100362: TKZC_ShiTou_01 (2)_0
+    100364: TKZC_ShiTou_01 (3)
+    100366: TKZC_ShiTou_01 (3)_0
+    100368: TKZC_ShiTou_01 (4)
+    100370: TKZC_ShiTou_01 (4)_0
+    100372: TKZC_ShiTou_01 (5)
+    100374: TKZC_ShiTou_01 (5)_0
+    100376: TKZC_ShiTou_01 (6)
+    100378: TKZC_ShiTou_01 (6)_0
+    100380: TKZC_ShiTou_02 (1)
+    100382: TKZC_ShiTou_02 (1)_0
+    100384: TKZC_ShiTou_02 (2)
+    100386: TKZC_ShiTou_02 (2)_0
+    100388: TKZC_ShiTou_02 (3)
+    100390: TKZC_ShiTou_02 (3)_0
+    100392: TKZC_ShiTou_03 (1)
+    100394: TKZC_ShiTou_03 (1)_0
+    100396: TKZC_ShiTou_03 (2)
+    100398: TKZC_ShiTou_03 (2)_0
+    100400: TKZC_TouMing_01
+    100402: TKZC_TouMing_01_0
+    100404: TKZC_Yun_01
+    100406: TKZC_Yun_01 (1)
+    100408: TKZC_Yun_01 (1)_0
+    100410: TKZC_Yun_01 (2)
+    100412: TKZC_Yun_01 (2)_0
+    100414: TKZC_Yun_01 (3)
+    100416: TKZC_Yun_01 (3)_0
+    100418: TKZC_Yun_01 (4)
+    100420: TKZC_Yun_01 (4)_0
+    100422: TKZC_Yun_01 (5)
+    100424: TKZC_Yun_01 (5)_0
+    100426: TKZC_Yun_01 (6)
+    100428: TKZC_Yun_01 (6)_0
+    100430: TKZC_Yun_01_0
+    100432: TKZC_Yun_02
+    100434: TKZC_Yun_02 (1)
+    100436: TKZC_Yun_02 (1)_0
+    100438: TKZC_Yun_02 (2)
+    100440: TKZC_Yun_02 (2)_0
+    100442: TKZC_Yun_02 (3)
+    100444: TKZC_Yun_02 (3)_0
+    100446: TKZC_Yun_02 (4)
+    100448: TKZC_Yun_02 (4)_0
+    100450: TKZC_Yun_02 (5)
+    100452: TKZC_Yun_02 (5)_0
+    100454: TKZC_Yun_02_0
+    100456: TKZC_Yun_03
+    100458: TKZC_Yun_03 (1)
+    100460: TKZC_Yun_03 (1)_0
+    100462: TKZC_Yun_03 (2)
+    100464: TKZC_Yun_03 (2)_0
+    100466: TKZC_Yun_03 (3)
+    100468: TKZC_Yun_03 (3)_0
+    100470: TKZC_Yun_03 (4)
+    100472: TKZC_Yun_03 (4)_0
+    100474: TKZC_Yun_03_0
+    100476: WuJian
+    100478: Yun
+    100480: ZhiWu
+    400000: //RootNode
+    400002: Model
+    400004: Shitou
+    400006: TKZC_Cao_01
+    400008: TKZC_Cao_01 (1)
+    400010: TKZC_Cao_01 (1)_0
+    400012: TKZC_Cao_01 (10)
+    400014: TKZC_Cao_01 (10)_0
+    400016: TKZC_Cao_01 (11)
+    400018: TKZC_Cao_01 (11)_0
+    400020: TKZC_Cao_01 (12)
+    400022: TKZC_Cao_01 (12)_0
+    400024: TKZC_Cao_01 (13)
+    400026: TKZC_Cao_01 (13)_0
+    400028: TKZC_Cao_01 (14)
+    400030: TKZC_Cao_01 (14)_0
+    400032: TKZC_Cao_01 (15)
+    400034: TKZC_Cao_01 (15)_0
+    400036: TKZC_Cao_01 (2)
+    400038: TKZC_Cao_01 (2)_0
+    400040: TKZC_Cao_01 (3)
+    400042: TKZC_Cao_01 (3)_0
+    400044: TKZC_Cao_01 (4)
+    400046: TKZC_Cao_01 (4)_0
+    400048: TKZC_Cao_01 (5)
+    400050: TKZC_Cao_01 (5)_0
+    400052: TKZC_Cao_01 (6)
+    400054: TKZC_Cao_01 (6)_0
+    400056: TKZC_Cao_01 (7)
+    400058: TKZC_Cao_01 (7)_0
+    400060: TKZC_Cao_01 (8)
+    400062: TKZC_Cao_01 (8)_0
+    400064: TKZC_Cao_01 (9)
+    400066: TKZC_Cao_01 (9)_0
+    400068: TKZC_Cao_01_0
+    400070: TKZC_Cao_02 (1)
+    400072: TKZC_Cao_02 (1)_0
+    400074: TKZC_Cao_02 (10)
+    400076: TKZC_Cao_02 (10)_0
+    400078: TKZC_Cao_02 (11)
+    400080: TKZC_Cao_02 (11)_0
+    400082: TKZC_Cao_02 (12)
+    400084: TKZC_Cao_02 (12)_0
+    400086: TKZC_Cao_02 (13)
+    400088: TKZC_Cao_02 (13)_0
+    400090: TKZC_Cao_02 (14)
+    400092: TKZC_Cao_02 (14)_0
+    400094: TKZC_Cao_02 (15)
+    400096: TKZC_Cao_02 (15)_0
+    400098: TKZC_Cao_02 (16)
+    400100: TKZC_Cao_02 (16)_0
+    400102: TKZC_Cao_02 (17)
+    400104: TKZC_Cao_02 (17)_0
+    400106: TKZC_Cao_02 (18)
+    400108: TKZC_Cao_02 (18)_0
+    400110: TKZC_Cao_02 (19)
+    400112: TKZC_Cao_02 (19)_0
+    400114: TKZC_Cao_02 (2)
+    400116: TKZC_Cao_02 (2)_0
+    400118: TKZC_Cao_02 (20)
+    400120: TKZC_Cao_02 (20)_0
+    400122: TKZC_Cao_02 (21)
+    400124: TKZC_Cao_02 (21)_0
+    400126: TKZC_Cao_02 (22)
+    400128: TKZC_Cao_02 (22)_0
+    400130: TKZC_Cao_02 (23)
+    400132: TKZC_Cao_02 (23)_0
+    400134: TKZC_Cao_02 (24)
+    400136: TKZC_Cao_02 (24)_0
+    400138: TKZC_Cao_02 (25)
+    400140: TKZC_Cao_02 (25)_0
+    400142: TKZC_Cao_02 (26)
+    400144: TKZC_Cao_02 (26)_0
+    400146: TKZC_Cao_02 (27)
+    400148: TKZC_Cao_02 (27)_0
+    400150: TKZC_Cao_02 (28)
+    400152: TKZC_Cao_02 (28)_0
+    400154: TKZC_Cao_02 (29)
+    400156: TKZC_Cao_02 (29)_0
+    400158: TKZC_Cao_02 (3)
+    400160: TKZC_Cao_02 (3)_0
+    400162: TKZC_Cao_02 (30)
+    400164: TKZC_Cao_02 (30)_0
+    400166: TKZC_Cao_02 (31)
+    400168: TKZC_Cao_02 (31)_0
+    400170: TKZC_Cao_02 (32)
+    400172: TKZC_Cao_02 (32)_0
+    400174: TKZC_Cao_02 (4)
+    400176: TKZC_Cao_02 (4)_0
+    400178: TKZC_Cao_02 (5)
+    400180: TKZC_Cao_02 (5)_0
+    400182: TKZC_Cao_02 (6)
+    400184: TKZC_Cao_02 (6)_0
+    400186: TKZC_Cao_02 (7)
+    400188: TKZC_Cao_02 (7)_0
+    400190: TKZC_Cao_02 (8)
+    400192: TKZC_Cao_02 (8)_0
+    400194: TKZC_Cao_02 (9)
+    400196: TKZC_Cao_02 (9)_0
+    400198: TKZC_DaShu_01 (1)
+    400200: TKZC_DaShu_01 (1) 1
+    400202: TKZC_DaShu_01 (1)_0
+    400204: TKZC_DaShu_01 (1)_0 1
+    400206: TKZC_DaShu_01 (2)
+    400208: TKZC_DaShu_01 (2)_0
+    400210: TKZC_DaShu_01 (3)
+    400212: TKZC_DaShu_01 (3)_0
+    400214: TKZC_DaShu_01 (4)
+    400216: TKZC_DaShu_01 (4)_0
+    400218: TKZC_DaShu_01 (5)
+    400220: TKZC_DaShu_01 (5)_0
+    400222: TKZC_DaShu_02
+    400224: TKZC_DaShu_02 (1)
+    400226: TKZC_DaShu_02 (1)_0
+    400228: TKZC_DaShu_02 (2)
+    400230: TKZC_DaShu_02 (2)_0
+    400232: TKZC_DaShu_02 (3)
+    400234: TKZC_DaShu_02 (3)_0
+    400236: TKZC_DaShu_02 (4)
+    400238: TKZC_DaShu_02 (4)_0
+    400240: TKZC_DaShu_02_0
+    400242: TKZC_DiZuo_01
+    400244: TKZC_DiZuo_01_01
+    400246: TKZC_DiZuo_01_01_0
+    400248: TKZC_DiZuo_01_02
+    400250: TKZC_DiZuo_01_02_0
+    400252: TKZC_FeiChuan_01 (1)
+    400254: TKZC_FeiChuan_01 (1)_0
+    400256: TKZC_FeiChuan_01 (2)
+    400258: TKZC_FeiChuan_01 (2)_0
+    400260: TKZC_FeiChuan_01 (3)
+    400262: TKZC_FeiChuan_01 (3)_0
+    400264: TKZC_FeiChuan_01 (4)
+    400266: TKZC_FeiChuan_01 (4)_0
+    400268: TKZC_FeiChuan_01 (5)
+    400270: TKZC_FeiChuan_01 (5)_0
+    400272: TKZC_HuaPen_01
+    400274: TKZC_HuaPen_01 (1)
+    400276: TKZC_HuaPen_01 (1)_0
+    400278: TKZC_HuaPen_01 (2)
+    400280: TKZC_HuaPen_01 (2)_0
+    400282: TKZC_HuaPen_01 (3)
+    400284: TKZC_HuaPen_01 (3)_0
+    400286: TKZC_HuaPen_01_0
+    400288: TKZC_LuoYe_01
+    400290: TKZC_LuoYe_01 (1)
+    400292: TKZC_LuoYe_01 (1)_0
+    400294: TKZC_LuoYe_01 (10)
+    400296: TKZC_LuoYe_01 (10)_0
+    400298: TKZC_LuoYe_01 (11)
+    400300: TKZC_LuoYe_01 (11)_0
+    400302: TKZC_LuoYe_01 (2)
+    400304: TKZC_LuoYe_01 (2)_0
+    400306: TKZC_LuoYe_01 (4)
+    400308: TKZC_LuoYe_01 (4)_0
+    400310: TKZC_LuoYe_01 (5)
+    400312: TKZC_LuoYe_01 (5)_0
+    400314: TKZC_LuoYe_01 (6)
+    400316: TKZC_LuoYe_01 (6)_0
+    400318: TKZC_LuoYe_01 (7)
+    400320: TKZC_LuoYe_01 (7)_0
+    400322: TKZC_LuoYe_01 (8)
+    400324: TKZC_LuoYe_01 (8)_0
+    400326: TKZC_LuoYe_01 (9)
+    400328: TKZC_LuoYe_01 (9)_0
+    400330: TKZC_LuoYe_01_0
+    400332: TKZC_ReQiQiu_01
+    400334: TKZC_ReQiQiu_01 (1)
+    400336: TKZC_ReQiQiu_01 (1)_0
+    400338: TKZC_ReQiQiu_01 (2)
+    400340: TKZC_ReQiQiu_01 (2)_0
+    400342: TKZC_ReQiQiu_01 (3)
+    400344: TKZC_ReQiQiu_01 (3)_0
+    400346: TKZC_ReQiQiu_01 (4)
+    400348: TKZC_ReQiQiu_01 (4)_0
+    400350: TKZC_ReQiQiu_01 (5)
+    400352: TKZC_ReQiQiu_01 (5)_0
+    400354: TKZC_ReQiQiu_01_0
+    400356: TKZC_ShiTou_01 (1)
+    400358: TKZC_ShiTou_01 (1)_0
+    400360: TKZC_ShiTou_01 (2)
+    400362: TKZC_ShiTou_01 (2)_0
+    400364: TKZC_ShiTou_01 (3)
+    400366: TKZC_ShiTou_01 (3)_0
+    400368: TKZC_ShiTou_01 (4)
+    400370: TKZC_ShiTou_01 (4)_0
+    400372: TKZC_ShiTou_01 (5)
+    400374: TKZC_ShiTou_01 (5)_0
+    400376: TKZC_ShiTou_01 (6)
+    400378: TKZC_ShiTou_01 (6)_0
+    400380: TKZC_ShiTou_02 (1)
+    400382: TKZC_ShiTou_02 (1)_0
+    400384: TKZC_ShiTou_02 (2)
+    400386: TKZC_ShiTou_02 (2)_0
+    400388: TKZC_ShiTou_02 (3)
+    400390: TKZC_ShiTou_02 (3)_0
+    400392: TKZC_ShiTou_03 (1)
+    400394: TKZC_ShiTou_03 (1)_0
+    400396: TKZC_ShiTou_03 (2)
+    400398: TKZC_ShiTou_03 (2)_0
+    400400: TKZC_TouMing_01
+    400402: TKZC_TouMing_01_0
+    400404: TKZC_Yun_01
+    400406: TKZC_Yun_01 (1)
+    400408: TKZC_Yun_01 (1)_0
+    400410: TKZC_Yun_01 (2)
+    400412: TKZC_Yun_01 (2)_0
+    400414: TKZC_Yun_01 (3)
+    400416: TKZC_Yun_01 (3)_0
+    400418: TKZC_Yun_01 (4)
+    400420: TKZC_Yun_01 (4)_0
+    400422: TKZC_Yun_01 (5)
+    400424: TKZC_Yun_01 (5)_0
+    400426: TKZC_Yun_01 (6)
+    400428: TKZC_Yun_01 (6)_0
+    400430: TKZC_Yun_01_0
+    400432: TKZC_Yun_02
+    400434: TKZC_Yun_02 (1)
+    400436: TKZC_Yun_02 (1)_0
+    400438: TKZC_Yun_02 (2)
+    400440: TKZC_Yun_02 (2)_0
+    400442: TKZC_Yun_02 (3)
+    400444: TKZC_Yun_02 (3)_0
+    400446: TKZC_Yun_02 (4)
+    400448: TKZC_Yun_02 (4)_0
+    400450: TKZC_Yun_02 (5)
+    400452: TKZC_Yun_02 (5)_0
+    400454: TKZC_Yun_02_0
+    400456: TKZC_Yun_03
+    400458: TKZC_Yun_03 (1)
+    400460: TKZC_Yun_03 (1)_0
+    400462: TKZC_Yun_03 (2)
+    400464: TKZC_Yun_03 (2)_0
+    400466: TKZC_Yun_03 (3)
+    400468: TKZC_Yun_03 (3)_0
+    400470: TKZC_Yun_03 (4)
+    400472: TKZC_Yun_03 (4)_0
+    400474: TKZC_Yun_03_0
+    400476: WuJian
+    400478: Yun
+    400480: ZhiWu
+    2300000: TKZC_Cao_01 (1)_0
+    2300002: TKZC_Cao_01 (10)_0
+    2300004: TKZC_Cao_01 (11)_0
+    2300006: TKZC_Cao_01 (12)_0
+    2300008: TKZC_Cao_01 (13)_0
+    2300010: TKZC_Cao_01 (14)_0
+    2300012: TKZC_Cao_01 (15)_0
+    2300014: TKZC_Cao_01 (2)_0
+    2300016: TKZC_Cao_01 (3)_0
+    2300018: TKZC_Cao_01 (4)_0
+    2300020: TKZC_Cao_01 (5)_0
+    2300022: TKZC_Cao_01 (6)_0
+    2300024: TKZC_Cao_01 (7)_0
+    2300026: TKZC_Cao_01 (8)_0
+    2300028: TKZC_Cao_01 (9)_0
+    2300030: TKZC_Cao_01_0
+    2300032: TKZC_Cao_02 (1)_0
+    2300034: TKZC_Cao_02 (10)_0
+    2300036: TKZC_Cao_02 (11)_0
+    2300038: TKZC_Cao_02 (12)_0
+    2300040: TKZC_Cao_02 (13)_0
+    2300042: TKZC_Cao_02 (14)_0
+    2300044: TKZC_Cao_02 (15)_0
+    2300046: TKZC_Cao_02 (16)_0
+    2300048: TKZC_Cao_02 (17)_0
+    2300050: TKZC_Cao_02 (18)_0
+    2300052: TKZC_Cao_02 (19)_0
+    2300054: TKZC_Cao_02 (2)_0
+    2300056: TKZC_Cao_02 (20)_0
+    2300058: TKZC_Cao_02 (21)_0
+    2300060: TKZC_Cao_02 (22)_0
+    2300062: TKZC_Cao_02 (23)_0
+    2300064: TKZC_Cao_02 (24)_0
+    2300066: TKZC_Cao_02 (25)_0
+    2300068: TKZC_Cao_02 (26)_0
+    2300070: TKZC_Cao_02 (27)_0
+    2300072: TKZC_Cao_02 (28)_0
+    2300074: TKZC_Cao_02 (29)_0
+    2300076: TKZC_Cao_02 (3)_0
+    2300078: TKZC_Cao_02 (30)_0
+    2300080: TKZC_Cao_02 (31)_0
+    2300082: TKZC_Cao_02 (32)_0
+    2300084: TKZC_Cao_02 (4)_0
+    2300086: TKZC_Cao_02 (5)_0
+    2300088: TKZC_Cao_02 (6)_0
+    2300090: TKZC_Cao_02 (7)_0
+    2300092: TKZC_Cao_02 (8)_0
+    2300094: TKZC_Cao_02 (9)_0
+    2300096: TKZC_DaShu_01 (1)_0
+    2300098: TKZC_DaShu_01 (1)_0 1
+    2300100: TKZC_DaShu_01 (2)_0
+    2300102: TKZC_DaShu_01 (3)_0
+    2300104: TKZC_DaShu_01 (4)_0
+    2300106: TKZC_DaShu_01 (5)_0
+    2300108: TKZC_DaShu_02 (1)_0
+    2300110: TKZC_DaShu_02 (2)_0
+    2300112: TKZC_DaShu_02 (3)_0
+    2300114: TKZC_DaShu_02 (4)_0
+    2300116: TKZC_DaShu_02_0
+    2300118: TKZC_DiZuo_01_01_0
+    2300120: TKZC_DiZuo_01_02_0
+    2300122: TKZC_FeiChuan_01 (1)_0
+    2300124: TKZC_FeiChuan_01 (2)_0
+    2300126: TKZC_FeiChuan_01 (3)_0
+    2300128: TKZC_FeiChuan_01 (4)_0
+    2300130: TKZC_FeiChuan_01 (5)_0
+    2300132: TKZC_HuaPen_01 (1)_0
+    2300134: TKZC_HuaPen_01 (2)_0
+    2300136: TKZC_HuaPen_01 (3)_0
+    2300138: TKZC_HuaPen_01_0
+    2300140: TKZC_LuoYe_01 (1)_0
+    2300142: TKZC_LuoYe_01 (10)_0
+    2300144: TKZC_LuoYe_01 (11)_0
+    2300146: TKZC_LuoYe_01 (2)_0
+    2300148: TKZC_LuoYe_01 (4)_0
+    2300150: TKZC_LuoYe_01 (5)_0
+    2300152: TKZC_LuoYe_01 (6)_0
+    2300154: TKZC_LuoYe_01 (7)_0
+    2300156: TKZC_LuoYe_01 (8)_0
+    2300158: TKZC_LuoYe_01 (9)_0
+    2300160: TKZC_LuoYe_01_0
+    2300162: TKZC_ReQiQiu_01 (1)_0
+    2300164: TKZC_ReQiQiu_01 (2)_0
+    2300166: TKZC_ReQiQiu_01 (3)_0
+    2300168: TKZC_ReQiQiu_01 (4)_0
+    2300170: TKZC_ReQiQiu_01 (5)_0
+    2300172: TKZC_ReQiQiu_01_0
+    2300174: TKZC_ShiTou_01 (1)_0
+    2300176: TKZC_ShiTou_01 (2)_0
+    2300178: TKZC_ShiTou_01 (3)_0
+    2300180: TKZC_ShiTou_01 (4)_0
+    2300182: TKZC_ShiTou_01 (5)_0
+    2300184: TKZC_ShiTou_01 (6)_0
+    2300186: TKZC_ShiTou_02 (1)_0
+    2300188: TKZC_ShiTou_02 (2)_0
+    2300190: TKZC_ShiTou_02 (3)_0
+    2300192: TKZC_ShiTou_03 (1)_0
+    2300194: TKZC_ShiTou_03 (2)_0
+    2300196: TKZC_TouMing_01_0
+    2300198: TKZC_Yun_01 (1)_0
+    2300200: TKZC_Yun_01 (2)_0
+    2300202: TKZC_Yun_01 (3)_0
+    2300204: TKZC_Yun_01 (4)_0
+    2300206: TKZC_Yun_01 (5)_0
+    2300208: TKZC_Yun_01 (6)_0
+    2300210: TKZC_Yun_01_0
+    2300212: TKZC_Yun_02 (1)_0
+    2300214: TKZC_Yun_02 (2)_0
+    2300216: TKZC_Yun_02 (3)_0
+    2300218: TKZC_Yun_02 (4)_0
+    2300220: TKZC_Yun_02 (5)_0
+    2300222: TKZC_Yun_02_0
+    2300224: TKZC_Yun_03 (1)_0
+    2300226: TKZC_Yun_03 (2)_0
+    2300228: TKZC_Yun_03 (3)_0
+    2300230: TKZC_Yun_03 (4)_0
+    2300232: TKZC_Yun_03_0
+    3300000: TKZC_Cao_01 (1)_0
+    3300002: TKZC_Cao_01 (10)_0
+    3300004: TKZC_Cao_01 (11)_0
+    3300006: TKZC_Cao_01 (12)_0
+    3300008: TKZC_Cao_01 (13)_0
+    3300010: TKZC_Cao_01 (14)_0
+    3300012: TKZC_Cao_01 (15)_0
+    3300014: TKZC_Cao_01 (2)_0
+    3300016: TKZC_Cao_01 (3)_0
+    3300018: TKZC_Cao_01 (4)_0
+    3300020: TKZC_Cao_01 (5)_0
+    3300022: TKZC_Cao_01 (6)_0
+    3300024: TKZC_Cao_01 (7)_0
+    3300026: TKZC_Cao_01 (8)_0
+    3300028: TKZC_Cao_01 (9)_0
+    3300030: TKZC_Cao_01_0
+    3300032: TKZC_Cao_02 (1)_0
+    3300034: TKZC_Cao_02 (10)_0
+    3300036: TKZC_Cao_02 (11)_0
+    3300038: TKZC_Cao_02 (12)_0
+    3300040: TKZC_Cao_02 (13)_0
+    3300042: TKZC_Cao_02 (14)_0
+    3300044: TKZC_Cao_02 (15)_0
+    3300046: TKZC_Cao_02 (16)_0
+    3300048: TKZC_Cao_02 (17)_0
+    3300050: TKZC_Cao_02 (18)_0
+    3300052: TKZC_Cao_02 (19)_0
+    3300054: TKZC_Cao_02 (2)_0
+    3300056: TKZC_Cao_02 (20)_0
+    3300058: TKZC_Cao_02 (21)_0
+    3300060: TKZC_Cao_02 (22)_0
+    3300062: TKZC_Cao_02 (23)_0
+    3300064: TKZC_Cao_02 (24)_0
+    3300066: TKZC_Cao_02 (25)_0
+    3300068: TKZC_Cao_02 (26)_0
+    3300070: TKZC_Cao_02 (27)_0
+    3300072: TKZC_Cao_02 (28)_0
+    3300074: TKZC_Cao_02 (29)_0
+    3300076: TKZC_Cao_02 (3)_0
+    3300078: TKZC_Cao_02 (30)_0
+    3300080: TKZC_Cao_02 (31)_0
+    3300082: TKZC_Cao_02 (32)_0
+    3300084: TKZC_Cao_02 (4)_0
+    3300086: TKZC_Cao_02 (5)_0
+    3300088: TKZC_Cao_02 (6)_0
+    3300090: TKZC_Cao_02 (7)_0
+    3300092: TKZC_Cao_02 (8)_0
+    3300094: TKZC_Cao_02 (9)_0
+    3300096: TKZC_DaShu_01 (1)_0
+    3300098: TKZC_DaShu_01 (1)_0 1
+    3300100: TKZC_DaShu_01 (2)_0
+    3300102: TKZC_DaShu_01 (3)_0
+    3300104: TKZC_DaShu_01 (4)_0
+    3300106: TKZC_DaShu_01 (5)_0
+    3300108: TKZC_DaShu_02 (1)_0
+    3300110: TKZC_DaShu_02 (2)_0
+    3300112: TKZC_DaShu_02 (3)_0
+    3300114: TKZC_DaShu_02 (4)_0
+    3300116: TKZC_DaShu_02_0
+    3300118: TKZC_DiZuo_01_01_0
+    3300120: TKZC_DiZuo_01_02_0
+    3300122: TKZC_FeiChuan_01 (1)_0
+    3300124: TKZC_FeiChuan_01 (2)_0
+    3300126: TKZC_FeiChuan_01 (3)_0
+    3300128: TKZC_FeiChuan_01 (4)_0
+    3300130: TKZC_FeiChuan_01 (5)_0
+    3300132: TKZC_HuaPen_01 (1)_0
+    3300134: TKZC_HuaPen_01 (2)_0
+    3300136: TKZC_HuaPen_01 (3)_0
+    3300138: TKZC_HuaPen_01_0
+    3300140: TKZC_LuoYe_01 (1)_0
+    3300142: TKZC_LuoYe_01 (10)_0
+    3300144: TKZC_LuoYe_01 (11)_0
+    3300146: TKZC_LuoYe_01 (2)_0
+    3300148: TKZC_LuoYe_01 (4)_0
+    3300150: TKZC_LuoYe_01 (5)_0
+    3300152: TKZC_LuoYe_01 (6)_0
+    3300154: TKZC_LuoYe_01 (7)_0
+    3300156: TKZC_LuoYe_01 (8)_0
+    3300158: TKZC_LuoYe_01 (9)_0
+    3300160: TKZC_LuoYe_01_0
+    3300162: TKZC_ReQiQiu_01 (1)_0
+    3300164: TKZC_ReQiQiu_01 (2)_0
+    3300166: TKZC_ReQiQiu_01 (3)_0
+    3300168: TKZC_ReQiQiu_01 (4)_0
+    3300170: TKZC_ReQiQiu_01 (5)_0
+    3300172: TKZC_ReQiQiu_01_0
+    3300174: TKZC_ShiTou_01 (1)_0
+    3300176: TKZC_ShiTou_01 (2)_0
+    3300178: TKZC_ShiTou_01 (3)_0
+    3300180: TKZC_ShiTou_01 (4)_0
+    3300182: TKZC_ShiTou_01 (5)_0
+    3300184: TKZC_ShiTou_01 (6)_0
+    3300186: TKZC_ShiTou_02 (1)_0
+    3300188: TKZC_ShiTou_02 (2)_0
+    3300190: TKZC_ShiTou_02 (3)_0
+    3300192: TKZC_ShiTou_03 (1)_0
+    3300194: TKZC_ShiTou_03 (2)_0
+    3300196: TKZC_TouMing_01_0
+    3300198: TKZC_Yun_01 (1)_0
+    3300200: TKZC_Yun_01 (2)_0
+    3300202: TKZC_Yun_01 (3)_0
+    3300204: TKZC_Yun_01 (4)_0
+    3300206: TKZC_Yun_01 (5)_0
+    3300208: TKZC_Yun_01 (6)_0
+    3300210: TKZC_Yun_01_0
+    3300212: TKZC_Yun_02 (1)_0
+    3300214: TKZC_Yun_02 (2)_0
+    3300216: TKZC_Yun_02 (3)_0
+    3300218: TKZC_Yun_02 (4)_0
+    3300220: TKZC_Yun_02 (5)_0
+    3300222: TKZC_Yun_02_0
+    3300224: TKZC_Yun_03 (1)_0
+    3300226: TKZC_Yun_03 (2)_0
+    3300228: TKZC_Yun_03 (3)_0
+    3300230: TKZC_Yun_03 (4)_0
+    3300232: TKZC_Yun_03_0
+    4300000: TKZC_DiZuo_01_01_0
+    4300002: TKZC_DiZuo_01_02_0
+    4300004: TKZC_ReQiQiu_01_0
+    4300006: TKZC_FeiChuan_01 (1)_0
+    4300008: TKZC_ReQiQiu_01 (1)_0
+    4300010: TKZC_FeiChuan_01 (2)_0
+    4300012: TKZC_ReQiQiu_01 (2)_0
+    4300014: TKZC_FeiChuan_01 (3)_0
+    4300016: TKZC_ReQiQiu_01 (3)_0
+    4300018: TKZC_FeiChuan_01 (4)_0
+    4300020: TKZC_ReQiQiu_01 (4)_0
+    4300022: TKZC_ReQiQiu_01 (5)_0
+    4300024: TKZC_FeiChuan_01 (5)_0
+    4300026: TKZC_DaShu_01 (1)_0
+    4300028: TKZC_DaShu_01 (2)_0
+    4300030: TKZC_DaShu_01 (3)_0
+    4300032: TKZC_DaShu_01 (4)_0
+    4300034: TKZC_DaShu_01 (5)_0
+    4300036: TKZC_DaShu_02_0
+    4300038: TKZC_DaShu_02 (1)_0
+    4300040: TKZC_DaShu_02 (2)_0
+    4300042: TKZC_Cao_01_0
+    4300044: TKZC_Cao_01 (1)_0
+    4300046: TKZC_Cao_02 (1)_0
+    4300048: TKZC_Cao_02 (2)_0
+    4300050: TKZC_Cao_02 (3)_0
+    4300052: TKZC_Cao_02 (4)_0
+    4300054: TKZC_Cao_01 (2)_0
+    4300056: TKZC_Cao_02 (5)_0
+    4300058: TKZC_Cao_01 (3)_0
+    4300060: TKZC_Cao_02 (6)_0
+    4300062: TKZC_HuaPen_01_0
+    4300064: TKZC_LuoYe_01_0
+    4300066: TKZC_TouMing_01_0
+    4300068: TKZC_HuaPen_01 (1)_0
+    4300070: TKZC_HuaPen_01 (2)_0
+    4300072: TKZC_HuaPen_01 (3)_0
+    4300074: TKZC_LuoYe_01 (1)_0
+    4300076: TKZC_LuoYe_01 (2)_0
+    4300078: TKZC_LuoYe_01 (4)_0
+    4300080: TKZC_LuoYe_01 (5)_0
+    4300082: TKZC_LuoYe_01 (6)_0
+    4300084: TKZC_LuoYe_01 (7)_0
+    4300086: TKZC_LuoYe_01 (8)_0
+    4300088: TKZC_LuoYe_01 (9)_0
+    4300090: TKZC_LuoYe_01 (10)_0
+    4300092: TKZC_Cao_02 (7)_0
+    4300094: TKZC_Cao_02 (8)_0
+    4300096: TKZC_Cao_01 (4)_0
+    4300098: TKZC_Cao_01 (5)_0
+    4300100: TKZC_Cao_02 (9)_0
+    4300102: TKZC_Cao_02 (10)_0
+    4300104: TKZC_Cao_02 (11)_0
+    4300106: TKZC_Cao_02 (12)_0
+    4300108: TKZC_Cao_01 (6)_0
+    4300110: TKZC_Cao_02 (13)_0
+    4300112: TKZC_Cao_01 (7)_0
+    4300114: TKZC_Cao_02 (14)_0
+    4300116: TKZC_Cao_02 (15)_0
+    4300118: TKZC_Cao_02 (16)_0
+    4300120: TKZC_Cao_01 (8)_0
+    4300122: TKZC_Cao_01 (9)_0
+    4300124: TKZC_Cao_02 (17)_0
+    4300126: TKZC_Cao_02 (18)_0
+    4300128: TKZC_Cao_02 (19)_0
+    4300130: TKZC_Cao_02 (20)_0
+    4300132: TKZC_Cao_01 (10)_0
+    4300134: TKZC_Cao_02 (21)_0
+    4300136: TKZC_Cao_01 (11)_0
+    4300138: TKZC_Cao_02 (22)_0
+    4300140: TKZC_Cao_02 (23)_0
+    4300142: TKZC_Cao_02 (24)_0
+    4300144: TKZC_Cao_01 (12)_0
+    4300146: TKZC_Cao_01 (13)_0
+    4300148: TKZC_Cao_02 (25)_0
+    4300150: TKZC_Cao_02 (26)_0
+    4300152: TKZC_Cao_02 (27)_0
+    4300154: TKZC_Cao_02 (28)_0
+    4300156: TKZC_Cao_01 (14)_0
+    4300158: TKZC_Cao_02 (29)_0
+    4300160: TKZC_Cao_01 (15)_0
+    4300162: TKZC_Cao_02 (30)_0
+    4300164: TKZC_Cao_02 (31)_0
+    4300166: TKZC_Cao_02 (32)_0
+    4300168: TKZC_DaShu_02 (3)_0
+    4300170: TKZC_LuoYe_01 (11)_0
+    4300172: TKZC_DaShu_01 (1)_0
+    4300174: TKZC_DaShu_02 (4)_0
+    4300176: TKZC_Yun_01_0
+    4300178: TKZC_Yun_01 (1)_0
+    4300180: TKZC_Yun_01 (2)_0
+    4300182: TKZC_Yun_02_0
+    4300184: TKZC_Yun_03_0
+    4300186: TKZC_Yun_02 (1)_0
+    4300188: TKZC_Yun_03 (1)_0
+    4300190: TKZC_Yun_01 (3)_0
+    4300192: TKZC_Yun_01 (4)_0
+    4300194: TKZC_Yun_03 (2)_0
+    4300196: TKZC_Yun_02 (2)_0
+    4300198: TKZC_Yun_01 (5)_0
+    4300200: TKZC_Yun_03 (3)_0
+    4300202: TKZC_Yun_01 (6)_0
+    4300204: TKZC_Yun_02 (3)_0
+    4300206: TKZC_Yun_03 (4)_0
+    4300208: TKZC_Yun_02 (4)_0
+    4300210: TKZC_Yun_02 (5)_0
+    4300212: TKZC_ShiTou_01 (1)_0
+    4300214: TKZC_ShiTou_03 (1)_0
+    4300216: TKZC_ShiTou_02 (1)_0
+    4300218: TKZC_ShiTou_01 (2)_0
+    4300220: TKZC_ShiTou_01 (3)_0
+    4300222: TKZC_ShiTou_02 (2)_0
+    4300224: TKZC_ShiTou_01 (4)_0
+    4300226: TKZC_ShiTou_03 (2)_0
+    4300228: TKZC_ShiTou_02 (3)_0
+    4300230: TKZC_ShiTou_01 (5)_0
+    4300232: TKZC_ShiTou_01 (6)_0
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -23,7 +23,8 @@ namespace Gameplay.Enemy
         
         public UnitType attackSoliderType;  //若attackEnemyType是多种，那么待扩展
         public int blockNum;
-        
+
+        public int deadCoin;
         public string scenePrefabPath;
         public string uiPrefabPath;
         public EnemyModelBase DeepCopy()
@@ -47,6 +48,7 @@ namespace Gameplay.Enemy
                 attackTargetType = this.attackTargetType,
                 attackSoliderType = this.attackSoliderType,
                 blockNum = this.blockNum,
+                deadCoin = this.deadCoin,
                 scenePrefabPath = this.scenePrefabPath,
                 uiPrefabPath = this.uiPrefabPath
             };
