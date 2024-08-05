@@ -117,7 +117,8 @@ namespace Gameplay.Player
 
             if (currentBlock == null || nextBlock == null || nextBlock.Count != 1)
             {
-                GameObject.Destroy(soliderAgent.gameObject);
+                Die();
+                //GameObject.Destroy(soliderAgent.gameObject);
                 return;
             }
         }
@@ -363,12 +364,11 @@ namespace Gameplay.Player
                 return;
             }
 
-            soliderAgent.StartCoroutine(FlashRed());
-
             if (curHp <= 0)
             {
                 Die();
             }
+            soliderAgent.StartCoroutine(FlashRed());
         }
 
         private void AddAttacker(EnemyAgent attacker)

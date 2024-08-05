@@ -34,7 +34,7 @@ namespace Gameplay.Player.Solider.Valkyrie
                         soliderAgent.soliderModel.attackPoint,
                         soliderAgent.soliderModel.magicAttackPoint, 
                         soliderAgent,
-                        5);
+                        soliderAgent.soliderModel.attackAoeRange);
                 }
 
             }
