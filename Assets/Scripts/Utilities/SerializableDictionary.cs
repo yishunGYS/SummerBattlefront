@@ -201,4 +201,5 @@ public class SerializableDictionary<TKey, TValue> : SerializableDictionary, IDic
     }
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     #endregion
+
 }

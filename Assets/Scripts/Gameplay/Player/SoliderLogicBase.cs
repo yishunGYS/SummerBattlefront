@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using _3DlevelEditor_GYS;
 using Gameplay.Enemy;
+using Managers;
 using UnityEngine;
 using UnityEngine.Events;
 using Object = UnityEngine.Object;
@@ -108,6 +109,10 @@ namespace Gameplay.Player
 
             if (currentBlock == null || nextBlock == null || nextBlock.Count != 1)
             {
+                if(BlockManager.instance.headSoliderBlocks.ContainsKey(soliderAgent))
+                {
+                    BlockManager.instance.OnHeadSoliderDestory(soliderAgent);
+                }
                 GameObject.Destroy(soliderAgent.gameObject);
                 return;
             }
@@ -240,9 +245,6 @@ namespace Gameplay.Player
             //子类override
         }
 
-
-       
-
         //群攻获取目标
         protected void DistanceBasedGetTarget()
         {
@@ -275,8 +277,8 @@ namespace Gameplay.Player
         //辅助/治疗获取目标
         protected void AssistSoliderGetTarget()
         {
-        }
 
+        }
 
         private bool CheckMatchAttackType(EnemyAgent target)
         {
