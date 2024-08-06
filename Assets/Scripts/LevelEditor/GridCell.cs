@@ -31,7 +31,7 @@ namespace _3DlevelEditor_GYS
 
         public BlockType blockType;
 
-        private void Start()
+        private void Awake()
         {
             rend = gameObject.GetComponent<Renderer>();
             originalColor = rend.material.color;

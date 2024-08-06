@@ -3,6 +3,7 @@ using Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.UI.Image;
 
 namespace Gameplay.Player
 {
@@ -12,14 +13,31 @@ namespace Gameplay.Player
         private GridCell lastDetectedCell;
 
         public GameObject campPrefab;
+        public GameObject cubePrefab;
+
+        public StartPoint lastCamp;
+        private GridCell initBlock;
 
         private void Awake()
         {
             agent = GetComponent<SoliderAgent>();
         }
 
+        private void Start()
+        {
+            if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 10f))
+            {
+                GridCell currentCell = hit.collider.GetComponent<GridCell>();
+
+                initBlock = currentCell;
+
+                lastCamp = initBlock.previousCells[0].gameObject.GetComponent<StartPoint>();
+            }
+        }
+
         public void UpdateCanPlace()
         {
+
             BlockManager.instance.CheckCanPlace();
             Vector3 origin = transform.position;
             Vector3 direction = Vector3.down;
@@ -60,6 +78,7 @@ namespace Gameplay.Player
         {
             if (agent.soliderLogic.nextBlock.Count > 1)
             {
+                destoryLastCamp();
                 SpawnCamp(agent.soliderLogic.currentBlock);
                 BlockManager.instance.CheckAllStartPoint();
                 BlockManager.instance.CheckCanPlace();
@@ -91,8 +110,6 @@ namespace Gameplay.Player
             StartPoint startPoint = instance.GetComponent<StartPoint>();
             BlockManager.instance.startPointBlocks.Add(startPoint, newNextCell);
 
-            //startPoint.OnInit();
-
             foreach (GridCell previouscell in gridCell.previousCells)
             {
                 previouscell.nextCells.Add(gridCell);
@@ -102,6 +119,30 @@ namespace Gameplay.Player
             {
                 nextcell.previousCells.Add(gridCell);
             }
+        }
+
+        public void destoryLastCamp()
+        {
+            var position = lastCamp.gameObject.transform.position;
+            var lastCampCell = lastCamp.gameObject.GetComponent<GridCell>();
+
+            //清除BlockManager中的数据
+            foreach(var cell in lastCampCell.nextCells)
+            {
+                if(BlockManager.instance.canPlaceBlocks.ContainsKey(cell))
+                {
+                    BlockManager.instance.canPlaceBlocks.Remove(cell);
+                    cell.canPlace = false;
+                    cell.OnCanPlaceChange(false);
+                }
+            }
+
+            BlockManager.instance.startPointBlocks.Remove(lastCamp);
+
+            GameObject.Destroy(lastCamp.gameObject);
+
+            Instantiate(cubePrefab, position, Quaternion.identity);
+
         }
     }
 }
