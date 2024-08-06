@@ -17,33 +17,33 @@ namespace Gameplay
 
         public Color hoverColor;
 
+        private GridCell cell;
 
         public List<GridCell> spawnBlocks = new List<GridCell>();
 
-        void Start()
-        {
-            OnInit();
-        }
-
-        private void OnInit()
+        private void Awake()
         {
             rend = GetComponent<Renderer>();
+            cell = GetComponent<GridCell>();
             startColor = rend.material.color;
+        }
 
-            var blocks = transform.GetComponentsInChildren<GridCell>();
-            foreach (GridCell cell in blocks)
+        void Start()
+        {
+            BlockManager.instance.startPoints.Add(this);
+        }
+
+        public void OnInit()
+        {
+
+            foreach (GridCell cell in cell.nextCells)
             {
                 spawnBlocks.Add(cell);
             }
 
-            BlockManager.instance.startPointBlocks.Add(this, spawnBlocks);
+            if (!BlockManager.instance.startPointBlocks.ContainsKey(this))
+                BlockManager.instance.startPointBlocks.Add(this, spawnBlocks);
         }
 
-        private void SpawnCharacter(SoliderAgent chara)
-        {
-            SpawnManager.instance.ChangeSpawnPoint(this.transform);
-            //SpawnManager.instance.SetPathNum(pathNum);
-            //SpawnManager.instance.SpawnCharacter();
-        }
     }
 }
