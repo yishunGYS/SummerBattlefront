@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using _3DlevelEditor_GYS;
 using Gameplay.Enemy;
+using Managers;
 using UnityEngine;
 using UnityEngine.Events;
 using Object = UnityEngine.Object;
@@ -35,9 +36,6 @@ namespace Gameplay.Player
         private float attackTimer = 1000f;
         public bool isAttackReady = true;
 
-        //血量
-        public float curHp;
-
         //阻挡的敌人
         public EnemyAgent blocker;
 
@@ -50,17 +48,11 @@ namespace Gameplay.Player
             currentBlock  = block;
             nextBlock = block.nextCells;
         }
-        
-        //BuffManager
-        protected BuffManager playerBuffManager;
 
-        protected SoliderLogicBase(SoliderAgent agent)
+        public SoliderLogicBase(SoliderAgent agent)
         {
             soliderAgent = agent;
             soliderModel = soliderAgent.soliderModel;
-            curHp = soliderModel.maxHp;
-
-            playerBuffManager = new BuffManager(soliderAgent);
         }
 
         public void RemoveTarget(EnemyAgent target)
@@ -117,8 +109,11 @@ namespace Gameplay.Player
 
             if (currentBlock == null || nextBlock == null || nextBlock.Count != 1)
             {
-                Die();
-                //GameObject.Destroy(soliderAgent.gameObject);
+                if(BlockManager.instance.headSoliderBlocks.ContainsKey(soliderAgent))
+                {
+                    BlockManager.instance.OnHeadSoliderDestory(soliderAgent);
+                }
+                GameObject.Destroy(soliderAgent.gameObject);
                 return;
             }
         }
@@ -250,7 +245,6 @@ namespace Gameplay.Player
             //子类override
         }
 
-
         //群攻获取目标
         protected void DistanceBasedGetTarget()
         {
@@ -283,8 +277,8 @@ namespace Gameplay.Player
         //辅助/治疗获取目标
         protected void AssistSoliderGetTarget()
         {
-        }
 
+        }
 
         private bool CheckMatchAttackType(EnemyAgent target)
         {
@@ -332,6 +326,7 @@ namespace Gameplay.Player
                         soliderAgent.soliderModel.attackPoint,
                         soliderAgent.soliderModel.magicAttackPoint, soliderAgent);
                 }
+                
             }
         }
 
@@ -349,26 +344,19 @@ namespace Gameplay.Player
         {
             AddAttacker(enemyAgent);
             // 减少士兵的生命值
-            var damageAmout = (int)playerBuffManager.CalculateDamage(new DamageInfo(enemyAgent, soliderAgent));
-            curHp -= damageAmout;
-            // soliderModel.maxHp = soliderModel.maxHp - (damage * (1 - soliderModel.defendReducePercent)) -
-            //                      (magicDamage * (1 - soliderModel.magicDefendReducePercent));
+            soliderModel.maxHp = soliderModel.maxHp - (damage * (1 - soliderModel.defendReducePercent)) -
+                                 (magicDamage * (1 - soliderModel.magicDefendReducePercent));
 
-            Debug.Log("士兵目前的血量是：" + curHp);
-            // Debug.Log("士兵受到的物理伤害为：" + (damage * (1 - soliderModel.defendReducePercent)));
-            // Debug.Log("士兵受到的法术伤害为：" + (magicDamage * (1 - soliderModel.magicDefendReducePercent)));
+            Debug.Log("士兵目前的血量是：" + soliderModel.maxHp);
+            Debug.Log("士兵受到的物理伤害为：" + (damage * (1 - soliderModel.defendReducePercent)));
+            Debug.Log("士兵受到的法术伤害为：" + (magicDamage * (1 - soliderModel.magicDefendReducePercent)));
 
-            if (damageAmout == 0)
-            {
-                Debug.Log("伤害为0，无敌");
-                return;
-            }
+            soliderAgent.StartCoroutine(FlashRed());
 
-            if (curHp <= 0)
+            if (soliderModel.maxHp <= 0)
             {
                 Die();
             }
-            soliderAgent.StartCoroutine(FlashRed());
         }
 
         private void AddAttacker(EnemyAgent attacker)
@@ -412,7 +400,6 @@ namespace Gameplay.Player
             {
                 agent.enemyLogic.RemoveTarget(soliderAgent);
             }
-
             //若该士兵是被阻挡的，通知被阻挡的人，他死了
             if (blocker != null)
             {
@@ -421,12 +408,6 @@ namespace Gameplay.Player
 
             soliderAgent.StopAllCoroutines();
             Object.Destroy(soliderAgent.gameObject);
-        }
-
-        
-        public void OnUpdateBuff()
-        {
-            playerBuffManager.UpdateBuff();
         }
     }
 }
