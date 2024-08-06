@@ -25,7 +25,7 @@ namespace Gameplay.Player
         {
             fsm.OnUpdate();
             
-            soliderLogic.OnUpdateBuff();
+            //soliderLogic.OnUpdateBuff();
         }
         
         private void InitData()
