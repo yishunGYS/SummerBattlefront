@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Gameplay.Player;
+using UnityEngine;
 using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "NewBuff", menuName = "Buff", order = 0)]

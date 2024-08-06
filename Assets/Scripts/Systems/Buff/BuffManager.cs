@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class BuffManager
 {
-    private readonly IAgent _agent;
+    private readonly UnitAgent _agent;
     private LinkedList<BuffInstance> _buffs = new();
 
-    public BuffManager(IAgent agent)
+    public BuffManager(UnitAgent agent)
     {
         _agent = agent;
     }
@@ -85,8 +85,6 @@ public class BuffManager
         var attackData = CalculateAttack(damageInfo.attacker);
 
         var defendData = CalculateDefend(damageInfo.beAttacker);
-
-
         var temp = attackData.attackPoint * (1 - defendData.defendReducePercent) +
                    attackData.magicAttackPoint * (1 - defendData.magicDefendReducePercent);
 
@@ -95,7 +93,7 @@ public class BuffManager
     }
 
 
-    private UnitAttackData CalculateAttack(IAgent attacker)
+    private UnitAttackData CalculateAttack(UnitAgent attacker)
     {
         var tempAttackData = new UnitAttackData(0, 0);
         //复制数据
@@ -121,7 +119,7 @@ public class BuffManager
         return tempAttackData;
     }
 
-    private UnitDefendData CalculateDefend(IAgent beAttacker)
+    private UnitDefendData CalculateDefend(UnitAgent beAttacker)
     {
         var tempDefenseData = new UnitDefendData(0, 0);
         //复制数据

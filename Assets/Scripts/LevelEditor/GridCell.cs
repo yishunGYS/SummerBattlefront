@@ -21,10 +21,10 @@ namespace _3DlevelEditor_GYS
         public bool showConnections = false;
         public float lineWidth = 5f;
 
-        [Header("×´Ì¬")]
+        [Header("??")]
         public bool canPlace = false;
 
-        [Header("ÑÕÉ«")]
+        [Header("???")]
         public Color hoverColor = Color.red;
         public Color canSpawnColor = Color.yellow;
         private Color originalColor;

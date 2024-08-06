@@ -1,3 +1,4 @@
+using Gameplay.Player.Solider.Attacker.RangeGodling;
 using UnityEngine;
 
 namespace Gameplay.Player.Solider

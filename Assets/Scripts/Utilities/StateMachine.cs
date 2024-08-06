@@ -21,7 +21,7 @@ namespace Utilities
 
     public class StateMachine : MonoBehaviour
     {
-        protected IAgent agent;
+        protected UnitAgent agent;
         [ShowInInspector]
         protected UnitStateSO curState;
         [SerializeField]
@@ -31,7 +31,7 @@ namespace Utilities
 
         private void Awake()
         {
-            agent = GetComponent<IAgent>();
+            agent = GetComponent<UnitAgent>();
         }
 
         public void OnInit()

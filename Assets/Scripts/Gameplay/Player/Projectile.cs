@@ -33,7 +33,7 @@ namespace Gameplay.Player
             if (other.CompareTag("Enemy"))
             {
                 var enemyCmpt =  other.GetComponent<EnemyAgent>();
-                enemyCmpt.enemyLogic.OnTakeDamage(soliderAgent.soliderModel.attackPoint,soliderAgent.soliderModel.magicAttackPoint,soliderAgent);
+                enemyCmpt.enemyLogic.OnTakeDamage(soliderAgent);
                 Destroy(gameObject);
             }
             

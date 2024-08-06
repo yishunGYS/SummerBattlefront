@@ -2,6 +2,7 @@ using Gameplay.Player;
 using Gameplay.Player.Solider.SkeletonArmy;
 using System.Collections;
 using System.Collections.Generic;
+using Gameplay.Player.Solider.Attacker.Valkyrie;
 using UnityEngine;
 
 namespace Gameplay.Player.Solider.Valkyrie

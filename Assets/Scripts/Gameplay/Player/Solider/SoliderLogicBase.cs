@@ -28,7 +28,8 @@ namespace Gameplay.Player
         protected SoliderModelBase soliderModel;
 
         private const float frontCheckDistance = 2f;
-        public List<EnemyAgent> attackTargets = new List<EnemyAgent>();
+        
+        public List<UnitAgent> attackTargets = new List<UnitAgent>(); //在攻击的目标:可以是敌人也可以是友方
         private HashSet<EnemyAgent> attackers = new HashSet<EnemyAgent>(); //在对自己攻击的敌方
 
         //攻击
@@ -52,7 +53,7 @@ namespace Gameplay.Player
         }
         
         //BuffManager
-        protected BuffManager playerBuffManager;
+        public BuffManager playerBuffManager;
 
         protected SoliderLogicBase(SoliderAgent agent)
         {
@@ -62,35 +63,10 @@ namespace Gameplay.Player
 
             playerBuffManager = new BuffManager(soliderAgent);
         }
-
-        public void RemoveTarget(EnemyAgent target)
-        {
-            if (attackTargets.Contains(target))
-            {
-                attackTargets.Remove(target);
-                Debug.Log($"Target removed: {target.enemyModel.enemyName}");
-            }
-            else
-            {
-                Debug.Log("Target not found in the list.");
-            }
-        }
+        
 
 
         #region 移动
-
-        //public void SetPath(int pathIndex)
-        //{
-        //    if (pathIndex < 0 || pathIndex >= Waypoints.paths.Count)
-        //    {
-        //        Debug.LogError("Invalid path index");
-        //        return;
-        //    }
-
-        //    pathPoints = Waypoints.paths[pathIndex];
-        //    waypointIndex = 0;
-        //    moveTarget = pathPoints[0];
-        //}
 
         public void Move()
         {
@@ -236,11 +212,15 @@ namespace Gameplay.Player
             }
         }
 
-        private void ClearTarget()
+        protected virtual void ClearTarget()
         {
-            attackTargets.Clear();
+            
         }
 
+        public virtual void RemoveTarget(UnitAgent target)
+        {
+            
+        }
 
         public virtual void GetTarget()
         {
@@ -248,58 +228,14 @@ namespace Gameplay.Player
             ClearTarget();
             //子类override
         }
+        
 
-
-        //群攻获取目标
-        protected void DistanceBasedGetTarget()
+        protected virtual bool CheckMatchAttackType(EnemyAgent target)
         {
-            List<AttackEnemyTarget> tempAttackTargets = new List<AttackEnemyTarget>();
-
-            Collider[] hitColliders =
-                Physics.OverlapSphere(soliderAgent.transform.position, soliderModel.attackRange,
-                    LayerMask.GetMask("Enemy"));
-
-            foreach (var collider in hitColliders)
-            {
-                var tempDis = Vector3.Distance(soliderAgent.transform.position, collider.transform.position);
-                var temp = collider.GetComponent<EnemyAgent>();
-                if (!CheckMatchAttackType(temp))
-                {
-                    continue;
-                }
-
-                var tempTarget = new AttackEnemyTarget(tempDis, temp);
-                tempAttackTargets.Add(tempTarget);
-            }
-
-            SortMultiTargetsByDistance(tempAttackTargets);
-            for (int i = 0; i < soliderModel.attackNum; i++)
-            {
-                attackTargets.Add(tempAttackTargets[i].target);
-            }
-        }
-
-        //辅助/治疗获取目标
-        protected void AssistSoliderGetTarget()
-        {
-        }
-
-
-        private bool CheckMatchAttackType(EnemyAgent target)
-        {
-            //todo 若attackEnemyType是多种，那么----待扩展
-            if (target.enemyModel.enemyType != soliderModel.attackEnemyType)
-            {
-                return false;
-            }
-
             return true;
         }
 
-        private void SortMultiTargetsByDistance(List<AttackEnemyTarget> attackTargets)
-        {
-            attackTargets.Sort((a, b) => a.dis.CompareTo(b.dis));
-        }
+
 
         #endregion
 
@@ -318,21 +254,7 @@ namespace Gameplay.Player
         }
 
 
-        //最基础的近战
-        protected void MeleeAttack()
-        {
-            if (isAttackReady)
-            {
-                CalculateCd();
-                for (int i = soliderAgent.soliderLogic.attackTargets.Count - 1; i >= 0; i--)
-                {
-                    Debug.Log("攻击！！！");
-                    soliderAgent.soliderLogic.attackTargets[i].enemyLogic.OnTakeDamage(
-                        soliderAgent.soliderModel.attackPoint,
-                        soliderAgent.soliderModel.magicAttackPoint, soliderAgent);
-                }
-            }
-        }
+
 
 
         //远程写在子类

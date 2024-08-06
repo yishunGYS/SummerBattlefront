@@ -318,18 +318,11 @@ namespace Gameplay.Enemy
         #endregion
 
 
-        public void OnTakeDamage(float damage, float magicDamage, SoliderAgent soliderAgent)
+        public void OnTakeDamage(SoliderAgent soliderAgent)
         {
             AddAttacker(soliderAgent);
-            // 减少敌人的生命值
             curHp -= enemyBuffManager.CalculateDamage(new DamageInfo(soliderAgent, enemyAgent));
-            // enemyAgent.enemyModel.maxHp = enemyAgent.enemyModel.maxHp -
-            //                               (damage * (1 - enemyModel.defendReducePercent)) -
-            //                               (magicDamage * (1 - enemyModel.magicDefendReducePercent));
-
             Debug.Log("敌人目前的血量是：" +curHp);
-            // Debug.Log("造成的物理伤害为：" + (damage * (1 - enemyModel.defendReducePercent)));
-            // Debug.Log("造成的法术伤害为：" + (magicDamage * (1 - enemyModel.magicDefendReducePercent)));
 
             enemyAgent.StartCoroutine(FlashRed());
 
@@ -358,10 +351,10 @@ namespace Gameplay.Enemy
         }
 
 
-        public void OnTakeAOEDamage(float damage, float magicDamage, SoliderAgent soliderAgent, float aoeRange)
+        public void OnTakeAOEDamage(SoliderAgent soliderAgent, float aoeRange)
         {
             // 当前敌人受到伤害
-            OnTakeDamage(damage, magicDamage, soliderAgent);
+            OnTakeDamage(soliderAgent);
 
             // 获取 aoeRange 范围内的所有敌人
             List<EnemyAgent> aoeTargets = GetAOETargets(enemyAgent.transform.position, aoeRange);
@@ -381,7 +374,7 @@ namespace Gameplay.Enemy
 
             foreach (var enemy in aoeTargets)
             {
-                enemy.enemyLogic.OnTakeDamage(damage, magicDamage, soliderAgent);
+                enemy.enemyLogic.OnTakeDamage( soliderAgent);
             }
 
             DrawRange(enemyAgent, aoeRange);

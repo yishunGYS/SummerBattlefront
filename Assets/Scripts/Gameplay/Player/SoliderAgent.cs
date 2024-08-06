@@ -5,7 +5,7 @@ using Utilities;
 
 namespace Gameplay.Player
 {
-    public class SoliderAgent : MonoBehaviour,IAgent
+    public class SoliderAgent : UnitAgent
     {
         public SoliderModelBase soliderModel;
         public int soliderId;
@@ -41,16 +41,18 @@ namespace Gameplay.Player
                 print("没有获取到该数据");
             }
         }
-        
-        public UnitAttackData GetAttackPoint()
+
+
+        public override UnitAttackData GetAttackPoint()
         {
             return new UnitAttackData(soliderModel.attackPoint, soliderModel.magicAttackPoint);
         }
 
-        public UnitDefendData GetDefendPoint()
+        public override UnitDefendData GetDefendPoint()
         {
             return new UnitDefendData(soliderModel.defendReducePercent, soliderModel.magicDefendReducePercent);
         }
+        
         
     }
 }

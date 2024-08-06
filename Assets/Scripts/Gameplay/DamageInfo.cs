@@ -4,10 +4,10 @@ namespace Gameplay
 {
     public class DamageInfo
     {
-        public IAgent attacker;
-        public IAgent beAttacker;
+        public UnitAgent attacker;
+        public UnitAgent beAttacker;
 
-        public DamageInfo(IAgent attacker, IAgent beAttacker)
+        public DamageInfo(UnitAgent attacker, UnitAgent beAttacker)
         {
             this.attacker = attacker;
             this.beAttacker = beAttacker;

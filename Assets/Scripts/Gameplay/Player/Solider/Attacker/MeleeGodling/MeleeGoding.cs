@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Gameplay.Player.Solider.Attacker.MeleeGodling;
 
 namespace Gameplay.Player.Solider.MeleeGodling
 {
@@ -8,6 +9,12 @@ namespace Gameplay.Player.Solider.MeleeGodling
         {
             base.OnInit();
             soliderLogic = new MeleeGodingLogic(this);
+        }
+        
+        
+        public void SmallCure(SoliderAgent agent)
+        {
+            agent.soliderLogic.curHp += 10;
         }
     }
 }

@@ -7,7 +7,7 @@ namespace ScriptableObjects.SoliderStateTypeSO
     public abstract class SoliderStateSO : UnitStateSO
     {
         protected SoliderAgent soliderAgent;
-        public override void OnLogin(StateMachine stateMachine, IAgent iAgent)
+        public override void OnLogin(StateMachine stateMachine, UnitAgent iAgent)
         {
             base.OnLogin(stateMachine, iAgent);
             soliderAgent = (SoliderAgent)agent;

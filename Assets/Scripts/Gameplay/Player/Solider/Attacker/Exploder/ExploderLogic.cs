@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Gameplay.Player.Solider.Exploder
+namespace Gameplay.Player.Solider.Attacker.Exploder
 {
     public class ExploderLogic : SoliderLogicBase
     {

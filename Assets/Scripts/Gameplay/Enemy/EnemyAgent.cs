@@ -6,7 +6,7 @@ using Utilities;
 
 namespace Gameplay.Enemy
 {
-    public class EnemyAgent : MonoBehaviour,IAgent
+    public class EnemyAgent : UnitAgent
     {
         public EnemyModelBase enemyModel;
         public EnemyLogicBase enemyLogic;
@@ -44,14 +44,16 @@ namespace Gameplay.Enemy
             fsm.OnUpdate();
         }
 
-        public UnitAttackData GetAttackPoint()
+
+        public override UnitAttackData GetAttackPoint()
         {
             return new UnitAttackData(enemyModel.attackPoint, enemyModel.magicAttackPoint);
         }
 
-        public UnitDefendData GetDefendPoint()
+        public override UnitDefendData GetDefendPoint()
         {
             return new UnitDefendData(enemyModel.defendReducePercent, enemyModel.magicDefendReducePercent);
         }
+        
     }
 }

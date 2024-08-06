@@ -1,10 +1,8 @@
-using System;
 using Managers;
-using UnityEngine;
 
-namespace Gameplay.Player.Solider.MeleeGodling
+namespace Gameplay.Player.Solider.Attacker.MeleeGodling
 {
-    public class MeleeGodingLogic : SoliderLogicBase
+    public class MeleeGodingLogic : AttackerSoliderLogic
     {
         public MeleeGodingLogic(SoliderAgent agent) : base(agent)
         {
@@ -23,6 +21,13 @@ namespace Gameplay.Player.Solider.MeleeGodling
             base.Attack();
             playerBuffManager.AddBuff(BuffInventoryManager.Instance.GetBuffById(0));  //无敌buff
             MeleeAttack();
+            // BuffInfo cureBuff = BuffInventoryManager.Instance.GetBuffById(0);
+            // //cureBuff.在Tick触发时 += SmallCure;
+            //
+            // SoliderAgent solider1 = new SoliderAgent();
+            // solider1.soliderLogic.playerBuffManager.AddBuff(cureBuff);
         }
+
+
     }
 }

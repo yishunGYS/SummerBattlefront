@@ -6,11 +6,11 @@ namespace ScriptableObjects
 {
     public abstract class UnitStateSO : ScriptableObject
     {
-        protected IAgent agent;
+        protected UnitAgent agent;
         protected StateMachine fsm;
         public UnitStateType stateType;
 
-        public virtual void OnLogin(StateMachine stateMachine,IAgent iAgent)
+        public virtual void OnLogin(StateMachine stateMachine,UnitAgent iAgent)
         {
             fsm = stateMachine;
             agent = iAgent;
