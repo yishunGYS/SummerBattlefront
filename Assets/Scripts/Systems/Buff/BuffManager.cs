@@ -93,7 +93,7 @@ public class BuffManager
     }
 
 
-    private UnitAttackData CalculateAttack(UnitAgent attacker)
+    public UnitAttackData CalculateAttack(UnitAgent attacker)
     {
         var tempAttackData = new UnitAttackData(0, 0);
         //复制数据
@@ -119,7 +119,7 @@ public class BuffManager
         return tempAttackData;
     }
 
-    private UnitDefendData CalculateDefend(UnitAgent beAttacker)
+    public UnitDefendData CalculateDefend(UnitAgent beAttacker)
     {
         var tempDefenseData = new UnitDefendData(0, 0);
         //复制数据

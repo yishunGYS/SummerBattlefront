@@ -5,7 +5,6 @@ namespace Gameplay.Player
     public enum UnitType
     {
         Ground,
-        Air,
         Tower,
     }
 
@@ -23,7 +22,7 @@ namespace Gameplay.Player
         public string soliderDes;
         public UnitType soliderType;
         public int cost;
-        public float maxHp;
+        public int maxHp;
         public int spawnNum;
         public int attackPoint;
         public int magicAttackPoint;

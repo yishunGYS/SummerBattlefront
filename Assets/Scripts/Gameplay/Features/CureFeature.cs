@@ -13,11 +13,10 @@ namespace Gameplay.Features
             BaseAttack,
             BaseMaxHp,
         }
-        
-        [EnumToggleButtons]
-        public HealingFormula healingFormula;
-        
-        
+
+        [EnumToggleButtons] public HealingFormula healingFormula;
+
+
         [ShowIf("healingFormula", HealingFormula.BaseAttack)]
         public float baseAttackPercentage;
 
@@ -32,14 +31,37 @@ namespace Gameplay.Features
         }
 
 
+        public void Cure()
+        {
+            foreach (var solider in agent.soliderLogic.attackTargets)
+            {
+                SoliderAgent targetAgent = solider as SoliderAgent;
+                if (targetAgent != null)
+                {
+                    if (targetAgent.soliderLogic.curHp < targetAgent.soliderModel.maxHp)
+                    {
+                        int newHp = targetAgent.soliderLogic.curHp + CalculateCureAmount();
+                        targetAgent.soliderLogic.curHp = Math.Clamp(newHp, 0, targetAgent.soliderModel.maxHp);
+                    }
+                }
+            }
+        }
 
-        // public void Cure()
-        // {
-        //     foreach (var solider in agent.soliderLogic.attackTargets)
-        //     {
-        //         solider.
-        //     }
-        //     
-        // }
+        private int CalculateCureAmount()
+        {
+            if (healingFormula == HealingFormula.BaseAttack)
+            {
+                var curAttackData = agent.soliderLogic.playerBuffManager.CalculateAttack(agent);
+                var attackPoint = curAttackData.attackPoint + curAttackData.magicAttackPoint;
+                return Mathf.RoundToInt(attackPoint * baseAttackPercentage);
+            }
+
+            if (healingFormula == HealingFormula.BaseMaxHp)
+            {
+                return Mathf.RoundToInt(agent.soliderModel.maxHp * baseAttackPercentage);
+            }
+
+            return 0;
+        }
     }
 }

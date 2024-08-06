@@ -36,20 +36,7 @@ MonoBehaviour:
       m_Calls: []
   "\u5728Tick\u89E6\u53D1\u65F6":
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2302560973402218857, guid: f85b5ac4e5c37a547b3783b5dfcf9e68, type: 3}
-        m_TargetAssemblyTypeName: Gameplay.Player.Solider.MeleeGodling.MeleeGoding,
-          Assembly-CSharp
-        m_MethodName: SmallCure
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: Gameplay.Player.SoliderAgent, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   "\u5728Stack\u89E6\u53D1\u65F6":
     m_PersistentCalls:
       m_Calls: []

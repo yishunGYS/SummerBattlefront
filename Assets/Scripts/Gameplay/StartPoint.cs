@@ -17,6 +17,7 @@ namespace Gameplay
 
         public Color hoverColor;
 
+        private GridCell cell;
 
         public List<GridCell> spawnBlocks = new List<GridCell>();
 
@@ -25,13 +26,13 @@ namespace Gameplay
             OnInit();
         }
 
-        private void OnInit()
+        public void OnInit()
         {
             rend = GetComponent<Renderer>();
+            cell = GetComponent<GridCell>();
             startColor = rend.material.color;
 
-            var blocks = transform.GetComponentsInChildren<GridCell>();
-            foreach (GridCell cell in blocks)
+            foreach (GridCell cell in cell.nextCells)
             {
                 spawnBlocks.Add(cell);
             }

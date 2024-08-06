@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using _3DlevelEditor_GYS;
 using Gameplay.Enemy;
+using Managers;
 using UnityEngine;
 using UnityEngine.Events;
 using Object = UnityEngine.Object;
@@ -37,7 +38,7 @@ namespace Gameplay.Player
         public bool isAttackReady = true;
 
         //血量
-        public float curHp;
+        public int curHp;
 
         //阻挡的敌人
         public EnemyAgent blocker;
@@ -93,6 +94,10 @@ namespace Gameplay.Player
 
             if (currentBlock == null || nextBlock == null || nextBlock.Count != 1)
             {
+                if(BlockManager.instance.headSoliderBlocks.ContainsKey(soliderAgent))
+                {
+                    BlockManager.instance.OnHeadSoliderDestory(soliderAgent);
+                }
                 GameObject.Destroy(soliderAgent.gameObject);
                 return;
             }
@@ -228,14 +233,13 @@ namespace Gameplay.Player
             ClearTarget();
             //子类override
         }
-        
+
 
         protected virtual bool CheckMatchAttackType(EnemyAgent target)
         {
             return true;
         }
-
-
+        
 
         #endregion
 

@@ -31,7 +31,7 @@ namespace _3DlevelEditor_GYS
 
         public BlockType blockType;
 
-        private void Start()
+        private void Awake()
         {
             rend = gameObject.GetComponent<Renderer>();
             originalColor = rend.material.color;
@@ -69,7 +69,7 @@ namespace _3DlevelEditor_GYS
 
         void OnMouseEnter()
         {
-            if (blockType == BlockType.Path)
+            if (blockType == BlockType.Path && canPlace)
             {
                 if (EventSystem.current.IsPointerOverGameObject())
                     return;
@@ -80,9 +80,9 @@ namespace _3DlevelEditor_GYS
 
         void OnMouseExit()
         {
-            if (blockType == BlockType.Path)
+            if (blockType == BlockType.Path && canPlace)
             {
-                rend.material.color = originalColor;
+                rend.material.color = canSpawnColor;
             }
         }
 
@@ -94,9 +94,16 @@ namespace _3DlevelEditor_GYS
             }
         }
 
-        public void SwitchState()
+        public void OnCanPlaceChange(bool can)
         {
-
+            if (can == true)
+            {
+                rend.material.color = canSpawnColor;
+            }
+            else
+            {
+                rend.material.color = originalColor;
+            }
         }
     }
 }
