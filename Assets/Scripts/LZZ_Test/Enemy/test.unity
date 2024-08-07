@@ -1501,7 +1501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
-  pathNum: 1
+  spawnBlocks: []
 --- !u!23 &155093373
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1919,10 +1919,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters: []
-  spawnPoint: {fileID: 276980799}
   SoliderContainer: {fileID: 1084850320}
   selectedCharacter: {fileID: 0}
-  pathNum: 0
 --- !u!114 &188839077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2014,8 +2012,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bf5b9b70d005b40b70c0fd56f05cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverUI: {fileID: 923029930}
-  completeLevelUI: {fileID: 788061273}
   EnemyContainer: {fileID: 47755916}
 --- !u!114 &196616392
 MonoBehaviour:
@@ -2938,7 +2934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
-  pathNum: 1
+  spawnBlocks: []
 --- !u!65 &276980801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4511,7 +4507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6855114071636747005, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8744579409802178309, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5811,7 +5807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6855114071636747005, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8744579409802178309, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5920,9 +5916,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gebuling
-
-    shooter'
+  m_text: Valkyrie
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7102,7 +7096,7 @@ GameObject:
   - component: {fileID: 825679759}
   - component: {fileID: 825679758}
   m_Layer: 5
-  m_Name: Valkyrie
+  m_Name: Exploder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10131,7 +10125,7 @@ GameObject:
   - component: {fileID: 1133136295}
   - component: {fileID: 1133136294}
   m_Layer: 5
-  m_Name: GebulinShooter
+  m_Name: Valkyrie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10206,7 +10200,7 @@ MonoBehaviour:
         m_MethodName: ChangeSpawnCharacter
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: -7747116291038743707, guid: 427d525df0ed3244cab1e5b77c3d406c, type: 3}
+          m_ObjectArgument: {fileID: -7174182815858978331, guid: b90e320bbc756f240b9e586dbd43f8f4, type: 3}
           m_ObjectArgumentAssemblyTypeName: Gameplay.Player.SoliderAgent, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -21266,7 +21260,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
-  pathNum: 0
+  spawnBlocks:
+  - {fileID: 0}
 --- !u!65 &2093475347
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21728,6 +21723,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arches
       objectReference: {fileID: 0}
+    - target: {fileID: 4855506166706676011, guid: 6c9336a4d56fac54996f77fc9f838046, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5103291751367099956, guid: 6c9336a4d56fac54996f77fc9f838046, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.33
@@ -21787,7 +21786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6855114071636747005, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8744579409802178309, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
       propertyPath: m_LocalPosition.x

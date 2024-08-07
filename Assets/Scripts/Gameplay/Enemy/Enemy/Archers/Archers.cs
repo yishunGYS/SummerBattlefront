@@ -1,13 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using Gameplay.Enemy;
-using UnityEngine;
-
-public class Archers : EnemyAgent
+namespace Gameplay.Enemy.Enemy.Archers
 {
-    public override void OnInit()
+    public class Archers : EnemyAgent
     {
-        base.OnInit();
-        enemyLogic = new ArchersLogic(this);
+        public override void OnInit()
+        {
+            base.OnInit();
+            enemyLogic = new ArchersLogic(this);
+        }
     }
 }
+
+

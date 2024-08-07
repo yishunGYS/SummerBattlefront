@@ -1,19 +1,21 @@
-namespace Gameplay.Enemy.Enemy.Archers
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Gameplay.Enemy.Enemy.SuperWoman
 {
-    public class ArchersLogic : EnemyLogicBase
+    public class SuperWomanLogic : EnemyLogicBase
     {
-        public ArchersLogic(EnemyAgent agent) : base(agent)
+        public SuperWomanLogic(EnemyAgent agent) : base(agent)
         {
-    
-    
         }
-    
+
         public override void GetTarget()
         {
             base.GetTarget();
             DistanceBasedEnemyGetTarget();
         }
-    
+
         public override void Attack()
         {
             base.Attack();
