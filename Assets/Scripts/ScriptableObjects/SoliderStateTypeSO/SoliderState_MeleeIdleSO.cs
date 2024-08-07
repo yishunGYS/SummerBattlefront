@@ -15,7 +15,7 @@ namespace ScriptableObjects.SoliderStateTypeSO
         public override void OnUpdate()
         {
             //idle to move
-            if (soliderAgent.soliderLogic.CheckObstacle()==false)
+            if (soliderAgent.soliderLogic.CheckObstacle()==false)//范围内不存在障碍物(包括敌人),则进入移动状态
             {
                 fsm.ChangeState(UnitStateType.Move);
             }

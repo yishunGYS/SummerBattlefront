@@ -25,7 +25,7 @@ namespace ScriptableObjects.SoliderStateTypeSO
         {
             
             // attack to idle
-            if (!soliderAgent.soliderLogic.CheckCanAttack())
+            if (!soliderAgent.soliderLogic.CheckCanAttack())//范围内不存在敌人/攻击CD未结束,进入Idle状态
             {
                 fsm.ChangeState(UnitStateType.Idle);
             }

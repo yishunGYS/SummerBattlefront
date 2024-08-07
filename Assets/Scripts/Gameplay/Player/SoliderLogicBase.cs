@@ -36,7 +36,7 @@ namespace Gameplay.Player
         private float attackTimer = 1000f;
         public bool isAttackReady = true;
 
-        //阻挡的敌人
+        //阻挡当前士兵的的敌人
         public EnemyAgent blocker;
 
         //用来获取Block
