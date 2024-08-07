@@ -16546,6 +16546,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SuperWoman
       objectReference: {fileID: 0}
+    - target: {fileID: 235258182517410980, guid: b41ae566f41211e4a846c581a8420b31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8416514937946934041, guid: b41ae566f41211e4a846c581a8420b31, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.95
@@ -16642,6 +16646,10 @@ PrefabInstance:
     - target: {fileID: 8370425632030017347, guid: f67204060ca599f4e83c6fdca986c37f, type: 3}
       propertyPath: m_Name
       value: SnowWoman
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370425632030017347, guid: f67204060ca599f4e83c6fdca986c37f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
