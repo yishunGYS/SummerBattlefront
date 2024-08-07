@@ -267,7 +267,25 @@ namespace Gameplay.Enemy
         public virtual void Attack()
         {
         }
+        
+        public void MeleeAOE()
+        {
+            if (isAttackReady)
+            {
+                CalculateCd();
+                for (int i = enemyAgent.enemyLogic.focusTargets.Count - 1; i >= 0; i--)
+                {
+                    Debug.Log("单体AOE攻击！！！");
+                    enemyAgent.enemyLogic.focusTargets[i].soliderLogic.OnTakeAOEDamage(
+                        enemyAgent.enemyModel.attackPoint,
+                        enemyAgent.enemyModel.magicAttackPoint, 
+                        enemyAgent,
+                        enemyAgent.enemyModel.attackAoeRange);
+                }
 
+            }
+        }
+        
         protected async void CalculateCd()
         {
             isAttackReady = false;
@@ -388,8 +406,7 @@ namespace Gameplay.Enemy
         }
 
 
-
-
+        
         private void AddAttacker(SoliderAgent attacker)
         {
             if (!attacker)

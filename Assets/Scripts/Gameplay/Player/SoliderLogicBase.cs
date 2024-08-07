@@ -358,6 +358,53 @@ namespace Gameplay.Player
                 Die();
             }
         }
+        //受到AOE伤害后,根据当前的攻击者(敌人)的AOE攻击范围,以自己为中心寻找范围内的士兵,并使其造成伤害
+        public void OnTakeAOEDamage(float damage, float magicDamage, EnemyAgent enemyAgent, float aoeRange)
+        {
+            // 当前敌人受到伤害
+            OnTakeDamage(damage, magicDamage, enemyAgent);
+
+            // 获取 aoeRange 范围内的所有敌人
+            List<SoliderAgent> aoeTargets = GetAOETargets(soliderAgent.transform.position, aoeRange);
+
+            if(aoeTargets != null)
+            {
+                Debug.Log("不为空");
+            }
+            else
+            {
+                Debug.Log("为空");
+                foreach(var item in aoeTargets)
+                {
+                    Debug.Log(item.gameObject.name);
+                }
+            }
+
+            foreach (var solider in aoeTargets)
+            {
+                solider.soliderLogic.OnTakeDamage(damage, magicDamage, enemyAgent);
+            }
+
+            DrawRange(enemyAgent, aoeRange);
+        }
+        
+        public List<SoliderAgent> GetAOETargets(Vector3 position, float aoeRange)
+        {
+            List<SoliderAgent> aoeTargets = new List<SoliderAgent>();
+            Collider[] hitColliders = Physics.OverlapSphere(position, aoeRange, LayerMask.GetMask("Solider"));
+
+            foreach (var collider in hitColliders)
+            {
+                var solider = collider.GetComponent<SoliderAgent>();
+                if (solider != null && solider != soliderAgent) // 确保不是当前的敌人
+                {
+                    aoeTargets.Add(solider);
+                }
+            }
+
+            return aoeTargets;
+        }
+
 
         private void AddAttacker(EnemyAgent attacker)
         {
@@ -383,6 +430,27 @@ namespace Gameplay.Player
             yield return new WaitForSeconds(0.1f); // 控制闪烁时间
 
             renderer.material.color = originalColor;
+        }
+        
+        private void DrawRange(EnemyAgent enemyAgent, float range)
+        {
+            Vector3 start = enemyAgent.transform.position;
+            Vector3 end = start + Vector3.up * 0.1f;
+
+            int segments = 20;
+            float angle = 0f;
+            float angleStep = 360f / segments;
+            for (int i = 0; i < segments; i++)
+            {
+                Vector3 offset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * angle), 0, Mathf.Cos(Mathf.Deg2Rad * angle)) *
+                                 range;
+                Vector3 nextOffset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * (angle + angleStep)), 0,
+                    Mathf.Cos(Mathf.Deg2Rad * (angle + angleStep))) * range;
+
+                Debug.DrawLine(start + offset, start + nextOffset, Color.blue);
+
+                angle += angleStep;
+            }
         }
 
 
