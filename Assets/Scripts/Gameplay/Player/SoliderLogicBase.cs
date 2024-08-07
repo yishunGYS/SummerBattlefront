@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using _3DlevelEditor_GYS;
 using Gameplay.Enemy;
+using Managers;
 using UnityEngine;
 using UnityEngine.Events;
 using Object = UnityEngine.Object;
@@ -30,17 +32,22 @@ namespace Gameplay.Player
         public List<EnemyAgent> attackTargets = new List<EnemyAgent>();
         private HashSet<EnemyAgent> attackers = new HashSet<EnemyAgent>(); //在对自己攻击的敌方
 
-        //移动路径
-        private Transform moveTarget;
-        private int waypointIndex = 0;
-        private Transform[] pathPoints;
-
         //攻击
         private float attackTimer = 1000f;
         public bool isAttackReady = true;
 
         //阻挡的敌人
         public EnemyAgent blocker;
+
+        //用来获取Block
+        public GridCell currentBlock;
+        public List<GridCell> nextBlock;
+
+        public void InitBlockData(GridCell block)
+        {
+            currentBlock  = block;
+            nextBlock = block.nextCells;
+        }
 
         public SoliderLogicBase(SoliderAgent agent)
         {
@@ -64,44 +71,51 @@ namespace Gameplay.Player
 
         #region 移动
 
-        public void SetPath(int pathIndex)
-        {
-            if (pathIndex < 0 || pathIndex >= Waypoints.paths.Count)
-            {
-                Debug.LogError("Invalid path index");
-                return;
-            }
+        //public void SetPath(int pathIndex)
+        //{
+        //    if (pathIndex < 0 || pathIndex >= Waypoints.paths.Count)
+        //    {
+        //        Debug.LogError("Invalid path index");
+        //        return;
+        //    }
 
-            pathPoints = Waypoints.paths[pathIndex];
-            waypointIndex = 0;
-            moveTarget = pathPoints[0];
-        }
+        //    pathPoints = Waypoints.paths[pathIndex];
+        //    waypointIndex = 0;
+        //    moveTarget = pathPoints[0];
+        //}
 
         public void Move()
         {
-            if (pathPoints == null || pathPoints.Length == 0) return;
+            if (currentBlock == null || nextBlock == null || nextBlock.Count != 1) return;
 
-            Vector3 dir = moveTarget.position - soliderAgent.transform.position;
+            var nextTarget = nextBlock[0];
+            var nextPoint = (nextTarget.transform.position + new Vector3(0f, nextTarget.transform.localScale.y, 0f));
+
+            Vector3 dir = nextPoint - soliderAgent.transform.position;
 
             soliderAgent.transform.Translate(soliderModel.moveSpeed * Time.deltaTime * dir.normalized, Space.World);
 
-            if (Vector3.Distance(soliderAgent.transform.position, moveTarget.position) <= 0.4f)
+            if (Vector3.Distance(soliderAgent.transform.position, nextPoint) <= 0.4f)
             {
-                GetNextWaypoint();
+                GetNextBlcok();
             }
         }
 
 
-        private void GetNextWaypoint()
+        private void GetNextBlcok()
         {
-            if (waypointIndex >= pathPoints.Length - 1)
+            currentBlock = nextBlock[0];
+            nextBlock = currentBlock.nextCells;
+
+            if (currentBlock == null || nextBlock == null || nextBlock.Count != 1)
             {
-                EndPath();
+                if(BlockManager.instance.headSoliderBlocks.ContainsKey(soliderAgent))
+                {
+                    BlockManager.instance.OnHeadSoliderDestory(soliderAgent);
+                }
+                GameObject.Destroy(soliderAgent.gameObject);
                 return;
             }
-
-            waypointIndex++;
-            moveTarget = pathPoints[waypointIndex];
         }
 
         private void EndPath()
@@ -122,9 +136,9 @@ namespace Gameplay.Player
                 return true;
             }
 
-            if (pathPoints == null || pathPoints.Length == 0) return false;
+            if (currentBlock == null || nextBlock == null || nextBlock.Count != 1) return false;
 
-            Vector3 dir = moveTarget.position - soliderAgent.transform.position;
+            Vector3 dir = nextBlock[0].transform.position - soliderAgent.transform.position;
             RaycastHit hit;
             Debug.DrawRay(soliderAgent.transform.position, dir.normalized * frontCheckDistance, Color.red);
 
@@ -231,9 +245,6 @@ namespace Gameplay.Player
             //子类override
         }
 
-
-       
-
         //群攻获取目标
         protected void DistanceBasedGetTarget()
         {
@@ -266,8 +277,8 @@ namespace Gameplay.Player
         //辅助/治疗获取目标
         protected void AssistSoliderGetTarget()
         {
-        }
 
+        }
 
         private bool CheckMatchAttackType(EnemyAgent target)
         {

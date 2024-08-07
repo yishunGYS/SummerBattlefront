@@ -1,4 +1,5 @@
 using System;
+using Managers;
 using UnityEngine;
 
 namespace Gameplay.Player.Solider.MeleeGodling
@@ -20,6 +21,7 @@ namespace Gameplay.Player.Solider.MeleeGodling
         public override void Attack()
         {
             base.Attack();
+            //playerBuffManager.AddBuff(BuffInventoryManager.Instance.GetBuffById(0));  //无敌buff
             MeleeAttack();
         }
     }
