@@ -104,7 +104,7 @@ namespace Utilities
                     enemyModel.attackNum = ParseInt(value[12]);
                     enemyModel.attackAoeRange = ParseFloat(value[13]);
                     enemyModel.attackTargetType = (AttackTargetType)ParseInt(value[14]);
-                    enemyModel.attackSoliderType = (UnitType)ParseInt(value[15]);
+                    enemyModel.attackSoliderType = ParseUnitType(value[15]);
                     enemyModel.blockNum = ParseInt(value[16]);
 
                     enemyModel.deadCoin = ParseInt(value[17]);
@@ -151,7 +151,12 @@ namespace Utilities
             {
                 if (int.TryParse(item, out int intValue))
                 {
-                    attackType |= (UnitType)(1 << intValue);
+                    var temp = intValue - 1;
+                    if (temp < 0) 
+                    {
+                        continue;
+                    } 
+                    attackType |= (UnitType)(1 << temp);
                 }
             }
 

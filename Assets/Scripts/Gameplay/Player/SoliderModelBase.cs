@@ -7,8 +7,8 @@ namespace Gameplay.Player
     public enum UnitType
     {
         None = 0,
-        Ground = 1 << 0,
-        Tower = 1 << 1,
+        Ground = 1 << 0, //1
+        Tower = 1 << 1, //2
     }
 
     public enum AttackTargetType
