@@ -60,6 +60,7 @@ namespace Gameplay.Player
         {
             soliderAgent = agent;
             soliderModel = soliderAgent.soliderModel;
+            playerBuffManager = new BuffManager(soliderAgent);
         }
 
 
