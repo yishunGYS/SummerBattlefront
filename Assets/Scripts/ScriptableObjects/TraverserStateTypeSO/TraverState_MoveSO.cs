@@ -41,6 +41,8 @@ namespace ScriptableObjects.TraverserStateTypeSO
             {
                 EndTraver(feature);
             }
+            
+            soliderAgent.soliderLogic.Move();
         }
         public override void OnFixedUpdate()
         {

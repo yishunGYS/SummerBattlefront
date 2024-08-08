@@ -141,5 +141,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51af71d9439b1f24bba563dc6f23bd10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soliderId: 1
+  soliderId: 4
   bomb: {fileID: 4717568731557150635, guid: c688948d5554ca4408caa7604595d43a, type: 3}

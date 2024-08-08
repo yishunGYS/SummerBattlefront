@@ -1,6 +1,10 @@
-namespace Gameplay.Player.Solider.Attacker.Exploder
+using Gameplay.Player.Solider.Attacker;
+using Gameplay.Player.Solider.Attacker.Exploder;
+using UnityEngine;
+
+namespace Gameplay.Player.Solider
 {
-    public class ExploderLogic : SoliderLogicBase
+    public class ExploderLogic : AttackerSoliderLogic
     {
         private Exploder exploderAgent;
 
@@ -10,21 +14,19 @@ namespace Gameplay.Player.Solider.Attacker.Exploder
         {
             exploderAgent = (Exploder)agent;
         }
-        
+
         //自爆兵的攻击行为--暂时为空
         public override void Attack()
         {
-            soliderAgent.soliderModel.maxHp = 0;
+            Die();
         }
+
         //死亡时获取周围友军和敌军,对其造成伤害
         public override void Die()
         {
-            GameObject.Instantiate(exploderAgent.bomb,soliderAgent.transform.position,Quaternion.identity);
+            var bomb = Object.Instantiate(exploderAgent.bomb, soliderAgent.transform.position, Quaternion.identity);
+            bomb.GetComponent<Bomb>().OnInit(exploderAgent);
             base.Die();
         }
-
-
     }
 }
-
-

@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using Gameplay.Player.Solider.Attacker.Exploder;
 using UnityEngine;
 
-namespace Gameplay.Player.Solider.Exploder
+namespace Gameplay.Player.Solider.Attacker.Exploder
 {
     public class Exploder : SoliderAgent
     {
