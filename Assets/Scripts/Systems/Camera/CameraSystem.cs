@@ -34,8 +34,8 @@ namespace Systems.Camera
             var inputDir = new Vector2(0, 0);
             if (Input.GetMouseButton(0))
             {
-                inputDir.x += Input.GetAxisRaw("Mouse X");
-                inputDir.y += Input.GetAxisRaw("Mouse Y");
+                inputDir.x -= Input.GetAxisRaw("Mouse X");
+                inputDir.y -= Input.GetAxisRaw("Mouse Y");
             }
             if (Input.GetKey(KeyCode.D))
             {

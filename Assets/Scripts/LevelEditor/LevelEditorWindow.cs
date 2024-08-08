@@ -9,7 +9,7 @@ namespace _3DlevelEditor_GYS
     {
         private BlockData blockData;
         private int selectedBlockIndex = 0;
-        private Vector2Int gridSize = new Vector2Int(10, 10);
+        private Vector2Int gridSize = new Vector2Int(100, 100);
         private float cellSize = 1f;
         private Vector3 gridOffset = Vector3.zero;
         private bool isGenerating = false;
