@@ -6186,7 +6186,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &640304088
 MonoBehaviour:
@@ -6319,7 +6319,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &681039780
 MonoBehaviour:
@@ -7436,7 +7436,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &795105727
 MonoBehaviour:
@@ -10734,7 +10734,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gebuling
+  m_text: Traverse
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11202,7 +11202,7 @@ GameObject:
   - component: {fileID: 1219695483}
   - component: {fileID: 1219695482}
   m_Layer: 5
-  m_Name: Gebuling
+  m_Name: Traverse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11226,7 +11226,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1219695482
 MonoBehaviour:
@@ -11277,7 +11277,7 @@ MonoBehaviour:
         m_MethodName: ChangeSpawnCharacter
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2302560973402218857, guid: f85b5ac4e5c37a547b3783b5dfcf9e68, type: 3}
+          m_ObjectArgument: {fileID: 8264248010974913806, guid: 424460a1b2f5cfc4484f527458fc0152, type: 3}
           m_ObjectArgumentAssemblyTypeName: Gameplay.Player.SoliderAgent, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -11739,7 +11739,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1274585700
 MonoBehaviour:
@@ -15511,10 +15511,10 @@ MonoBehaviour:
   startMoney: 400
   startLives: 20
   currentRegainRate: 1
-  currentLimit: 1
-  switchPhase: 1
-  regainPhase: 
-  limitPhase: 
+  currentLimit: 1000
+  switchPhase: 1000000000
+  regainPhase: 01000000
+  limitPhase: e8030000
 --- !u!1 &1752857093
 GameObject:
   m_ObjectHideFlags: 0

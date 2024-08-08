@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6345732500387732083}
   - component: {fileID: 6425060511249867181}
   - component: {fileID: 6452188077693735800}
-  - component: {fileID: -1999023143710157323}
+  - component: {fileID: 7227942143848566660}
   m_Layer: 6
   m_Name: HeadSolider
   m_TagString: Untagged
@@ -147,12 +147,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8861984038093239496}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32e130e9e0d03ca4c95f5423afdc394e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-1999023143710157323
+--- !u!114 &7227942143848566660
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8861984038093239496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94b15d4219ddc3e4cad5efb6b4bf4f55, type: 3}
+  m_Script: {fileID: 11500000, guid: bb36b74cbd6f0eb40a56395e8597d947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   campPrefab: {fileID: 5581011281161083918, guid: e3c5d773129dfac4d91651f7ca87a4bf, type: 3}

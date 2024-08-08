@@ -15,7 +15,7 @@ namespace ScriptableObjects.TraverserStateTypeSO
 
         public override void OnEnter()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public override void OnUpdate()
@@ -44,12 +44,12 @@ namespace ScriptableObjects.TraverserStateTypeSO
         }
         public override void OnFixedUpdate()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public override void OnExit()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         private bool CheckArriveTarget(TraverserFeature feature) //检查当前是否到达目标格子
