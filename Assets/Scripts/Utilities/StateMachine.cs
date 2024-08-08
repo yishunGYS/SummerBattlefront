@@ -72,7 +72,7 @@ namespace Utilities
                 Debug.LogError($"StateSO for {stateType} is null.");
                 return;
             }
-            Debug.Log("切换状态");
+            Debug.Log("切换状态"+ curState);
             curState.OnEnter();
         }
 

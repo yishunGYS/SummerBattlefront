@@ -43,6 +43,7 @@ namespace Gameplay.Features
                     {
                         int newHp = targetAgent.soliderLogic.curHp + CalculateCureAmount();
                         targetAgent.soliderLogic.curHp = Math.Clamp(newHp, 0, targetAgent.soliderModel.maxHp);
+                        Debug.Log("治疗"+targetAgent.name+" "+CalculateCureAmount());
                     }
                 }
             }

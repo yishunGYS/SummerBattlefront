@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2171347887519508127
+--- !u!1 &8861984038093239496
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,26 +8,27 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5500833549864118124}
-  - component: {fileID: 285400858503572910}
-  - component: {fileID: 7928618767822741160}
-  - component: {fileID: 6042945257342304889}
-  - component: {fileID: 8918809616097222489}
-  - component: {fileID: 4606150940562005678}
+  - component: {fileID: 5022474881247193319}
+  - component: {fileID: 5536557329824037928}
+  - component: {fileID: 7242060906805538017}
+  - component: {fileID: -7174182815858978331}
+  - component: {fileID: 6425060511249867181}
+  - component: {fileID: 1835549487973573158}
+  - component: {fileID: 4160830957090592363}
   m_Layer: 6
-  m_Name: Exploder
+  m_Name: Valkyrie Traverser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5500833549864118124
+--- !u!4 &5022474881247193319
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2171347887519508127}
+  m_GameObject: {fileID: 8861984038093239496}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15, y: -0.70068455, z: -25}
@@ -36,21 +37,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &285400858503572910
+--- !u!33 &5536557329824037928
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2171347887519508127}
+  m_GameObject: {fileID: 8861984038093239496}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7928618767822741160
+--- !u!23 &7242060906805538017
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2171347887519508127}
+  m_GameObject: {fileID: 8861984038093239496}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -86,13 +87,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6042945257342304889
+--- !u!114 &-7174182815858978331
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2171347887519508127}
+  m_GameObject: {fileID: 8861984038093239496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d49787f3aee990f4e9b17204d99d71ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soliderId: 6
+--- !u!114 &6425060511249867181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8861984038093239496}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34c5f647ed954d148879c4375c6537ef, type: 3}
@@ -103,16 +117,16 @@ MonoBehaviour:
     - Key: 0
       Value: {fileID: 11400000, guid: 84eff5f6000f84144b16b5ed1413c318, type: 2}
     - Key: 1
-      Value: {fileID: 11400000, guid: cbe63a50b10a6c3448cd6f786b10ce5c, type: 2}
+      Value: {fileID: 11400000, guid: 016496da9a7898046802a51a22374e16, type: 2}
     - Key: 2
       Value: {fileID: 11400000, guid: 0e52b69940ce2774293d22128b125f03, type: 2}
---- !u!136 &8918809616097222489
+--- !u!136 &1835549487973573158
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2171347887519508127}
+  m_GameObject: {fileID: 8861984038093239496}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -129,17 +143,22 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4606150940562005678
+--- !u!114 &4160830957090592363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2171347887519508127}
+  m_GameObject: {fileID: 8861984038093239496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51af71d9439b1f24bba563dc6f23bd10, type: 3}
+  m_Script: {fileID: 11500000, guid: b2b03ce1e520a434988a900515291af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soliderId: 4
-  bomb: {fileID: 4717568731557150635, guid: c688948d5554ca4408caa7604595d43a, type: 3}
+  agent: {fileID: 0}
+  canTraver: 1
+  isTraver: 0
+  targetCell: {fileID: 0}
+  preSpeed: 0
+  preEnemy: {fileID: 0}
+  traverSpeed: 25

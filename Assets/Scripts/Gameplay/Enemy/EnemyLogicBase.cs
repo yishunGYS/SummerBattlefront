@@ -55,7 +55,7 @@ namespace Gameplay.Enemy
             enemyBuffManager = new BuffManager(enemyAgent);
         }
 
-        public void RemoveTarget(SoliderAgent target)
+        public void RemoveAttackTarget(SoliderAgent target)
         {
             if (distanceTargets.Contains(target))
             {
@@ -75,6 +75,19 @@ namespace Gameplay.Enemy
             else
             {
                 Debug.Log("Focus Target not found in the list.");
+            }
+        }
+
+        public void RemoveBlockTargets(SoliderAgent target)
+        {
+            if (blockSoilders.Contains(target))
+            {
+                blockSoilders.Remove(target);
+                Debug.Log($"BlockTarget removed: {target.soliderModel.soliderName}");
+            }
+            else
+            {
+                Debug.Log("BlockTarget not found in the list.");
             }
         }
 

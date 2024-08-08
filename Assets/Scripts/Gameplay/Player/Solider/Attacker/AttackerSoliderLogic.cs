@@ -57,6 +57,21 @@ namespace Gameplay.Player.Solider.Attacker
             return true;
         }
 
+        public override bool HasAttackTarget()
+        {
+            //return base.HasAttackTarget();
+            Collider[] hitColliders =
+                Physics.OverlapSphere(soliderAgent.transform.position, soliderModel.attackRange,
+                    LayerMask.GetMask("Enemy"));
+
+            if (hitColliders.Length <= 0)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public override void RemoveTarget(UnitAgent target)
         {
             EnemyAgent enemyAgent = target as EnemyAgent;
@@ -67,12 +82,7 @@ namespace Gameplay.Player.Solider.Attacker
             }
         }
 
-
-        protected override void ClearTarget()
-        {
-            base.ClearTarget();
-            attackTargets.Clear();
-        }
+        
 
 
         #region ¹¥»÷

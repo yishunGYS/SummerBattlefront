@@ -18,12 +18,12 @@ namespace ScriptableObjects.TraverserStateTypeSO
 
         public override void OnFixedUpdate()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public override void OnExit()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

@@ -75,11 +75,12 @@ namespace ScriptableObjects.TraverserStateTypeSO
             //记录敌人
             feature.preEnemy = soliderAgent.soliderLogic.blocker;
             
-            soliderAgent.soliderLogic.blocker.enemyLogic.RemoveTarget(soliderAgent);//之前阻挡我的敌人不再以我为目标
+            soliderAgent.soliderLogic.blocker.enemyLogic.RemoveAttackTarget(soliderAgent);//之前阻挡我的敌人不再以我为目标
         }
         private void EndTraver(TraverserFeature feature)//穿越结束
         {
-            soliderAgent.soliderLogic.blocker?.enemyLogic.RemoveTarget(soliderAgent);//之前阻挡我的敌人不再以我为目标
+            soliderAgent.soliderLogic.blocker?.enemyLogic.RemoveAttackTarget(soliderAgent);//之前阻挡我的敌人不再以我为目标
+            soliderAgent.soliderLogic.blocker?.enemyLogic.RemoveBlockTargets(soliderAgent);//在敌人的阻挡列表中去除我
             feature.isTraver = false;
             soliderAgent.soliderLogic.blocker = null;
             soliderAgent.soliderModel.moveSpeed = feature.preSpeed;

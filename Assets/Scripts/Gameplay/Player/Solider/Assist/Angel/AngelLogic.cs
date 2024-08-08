@@ -20,7 +20,29 @@ namespace Gameplay.Player.Solider.Assist.Angel
         }
 
 
-        public void GetTargetBaseMinHp()
+        public override bool HasAttackTarget()
+        {
+            Collider[] hitColliders =
+                Physics.OverlapSphere(soliderAgent.transform.position, soliderModel.attackRange,
+                    LayerMask.GetMask("Solider"));
+
+            int colliderCount = hitColliders.Length;
+            foreach (var collider in hitColliders)
+            {
+                if (collider == soliderAgent.GetComponent<Collider>())
+                {
+                    colliderCount--;
+                }
+            }
+            if (colliderCount<1)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private void GetTargetBaseMinHp()
         {
             List<CureSoliderTarget> tempCureTargets = new List<CureSoliderTarget>();
             
@@ -32,18 +54,23 @@ namespace Gameplay.Player.Solider.Assist.Angel
             {
                 var temp = collider.GetComponent<SoliderAgent>();
                 var tempTargetHp = temp.soliderLogic.curHp;
-
+                if (tempTargetHp == temp.soliderModel.maxHp)
+                {
+                    continue;
+                }
                 var temTarget = new CureSoliderTarget(tempTargetHp, temp);
                 tempCureTargets.Add(temTarget);
-                
-            }
-
-            SortCureTargetsByMinHp(tempCureTargets);
-            for (int i = 0; i < tempCureTargets.Count; i++)
-            {
-                attackTargets.Add(tempCureTargets[i].target);
             }
             
+            SortCureTargetsByMinHp(tempCureTargets);
+            for (int i = 0; i < soliderAgent.soliderModel.attackNum; i++)
+            {
+                if (tempCureTargets.Count <= i)
+                {
+                    return;
+                }
+                attackTargets.Add(tempCureTargets[i].target);
+            }
         }
 
         private void SortCureTargetsByMinHp(List<CureSoliderTarget> cureTargets)
@@ -54,7 +81,12 @@ namespace Gameplay.Player.Solider.Assist.Angel
         public override void Attack()
         {
             base.Attack();
-            soliderAgent.GetComponent<CureFeature>().Cure();
+            if (isAttackReady)
+            {
+                CalculateCd();
+                soliderAgent.GetComponent<CureFeature>().Cure();
+            }
+            
         }
     }
 }

@@ -9,6 +9,7 @@ namespace ScriptableObjects.SoliderStateTypeSO
         private bool canEnterMove;
         private float timer;
 
+        
 
         public override void OnUpdate()
         {
@@ -18,7 +19,7 @@ namespace ScriptableObjects.SoliderStateTypeSO
             //    fsm.ChangeState(UnitStateType.Move);
             //}
             //应该是远程的attack逻辑
-            if (soliderAgent.soliderLogic.CheckObstacle() == false && soliderAgent.soliderLogic.isAttackReady == false)
+            if (soliderAgent.soliderLogic.CheckObstacle() == false || soliderAgent.soliderLogic.isAttackReady == false)
             {
                 timer += Time.deltaTime;
                 if (timer> 0.2f)

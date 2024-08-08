@@ -61,6 +61,8 @@ namespace Gameplay.Player
             soliderAgent = agent;
             soliderModel = soliderAgent.soliderModel;
             playerBuffManager = new BuffManager(soliderAgent);
+
+            curHp = soliderModel.maxHp;
         }
 
 
@@ -177,26 +179,17 @@ namespace Gameplay.Player
 
 
         //有攻击目标
-        public bool HasAttackTarget()
+        public virtual bool HasAttackTarget()
         {
             // 绘制攻击判定范围的可视化效果
             DrawAttackRange();
-
-            Collider[] hitColliders =
-                Physics.OverlapSphere(soliderAgent.transform.position, soliderModel.attackRange,
-                    LayerMask.GetMask("Enemy"));
-
-            if (hitColliders.Length <= 0)
-            {
-                return false;
-            }
-
-            return true;
+            return false;
         }
 
 
-        protected virtual void ClearTarget()
+        private void ClearTarget()
         {
+            attackTargets.Clear();
         }
 
         public virtual void RemoveTarget(UnitAgent target)
@@ -268,7 +261,7 @@ namespace Gameplay.Player
                 soliderAgent.StartCoroutine(FlashRed());
             }
            
-            if (soliderModel.maxHp <= 0)
+            if (curHp<= 0)
             {
                 Die();
             }
@@ -362,13 +355,13 @@ namespace Gameplay.Player
             //通知在打他的敌人，他死了
             foreach (var agent in attackers)
             {
-                agent.enemyLogic.RemoveTarget(soliderAgent);
+                agent.enemyLogic.RemoveAttackTarget(soliderAgent);
             }
 
             //若该士兵是被阻挡的，通知被阻挡的人，他死了
             if (blocker != null)
             {
-                blocker.enemyLogic.blockSoilders.Remove(soliderAgent);
+                blocker.enemyLogic.RemoveBlockTargets(soliderAgent);
             }
 
             soliderAgent.StopAllCoroutines();

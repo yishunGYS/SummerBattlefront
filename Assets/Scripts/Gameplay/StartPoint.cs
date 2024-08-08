@@ -1,3 +1,4 @@
+using System;
 using _3DlevelEditor_GYS;
 using Gameplay.Player;
 using Managers;
@@ -61,5 +62,10 @@ namespace Gameplay
             BlockManager.instance.CheckCanPlace();
         }
 
+
+        private void OnDestroy()
+        {
+            BlockManager.OnAddStartPoint -= AddStartPoint;
+        }
     }
 }
