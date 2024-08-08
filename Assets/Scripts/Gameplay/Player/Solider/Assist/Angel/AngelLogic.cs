@@ -1,8 +1,10 @@
 using System.Collections.Generic;
+using Gameplay.Features;
 using UnityEngine;
 
 namespace Gameplay.Player.Solider.Assist.Angel
 {
+    //普攻为血量最低的友方加血
     public class AngelLogic : AssistSoliderLogic
     {
         public AngelLogic(SoliderAgent agent) : base(agent)
@@ -47,6 +49,12 @@ namespace Gameplay.Player.Solider.Assist.Angel
         private void SortCureTargetsByMinHp(List<CureSoliderTarget> cureTargets)
         {
             cureTargets.Sort((a,b)=>a.hp.CompareTo(b.hp));
+        }
+
+        public override void Attack()
+        {
+            base.Attack();
+            soliderAgent.GetComponent<CureFeature>().Cure();
         }
     }
 }

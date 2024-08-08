@@ -31,6 +31,7 @@ namespace Gameplay.Features
         }
 
 
+        //单次治疗
         public void Cure()
         {
             foreach (var solider in agent.soliderLogic.attackTargets)
