@@ -1,11 +1,10 @@
-using _3DlevelEditor_GYS;
-using Managers;
-using System.Collections;
 using System.Collections.Generic;
+using _3DlevelEditor_GYS;
+using Gameplay.Player;
+using Managers;
 using UnityEngine;
-using static UnityEngine.UI.Image;
 
-namespace Gameplay.Player
+namespace Gameplay.Features
 {
     public class SpawnCampFeature : MonoBehaviour
     {
