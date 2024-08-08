@@ -159,4 +159,4 @@ MonoBehaviour:
   targetCell: {fileID: 0}
   preSpeed: 0
   preEnemy: {fileID: 0}
-  traverSpeed: 100
+  traverSpeed: 25

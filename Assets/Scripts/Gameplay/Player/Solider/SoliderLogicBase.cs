@@ -263,7 +263,11 @@ namespace Gameplay.Player
 
             Debug.Log("士兵扣血，目前的血量是：" + curHp);
             curHp -= damagePoint;
-            soliderAgent.StartCoroutine(FlashRed());
+            if (soliderAgent) 
+            {
+                soliderAgent.StartCoroutine(FlashRed());
+            }
+           
             if (soliderModel.maxHp <= 0)
             {
                 Die();

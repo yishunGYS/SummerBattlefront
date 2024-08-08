@@ -21,15 +21,21 @@ namespace ScriptableObjects.TraverserStateTypeSO
         public override void OnUpdate()
         {
             TraverserFeature feature = soliderAgent.GetComponent<TraverserFeature>();
+            
             if (soliderAgent.soliderLogic.CheckObstacle()) //当前角色被阻挡
             {
                 if (feature.canTraver) //当前第一次被阻挡,进入穿越状态
                 {
                     TriggerTraver(feature);
                 }
-                else if (feature.isTraver && soliderAgent.soliderLogic.blocker != feature.preEnemy) //当前处于穿越状态且再次碰到的阻挡者不为上一个
+                else if (feature.isTraver) //当前处于穿越状态且再次碰到的阻挡者不为上一个
                 {
-                    EndTraver(feature);
+                    soliderAgent.soliderLogic.attackTargets.Remove(feature.preEnemy);
+                    if (soliderAgent.soliderLogic.blocker != feature.preEnemy &&
+                        soliderAgent.soliderLogic.blocker != null)
+                    {
+                        EndTraver(feature);
+                    }
                 }
                 else //以上都不成立,说明穿越结束了,被正常阻挡/进行攻击
                 {
@@ -61,7 +67,6 @@ namespace ScriptableObjects.TraverserStateTypeSO
         private void TriggerTraver(TraverserFeature feature)//触发穿越
         {
             feature.targetCell = soliderAgent.soliderLogic.currentBlock.nextCells[0].nextCells[0];//临时方案
-
             feature.isTraver = true;
             feature.canTraver = false;
             //速度更新
@@ -69,10 +74,14 @@ namespace ScriptableObjects.TraverserStateTypeSO
             soliderAgent.soliderModel.moveSpeed = feature.traverSpeed;
             //记录敌人
             feature.preEnemy = soliderAgent.soliderLogic.blocker;
+            
+            soliderAgent.soliderLogic.blocker.enemyLogic.RemoveTarget(soliderAgent);//之前阻挡我的敌人不再以我为目标
         }
         private void EndTraver(TraverserFeature feature)//穿越结束
         {
+            soliderAgent.soliderLogic.blocker?.enemyLogic.RemoveTarget(soliderAgent);//之前阻挡我的敌人不再以我为目标
             feature.isTraver = false;
+            soliderAgent.soliderLogic.blocker = null;
             soliderAgent.soliderModel.moveSpeed = feature.preSpeed;
         }
 
