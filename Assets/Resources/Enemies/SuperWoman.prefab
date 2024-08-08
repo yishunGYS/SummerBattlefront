@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8963697562178715558}
   - component: {fileID: 1305034242398386329}
   - component: {fileID: 8235220761539673862}
-  - component: {fileID: 8925719167594405144}
+  - component: {fileID: 5615886019789500264}
   m_Layer: 7
   m_Name: SuperWoman
   m_TagString: Enemy
@@ -125,7 +125,7 @@ MonoBehaviour:
       Value: {fileID: 11400000, guid: bafe3a3c8f6486243be6a11b858a084e, type: 2}
     - Key: 2
       Value: {fileID: 11400000, guid: 7132f25e7a3967743894cb6c70bbc897, type: 2}
---- !u!114 &8925719167594405144
+--- !u!114 &5615886019789500264
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 235258182517410980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b2d54f0ec7497540af2ee423d45da7d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f15cad05bf539c46a520f08267fe39a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyId: 1010

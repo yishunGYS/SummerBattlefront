@@ -11,7 +11,7 @@ namespace Gameplay.Player
         public override void OnInit()
         {
             base.OnInit();
-            soliderLogic = new SoliderLogicBase(this);
+            soliderLogic = new HeadSoliderLogic(this);
         }
     }
 }

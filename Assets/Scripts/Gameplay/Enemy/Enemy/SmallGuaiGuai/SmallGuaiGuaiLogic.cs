@@ -13,7 +13,7 @@ namespace Gameplay.Enemy.Enemy.SmallGuaiGuai
         public override void GetTarget()
         {
             base.GetTarget();
-            DistanceBasedEnemyGetTarget();
+            GetFocusTarget();
         }
 
         public override void Attack()

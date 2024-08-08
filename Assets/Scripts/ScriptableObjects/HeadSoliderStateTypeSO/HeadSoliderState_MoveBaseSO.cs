@@ -27,10 +27,6 @@ public class HeadSoliderState_MoveBaseSO : SoliderStateSO
         }
 
         soliderAgent.soliderLogic.Move();
-
-        var paitouCompt = soliderAgent.GetComponent<HeadSoliderFeature>();
-        paitouCompt.UpdateCanPlace();
-        paitouCompt.CheckIsCrossRoad();
     }
 
     public override void OnFixedUpdate()

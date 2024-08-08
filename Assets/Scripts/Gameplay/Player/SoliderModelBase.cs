@@ -1,12 +1,14 @@
+using System;
 using UnityEngine;
 
 namespace Gameplay.Player
 {
+    [Flags]
     public enum UnitType
     {
-        Ground,
-        Air,
-        Tower,
+        None = 0,
+        Ground = 1 << 0,
+        Tower = 1 << 1,
     }
 
     public enum AttackTargetType
@@ -23,7 +25,7 @@ namespace Gameplay.Player
         public string soliderDes;
         public UnitType soliderType;
         public int cost;
-        public float maxHp;
+        public int maxHp;
         public int spawnNum;
         public int attackPoint;
         public int magicAttackPoint;

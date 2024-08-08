@@ -42,7 +42,7 @@ namespace Managers
             }
 
             CheckAllStartPoint();
-            //¼ì²éheadSolider
+            //ï¿½ï¿½ï¿½headSolider
             foreach (var cellList in headSoliderBlocks.Values)
             {
                 foreach (GridCell cell in cellList)
