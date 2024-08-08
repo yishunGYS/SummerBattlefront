@@ -250,11 +250,11 @@ namespace Gameplay.Enemy
         private bool CheckMatchAttackType(SoliderAgent target)
         {
             //若attackEnemyType是多种，那么----待扩展
-            if (target.soliderModel.soliderType != enemyModel.attackSoliderType)
+
+            if ((enemyModel.attackSoliderType & target.soliderModel.soliderType) == UnitType.None)
             {
                 return false;
             }
-
             return true;
         }
 
