@@ -50,7 +50,7 @@ namespace Gameplay.Player.Solider.Attacker
         protected override bool CheckMatchAttackType(EnemyAgent target)
         {
             //todo 若attackEnemyType是多种，那么----待扩展
-            if ((soliderModel.attackEnemyType & soliderModel.attackEnemyType) == UnitType.None) 
+            if ((soliderModel.attackEnemyType & target.enemyModel.enemyType) == UnitType.None) 
             {
                 return false;
             }
