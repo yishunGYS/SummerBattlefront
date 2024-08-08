@@ -56,13 +56,10 @@ namespace Gameplay.Player
         //BuffManager
         public BuffManager playerBuffManager;
 
-        protected SoliderLogicBase(SoliderAgent agent)
+        public SoliderLogicBase(SoliderAgent agent)
         {
             soliderAgent = agent;
             soliderModel = soliderAgent.soliderModel;
-            curHp = soliderModel.maxHp;
-
-            playerBuffManager = new BuffManager(soliderAgent);
         }
         
 
@@ -237,6 +234,11 @@ namespace Gameplay.Player
 
         protected virtual bool CheckMatchAttackType(EnemyAgent target)
         {
+            
+        }
+        //群攻获取目标
+        protected void DistanceBasedGetTarget()
+        {
             return true;
         }
         
@@ -260,7 +262,6 @@ namespace Gameplay.Player
 
 
 
-
         //远程写在子类
         protected void RangeAttack()
         {
@@ -274,24 +275,16 @@ namespace Gameplay.Player
         {
             AddAttacker(enemyAgent);
             // 减少士兵的生命值
-            var damageAmout = (int)playerBuffManager.CalculateDamage(new DamageInfo(enemyAgent, soliderAgent));
-            curHp -= damageAmout;
-            // soliderModel.maxHp = soliderModel.maxHp - (damage * (1 - soliderModel.defendReducePercent)) -
-            //                      (magicDamage * (1 - soliderModel.magicDefendReducePercent));
+            soliderModel.maxHp = soliderModel.maxHp - (damage * (1 - soliderModel.defendReducePercent)) -
+                                 (magicDamage * (1 - soliderModel.magicDefendReducePercent));
 
-            Debug.Log("士兵目前的血量是：" + curHp);
-            // Debug.Log("士兵受到的物理伤害为：" + (damage * (1 - soliderModel.defendReducePercent)));
-            // Debug.Log("士兵受到的法术伤害为：" + (magicDamage * (1 - soliderModel.magicDefendReducePercent)));
-
-            if (damageAmout == 0)
-            {
-                Debug.Log("伤害为0，无敌");
-                return;
-            }
+            Debug.Log("士兵目前的血量是：" + soliderModel.maxHp);
+            Debug.Log("士兵受到的物理伤害为：" + (damage * (1 - soliderModel.defendReducePercent)));
+            Debug.Log("士兵受到的法术伤害为：" + (magicDamage * (1 - soliderModel.magicDefendReducePercent)));
 
             soliderAgent.StartCoroutine(FlashRed());
 
-            if (curHp <= 0)
+            if (soliderModel.maxHp <= 0)
             {
                 Die();
             }
@@ -338,7 +331,6 @@ namespace Gameplay.Player
             {
                 agent.enemyLogic.RemoveTarget(soliderAgent);
             }
-
             //若该士兵是被阻挡的，通知被阻挡的人，他死了
             if (blocker != null)
             {
@@ -347,12 +339,6 @@ namespace Gameplay.Player
 
             soliderAgent.StopAllCoroutines();
             Object.Destroy(soliderAgent.gameObject);
-        }
-
-        
-        public void OnUpdateBuff()
-        {
-            playerBuffManager.UpdateBuff();
         }
     }
 }

@@ -9,7 +9,10 @@ namespace Managers
 {
     public class BlockManager : MonoBehaviour
     {
+        public List<StartPoint> startPoints = new List<StartPoint>();
+
         public static BlockManager instance;
+
 
         public Dictionary<SoliderAgent, List<GridCell>> headSoliderBlocks = new Dictionary<SoliderAgent, List<GridCell>>();
         public Dictionary<StartPoint, List<GridCell>> startPointBlocks = new Dictionary<StartPoint, List<GridCell>>();
@@ -33,24 +36,29 @@ namespace Managers
 
         private void OnInit()
         {
+            foreach (StartPoint startPoint in startPoints)
+            {
+                startPoint.OnInit();
+            }
+
             CheckAllStartPoint();
             //¼ì²éheadSolider
-            // foreach (var cellList in headSoliderBlocks.Values)
-            // {
-            //     foreach (GridCell cell in cellList)
-            //     {
-            //         if (canPlaceBlocks.ContainsKey(cell))
-            //         {
-            //             canPlaceBlocks[cell]++;
-            //             Debug.Log("HeadSolider has key:" + cell.name +  " " + canPlaceBlocks[cell]);
-            //         }
-            //         else
-            //         {
-            //             canPlaceBlocks.Add(cell, 1);
-            //             Debug.Log("HeadSolider no key:" + canPlaceBlocks[cell]);
-            //         }
-            //     }
-            // }
+            foreach (var cellList in headSoliderBlocks.Values)
+            {
+                foreach (GridCell cell in cellList)
+                {
+                    if (canPlaceBlocks.ContainsKey(cell))
+                    {
+                        canPlaceBlocks[cell]++;
+                        Debug.Log("HeadSolider has key:" + cell.name + " " + canPlaceBlocks[cell]);
+                    }
+                    else
+                    {
+                        canPlaceBlocks.Add(cell, 1);
+                        Debug.Log("HeadSolider no key:" + canPlaceBlocks[cell]);
+                    }
+                }
+            }
             CheckCanPlace();
         }
 
@@ -108,7 +116,7 @@ namespace Managers
             }
         }
 
-        public void UpdateCell(SoliderAgent solider ,GridCell cell)
+        public void UpdateCell(SoliderAgent solider, GridCell cell)
         {
             if (headSoliderBlocks.ContainsKey(solider))
             {
@@ -128,9 +136,9 @@ namespace Managers
 
         public void OnHeadSoliderDestory(SoliderAgent solider)
         {
-            if(headSoliderBlocks.ContainsKey(solider))
+            if (headSoliderBlocks.ContainsKey(solider))
             {
-                foreach(var cell in headSoliderBlocks[solider])
+                foreach (var cell in headSoliderBlocks[solider])
                 {
                     if (canPlaceBlocks.ContainsKey(cell))
                     {

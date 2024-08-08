@@ -152,3 +152,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   campPrefab: {fileID: 5581011281161083918, guid: e3c5d773129dfac4d91651f7ca87a4bf, type: 3}
+  cubePrefab: {fileID: 8381054435254191774, guid: a4d5f71a68c25e8469419e0cbe445c8b, type: 3}
