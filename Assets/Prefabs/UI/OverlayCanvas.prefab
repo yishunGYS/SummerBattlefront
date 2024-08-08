@@ -1299,7 +1299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters: []
-  SoliderContainer: {fileID: 0}
+  SoliderContainer: {fileID: 2943458219343050077, guid: dbe4ae9a072305a4dbb75643f1a69456, type: 3}
   selectedCharacter: {fileID: 0}
 --- !u!114 &31886156207418987
 MonoBehaviour:
