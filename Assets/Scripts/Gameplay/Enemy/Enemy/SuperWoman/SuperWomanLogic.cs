@@ -1,12 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gameplay.Enemy.Enemy.SmallGuaiGuai
+namespace Gameplay.Enemy.Enemy.SuperWoman
 {
-    public class SmallGuaiGuaiLogic : EnemyLogicBase
+    public class SuperWomanLogic : EnemyLogicBase
     {
-
-
-        public SmallGuaiGuaiLogic(EnemyAgent agent) : base(agent)
+        public SuperWomanLogic(EnemyAgent agent) : base(agent)
         {
         }
 
@@ -23,3 +23,5 @@ namespace Gameplay.Enemy.Enemy.SmallGuaiGuai
         }
     }
 }
+
+

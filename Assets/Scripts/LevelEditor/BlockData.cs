@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace _3DlevelEditor_GYS
+namespace LevelEditor
 {
     [CreateAssetMenu(fileName = "BlockData", menuName = "LevelEditor/BlockData")]
     public class BlockData : ScriptableObject

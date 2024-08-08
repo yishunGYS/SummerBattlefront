@@ -1,11 +1,14 @@
+using System;
 using UnityEngine;
 
 namespace Gameplay.Player
 {
+    [Flags]
     public enum UnitType
     {
-        Ground,
-        Tower,
+        None = 0,
+        Ground = 1 << 0,
+        Tower = 1 << 1,
     }
 
     public enum AttackTargetType

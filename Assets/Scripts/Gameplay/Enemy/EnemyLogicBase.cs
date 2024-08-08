@@ -29,9 +29,9 @@ namespace Gameplay.Enemy
 
         private const float frontCheckDistance = 2f;
         private List<SoliderAgent> distanceTargets = new List<SoliderAgent>(); //自己的攻击目标---base distance
-        private List<SoliderAgent> focusTargets = new List<SoliderAgent>();    //自己的攻击目标---base focus
+        private List<SoliderAgent> focusTargets = new List<SoliderAgent>(); //自己的攻击目标---base focus
         private HashSet<SoliderAgent> attackers = new HashSet<SoliderAgent>(); //在对自己攻击的士兵
-        
+
 
         //攻击
         private float attackTimer = 1000f;
@@ -41,9 +41,11 @@ namespace Gameplay.Enemy
         public HashSet<SoliderAgent> blockSoilders = new HashSet<SoliderAgent>();
 
         //血量
-        public float curHp;
+        public int curHp;
+
         //BuffManager
         protected BuffManager enemyBuffManager;
+
         protected EnemyLogicBase(EnemyAgent agent)
         {
             enemyAgent = agent;
@@ -224,16 +226,17 @@ namespace Gameplay.Enemy
                 var tempTarget = new AttackSoliderTarget(tempDis, temp);
                 tempDistanceTargets.Add(tempTarget);
             }
+
             SortMultiTargetsByDistance(tempDistanceTargets);
-            for (int i = 0; i < enemyModel.attackNum - focusTargets.Count ; i++)
+            for (int i = 0; i < enemyModel.attackNum - focusTargets.Count; i++)
             {
                 focusTargets.Add(tempDistanceTargets[i].target);
             }
         }
 
-        public bool HasFocusTarget()
+        private bool HasFocusTarget()
         {
-            if (focusTargets.Count >= enemyModel.attackNum )
+            if (focusTargets.Count >= enemyModel.attackNum)
                 return true;
             return false;
         }
@@ -280,10 +283,9 @@ namespace Gameplay.Enemy
         {
             if (isAttackReady)
             {
-                for (int i = enemyAgent.enemyLogic.distanceTargets.Count-1; i >= 0; i--)
+                for (int i = enemyAgent.enemyLogic.distanceTargets.Count - 1; i >= 0; i--)
                 {
-                    enemyAgent.enemyLogic.distanceTargets[i].soliderLogic.OnTakeDamage(enemyAgent.enemyModel.attackPoint,
-                        enemyAgent.enemyModel.magicAttackPoint, enemyAgent);
+                    enemyAgent.enemyLogic.distanceTargets[i].soliderLogic.OnTakeDamage(enemyAgent);
                     Debug.Log("敌人攻击距离最近");
                 }
 
@@ -295,10 +297,9 @@ namespace Gameplay.Enemy
         {
             if (isAttackReady)
             {
-                for (int i = enemyAgent.enemyLogic.focusTargets.Count-1; i >= 0; i--)
+                for (int i = enemyAgent.enemyLogic.focusTargets.Count - 1; i >= 0; i--)
                 {
-                    enemyAgent.enemyLogic.focusTargets[i].soliderLogic.OnTakeDamage(enemyAgent.enemyModel.attackPoint,
-                        enemyAgent.enemyModel.magicAttackPoint, enemyAgent);
+                    enemyAgent.enemyLogic.focusTargets[i].soliderLogic.OnTakeDamage(enemyAgent);
                     Debug.Log("敌人专注攻击");
                 }
                 // enemyAgent.enemyLogic.focusTarget.soliderLogic.OnTakeDamage(enemyAgent.enemyModel.attackPoint,
@@ -309,11 +310,21 @@ namespace Gameplay.Enemy
             }
         }
 
-
-        //最基础的远战
-        protected void RangeAttack()
+        protected void MeleeAOE()
         {
+            if (isAttackReady)
+            {
+                CalculateCd();
+                for (int i = enemyAgent.enemyLogic.focusTargets.Count - 1; i >= 0; i--)
+                {
+                    Debug.Log("单体AOE攻击！！！");
+                    enemyAgent.enemyLogic.focusTargets[i].soliderLogic.OnTakeAOEDamage(
+                        enemyAgent,
+                        enemyAgent.enemyModel.attackAoeRange);
+                }
+            }
         }
+        
 
         #endregion
 
@@ -321,12 +332,16 @@ namespace Gameplay.Enemy
         public void OnTakeDamage(SoliderAgent soliderAgent)
         {
             AddAttacker(soliderAgent);
-            curHp -= enemyBuffManager.CalculateDamage(new DamageInfo(soliderAgent, enemyAgent));
-            Debug.Log("敌人目前的血量是：" +curHp);
+            var damagePoint = enemyBuffManager.CalculateDamage(new DamageInfo(soliderAgent, enemyAgent));
+            if (damagePoint == 0)
+            {
+                Debug.Log("敌人免伤，目前的血量是：" + curHp);
+                return;
+            }
 
+            Debug.Log("敌人扣血，敌人目前的血量是：" + curHp);
+            curHp -= damagePoint;
             enemyAgent.StartCoroutine(FlashRed());
-
-
             if (curHp <= 0)
             {
                 Die();
@@ -359,14 +374,14 @@ namespace Gameplay.Enemy
             // 获取 aoeRange 范围内的所有敌人
             List<EnemyAgent> aoeTargets = GetAOETargets(enemyAgent.transform.position, aoeRange);
 
-            if(aoeTargets != null)
+            if (aoeTargets != null)
             {
                 Debug.Log("不为空");
             }
             else
             {
                 Debug.Log("为空");
-                foreach(var item in aoeTargets)
+                foreach (var item in aoeTargets)
                 {
                     Debug.Log(item.gameObject.name);
                 }
@@ -374,13 +389,11 @@ namespace Gameplay.Enemy
 
             foreach (var enemy in aoeTargets)
             {
-                enemy.enemyLogic.OnTakeDamage( soliderAgent);
+                enemy.enemyLogic.OnTakeDamage(soliderAgent);
             }
 
             DrawRange(enemyAgent, aoeRange);
         }
-
-
 
 
         private void AddAttacker(SoliderAgent attacker)

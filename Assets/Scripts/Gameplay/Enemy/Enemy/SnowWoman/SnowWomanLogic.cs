@@ -1,12 +1,8 @@
-using UnityEngine;
-
-namespace Gameplay.Enemy.Enemy.SmallGuaiGuai
+namespace Gameplay.Enemy.Enemy.SnowWoman
 {
-    public class SmallGuaiGuaiLogic : EnemyLogicBase
+    public class SnowWomanLogic : EnemyLogicBase
     {
-
-
-        public SmallGuaiGuaiLogic(EnemyAgent agent) : base(agent)
+        public SnowWomanLogic(EnemyAgent agent) : base(agent)
         {
         }
 
@@ -19,7 +15,9 @@ namespace Gameplay.Enemy.Enemy.SmallGuaiGuai
         public override void Attack()
         {
             base.Attack();
-            FocusAttack();
+            MeleeAOE();
         }
     }
 }
+
+

@@ -62,7 +62,7 @@ namespace Utilities
                     soliderModel.attackNum = ParseInt(value[13]);
                     soliderModel.attackAoeRange = ParseFloat(value[14]);
                     soliderModel.attackTargetType = (AttackTargetType)ParseInt(value[15]);
-                    soliderModel.attackEnemyType = (UnitType)ParseInt(value[16]);
+                    soliderModel.attackEnemyType = ParseUnitType(value[16]);
                     
                     soliderModel.moveSpeed = ParseFloat(value[17]);
                     soliderModel.relocateCd = ParseFloat(value[18]);
@@ -92,7 +92,7 @@ namespace Utilities
                     enemyModel.enemyDes = value[2];
 
                     enemyModel.enemyType = (UnitType)ParseInt(value[3]);
-                    enemyModel.maxHp = ParseFloat(value[4]);
+                    enemyModel.maxHp = ParseInt(value[4]);
                     enemyModel.spawnNum = ParseInt(value[5]);
                     enemyModel.attackPoint = ParseInt(value[6]);
                     enemyModel.magicAttackPoint = ParseInt(value[7]);
@@ -141,6 +141,21 @@ namespace Utilities
                 throw new FormatException($"Unable to parse ");
             }
         }
-        
+
+
+        private UnitType ParseUnitType(string value)
+        {
+            UnitType attackType = UnitType.None;
+            string[] parts = value.Split('|');
+            foreach (var item in parts)
+            {
+                if (int.TryParse(item, out int intValue))
+                {
+                    attackType |= (UnitType)(1 << intValue);
+                }
+            }
+
+            return attackType;
+        }
     }
 }

@@ -29,7 +29,7 @@ namespace Gameplay.Player
         protected SoliderModelBase soliderModel;
 
         private const float frontCheckDistance = 2f;
-        
+
         public List<UnitAgent> attackTargets = new List<UnitAgent>(); //在攻击的目标:可以是敌人也可以是友方
         private HashSet<EnemyAgent> attackers = new HashSet<EnemyAgent>(); //在对自己攻击的敌方
 
@@ -49,10 +49,10 @@ namespace Gameplay.Player
 
         public void InitBlockData(GridCell block)
         {
-            currentBlock  = block;
+            currentBlock = block;
             nextBlock = block.nextCells;
         }
-        
+
         //BuffManager
         public BuffManager playerBuffManager;
 
@@ -61,7 +61,6 @@ namespace Gameplay.Player
             soliderAgent = agent;
             soliderModel = soliderAgent.soliderModel;
         }
-        
 
 
         #region 移动
@@ -91,10 +90,11 @@ namespace Gameplay.Player
 
             if (currentBlock == null || nextBlock == null || nextBlock.Count != 1)
             {
-                if(BlockManager.instance.headSoliderBlocks.ContainsKey(soliderAgent))
+                if (BlockManager.instance.headSoliderBlocks.ContainsKey(soliderAgent))
                 {
                     BlockManager.instance.OnHeadSoliderDestory(soliderAgent);
                 }
+
                 GameObject.Destroy(soliderAgent.gameObject);
                 return;
             }
@@ -193,35 +193,13 @@ namespace Gameplay.Player
             return true;
         }
 
-        private void DrawAttackRange()
-        {
-            Vector3 start = soliderAgent.transform.position;
-            Vector3 end = start + Vector3.up * 0.1f;
-
-            int segments = 20;
-            float angle = 0f;
-            float angleStep = 360f / segments;
-            for (int i = 0; i < segments; i++)
-            {
-                Vector3 offset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * angle), 0, Mathf.Cos(Mathf.Deg2Rad * angle)) *
-                                 soliderModel.attackRange;
-                Vector3 nextOffset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * (angle + angleStep)), 0,
-                    Mathf.Cos(Mathf.Deg2Rad * (angle + angleStep))) * soliderModel.attackRange;
-
-                Debug.DrawLine(start + offset, start + nextOffset, Color.blue);
-
-                angle += angleStep;
-            }
-        }
 
         protected virtual void ClearTarget()
         {
-            
         }
 
         public virtual void RemoveTarget(UnitAgent target)
         {
-            
         }
 
         public virtual void GetTarget()
@@ -234,14 +212,8 @@ namespace Gameplay.Player
 
         protected virtual bool CheckMatchAttackType(EnemyAgent target)
         {
-            
-        }
-        //群攻获取目标
-        protected void DistanceBasedGetTarget()
-        {
             return true;
         }
-        
 
         #endregion
 
@@ -260,8 +232,6 @@ namespace Gameplay.Player
         }
 
 
-
-
         //远程写在子类
         protected void RangeAttack()
         {
@@ -270,25 +240,78 @@ namespace Gameplay.Player
         #endregion
 
 
-        //受击
-        public void OnTakeDamage(float damage, float magicDamage, EnemyAgent enemyAgent)
+        #region 受击
+
+        public void OnTakeDamage(EnemyAgent enemyAgent)
         {
             AddAttacker(enemyAgent);
-            // 减少士兵的生命值
-            soliderModel.maxHp = soliderModel.maxHp - (damage * (1 - soliderModel.defendReducePercent)) -
-                                 (magicDamage * (1 - soliderModel.magicDefendReducePercent));
 
-            Debug.Log("士兵目前的血量是：" + soliderModel.maxHp);
-            Debug.Log("士兵受到的物理伤害为：" + (damage * (1 - soliderModel.defendReducePercent)));
-            Debug.Log("士兵受到的法术伤害为：" + (magicDamage * (1 - soliderModel.magicDefendReducePercent)));
+            var damagePoint = playerBuffManager.CalculateDamage(new DamageInfo(enemyAgent, soliderAgent));
+            if (damagePoint == 0)
+            {
+                Debug.Log("士兵免伤，目前的血量是：" + curHp);
+                return;
+            }
 
+            Debug.Log("士兵扣血，目前的血量是：" + curHp);
+            curHp -= damagePoint;
             soliderAgent.StartCoroutine(FlashRed());
-
             if (soliderModel.maxHp <= 0)
             {
                 Die();
             }
         }
+
+
+        //受到AOE伤害后,根据当前的攻击者(敌人)的AOE攻击范围,以自己为中心寻找范围内的士兵,并使其造成伤害
+        public void OnTakeAOEDamage(EnemyAgent enemyAgent, float aoeRange)
+        {
+            // 当前敌人受到伤害
+            OnTakeDamage(enemyAgent);
+
+            // 获取 aoeRange 范围内的所有敌人
+            List<SoliderAgent> aoeTargets = GetAOETargets(soliderAgent.transform.position, aoeRange);
+
+            if (aoeTargets != null)
+            {
+                Debug.Log("不为空");
+            }
+            else
+            {
+                Debug.Log("为空");
+                foreach (var item in aoeTargets)
+                {
+                    Debug.Log(item.gameObject.name);
+                }
+            }
+
+            foreach (var solider in aoeTargets)
+            {
+                solider.soliderLogic.OnTakeDamage(enemyAgent);
+            }
+
+            DrawRange(enemyAgent, aoeRange);
+        }
+
+        public List<SoliderAgent> GetAOETargets(Vector3 position, float aoeRange)
+        {
+            List<SoliderAgent> aoeTargets = new List<SoliderAgent>();
+            Collider[] hitColliders = Physics.OverlapSphere(position, aoeRange, LayerMask.GetMask("Solider"));
+
+            foreach (var collider in hitColliders)
+            {
+                var solider = collider.GetComponent<SoliderAgent>();
+                if (solider != null && solider != soliderAgent) // 确保不是当前的敌人
+                {
+                    aoeTargets.Add(solider);
+                }
+            }
+
+            return aoeTargets;
+        }
+
+        #endregion
+
 
         private void AddAttacker(EnemyAgent attacker)
         {
@@ -331,6 +354,7 @@ namespace Gameplay.Player
             {
                 agent.enemyLogic.RemoveTarget(soliderAgent);
             }
+
             //若该士兵是被阻挡的，通知被阻挡的人，他死了
             if (blocker != null)
             {
@@ -340,5 +364,52 @@ namespace Gameplay.Player
             soliderAgent.StopAllCoroutines();
             Object.Destroy(soliderAgent.gameObject);
         }
+
+
+        #region 绘制
+
+        private void DrawRange(EnemyAgent enemyAgent, float range)
+        {
+            Vector3 start = enemyAgent.transform.position;
+            Vector3 end = start + Vector3.up * 0.1f;
+
+            int segments = 20;
+            float angle = 0f;
+            float angleStep = 360f / segments;
+            for (int i = 0; i < segments; i++)
+            {
+                Vector3 offset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * angle), 0, Mathf.Cos(Mathf.Deg2Rad * angle)) *
+                                 range;
+                Vector3 nextOffset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * (angle + angleStep)), 0,
+                    Mathf.Cos(Mathf.Deg2Rad * (angle + angleStep))) * range;
+
+                Debug.DrawLine(start + offset, start + nextOffset, Color.blue);
+
+                angle += angleStep;
+            }
+        }
+
+        private void DrawAttackRange()
+        {
+            Vector3 start = soliderAgent.transform.position;
+            Vector3 end = start + Vector3.up * 0.1f;
+
+            int segments = 20;
+            float angle = 0f;
+            float angleStep = 360f / segments;
+            for (int i = 0; i < segments; i++)
+            {
+                Vector3 offset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * angle), 0, Mathf.Cos(Mathf.Deg2Rad * angle)) *
+                                 soliderModel.attackRange;
+                Vector3 nextOffset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * (angle + angleStep)), 0,
+                    Mathf.Cos(Mathf.Deg2Rad * (angle + angleStep))) * soliderModel.attackRange;
+
+                Debug.DrawLine(start + offset, start + nextOffset, Color.blue);
+
+                angle += angleStep;
+            }
+        }
+
+        #endregion
     }
 }

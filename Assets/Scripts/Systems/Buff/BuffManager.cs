@@ -80,7 +80,7 @@ public class BuffManager
     }
 
 
-    public float CalculateDamage(DamageInfo damageInfo)
+    public int CalculateDamage(DamageInfo damageInfo)
     {
         var attackData = CalculateAttack(damageInfo.attacker);
 
@@ -89,7 +89,7 @@ public class BuffManager
                    attackData.magicAttackPoint * (1 - defendData.magicDefendReducePercent);
 
 
-        return temp;
+        return (int)Math.Floor(temp);
     }
 
 
