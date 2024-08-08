@@ -7,7 +7,7 @@ using static UnityEngine.UI.Image;
 
 namespace Gameplay.Player
 {
-    public class HeadSoliderFeature : MonoBehaviour
+    public class SpawnCampFeature : MonoBehaviour
     {
         SoliderAgent agent;
         private GridCell lastDetectedCell;
@@ -35,9 +35,8 @@ namespace Gameplay.Player
             }
         }
 
-        public void UpdateCanPlace()
+        public void Update()
         {
-
             BlockManager.instance.CheckCanPlace();
             Vector3 origin = transform.position;
             Vector3 direction = Vector3.down;
@@ -58,8 +57,6 @@ namespace Gameplay.Player
                     // 仅当检测到的物体发生变化时才调用 UpdateCell
                     if (currentCell != lastDetectedCell)
                     {
-                        BlockManager.instance.UpdateCell(agent, currentCell);//放入字典
-                        BlockManager.instance.CheckHeadSolider(currentCell);
                         lastDetectedCell = currentCell; // 更新最后检测到的物体
                     }
                 }
@@ -76,14 +73,18 @@ namespace Gameplay.Player
 
         public void CheckIsCrossRoad()
         {
+            Debug.Log("CheckIsCrossRoad called");
             if (agent.soliderLogic.nextBlock.Count > 1)
             {
-                destoryLastCamp();
+                Debug.Log("Crossroad detected");
+                //destoryLastCamp();
                 SpawnCamp(agent.soliderLogic.currentBlock);
+                setLastCampUnActive();
                 BlockManager.instance.CheckAllStartPoint();
                 BlockManager.instance.CheckCanPlace();
             }
         }
+
 
         public void SpawnCamp(GridCell cell)
         {
@@ -110,6 +111,8 @@ namespace Gameplay.Player
             StartPoint startPoint = instance.GetComponent<StartPoint>();
             BlockManager.instance.startPointBlocks.Add(startPoint, newNextCell);
 
+            setCampDate(startPoint);
+
             foreach (GridCell previouscell in gridCell.previousCells)
             {
                 previouscell.nextCells.Add(gridCell);
@@ -121,15 +124,15 @@ namespace Gameplay.Player
             }
         }
 
-        public void destoryLastCamp()
+        public void setLastCampUnActive()
         {
             var position = lastCamp.gameObject.transform.position;
             var lastCampCell = lastCamp.gameObject.GetComponent<GridCell>();
 
             //清除BlockManager中的数据
-            foreach(var cell in lastCampCell.nextCells)
+            foreach (var cell in lastCampCell.nextCells)
             {
-                if(BlockManager.instance.canPlaceBlocks.ContainsKey(cell))
+                if (BlockManager.instance.canPlaceBlocks.ContainsKey(cell))
                 {
                     BlockManager.instance.canPlaceBlocks.Remove(cell);
                     cell.canPlace = false;
@@ -139,10 +142,20 @@ namespace Gameplay.Player
 
             BlockManager.instance.startPointBlocks.Remove(lastCamp);
 
-            GameObject.Destroy(lastCamp.gameObject);
+        }
 
-            Instantiate(cubePrefab, position, Quaternion.identity);
+        public void setCampDate(StartPoint start)
+        {
+            start.previousCamps.Add(lastCamp, BlockManager.instance.startPointBlocks[lastCamp]);
+        }
 
+        private void OnDestroy()
+        {
+            Debug.Log("Crossroad detected");
+            SpawnCamp(agent.soliderLogic.currentBlock);
+            setLastCampUnActive();
+            BlockManager.instance.CheckAllStartPoint();
+            BlockManager.instance.CheckCanPlace();
         }
     }
 }
