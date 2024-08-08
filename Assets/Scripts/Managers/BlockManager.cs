@@ -4,6 +4,7 @@ using Gameplay.Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Managers
 {
@@ -19,6 +20,7 @@ namespace Managers
 
         public Dictionary<GridCell, int> canPlaceBlocks = new Dictionary<GridCell, int>();
 
+        public static UnityAction OnAddStartPoint;
         private void Awake()
         {
             if (instance != null)
@@ -31,6 +33,7 @@ namespace Managers
 
         private void Start()
         {
+            OnAddStartPoint?.Invoke();
             OnInit();
         }
 

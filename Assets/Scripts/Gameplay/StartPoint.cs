@@ -28,12 +28,16 @@ namespace Gameplay
             rend = GetComponent<Renderer>();
             cell = GetComponent<GridCell>();
             startColor = rend.material.color;
-        }
 
-        void Start()
+            BlockManager.OnAddStartPoint += AddStartPoint;
+        }
+        
+
+        private void AddStartPoint()
         {
             BlockManager.instance.startPoints.Add(this);
         }
+        
 
         public void OnInit()
         {
