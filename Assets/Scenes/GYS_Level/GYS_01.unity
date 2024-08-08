@@ -5645,7 +5645,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousCells:
   - {fileID: 2122548040}
-  nextCells: []
+  nextCells:
+  - {fileID: 292705425}
   showConnections: 0
   lineWidth: 5
   canPlace: 0
@@ -7018,7 +7019,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousCells:
   - {fileID: 906404254}
-  nextCells: []
+  nextCells:
+  - {fileID: 292705425}
   showConnections: 0
   lineWidth: 5
   canPlace: 0
@@ -7901,6 +7903,10 @@ PrefabInstance:
     - target: {fileID: 8206441781280445118, guid: c394aa277d20d4744835be46ce228d5a, type: 3}
       propertyPath: minFov
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206441781280445118, guid: c394aa277d20d4744835be46ce228d5a, type: 3}
+      propertyPath: dragSpeed
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
