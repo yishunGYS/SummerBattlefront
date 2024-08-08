@@ -21,6 +21,8 @@ namespace Gameplay
 
         public List<GridCell> spawnBlocks = new List<GridCell>();
 
+        public SerializableDictionary<StartPoint, List<GridCell>> previousCamps;
+
         private void Awake()
         {
             rend = GetComponent<Renderer>();
@@ -43,6 +45,16 @@ namespace Gameplay
 
             if (!BlockManager.instance.startPointBlocks.ContainsKey(this))
                 BlockManager.instance.startPointBlocks.Add(this, spawnBlocks);
+        }
+
+        public void SetLastCampActive()
+        {
+            foreach (var startPoint in previousCamps.Keys)
+            {
+                BlockManager.instance.startPointBlocks.Add(startPoint, previousCamps[startPoint]);
+            }
+            BlockManager.instance.CheckAllStartPoint();
+            BlockManager.instance.CheckCanPlace();
         }
 
     }
