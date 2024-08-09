@@ -41,7 +41,7 @@ namespace Gameplay.Enemy
         public HashSet<SoliderAgent> blockSoilders = new HashSet<SoliderAgent>();
 
         //血量
-        public int curHp;
+        //public int curHp;
 
         //BuffManager
         protected BuffManager enemyBuffManager;
@@ -50,7 +50,7 @@ namespace Gameplay.Enemy
         {
             enemyAgent = agent;
             enemyModel = enemyAgent.enemyModel;
-            curHp = enemyModel.maxHp;
+            //curHp = enemyModel.maxHp;
 
             enemyBuffManager = new BuffManager(enemyAgent);
         }
@@ -348,14 +348,14 @@ namespace Gameplay.Enemy
             var damagePoint = enemyBuffManager.CalculateDamage(new DamageInfo(soliderAgent, enemyAgent));
             if (damagePoint == 0)
             {
-                Debug.Log("敌人免伤，目前的血量是：" + curHp);
+                Debug.Log("敌人免伤，目前的血量是：" + enemyAgent.curHp);
                 return;
             }
 
-            Debug.Log("敌人扣血，敌人目前的血量是：" + curHp);
-            curHp -= damagePoint;
+            Debug.Log("敌人扣血，敌人目前的血量是：" +  enemyAgent.curHp);
+            enemyAgent.curHp -= damagePoint;
             enemyAgent.StartCoroutine(FlashRed());
-            if (curHp <= 0)
+            if ( enemyAgent.curHp <= 0)
             {
                 Die();
             }

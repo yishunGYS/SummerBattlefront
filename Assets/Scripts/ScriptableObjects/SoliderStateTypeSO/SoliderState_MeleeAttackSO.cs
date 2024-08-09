@@ -5,12 +5,12 @@ using Utilities;
 
 namespace ScriptableObjects.SoliderStateTypeSO
 {
-    [CreateAssetMenu(fileName = "SoliderState_MeleeAttackSO", menuName = "ScriptableObjects/SoliderStateTypeSO/SoliderState_MeleeAttackSO")]
-    public class SoliderState_MeleeAttackSO : SoliderStateSO
+    [CreateAssetMenu(fileName = "SoliderState_AttackSO", menuName = "ScriptableObjects/SoliderStateTypeSO/SoliderState_AttackSO")]
+    public class SoliderState_AttackSO : SoliderStateSO
     {
         
 
-        public SoliderState_MeleeAttackSO()
+        public SoliderState_AttackSO()
         {
             stateType = UnitStateType.Attack;
         }

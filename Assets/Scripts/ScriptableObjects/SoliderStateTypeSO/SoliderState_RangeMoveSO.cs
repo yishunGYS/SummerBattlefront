@@ -10,8 +10,6 @@ namespace ScriptableObjects.SoliderStateTypeSO
     public class SoliderState_RangeMoveSO: SoliderStateSO
     {
         private const float enterToMoveTime = 0.2f;
-        private const float movePerTime = 1f;
-        
         private bool canMove = false;
         
        
@@ -34,12 +32,6 @@ namespace ScriptableObjects.SoliderStateTypeSO
             {
                 fsm.ChangeState(UnitStateType.Idle);
             }
-            //×ß×ßÍ£Í£
-            // if (!soliderAgent.soliderLogic.isAttackReady&& soliderAgent.soliderLogic.HasAttackTarget())
-            // {
-            //     fsm.ChangeState(UnitStateType.Idle);
-            // }
-            
 
             //Âß¼­ÇÐ»»
             if (soliderAgent.soliderLogic.CheckCanAttack())

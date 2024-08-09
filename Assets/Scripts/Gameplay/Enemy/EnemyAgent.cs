@@ -15,12 +15,14 @@ namespace Gameplay.Enemy
         private StateMachine fsm;
         
         //关卡开始一开始/第x阶段更新敌方防线的时候调用
-        public virtual void OnInit()
+        public override void OnInit()
         {
             InitData();
             fsm = GetComponent<StateMachine>();
             fsm.OnInit();
-            //enemyLogic = new EnemyLogicBase(this);
+            curHp = enemyModel.maxHp;
+            
+            base.OnInit();
         }
         
         
@@ -54,6 +56,10 @@ namespace Gameplay.Enemy
         {
             return new UnitDefendData(enemyModel.defendReducePercent, enemyModel.magicDefendReducePercent);
         }
-        
+
+        public override int GetMaxHp()
+        {
+            return enemyModel.maxHp;
+        }
     }
 }
