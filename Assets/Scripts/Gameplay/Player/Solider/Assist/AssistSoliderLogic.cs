@@ -22,7 +22,7 @@ namespace Gameplay.Player.Solider.Assist
         }
         
         
-        //辅助/治疗获取目标 override
+        //杈呭姪/娌荤枟鑾峰彇鐩爣 override
 
 
     }

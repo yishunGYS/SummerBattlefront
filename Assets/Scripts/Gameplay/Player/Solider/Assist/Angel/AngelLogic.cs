@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Gameplay.Player.Solider.Assist.Angel
 {
-    //ÆÕ¹¥ÎªÑªÁ¿×îµÍµÄÓÑ·½¼ÓÑª
+    //æ™®æ”»ä¸ºè¡€é‡æœ€ä½çš„å‹æ–¹åŠ è¡€
     public class AngelLogic : AssistSoliderLogic
     {
         public AngelLogic(SoliderAgent agent) : base(agent)
@@ -12,7 +12,7 @@ namespace Gameplay.Player.Solider.Assist.Angel
         }
 
 
-        //»ñÈ¡¹¥»÷·¶Î§ÄÚÑªÁ¿/ÑªÁ¿°Ù·Ö±È×îµÍµÄÓÑ·½
+        //è·å–æ”»å‡»èŒƒå›´å†…è¡€é‡/è¡€é‡ç™¾åˆ†æ¯”æœ€ä½çš„å‹æ–¹
         public override void GetTarget()
         {
             base.GetTarget();

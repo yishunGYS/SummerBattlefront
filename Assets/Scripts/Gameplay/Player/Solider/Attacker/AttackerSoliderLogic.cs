@@ -49,7 +49,7 @@ namespace Gameplay.Player.Solider.Attacker
 
         protected override bool CheckMatchAttackType(EnemyAgent target)
         {
-            //todo ÈôattackEnemyTypeÊÇ¶àÖÖ£¬ÄÇÃ´----´ıÀ©Õ¹
+            //todo è‹¥attackEnemyTypeæ˜¯å¤šç§ï¼Œé‚£ä¹ˆ----å¾…æ‰©å±•
             if ((soliderModel.attackEnemyType & target.enemyModel.enemyType) == UnitType.None) 
             {
                 return false;
@@ -85,9 +85,9 @@ namespace Gameplay.Player.Solider.Attacker
         
 
 
-        #region ¹¥»÷
+        #region æ”»å‡»
 
-        //×î»ù´¡µÄ½üÕ½
+        //æœ€åŸºç¡€çš„è¿‘æˆ˜
         protected void MeleeAttack()
         {
             if (isAttackReady)
@@ -98,7 +98,7 @@ namespace Gameplay.Player.Solider.Attacker
                     EnemyAgent enemyAgent = attackTargets[i] as EnemyAgent;
                     if (enemyAgent != null)
                     {
-                        Debug.Log("¹¥»÷£¡£¡£¡");
+                        Debug.Log("æ”»å‡»ï¼ï¼ï¼");
                         enemyAgent.enemyLogic.OnTakeDamage(soliderAgent);
                     }
                 }
@@ -113,7 +113,7 @@ namespace Gameplay.Player.Solider.Attacker
                 for (int i = attackTargets.Count - 1; i >= 0; i--)
                 {
                     EnemyAgent enemyAgent = attackTargets[i] as EnemyAgent;
-                    Debug.Log("µ¥ÌåAOE¹¥»÷£¡£¡£¡");
+                    Debug.Log("å•ä½“AOEæ”»å‡»ï¼ï¼ï¼");
                     if (enemyAgent != null)
                     {
                         enemyAgent.enemyLogic.OnTakeAOEDamage(
