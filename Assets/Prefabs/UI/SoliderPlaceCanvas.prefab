@@ -2011,7 +2011,7 @@ GameObject:
   - component: {fileID: 31130590160049976}
   - component: {fileID: 7314591316138237018}
   m_Layer: 5
-  m_Name: OverlayCanvas
+  m_Name: SoliderPlaceCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

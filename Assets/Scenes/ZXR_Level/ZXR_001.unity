@@ -301,7 +301,7 @@ MonoBehaviour:
   - {fileID: 548488550}
   nextCells:
   - {fileID: 326329393}
-  showConnections: 1
+  showConnections: 0
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
@@ -1442,7 +1442,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousCells: []
-  nextCells: []
+  nextCells:
+  - {fileID: 438987728}
   showConnections: 0
   lineWidth: 5
   canPlace: 0
@@ -2188,7 +2189,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousCells: []
-  nextCells: []
+  nextCells:
+  - {fileID: 179862687}
   showConnections: 0
   lineWidth: 5
   canPlace: 0
@@ -6148,7 +6150,7 @@ MonoBehaviour:
   - {fileID: 675153002}
   nextCells:
   - {fileID: 887394603}
-  showConnections: 1
+  showConnections: 0
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
