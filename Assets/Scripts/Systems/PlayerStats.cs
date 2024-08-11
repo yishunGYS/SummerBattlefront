@@ -1,3 +1,5 @@
+using Sirenix.OdinInspector;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,6 +7,9 @@ namespace Systems
 {
     public class PlayerStats : MonoBehaviour
     {
+        public static PlayerStats Instance;
+
+        [ShowInInspector]
         public static int Money;
         public int startMoney = 400;
 
@@ -32,6 +37,15 @@ namespace Systems
         private float regainTimer;
         private int currentPhaseIndex;
 
+        // 定义OnMoneyChanged事件
+        public static event Action<int, int> OnMoneyChanged;
+
+        void Awake()
+        {
+            // 初始化实例
+            Instance = this;
+        }
+
         void Start()
         {
             Money = startMoney;
@@ -51,6 +65,9 @@ namespace Systems
             Rounds = 0;
             switchTimer = 0f;
             regainTimer = 0f;
+
+            // 初始更新UI
+            OnMoneyChanged?.Invoke(Money, currentLimit);
         }
 
         void FixedUpdate()
@@ -72,6 +89,9 @@ namespace Systems
                 {
                     Money = currentLimit;
                 }
+
+                // 触发OnMoneyChanged事件
+                OnMoneyChanged?.Invoke(Money, currentLimit);
             }
         }
 

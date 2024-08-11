@@ -12,7 +12,6 @@ namespace Gameplay.Features
         private GridCell lastDetectedCell;
 
         public GameObject campPrefab;
-        public GameObject cubePrefab;
 
         public StartPoint lastCamp;
         private GridCell initBlock;
@@ -20,6 +19,8 @@ namespace Gameplay.Features
         private void Awake()
         {
             agent = GetComponent<SoliderAgent>();
+
+            campPrefab = Resources.Load<GameObject>("BlockPrefab/SpawnPoint");
         }
 
         private void Start()

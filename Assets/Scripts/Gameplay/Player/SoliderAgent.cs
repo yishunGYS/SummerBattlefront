@@ -1,4 +1,5 @@
 using System;
+using Ilumisoft.Health_System.Scripts.UI;
 using Managers;
 using UnityEngine;
 using Utilities;
@@ -14,15 +15,22 @@ namespace Gameplay.Player
         private StateMachine fsm;
 
         //instantiate时
-        public virtual void OnInit()
+        public override void OnInit()
         {
             InitData();
             fsm = GetComponent<StateMachine>();
             fsm.OnInit();
+            curHp = soliderModel.maxHp;
+            
+            base.OnInit();
         }
 
         private void Update()
         {
+            if (!fsm)
+            {
+                return;
+            }
             fsm.OnUpdate();
             
             //soliderLogic.OnUpdateBuff();
@@ -52,7 +60,10 @@ namespace Gameplay.Player
         {
             return new UnitDefendData(soliderModel.defendReducePercent, soliderModel.magicDefendReducePercent);
         }
-        
-        
+
+        public override int GetMaxHp()
+        {
+            return soliderModel.maxHp;
+        }
     }
 }

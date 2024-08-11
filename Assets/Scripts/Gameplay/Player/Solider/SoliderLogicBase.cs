@@ -38,7 +38,7 @@ namespace Gameplay.Player
         public bool isAttackReady = true;
 
         //血量
-        public int curHp;
+        //public int curHp;
 
         //阻挡的敌人
         public EnemyAgent blocker;
@@ -62,7 +62,7 @@ namespace Gameplay.Player
             soliderModel = soliderAgent.soliderModel;
             playerBuffManager = new BuffManager(soliderAgent);
 
-            curHp = soliderModel.maxHp;
+            
         }
 
 
@@ -96,6 +96,11 @@ namespace Gameplay.Player
                 if (BlockManager.instance.headSoliderBlocks.ContainsKey(soliderAgent))
                 {
                     BlockManager.instance.OnHeadSoliderDestory(soliderAgent);
+                }
+
+                if (currentBlock.gameObject.GetComponent<StartPoint>())
+                {
+                    Debug.Log("返回费用");
                 }
 
                 GameObject.Destroy(soliderAgent.gameObject);
@@ -250,18 +255,18 @@ namespace Gameplay.Player
             var damagePoint = playerBuffManager.CalculateDamage(new DamageInfo(enemyAgent, soliderAgent));
             if (damagePoint == 0)
             {
-                Debug.Log("士兵免伤，目前的血量是：" + curHp);
+                Debug.Log("士兵免伤，目前的血量是：" + soliderAgent.curHp);
                 return;
             }
 
-            Debug.Log("士兵扣血，目前的血量是：" + curHp);
-            curHp -= damagePoint;
+            Debug.Log("士兵扣血，目前的血量是：" + soliderAgent.curHp);
+            soliderAgent.curHp -= damagePoint;
             if (soliderAgent) 
             {
                 soliderAgent.StartCoroutine(FlashRed());
             }
            
-            if (curHp<= 0)
+            if (soliderAgent.curHp<= 0)
             {
                 Die();
             }
@@ -269,6 +274,10 @@ namespace Gameplay.Player
         //受到AOE伤害后,根据当前的攻击者(敌人)的AOE攻击范围,以自己为中心寻找范围内的士兵,并使其造成伤害
         public void OnTakeAOEDamage(EnemyAgent enemyAgent, float aoeRange)
         {
+            if (!soliderAgent)
+            {
+                return;
+            }
             // 当前敌人受到伤害
             OnTakeDamage(enemyAgent);
 

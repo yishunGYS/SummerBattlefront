@@ -12,9 +12,5 @@ namespace Gameplay.Player.Solider.MeleeGodling
         }
         
         
-        public void SmallCure(SoliderAgent agent)
-        {
-            agent.soliderLogic.curHp += 10;
-        }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 namespace ScriptableObjects.TraverserStateTypeSO
 {
     [CreateAssetMenu(fileName = "TraverserState_AttackSO", menuName = "ScriptableObjects/TraverserState/TraverserState_AttackSO")]
-    public class TraverserState_AttackSO : SoliderState_MeleeAttackSO
+    public class TraverserState_AttackSO : SoliderState_AttackSO
     {
         public override void OnEnter()
         {

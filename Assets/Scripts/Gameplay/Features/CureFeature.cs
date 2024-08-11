@@ -39,10 +39,10 @@ namespace Gameplay.Features
                 SoliderAgent targetAgent = solider as SoliderAgent;
                 if (targetAgent != null)
                 {
-                    if (targetAgent.soliderLogic.curHp < targetAgent.soliderModel.maxHp)
+                    if (targetAgent.curHp < targetAgent.soliderModel.maxHp)
                     {
-                        int newHp = targetAgent.soliderLogic.curHp + CalculateCureAmount();
-                        targetAgent.soliderLogic.curHp = Math.Clamp(newHp, 0, targetAgent.soliderModel.maxHp);
+                        int newHp = targetAgent.curHp + CalculateCureAmount();
+                        targetAgent.curHp = Math.Clamp(newHp, 0, targetAgent.soliderModel.maxHp);
                         Debug.Log("治疗"+targetAgent.name+" "+CalculateCureAmount());
                     }
                 }

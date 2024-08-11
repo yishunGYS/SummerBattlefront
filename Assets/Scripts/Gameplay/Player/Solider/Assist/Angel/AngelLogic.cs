@@ -53,7 +53,7 @@ namespace Gameplay.Player.Solider.Assist.Angel
             foreach (var collider in hitColliders)
             {
                 var temp = collider.GetComponent<SoliderAgent>();
-                var tempTargetHp = temp.soliderLogic.curHp;
+                var tempTargetHp = temp.curHp;
                 if (tempTargetHp == temp.soliderModel.maxHp)
                 {
                     continue;

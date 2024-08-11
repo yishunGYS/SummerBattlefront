@@ -8,7 +8,7 @@ namespace ScriptableObjects.SoliderStateTypeSO
     {
         private bool canEnterMove;
         private float timer;
-
+        public float waitTime;
         
 
         public override void OnUpdate()
@@ -22,7 +22,7 @@ namespace ScriptableObjects.SoliderStateTypeSO
             if (soliderAgent.soliderLogic.CheckObstacle() == false || soliderAgent.soliderLogic.isAttackReady == false)
             {
                 timer += Time.deltaTime;
-                if (timer> 0.2f)
+                if (timer> waitTime)
                 {
                     fsm.ChangeState(UnitStateType.Move);
                     timer = 0;
