@@ -1,15 +1,18 @@
+using Gameplay.Enemy;
 using Managers;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static UnityEngine.UI.Image;
 
 namespace _3DlevelEditor_GYS
 {
     public enum BlockType
     {
         None,
-        Path
+        Path,
+        CanCamp
     }
 
     public class GridCell : MonoBehaviour
@@ -35,6 +38,8 @@ namespace _3DlevelEditor_GYS
         {
             rend = gameObject.GetComponent<Renderer>();
             originalColor = rend.material.color;
+
+            //startPointPrefab = Resources.Load<GameObject>("BlockPrefab/SpawnPoint");
         }
 
         private void OnDrawGizmos()

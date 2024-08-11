@@ -98,6 +98,11 @@ namespace Gameplay.Player
                     BlockManager.instance.OnHeadSoliderDestory(soliderAgent);
                 }
 
+                if (currentBlock.gameObject.GetComponent<StartPoint>())
+                {
+                    Debug.Log("返回费用");
+                }
+
                 GameObject.Destroy(soliderAgent.gameObject);
                 return;
             }
