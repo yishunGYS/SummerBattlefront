@@ -14,6 +14,8 @@ namespace Gameplay.Player
         public SoliderLogicBase soliderLogic;
         private StateMachine fsm;
 
+        public StartPoint birthPonit;
+
         //instantiate时
         public override void OnInit()
         {
@@ -32,7 +34,7 @@ namespace Gameplay.Player
                 return;
             }
             fsm.OnUpdate();
-            
+            birthPonit = soliderLogic.birthPoint;
             //soliderLogic.OnUpdateBuff();
         }
         

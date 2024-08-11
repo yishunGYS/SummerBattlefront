@@ -70,6 +70,7 @@ namespace Managers
                 spawnedCharacter.transform.SetParent(SoliderContainer.transform);
                 spawnedCharacter.OnInit();
                 spawnedCharacter.soliderLogic.InitBlockData(block);
+                spawnedCharacter.soliderLogic.InitBirthPointData(block);
             }
 
             PlayerStats.Money -= cost;
@@ -92,6 +93,7 @@ namespace Managers
                     spawnedCharacter.transform.SetParent(SoliderContainer.transform);
                     spawnedCharacter.OnInit();
                     spawnedCharacter.soliderLogic.InitBlockData(block);
+                    spawnedCharacter.soliderLogic.InitBirthPointData(block);
                 }
 
                 PlayerStats.Money -= cost;

@@ -47,10 +47,23 @@ namespace Gameplay.Player
         public GridCell currentBlock;
         public List<GridCell> nextBlock;
 
+        //从哪个出生点出生的
+        public StartPoint birthPoint;
+
         public void InitBlockData(GridCell block)
         {
             currentBlock = block;
             nextBlock = block.nextCells;
+        }
+
+        public void InitBirthPointData(GridCell block)
+        {
+            birthPoint = BlockManager.instance.ReturnHeadStartPoint(block);
+
+            if (birthPoint == null)
+            {
+                birthPoint = currentBlock.previousCells[0].GetComponent<StartPoint>();
+            }
         }
 
         //BuffManager
@@ -61,8 +74,6 @@ namespace Gameplay.Player
             soliderAgent = agent;
             soliderModel = soliderAgent.soliderModel;
             playerBuffManager = new BuffManager(soliderAgent);
-
-            
         }
 
 
@@ -227,12 +238,12 @@ namespace Gameplay.Player
         {
             isAttackReady = false;
             //攻击间隔<0 说明只能单次攻击
-            if (soliderModel.attackInterval<0)
+            if (soliderModel.attackInterval < 0)
             {
                 return;
             }
-            
-            
+
+
             await Task.Delay(TimeSpan.FromSeconds(soliderModel.attackInterval));
             isAttackReady = true;
         }
@@ -261,16 +272,17 @@ namespace Gameplay.Player
 
             Debug.Log("士兵扣血，目前的血量是：" + soliderAgent.curHp);
             soliderAgent.curHp -= damagePoint;
-            if (soliderAgent) 
+            if (soliderAgent)
             {
                 soliderAgent.StartCoroutine(FlashRed());
             }
-           
-            if (soliderAgent.curHp<= 0)
+
+            if (soliderAgent.curHp <= 0)
             {
                 Die();
             }
         }
+
         //受到AOE伤害后,根据当前的攻击者(敌人)的AOE攻击范围,以自己为中心寻找范围内的士兵,并使其造成伤害
         public void OnTakeAOEDamage(EnemyAgent enemyAgent, float aoeRange)
         {
@@ -278,6 +290,7 @@ namespace Gameplay.Player
             {
                 return;
             }
+
             // 当前敌人受到伤害
             OnTakeDamage(enemyAgent);
 

@@ -25,7 +25,7 @@ namespace Systems
         public int currentLimit;
 
         [Header("经过多长时间切换到下一个阶段")]
-        public int switchPhase;
+        //public int switchPhase;
 
         [Header("回复速度")]
         public List<int> regainPhase;
@@ -73,7 +73,7 @@ namespace Systems
         void FixedUpdate()
         {
             RegainMoneyOverTime();
-            SwitchPhaseOverTime();
+            //SwitchPhaseOverTime();
         }
 
         void RegainMoneyOverTime()
@@ -95,22 +95,22 @@ namespace Systems
             }
         }
 
-        void SwitchPhaseOverTime()
-        {
-            switchTimer += Time.fixedDeltaTime;
-
-            if (switchTimer >= switchPhase)
-            {
-                currentPhaseIndex++;
-
-                if (currentPhaseIndex < regainPhase.Count && currentPhaseIndex < limitPhase.Count)
-                {
-                    currentRegainRate = regainPhase[currentPhaseIndex];
-                    currentLimit = limitPhase[currentPhaseIndex];
-                }
-
-                switchTimer = 0f;
-            }
-        }
+        // void SwitchPhaseOverTime()
+        // {
+        //     switchTimer += Time.fixedDeltaTime;
+        //
+        //     if (switchTimer >= switchPhase)
+        //     {
+        //         currentPhaseIndex++;
+        //
+        //         if (currentPhaseIndex < regainPhase.Count && currentPhaseIndex < limitPhase.Count)
+        //         {
+        //             currentRegainRate = regainPhase[currentPhaseIndex];
+        //             currentLimit = limitPhase[currentPhaseIndex];
+        //         }
+        //
+        //         switchTimer = 0f;
+        //     }
+        // }
     }
 }
