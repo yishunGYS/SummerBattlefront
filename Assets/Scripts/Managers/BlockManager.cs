@@ -3,6 +3,7 @@ using Gameplay;
 using Gameplay.Player;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -37,6 +38,22 @@ namespace Managers
             OnInit();
         }
 
+        public StartPoint ReturnHeadStartPoint(GridCell block)
+        {
+            SoliderAgent headSolider;
+            foreach (List<GridCell> cells in headSoliderBlocks.Values)
+            {
+                if (cells.Contains(block))
+                {
+                    headSolider = headSoliderBlocks.FirstOrDefault(x => x.Value == cells).Key;
+                    return headSolider.GetComponent<UpdateSpawnFeature>().startPoint;
+                }
+            }
+
+            return null;
+        }
+        
+        
         private void OnInit()
         {
             foreach (StartPoint startPoint in startPoints)

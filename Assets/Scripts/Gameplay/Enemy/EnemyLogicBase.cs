@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Gameplay.Features;
 using Gameplay.Player;
 using ScriptableObjects.SoliderStateTypeSO;
 using Unity.VisualScripting;
@@ -357,6 +358,11 @@ namespace Gameplay.Enemy
             enemyAgent.StartCoroutine(FlashRed());
             if ( enemyAgent.curHp <= 0)
             {
+                var eliteCmpt = enemyAgent.GetComponent<EliteEnemyFeature>();
+                if (eliteCmpt)
+                {
+                    eliteCmpt.lastCamp = soliderAgent.soliderLogic.birthPoint;
+                }
                 Die();
             }
         }
@@ -453,6 +459,11 @@ namespace Gameplay.Enemy
 
             enemyAgent.StopAllCoroutines();
             Object.Destroy(enemyAgent.gameObject);
+        }
+
+        public HashSet<SoliderAgent> GetAttackers()
+        {
+            return attackers;
         }
     }
 }

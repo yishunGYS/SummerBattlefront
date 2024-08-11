@@ -60,8 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startMoney: 400
   startLives: 20
-  currentRegainRate: 1
-  currentLimit: 1
-  switchPhase: 1
+  currentRegainRate: 0
+  currentLimit: 10
   regainPhase: 
-  limitPhase: 
+  limitPhase: 0a000000

@@ -36,7 +36,7 @@ namespace Gameplay.Features
                 currentBlock = currentCell;
             }
         }
-
+        
         public void SpawnCamp(GridCell cell)
         {
             List<GridCell> newPreviousCell = cell.previousCells;

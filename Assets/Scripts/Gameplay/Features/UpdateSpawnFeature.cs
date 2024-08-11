@@ -14,6 +14,8 @@ namespace Gameplay.Player
 
         private GridCell initBlock;
 
+        public StartPoint startPoint;
+
         private void Awake()
         {
             agent = GetComponent<SoliderAgent>();
@@ -26,6 +28,8 @@ namespace Gameplay.Player
                 GridCell currentCell = hit.collider.GetComponent<GridCell>();
 
                 initBlock = currentCell;
+
+                startPoint = initBlock.previousCells[0].GetComponent<StartPoint>();
             }
         }
 

@@ -19,7 +19,7 @@ namespace Managers
 			//GameIsOver = false;
 			
 			InitCsvReader();
-			InitEnemy();
+			InitEnemy(EnemyContainer.transform);
 		}
 		
 		
@@ -53,13 +53,26 @@ namespace Managers
 			csvReader.OnStart();
 		}
 
-		private void InitEnemy()
+		private void InitEnemy(Transform parent)
 		{
 			if (!EnemyContainer ) { return; }
-			foreach (var item in EnemyContainer.GetComponentsInChildren<EnemyAgent>())
+			foreach (Transform child in parent)
 			{
-				item.OnInit();
+				// 如果子物体本身有EnemyAgent组件，调用OnInit
+				var enemyAgent = child.GetComponent<EnemyAgent>();
+				if (enemyAgent != null)
+				{
+					enemyAgent.OnInit();
+				}
+
+				// 递归调用此函数以检查所有子物体
+				InitEnemy(child);
 			}
+			
+			// foreach (var item in EnemyContainer.GetComponents<EnemyAgent>())
+			// {
+			// 	item.OnInit();
+			// }
 		}
 	}
 }
