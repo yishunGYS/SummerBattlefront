@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallGuaiGuai (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6855114071636747005, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8744579409802178309, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.65
@@ -192,7 +196,7 @@ GameObject:
   - component: {fileID: 27904151}
   - component: {fileID: 27904150}
   - component: {fileID: 27904149}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (13,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,6 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1225316542}
   nextCells:
@@ -235,7 +240,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &27904150
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -320,7 +324,7 @@ GameObject:
   - component: {fileID: 59687605}
   - component: {fileID: 59687604}
   - component: {fileID: 59687603}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (19,9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,6 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 548488550}
   nextCells:
@@ -363,7 +368,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &59687604
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -448,7 +452,7 @@ GameObject:
   - component: {fileID: 65348285}
   - component: {fileID: 65348284}
   - component: {fileID: 65348283}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (19,5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -482,6 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -489,7 +494,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &65348284
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -574,7 +578,7 @@ GameObject:
   - component: {fileID: 77763604}
   - component: {fileID: 77763603}
   - component: {fileID: 77763602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (19,6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -608,6 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -615,7 +620,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &77763603
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -700,7 +704,7 @@ GameObject:
   - component: {fileID: 87264630}
   - component: {fileID: 87264629}
   - component: {fileID: 87264628}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (16,10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -734,6 +738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 686493507}
@@ -742,7 +747,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &87264629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -827,7 +831,7 @@ GameObject:
   - component: {fileID: 125789076}
   - component: {fileID: 125789075}
   - component: {fileID: 125789074}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (35,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -861,6 +865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 927899855}
@@ -869,7 +874,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &125789075
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -954,7 +958,7 @@ GameObject:
   - component: {fileID: 132477543}
   - component: {fileID: 132477542}
   - component: {fileID: 132477541}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (5,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -988,6 +992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1832479636}
   nextCells:
@@ -997,7 +1002,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &132477542
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1082,7 +1086,7 @@ GameObject:
   - component: {fileID: 146458627}
   - component: {fileID: 146458626}
   - component: {fileID: 146458625}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (27,7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1116,6 +1120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 657027424}
@@ -1124,7 +1129,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &146458626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1209,7 +1213,7 @@ GameObject:
   - component: {fileID: 158900523}
   - component: {fileID: 158900522}
   - component: {fileID: 158900521}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (23,7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1243,6 +1247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 1366543883}
@@ -1251,7 +1256,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &158900522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1336,7 +1340,7 @@ GameObject:
   - component: {fileID: 161609120}
   - component: {fileID: 161609119}
   - component: {fileID: 161609118}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (28,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1355,6 +1359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 1248841098}
@@ -1364,7 +1369,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &161609119
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1464,7 +1468,7 @@ GameObject:
   - component: {fileID: 179862689}
   - component: {fileID: 179862688}
   - component: {fileID: 179862687}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (17,5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1498,6 +1502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 219607060}
@@ -1506,7 +1511,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &179862688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1591,7 +1595,7 @@ GameObject:
   - component: {fileID: 219607062}
   - component: {fileID: 219607061}
   - component: {fileID: 219607060}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (18,5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1625,6 +1629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 65348283}
@@ -1634,7 +1639,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &219607061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1719,7 +1723,7 @@ GameObject:
   - component: {fileID: 326329395}
   - component: {fileID: 326329394}
   - component: {fileID: 326329393}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (19,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1753,6 +1757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 675153002}
@@ -1761,7 +1766,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &326329394
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1846,7 +1850,7 @@ GameObject:
   - component: {fileID: 326766326}
   - component: {fileID: 326766325}
   - component: {fileID: 326766324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (7,14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1880,6 +1884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -1887,7 +1892,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &326766325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1972,7 +1976,7 @@ GameObject:
   - component: {fileID: 369050858}
   - component: {fileID: 369050857}
   - component: {fileID: 369050856}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (9,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2006,6 +2010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 440251359}
   nextCells:
@@ -2015,7 +2020,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &369050857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2218,7 +2222,7 @@ GameObject:
   - component: {fileID: 438987730}
   - component: {fileID: 438987729}
   - component: {fileID: 438987728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (16,5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2252,6 +2256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 179862687}
@@ -2260,7 +2265,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &438987729
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2345,7 +2349,7 @@ GameObject:
   - component: {fileID: 440251361}
   - component: {fileID: 440251360}
   - component: {fileID: 440251359}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (8,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2379,6 +2383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1562969124}
   nextCells:
@@ -2388,7 +2393,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &440251360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2520,6 +2524,10 @@ PrefabInstance:
       propertyPath: SoliderContainer
       value: 
       objectReference: {fileID: 6464956406857042835}
+    - target: {fileID: 1088496325023360150, guid: 24ff109a3ef6a1e47992ed5047d885d5, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 2860915444511125310, guid: 24ff109a3ef6a1e47992ed5047d885d5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2702,7 +2710,7 @@ GameObject:
   - component: {fileID: 489399906}
   - component: {fileID: 489399905}
   - component: {fileID: 489399904}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (31,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2736,6 +2744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 1092847154}
@@ -2744,7 +2753,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &489399905
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2829,7 +2837,7 @@ GameObject:
   - component: {fileID: 548488552}
   - component: {fileID: 548488551}
   - component: {fileID: 548488550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (19,10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2863,6 +2871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1560665000}
   nextCells:
@@ -2872,7 +2881,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &548488551
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2944,6 +2952,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548488548}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &590651603
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1903957192}
+    m_Modifications:
+    - target: {fileID: 4855506166706676011, guid: 6c9336a4d56fac54996f77fc9f838046, type: 3}
+      propertyPath: m_Name
+      value: Arches
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103291751367099956, guid: 6c9336a4d56fac54996f77fc9f838046, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.792335
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103291751367099956, guid: 6c9336a4d56fac54996f77fc9f838046, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103291751367099956, guid: 6c9336a4d56fac54996f77fc9f838046, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.4427795
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103291751367099956, guid: 6c9336a4d56fac54996f77fc9f838046, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103291751367099956, guid: 6c9336a4d56fac54996f77fc9f838046, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103291751367099956, guid: 6c9336a4d56fac54996f77fc9f838046, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103291751367099956, guid: 6c9336a4d56fac54996f77fc9f838046, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103291751367099956, guid: 6c9336a4d56fac54996f77fc9f838046, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103291751367099956, guid: 6c9336a4d56fac54996f77fc9f838046, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103291751367099956, guid: 6c9336a4d56fac54996f77fc9f838046, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6c9336a4d56fac54996f77fc9f838046, type: 3}
 --- !u!4 &600502683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8744579409802178309, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
@@ -3018,6 +3083,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallGuaiGuai (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6855114071636747005, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8744579409802178309, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.929
@@ -3076,7 +3145,7 @@ GameObject:
   - component: {fileID: 657027426}
   - component: {fileID: 657027425}
   - component: {fileID: 657027424}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (28,7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3110,6 +3179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 161609118}
@@ -3118,7 +3188,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &657027425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3203,7 +3272,7 @@ GameObject:
   - component: {fileID: 675153004}
   - component: {fileID: 675153003}
   - component: {fileID: 675153002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (19,7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3237,6 +3306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 1686368328}
@@ -3246,7 +3316,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &675153003
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3331,7 +3400,7 @@ GameObject:
   - component: {fileID: 686493509}
   - component: {fileID: 686493508}
   - component: {fileID: 686493507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (17,10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3365,6 +3434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 87264628}
   nextCells:
@@ -3374,7 +3444,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &686493508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3459,7 +3528,7 @@ GameObject:
   - component: {fileID: 724410339}
   - component: {fileID: 724410338}
   - component: {fileID: 724410337}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (11,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3493,6 +3562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1524490880}
   nextCells:
@@ -3502,7 +3572,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &724410338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3587,7 +3656,7 @@ GameObject:
   - component: {fileID: 743035343}
   - component: {fileID: 743035342}
   - component: {fileID: 743035341}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (13,10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3621,6 +3690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 898138415}
   nextCells:
@@ -3630,7 +3700,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &743035342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3715,7 +3784,7 @@ GameObject:
   - component: {fileID: 788755161}
   - component: {fileID: 788755160}
   - component: {fileID: 788755159}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (15,10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3749,6 +3818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1608708469}
   nextCells:
@@ -3758,7 +3828,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &788755160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3848,7 +3917,7 @@ GameObject:
   - component: {fileID: 887394605}
   - component: {fileID: 887394604}
   - component: {fileID: 887394603}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (21,7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3882,6 +3951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 2074610645}
@@ -3890,7 +3960,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &887394604
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3974,6 +4043,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallGuaiGuai
       objectReference: {fileID: 0}
+    - target: {fileID: 6855114071636747005, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8744579409802178309, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.56
@@ -4032,7 +4105,7 @@ GameObject:
   - component: {fileID: 898138417}
   - component: {fileID: 898138416}
   - component: {fileID: 898138415}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (13,9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4066,6 +4139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 27904149}
   nextCells:
@@ -4075,7 +4149,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &898138416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4160,7 +4233,7 @@ GameObject:
   - component: {fileID: 927899857}
   - component: {fileID: 927899856}
   - component: {fileID: 927899855}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (36,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4194,6 +4267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -4201,7 +4275,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &927899856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4286,7 +4359,7 @@ GameObject:
   - component: {fileID: 969061784}
   - component: {fileID: 969061783}
   - component: {fileID: 969061782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (6,11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4320,6 +4393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -4327,7 +4401,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &969061783
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4410,6 +4483,10 @@ PrefabInstance:
     - target: {fileID: 6855114071636747005, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
       propertyPath: m_Name
       value: SmallGuaiGuai (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855114071636747005, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8744579409802178309, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4562,6 +4639,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallGuaiGuai (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6855114071636747005, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8744579409802178309, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.08
@@ -4620,7 +4701,7 @@ GameObject:
   - component: {fileID: 1092847156}
   - component: {fileID: 1092847155}
   - component: {fileID: 1092847154}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (32,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4654,6 +4735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 1780684166}
@@ -4662,7 +4744,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1092847155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4747,7 +4828,7 @@ GameObject:
   - component: {fileID: 1190320310}
   - component: {fileID: 1190320309}
   - component: {fileID: 1190320308}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (25,7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4766,6 +4847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 2030130644}
@@ -4774,7 +4856,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1190320309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4874,7 +4955,7 @@ GameObject:
   - component: {fileID: 1225316544}
   - component: {fileID: 1225316543}
   - component: {fileID: 1225316542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (12,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4908,6 +4989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 724410337}
   nextCells:
@@ -4917,7 +4999,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1225316543
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5002,7 +5083,7 @@ GameObject:
   - component: {fileID: 1248841100}
   - component: {fileID: 1248841099}
   - component: {fileID: 1248841098}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (29,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5021,6 +5102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 1876303692}
@@ -5029,7 +5111,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1248841099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5298,7 +5379,7 @@ GameObject:
   - component: {fileID: 1366543885}
   - component: {fileID: 1366543884}
   - component: {fileID: 1366543883}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (24,7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5332,6 +5413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 1190320308}
@@ -5340,7 +5422,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1366543884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5425,7 +5506,7 @@ GameObject:
   - component: {fileID: 1434098057}
   - component: {fileID: 1434098056}
   - component: {fileID: 1434098055}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (34,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5444,6 +5525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 125789074}
@@ -5452,7 +5534,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1434098056
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5539,6 +5620,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2073801313}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1445230610 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5103291751367099956, guid: 6c9336a4d56fac54996f77fc9f838046, type: 3}
+  m_PrefabInstance: {fileID: 590651603}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1446410721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5619,7 +5705,7 @@ GameObject:
   - component: {fileID: 1490182165}
   - component: {fileID: 1490182164}
   - component: {fileID: 1490182163}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (6,13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5653,6 +5739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -5660,7 +5747,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1490182164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5745,7 +5831,7 @@ GameObject:
   - component: {fileID: 1524490882}
   - component: {fileID: 1524490881}
   - component: {fileID: 1524490880}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (10,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5779,6 +5865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 369050856}
   nextCells:
@@ -5788,7 +5875,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1524490881
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5873,7 +5959,7 @@ GameObject:
   - component: {fileID: 1560665002}
   - component: {fileID: 1560665001}
   - component: {fileID: 1560665000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (18,10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5892,6 +5978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 686493507}
   nextCells:
@@ -5901,7 +5988,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1560665001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6001,7 +6087,7 @@ GameObject:
   - component: {fileID: 1562969126}
   - component: {fileID: 1562969125}
   - component: {fileID: 1562969124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (7,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6035,6 +6121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1758643181}
   nextCells:
@@ -6044,7 +6131,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1562969125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6129,7 +6215,7 @@ GameObject:
   - component: {fileID: 1608708471}
   - component: {fileID: 1608708470}
   - component: {fileID: 1608708469}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (14,10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6163,6 +6249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 743035341}
   nextCells:
@@ -6172,7 +6259,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1608708470
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6290,6 +6376,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallGuaiGuai (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6855114071636747005, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8744579409802178309, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.02
@@ -6348,7 +6438,7 @@ GameObject:
   - component: {fileID: 1686368330}
   - component: {fileID: 1686368329}
   - component: {fileID: 1686368328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (20,7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6382,6 +6472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 675153002}
   nextCells:
@@ -6391,7 +6482,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1686368329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6476,7 +6566,7 @@ GameObject:
   - component: {fileID: 1758643183}
   - component: {fileID: 1758643182}
   - component: {fileID: 1758643181}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (6,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6510,6 +6600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 132477541}
   nextCells:
@@ -6519,7 +6610,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1758643182
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6604,7 +6694,7 @@ GameObject:
   - component: {fileID: 1780684168}
   - component: {fileID: 1780684167}
   - component: {fileID: 1780684166}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (33,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6638,6 +6728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 1434098055}
@@ -6646,7 +6737,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1780684167
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6766,6 +6856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 132477541}
@@ -6774,7 +6865,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1832479637
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6875,7 +6965,7 @@ GameObject:
   - component: {fileID: 1876303694}
   - component: {fileID: 1876303693}
   - component: {fileID: 1876303692}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (30,8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6909,6 +6999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 489399904}
@@ -6917,7 +7008,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1876303693
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7024,6 +7114,7 @@ Transform:
   - {fileID: 600502683}
   - {fileID: 1471261445}
   - {fileID: 2037322928}
+  - {fileID: 1445230610}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2030130642
@@ -7039,7 +7130,7 @@ GameObject:
   - component: {fileID: 2030130646}
   - component: {fileID: 2030130645}
   - component: {fileID: 2030130644}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (26,7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7073,6 +7164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 146458625}
@@ -7081,7 +7173,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &2030130645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7241,7 +7332,7 @@ GameObject:
   - component: {fileID: 2074610647}
   - component: {fileID: 2074610646}
   - component: {fileID: 2074610645}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path (22,7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7275,6 +7366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 158900521}
@@ -7283,7 +7375,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &2074610646
 BoxCollider:
   m_ObjectHideFlags: 0

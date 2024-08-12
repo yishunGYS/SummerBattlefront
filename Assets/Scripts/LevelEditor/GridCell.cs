@@ -17,7 +17,7 @@ namespace _3DlevelEditor_GYS
 
     public class GridCell : MonoBehaviour
     {
-        private Renderer rend;
+        [HideInInspector]public Renderer rend;
 
         public List<GridCell> previousCells = new List<GridCell>();
         public List<GridCell> nextCells = new List<GridCell>();
@@ -32,7 +32,7 @@ namespace _3DlevelEditor_GYS
         public Color canSpawnColor = Color.yellow;
         private Color originalColor;
 
-        public BlockType blockType;
+        //public BlockType blockType;
 
         private void Awake()
         {
@@ -71,33 +71,7 @@ namespace _3DlevelEditor_GYS
             Handles.color = color;
             Handles.DrawAAPolyLine(width, new Vector3[] { start, end });
         }
-
-        void OnMouseEnter()
-        {
-            if (blockType == BlockType.Path && canPlace)
-            {
-                if (EventSystem.current.IsPointerOverGameObject())
-                    return;
-
-                rend.material.color = hoverColor;
-            }
-        }
-
-        void OnMouseExit()
-        {
-            if (blockType == BlockType.Path && canPlace)
-            {
-                rend.material.color = canSpawnColor;
-            }
-        }
-
-        private void OnMouseDown()
-        {
-            if (blockType == BlockType.Path && canPlace)
-            {
-                SpawnManager.instance.SpawnCharacter(this);
-            }
-        }
+        
 
         public void OnCanPlaceChange(bool can)
         {

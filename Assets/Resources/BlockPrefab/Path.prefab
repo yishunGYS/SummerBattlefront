@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6258460540024691829}
   - component: {fileID: 1292576509996459919}
   - component: {fileID: 5376451359998191807}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,10 +118,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
   lineWidth: 5
+  canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   blockType: 1
