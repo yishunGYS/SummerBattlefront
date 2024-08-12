@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Gameplay.Enemy.Enemy.SuperWoman
 {
-    public class SuperWomanLogic : EnemyLogicBase
+    public class SuperWomanLogic : AttackEnemyLogic
     {
         public SuperWomanLogic(EnemyAgent agent) : base(agent)
         {

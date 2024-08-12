@@ -8,13 +8,6 @@ using static UnityEngine.UI.Image;
 
 namespace _3DlevelEditor_GYS
 {
-    public enum BlockType
-    {
-        None,
-        Path,
-        CanCamp
-    }
-
     public class GridCell : MonoBehaviour
     {
         [HideInInspector]public Renderer rend;
@@ -31,8 +24,6 @@ namespace _3DlevelEditor_GYS
         public Color hoverColor = Color.red;
         public Color canSpawnColor = Color.yellow;
         private Color originalColor;
-
-        //public BlockType blockType;
 
         private void Awake()
         {

@@ -29,17 +29,8 @@ namespace Ilumisoft.Health_System.Scripts.UI
         float currentValue;
 
         private float maxValue;
-        //solider
         private UnitAgent agent;
-        // protected virtual void Reset()
-        // {
-        //     if (Health == null)
-        //     {
-        //         Health = GetComponentInParent<HealthComponent>();
-        //     }
-        // }
         
-
         public void OnInit(UnitAgent agent)
         {
             this.agent = agent;
@@ -61,7 +52,6 @@ namespace Ilumisoft.Health_System.Scripts.UI
             }
 
             currentValue = Mathf.MoveTowards(currentValue,  agent.curHp, Time.deltaTime * changeSpeed);
-            print("hud 血量");
             UpdateFillbar();
             UpdateVisibility();
         }
@@ -75,7 +65,6 @@ namespace Ilumisoft.Health_System.Scripts.UI
         {
             // Update the fill amount
             float value = Mathf.InverseLerp(0, maxValue, currentValue);
-            print("hud 血量比例");
             fillImage.fillAmount = value;
         }
 

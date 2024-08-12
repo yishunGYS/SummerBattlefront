@@ -48,7 +48,7 @@ namespace Managers
             selectedCharacter = chara;
         }
 
-        public void SpawnCharacter(GridCell block)
+        private void SpawnCharacter(GridCell block)
         {
             if (selectedCharacter != null)
             {
@@ -142,8 +142,6 @@ namespace Managers
                 }
             }
         }
-
-
 
         private void DetectMouseHover()
         {

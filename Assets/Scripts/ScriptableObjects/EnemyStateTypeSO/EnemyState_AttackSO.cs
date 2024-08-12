@@ -14,8 +14,7 @@ namespace ScriptableObjects.EnemyStateTypeSO
         public override void OnEnter()
         {
             Debug.Log("EnemytStateIdle Attack");
-            //enemyAgent.enemyLogic.GetTarget();
-            enemyAgent.enemyLogic.GetFocusTarget();
+            enemyAgent.enemyLogic.GetTarget();
         }
 
         public override void OnUpdate()

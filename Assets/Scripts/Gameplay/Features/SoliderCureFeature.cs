@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Gameplay.Features
 {
     [RequireComponent(typeof(SoliderAgent))]
-    public class CureFeature : MonoBehaviour
+    public class SoliderCureFeature : MonoBehaviour
     {
         public enum HealingFormula
         {
@@ -60,7 +60,7 @@ namespace Gameplay.Features
 
             if (healingFormula == HealingFormula.BaseMaxHp)
             {
-                return Mathf.RoundToInt(agent.soliderModel.maxHp * baseAttackPercentage);
+                return Mathf.RoundToInt(agent.soliderModel.maxHp * baseMaxHpPercentage);
             }
 
             return 0;

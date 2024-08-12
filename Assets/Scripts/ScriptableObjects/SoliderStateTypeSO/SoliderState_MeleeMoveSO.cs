@@ -19,16 +19,16 @@ namespace ScriptableObjects.SoliderStateTypeSO
 
         public override void OnUpdate()
         {
-            //逻辑切换
-            if (soliderAgent.soliderLogic.CheckCanAttack())
-            {
-                fsm.ChangeState(UnitStateType.Attack);
-            }
-
             //辅助角色？？？？
             if (soliderAgent.soliderLogic.CheckObstacle())
             {
                 fsm.ChangeState(UnitStateType.Idle);
+            }
+            
+            //逻辑切换
+            if (soliderAgent.soliderLogic.CheckCanAttack())
+            {
+                fsm.ChangeState(UnitStateType.Attack);
             }
             
             soliderAgent.soliderLogic.Move();

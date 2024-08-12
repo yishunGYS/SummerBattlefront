@@ -1,6 +1,6 @@
 namespace Gameplay.Enemy.Enemy.SnowWoman
 {
-    public class SnowWomanLogic : EnemyLogicBase
+    public class SnowWomanLogic : AttackEnemyLogic
     {
         public SnowWomanLogic(EnemyAgent agent) : base(agent)
         {

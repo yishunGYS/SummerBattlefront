@@ -31,14 +31,11 @@ namespace Gameplay.Player
         private const float frontCheckDistance = 2f;
 
         public List<UnitAgent> attackTargets = new List<UnitAgent>(); //在攻击的目标:可以是敌人也可以是友方
-        private HashSet<EnemyAgent> attackers = new HashSet<EnemyAgent>(); //在对自己攻击的敌方
+        private HashSet<UnitAgent> attackers = new HashSet<UnitAgent>(); //在对自己攻击的敌方
 
         //攻击
         private float attackTimer = 1000f;
         public bool isAttackReady = true;
-
-        //血量
-        //public int curHp;
 
         //阻挡的敌人
         public EnemyAgent blocker;
@@ -119,13 +116,6 @@ namespace Gameplay.Player
             }
         }
 
-        private void EndPath()
-        {
-            // PlayerStats.Lives--;
-            // WaveSpawner.EnemiesAlive--;
-            // Destroy(gameObject);
-        }
-
         #endregion
 
         #region 判断障碍
@@ -157,28 +147,15 @@ namespace Gameplay.Player
                         blocker = enemyAgent;
                         return true;
                     }
-                    else
-                    {
-                        // 不能被阻挡
-                        return false;
-                    }
+                    // 不能被阻挡
+                    return false;
                 }
-                // else if (hit.collider.CompareTag("Enemy"))
-                // {
-                //     return true; // 其他障碍物阻挡
-                // }
             }
 
             return false;
         }
 
         #endregion
-
-        //有些士兵会穿透
-        public virtual bool CheckCanBeBlock()
-        {
-            return true;
-        }
 
 
         #region 攻击判定
@@ -195,7 +172,7 @@ namespace Gameplay.Player
 
 
         //有攻击目标
-        public virtual bool HasAttackTarget()
+        protected virtual bool HasAttackTarget()
         {
             // 绘制攻击判定范围的可视化效果
             DrawAttackRange();
@@ -248,14 +225,13 @@ namespace Gameplay.Player
             isAttackReady = true;
         }
 
-
-        //远程写在子类
-        protected void RangeAttack()
-        {
-        }
-
         #endregion
 
+
+        //召唤
+        public virtual void Summon()
+        {
+        }
 
         #region 受击
 
@@ -283,6 +259,15 @@ namespace Gameplay.Player
             }
         }
 
+        private void AddAttacker(EnemyAgent attacker)
+        {
+            if (!attackers.Contains(attacker))
+            {
+                attackers.Add(attacker);
+                Debug.Log($"{attacker.enemyModel.enemyName} started attacking Me!");
+            }
+        }
+
         //受到AOE伤害后,根据当前的攻击者(敌人)的AOE攻击范围,以自己为中心寻找范围内的士兵,并使其造成伤害
         public void OnTakeAOEDamage(EnemyAgent enemyAgent, float aoeRange)
         {
@@ -296,20 +281,6 @@ namespace Gameplay.Player
 
             // 获取 aoeRange 范围内的所有敌人
             List<SoliderAgent> aoeTargets = GetAOETargets(soliderAgent.transform.position, aoeRange);
-
-            if (aoeTargets != null)
-            {
-                Debug.Log("不为空");
-            }
-            else
-            {
-                Debug.Log("为空");
-                foreach (var item in aoeTargets)
-                {
-                    Debug.Log(item.gameObject.name);
-                }
-            }
-
             foreach (var solider in aoeTargets)
             {
                 solider.soliderLogic.OnTakeDamage(enemyAgent);
@@ -335,18 +306,6 @@ namespace Gameplay.Player
             return aoeTargets;
         }
 
-        #endregion
-
-
-        private void AddAttacker(EnemyAgent attacker)
-        {
-            if (!attackers.Contains(attacker))
-            {
-                attackers.Add(attacker);
-                Debug.Log($"{attacker.enemyModel.enemyName} started attacking Me!");
-            }
-        }
-
         private IEnumerator FlashRed()
         {
             Renderer renderer = soliderAgent.GetComponent<Renderer>();
@@ -364,21 +323,31 @@ namespace Gameplay.Player
             renderer.material.color = originalColor;
         }
 
+        #endregion
 
-        //召唤
-        public virtual void Summon()
-        {
-        }
+        #region 死亡
 
-        //死亡
-        public virtual void Die()
+        protected virtual void Die()
         {
             Debug.Log($"{soliderModel.soliderName} has died!");
-            //通知在打他的敌人，他死了
+
             foreach (var agent in attackers)
             {
-                agent.enemyLogic.RemoveAttackTarget(soliderAgent);
+                //通知在打他的敌人，他死了
+                if (agent as EnemyAgent)
+                {
+                    var enemyAgent = agent.GetComponent<EnemyAgent>();
+                    enemyAgent.enemyLogic.RemoveAttackTarget(soliderAgent);
+                }
+
+                //通知在辅助他的队友，他死了
+                if (agent as SoliderAgent)
+                {
+                    var solider = agent.GetComponent<SoliderAgent>();
+                    solider.soliderLogic.RemoveTarget(soliderAgent);
+                }
             }
+
 
             //若该士兵是被阻挡的，通知被阻挡的人，他死了
             if (blocker != null)
@@ -390,6 +359,7 @@ namespace Gameplay.Player
             Object.Destroy(soliderAgent.gameObject);
         }
 
+        #endregion
 
         #region 绘制
 

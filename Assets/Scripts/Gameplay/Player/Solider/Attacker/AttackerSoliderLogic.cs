@@ -7,12 +7,11 @@ namespace Gameplay.Player.Solider.Attacker
 {
     public class AttackerSoliderLogic : SoliderLogicBase
     {
-        //public List<EnemyAgent> attackTargets = new List<EnemyAgent>();
-
-
         protected AttackerSoliderLogic(SoliderAgent agent) : base(agent)
         {
         }
+
+        #region 获取目标
 
         protected void DistanceBasedGetTarget()
         {
@@ -47,19 +46,21 @@ namespace Gameplay.Player.Solider.Attacker
             attackTargets.Sort((a, b) => a.dis.CompareTo(b.dis));
         }
 
+        //用于判别地面不能打敌人Tower
         protected override bool CheckMatchAttackType(EnemyAgent target)
         {
             //todo 若attackEnemyType是多种，那么----待扩展
-            if ((soliderModel.attackEnemyType & target.enemyModel.enemyType) == UnitType.None) 
+            if ((soliderModel.attackEnemyType & target.enemyModel.enemyType) == UnitType.None)
             {
                 return false;
             }
+
             return true;
         }
 
-        public override bool HasAttackTarget()
+        protected override bool HasAttackTarget()
         {
-            //return base.HasAttackTarget();
+            
             Collider[] hitColliders =
                 Physics.OverlapSphere(soliderAgent.transform.position, soliderModel.attackRange,
                     LayerMask.GetMask("Enemy"));
@@ -82,7 +83,7 @@ namespace Gameplay.Player.Solider.Attacker
             }
         }
 
-        
+        #endregion
 
 
         #region 攻击

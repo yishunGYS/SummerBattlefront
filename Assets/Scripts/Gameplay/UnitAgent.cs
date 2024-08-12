@@ -6,7 +6,7 @@ namespace Gameplay.Player
 
     public abstract class UnitAgent : MonoBehaviour
     {
-        public int curHp;
+        [HideInInspector]public int curHp;
         
         public abstract UnitAttackData GetAttackPoint();
         

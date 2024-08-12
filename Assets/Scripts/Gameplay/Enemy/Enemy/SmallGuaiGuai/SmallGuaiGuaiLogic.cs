@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Gameplay.Enemy.Enemy.SmallGuaiGuai
 {
-    public class SmallGuaiGuaiLogic : EnemyLogicBase
+    public class SmallGuaiGuaiLogic : AttackEnemyLogic
     {
 
 

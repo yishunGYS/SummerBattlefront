@@ -16,6 +16,7 @@ namespace Gameplay.Features
 
         public GameObject campPrefab;
 
+        //若精英怪不在岔路口的话，currentBlock需要策划手动拖~
         public GridCell currentBlock;
 
         public StartPoint lastCamp;

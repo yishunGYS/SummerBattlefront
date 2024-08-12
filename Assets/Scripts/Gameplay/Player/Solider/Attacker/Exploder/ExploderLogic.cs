@@ -22,7 +22,7 @@ namespace Gameplay.Player.Solider
         }
 
         //死亡时获取周围友军和敌军,对其造成伤害
-        public override void Die()
+        protected override void Die()
         {
             var bomb = Object.Instantiate(exploderAgent.bomb, soliderAgent.transform.position, Quaternion.identity);
             bomb.GetComponent<Bomb>().OnInit(exploderAgent);
