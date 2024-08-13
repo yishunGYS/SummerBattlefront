@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3258390813702686429}
   - component: {fileID: 2302560973402218857}
   - component: {fileID: 6425060511249867181}
-  - component: {fileID: 3988725690937677214}
   m_Layer: 6
   m_Name: MeleeGoding
   m_TagString: Untagged
@@ -143,20 +142,6 @@ MonoBehaviour:
       Value: {fileID: 11400000, guid: cbe63a50b10a6c3448cd6f786b10ce5c, type: 2}
     - Key: 2
       Value: {fileID: 11400000, guid: 0e52b69940ce2774293d22128b125f03, type: 2}
---- !u!114 &3988725690937677214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8861984038093239496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 143bf4aa5ce536246b13c53201ba94b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  initialRatio: 1
 --- !u!1001 &1978556528241476352
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -23,6 +23,7 @@ namespace Gameplay.Player.Solider.Assist
 
         protected override bool HasAttackTarget()
         {
+            base.HasAttackTarget();
             Collider[] hitColliders =
                 Physics.OverlapSphere(soliderAgent.transform.position, soliderModel.attackRange,
                     LayerMask.GetMask("Solider"));

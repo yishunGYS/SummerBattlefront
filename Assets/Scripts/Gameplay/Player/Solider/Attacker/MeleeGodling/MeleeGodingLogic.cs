@@ -19,7 +19,6 @@ namespace Gameplay.Player.Solider.Attacker.MeleeGodling
         public override void Attack()
         {
             base.Attack();
-            
             MeleeAttack();
             
             

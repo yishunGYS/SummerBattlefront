@@ -60,7 +60,7 @@ namespace Gameplay.Player.Solider.Attacker
 
         protected override bool HasAttackTarget()
         {
-            
+            base.HasAttackTarget();
             Collider[] hitColliders =
                 Physics.OverlapSphere(soliderAgent.transform.position, soliderModel.attackRange,
                     LayerMask.GetMask("Enemy"));

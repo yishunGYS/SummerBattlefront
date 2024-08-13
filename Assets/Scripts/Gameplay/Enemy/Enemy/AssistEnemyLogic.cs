@@ -12,6 +12,7 @@ namespace Gameplay.Enemy.Enemy
 
         protected override bool HasAttackTarget()
         {
+            base.HasAttackTarget();
             Collider[] hitColliders =
                 Physics.OverlapSphere(enemyAgent.transform.position, enemyModel.attackRange,
                     LayerMask.GetMask("Enemy"));

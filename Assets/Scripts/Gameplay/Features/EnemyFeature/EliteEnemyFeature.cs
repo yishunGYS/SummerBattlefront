@@ -96,6 +96,10 @@ namespace Gameplay.Features.EnemyFeature
 
         public void setCampDate(StartPoint start)
         {
+            if (start==null)
+            {
+                return;
+            }
             start.previousCamps.Add(lastCamp, BlockManager.instance.startPointBlocks[lastCamp]);
         }
 
