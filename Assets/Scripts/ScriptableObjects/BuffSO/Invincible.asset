@@ -12,19 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f901b04a772526f488381d09fee440f4, type: 3}
   m_Name: Invincible
   m_EditorClassIdentifier: 
-  buffIcon: {fileID: 0}
   description: 
   id: 0
   "\u6700\u5927\u5C42\u6570": 0
   priority: 0
-  cureGainEffect: 0
   attackGainEffect: 0
   defendGainEffect: 1
   durationTime: 4
   tickTime: 0
   "buff\u89E6\u53D1\u7C7B\u578B": 1
-  "buff\u6548\u679C\u7C7B\u578B": 1
-  "buff\u5237\u65B0\u7C7B\u578B": 0
+  "buff\u6548\u679C\u7C7B\u578B": 2
+  "buff\u5237\u65B0\u7C7B\u578B": 1
   "\u5728\u521B\u5EFA\u65F6":
     m_PersistentCalls:
       m_Calls: []

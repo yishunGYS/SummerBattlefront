@@ -12,6 +12,7 @@ namespace Gameplay.Features
         {
             BaseAttack,
             BaseMaxHp,
+            ExactValue
         }
 
         [EnumToggleButtons] public HealingFormula healingFormula;
@@ -53,7 +54,7 @@ namespace Gameplay.Features
         {
             if (healingFormula == HealingFormula.BaseAttack)
             {
-                var curAttackData = agent.soliderLogic.playerBuffManager.CalculateAttack(agent);
+                var curAttackData = agent.buffManager.CalculateAttack(agent);
                 var attackPoint = curAttackData.attackPoint + curAttackData.magicAttackPoint;
                 return Mathf.RoundToInt(attackPoint * baseAttackPercentage);
             }

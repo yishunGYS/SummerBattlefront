@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Systems.Buff;
 using UnityEngine;
 using Utilities;
 
@@ -6,9 +7,9 @@ namespace Managers
 {
     public class BuffInventoryManager : Singleton<BuffInventoryManager>
     {
-        public List<BuffInfo> buffInfos = new List<BuffInfo>();
+        public List<BuffDataSO> buffInfos = new List<BuffDataSO>();
         
-        public BuffInfo GetBuffById(int id)
+        public BuffDataSO GetBuffById(int id)
         {
             foreach (var item in buffInfos)
             {

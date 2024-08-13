@@ -1,3 +1,4 @@
+using Gameplay.Features;
 using Gameplay.Player.Solider.Attacker.Traverser;
 using ScriptableObjects.SoliderStateTypeSO;
 using UnityEngine;

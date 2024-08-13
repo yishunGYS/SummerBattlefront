@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Gameplay.Features;
+using Gameplay.Features.EnemyFeature;
 using Gameplay.Player;
 using ScriptableObjects.SoliderStateTypeSO;
 using Unity.VisualScripting;
@@ -39,7 +40,7 @@ namespace Gameplay.Enemy
         public HashSet<SoliderAgent> blockSoilders = new HashSet<SoliderAgent>();
 
         //BuffManager
-        public BuffManager enemyBuffManager;
+        //public BuffManager enemyBuffManager;
 
         protected EnemyLogicBase(EnemyAgent agent)
         {
@@ -47,7 +48,7 @@ namespace Gameplay.Enemy
             enemyModel = enemyAgent.enemyModel;
             //curHp = enemyModel.maxHp;
 
-            enemyBuffManager = new BuffManager(enemyAgent);
+            //enemyBuffManager = new BuffManager(enemyAgent);
         }
 
 
@@ -125,7 +126,7 @@ namespace Gameplay.Enemy
         public void OnTakeDamage(SoliderAgent soliderAgent)
         {
             AddAttacker(soliderAgent);
-            var damagePoint = enemyBuffManager.CalculateDamage(new DamageInfo(soliderAgent, enemyAgent));
+            var damagePoint = enemyAgent.buffManager.CalculateDamage(new DamageInfo(soliderAgent, enemyAgent));
             if (damagePoint == 0)
             {
                 Debug.Log("敌人免伤，目前的血量是：" + enemyAgent.curHp);

@@ -47,6 +47,13 @@ namespace Gameplay.Player
         //从哪个出生点出生的
         public StartPoint birthPoint;
 
+        public SoliderLogicBase(SoliderAgent agent)
+        {
+            soliderAgent = agent;
+            soliderModel = soliderAgent.soliderModel;
+            //playerBuffManager = new BuffManager(soliderAgent);
+        }
+        
         public void InitBlockData(GridCell block)
         {
             currentBlock = block;
@@ -64,14 +71,9 @@ namespace Gameplay.Player
         }
 
         //BuffManager
-        public BuffManager playerBuffManager;
+        //public BuffManager playerBuffManager;
 
-        public SoliderLogicBase(SoliderAgent agent)
-        {
-            soliderAgent = agent;
-            soliderModel = soliderAgent.soliderModel;
-            playerBuffManager = new BuffManager(soliderAgent);
-        }
+
 
 
         #region 移动
@@ -239,7 +241,7 @@ namespace Gameplay.Player
         {
             AddAttacker(enemyAgent);
 
-            var damagePoint = playerBuffManager.CalculateDamage(new DamageInfo(enemyAgent, soliderAgent));
+            var damagePoint = soliderAgent.buffManager.CalculateDamage(new DamageInfo(enemyAgent, soliderAgent));
             if (damagePoint == 0)
             {
                 Debug.Log("士兵免伤，目前的血量是：" + soliderAgent.curHp);

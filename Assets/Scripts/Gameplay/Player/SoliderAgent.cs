@@ -19,22 +19,11 @@ namespace Gameplay.Player
         public override void OnInit()
         {
             InitData();
-            fsm = GetComponent<StateMachine>();
-            fsm.OnInit();
             curHp = soliderModel.maxHp;
             
             base.OnInit();
         }
-
-        private void Update()
-        {
-            if (!fsm)
-            {
-                return;
-            }
-            fsm.OnUpdate();
-            //soliderLogic.OnUpdateBuff();
-        }
+        
         
         private void InitData()
         {

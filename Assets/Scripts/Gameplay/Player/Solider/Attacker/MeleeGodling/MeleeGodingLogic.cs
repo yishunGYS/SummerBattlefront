@@ -19,13 +19,10 @@ namespace Gameplay.Player.Solider.Attacker.MeleeGodling
         public override void Attack()
         {
             base.Attack();
-            //playerBuffManager.AddBuff(BuffInventoryManager.Instance.GetBuffById(0));  //无敌buff
+            
             MeleeAttack();
-            // BuffInfo cureBuff = BuffInventoryManager.Instance.GetBuffById(0);
-            // //cureBuff.在Tick触发时 += SmallCure;
-            //
-            // SoliderAgent solider1 = new SoliderAgent();
-            // solider1.soliderLogic.playerBuffManager.AddBuff(cureBuff);
+            
+            
         }
 
 

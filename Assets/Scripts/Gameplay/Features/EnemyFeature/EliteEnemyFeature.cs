@@ -1,14 +1,12 @@
+using System.Collections.Generic;
 using _3DlevelEditor_GYS;
 using Gameplay.Enemy;
-using Gameplay.Player;
 using Managers;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-
-namespace Gameplay.Features
+namespace Gameplay.Features.EnemyFeature
 {
+    [RequireComponent(typeof(EnemyAgent))]
     public class EliteEnemyFeature : MonoBehaviour
     {
         EnemyAgent agent;

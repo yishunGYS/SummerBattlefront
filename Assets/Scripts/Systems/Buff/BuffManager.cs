@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Gameplay;
 using Gameplay.Player;
+using Systems.Buff;
 using UnityEngine;
 
 public class BuffManager
@@ -14,7 +15,7 @@ public class BuffManager
         _agent = agent;
     }
 
-    public void AddBuff(BuffInfo buffInfo)
+    public void AddBuff(BuffModel buffInfo)
     {
         var newBuff = FindBuff(buffInfo);
         if (newBuff == null)
@@ -37,6 +38,7 @@ public class BuffManager
                     break;
             }
         }
+        
     }
 
     public void RemoveBuff(BuffInstance buffInstance)
@@ -65,7 +67,7 @@ public class BuffManager
         }
     }
 
-    public BuffInstance FindBuff(BuffInfo buffInfo)
+    public BuffInstance FindBuff(BuffModel buffInfo)
     {
         foreach (var buff in _buffs)
             if (buff?.buffInfo.id == buffInfo.id)
@@ -148,4 +150,5 @@ public class BuffManager
 
         return tempDefenseData;
     }
+    
 }

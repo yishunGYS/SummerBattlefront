@@ -1,8 +1,9 @@
 using _3DlevelEditor_GYS;
 using Gameplay.Enemy;
+using Gameplay.Player;
 using UnityEngine;
 
-namespace Gameplay.Player.Solider.Attacker.Traverser
+namespace Gameplay.Features
 {
     public class TraverserFeature : MonoBehaviour
     {

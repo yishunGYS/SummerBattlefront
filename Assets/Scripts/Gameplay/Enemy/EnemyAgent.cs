@@ -14,12 +14,11 @@ namespace Gameplay.Enemy
 
         private StateMachine fsm;
         
+        
         //关卡开始一开始/第x阶段更新敌方防线的时候调用
         public override void OnInit()
         {
             InitData();
-            fsm = GetComponent<StateMachine>();
-            fsm.OnInit();
             curHp = enemyModel.maxHp;
             
             base.OnInit();
@@ -40,11 +39,7 @@ namespace Gameplay.Enemy
             }
         }
 
-
-        private void Update()
-        {
-            fsm.OnUpdate();
-        }
+        
 
 
         public override UnitAttackData GetAttackPoint()

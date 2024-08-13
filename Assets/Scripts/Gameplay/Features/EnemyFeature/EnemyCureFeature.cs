@@ -48,7 +48,7 @@ namespace Gameplay.Features.EnemyFeature
         {
             if (healingFormula == SoliderCureFeature.HealingFormula.BaseAttack)
             {
-                var curAttackData = agent.enemyLogic.enemyBuffManager.CalculateAttack(agent);
+                var curAttackData = agent.buffManager.CalculateAttack(agent);
                 var attackPoint = curAttackData.attackPoint + curAttackData.magicAttackPoint;
                 return Mathf.RoundToInt(attackPoint * baseAttackPercentage);
             }
