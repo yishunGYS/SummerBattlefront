@@ -8,7 +8,6 @@ namespace Systems.Camera
     {
         public CinemachineVirtualCamera virtualCamera;
 
-
         public float dragSpeed;
         public float rotateSpeed;
         public float zoomSpeed;
@@ -16,6 +15,9 @@ namespace Systems.Camera
         public float maxFov;
         public float minFov;
 
+        private Vector2 lastMousePosition;
+        private bool isDragging;
+        public float mouseSensitivity = 0.02f; // 调整鼠标移动的灵敏度
         private void Start()
         {
             curFov = virtualCamera.m_Lens.FieldOfView;
@@ -32,11 +34,32 @@ namespace Systems.Camera
         private void HandleCameraMove()
         {
             var inputDir = new Vector2(0, 0);
-            if (Input.GetMouseButton(0))
+
+            if (Input.GetMouseButtonDown(0))
             {
-                inputDir.x -= Input.GetAxisRaw("Mouse X");
-                inputDir.y -= Input.GetAxisRaw("Mouse Y");
+                isDragging = true;
+                lastMousePosition = Input.mousePosition;
             }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                isDragging = false;
+            }
+
+            if (isDragging && Input.GetMouseButton(0))
+            {
+                Vector2 currentMousePosition = Input.mousePosition;
+                Vector2 mouseDelta = currentMousePosition - lastMousePosition;
+
+                // 设置一个阈值，忽略大的跳变
+                if (mouseDelta.magnitude < 100)
+                {
+                    inputDir.x -= mouseDelta.x * mouseSensitivity;
+                    inputDir.y -= mouseDelta.y* mouseSensitivity;
+                }
+
+                lastMousePosition = currentMousePosition;
+            }
+
             if (Input.GetKey(KeyCode.D))
             {
                 inputDir.x += 0.2f;
@@ -53,11 +76,38 @@ namespace Systems.Camera
             {
                 inputDir.y -= 0.2f;
             }
-            var moveDir = transform.forward * inputDir.y + transform.right * inputDir.x;
 
+            var moveDir = transform.forward * inputDir.y + transform.right * inputDir.x;
             transform.position += Time.deltaTime * dragSpeed * moveDir;
         }
-
+        // private void HandleCameraMove()
+        // {
+        //     var inputDir = new Vector2(0, 0);
+        //     if (Input.GetMouseButton(0))
+        //     {
+        //         inputDir.x -= Input.GetAxisRaw("Mouse X");
+        //         inputDir.y -= Input.GetAxisRaw("Mouse Y");
+        //     }
+        //     if (Input.GetKey(KeyCode.D))
+        //     {
+        //         inputDir.x += 0.2f;
+        //     }
+        //     if (Input.GetKey(KeyCode.A))
+        //     {
+        //         inputDir.x -= 0.2f;
+        //     }
+        //     if (Input.GetKey(KeyCode.W))
+        //     {
+        //         inputDir.y += 0.2f;
+        //     }
+        //     if (Input.GetKey(KeyCode.S))
+        //     {
+        //         inputDir.y -= 0.2f;
+        //     }
+        //     var moveDir = transform.forward * inputDir.y + transform.right * inputDir.x;
+        //
+        //     transform.position += Time.deltaTime * dragSpeed * moveDir;
+        // }
 
         private void HandleCameraRotate()
         {

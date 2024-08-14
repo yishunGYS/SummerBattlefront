@@ -30,35 +30,43 @@ namespace Ilumisoft.Health_System.Scripts.UI
 
         private float maxValue;
         private UnitAgent agent;
-        
+
         public void OnInit(UnitAgent agent)
         {
             this.agent = agent;
             currentValue = agent.GetMaxHp();
             maxValue = agent.GetMaxHp();
         }
-        
 
-        private void Update()
+        private void LateUpdate()
         {
             if (!agent)
             {
                 return;
             }
-            
+
             if (alignWithCamera)
             {
                 AlignWithCamera();
             }
 
-            currentValue = Mathf.MoveTowards(currentValue,  agent.curHp, Time.deltaTime * changeSpeed);
+            currentValue = Mathf.MoveTowards(currentValue, agent.curHp, Time.deltaTime * changeSpeed);
             UpdateFillbar();
             UpdateVisibility();
         }
 
         private void AlignWithCamera()
         {
-            transform.forward = Camera.main.transform.forward;
+            if (Camera.main != null)
+            {
+                // 计算相对于相机的方向
+                Vector3 direction = Camera.main.transform.position - transform.position;
+                direction.y = 0; // 忽略Y轴旋转
+                
+                // 设置旋转角度使其面向相机
+                Quaternion rotation = Quaternion.LookRotation(direction);
+                canvas.transform.rotation = rotation;
+            }
         }
 
         void UpdateFillbar()

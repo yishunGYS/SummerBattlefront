@@ -36,11 +36,13 @@ namespace Gameplay.Features.EnemyFeature
         [ShowIf("healingFormula", SoliderCureFeature.HealingFormula.BaseMaxHp)]
         public float baseMaxHpPercentage;
 
+        [ShowIf("healingFormula", SoliderCureFeature.HealingFormula.ExactValue)]
+        public int exactValue; 
         //应用的Buff
         private BuffModel cureBuff;
-
         private float lastHitTime;
-        
+
+        public float cureTicker = 3f;
 
         public void OnInit()
         {
@@ -86,6 +88,11 @@ namespace Gameplay.Features.EnemyFeature
                 return Mathf.RoundToInt(agent.enemyModel.maxHp * baseMaxHpPercentage);
             }
 
+            if (healingFormula == SoliderCureFeature.HealingFormula.ExactValue)
+            {
+                return exactValue;
+            }
+
             return 0;
         }
 
@@ -95,7 +102,7 @@ namespace Gameplay.Features.EnemyFeature
             {
                 buff触发类型 = BuffType.持续每秒生效,
                 durationTime = 100000000f,
-                tickTime = 3f,
+                tickTime = cureTicker,
             };
             cureBuff.在Tick触发时.AddListener(SelfCure);
             agent.buffManager.AddBuff(cureBuff);

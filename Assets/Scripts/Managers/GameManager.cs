@@ -23,7 +23,7 @@ namespace Managers
 			InitCsvReader();
 			InitEnemy(EnemyContainer.transform);
 
-			CardManager.Instance.OnStart();
+			//CardManager.Instance.OnStart();
 		}
 		
 		
