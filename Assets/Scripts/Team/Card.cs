@@ -52,7 +52,7 @@ public class Card : MonoBehaviour
                 transform.SetParent(GameObject.Find("TeamUnselectPanel").transform);
                 break;
             case CardState.InTopPanel:
-                // 更新卡片的位置到上栏框
+                // 更新卡片的位置到上栏框——————上边栏生成一个新的，左边栏的变暗
                 transform.SetParent(GameObject.Find("TopPanel").transform);
               
                 break;

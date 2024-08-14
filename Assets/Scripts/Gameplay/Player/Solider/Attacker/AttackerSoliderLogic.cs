@@ -25,6 +25,11 @@ namespace Gameplay.Player.Solider.Attacker
             {
                 var tempDis = Vector3.Distance(soliderAgent.transform.position, collider.transform.position);
                 var temp = collider.GetComponent<EnemyAgent>();
+                if (temp == null)
+                {
+                    Debug.Log("temp is null");
+                    return;
+                }
                 if (!CheckMatchAttackType(temp))
                 {
                     continue;

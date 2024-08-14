@@ -4,9 +4,11 @@ using Utilities;
 
 namespace Team
 {
-    public class CardManager : Singleton<CardManager>
+    public class UnSelectedPanel : MonoBehaviour
     {
-        //public RectTransform TeamUnselectedPanel;
+        public RectTransform TeamUnselectedPanel;
+        
+        
         public void OnStart() 
         {
             GenerateCards();
