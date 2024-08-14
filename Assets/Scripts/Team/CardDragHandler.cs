@@ -28,17 +28,4 @@ public class CardDragHandler : MonoBehaviour, IPointerClickHandler
     }
     
 
-    //private void OnMouseDown()
-    //{
-    //    Debug.Log("OnMouseDown");
-    //    if (RectTransformUtility.RectangleContainsScreenPoint(GameObject.Find("TeamUnselectPanel").GetComponent<RectTransform>(), Input.mousePosition))
-    //    {
-    //        card.SetCardState(CardState.InLeftPanel);
-    //    }
-    //    else if (RectTransformUtility.RectangleContainsScreenPoint(GameObject.Find("TopPanel").GetComponent<RectTransform>(), Input.mousePosition))
-    //    {
-    //        card.SetCardState(CardState.InTopPanel);
-    //    }
-    //}
-
 }

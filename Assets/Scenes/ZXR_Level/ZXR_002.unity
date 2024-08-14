@@ -23768,6 +23768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SuSuLuo
       objectReference: {fileID: 0}
+    - target: {fileID: 6855114071636747005, guid: 45ba1df24403a8a4eb1d636eb914388a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8744579409802178309, guid: 45ba1df24403a8a4eb1d636eb914388a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.6
@@ -27060,6 +27064,10 @@ PrefabInstance:
     - target: {fileID: 235258182517410980, guid: d521be034d409304194f16b094fb20fd, type: 3}
       propertyPath: m_Name
       value: SuperWoman
+      objectReference: {fileID: 0}
+    - target: {fileID: 235258182517410980, guid: d521be034d409304194f16b094fb20fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8416514937946934041, guid: d521be034d409304194f16b094fb20fd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42936,6 +42944,8 @@ MonoBehaviour:
   healingFormula: 0
   baseAttackPercentage: 0
   baseMaxHpPercentage: 0
+  exactValue: 0
+  cureTicker: 3
 --- !u!1 &1722294380
 GameObject:
   m_ObjectHideFlags: 0
