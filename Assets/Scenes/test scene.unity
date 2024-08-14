@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -176,7 +177,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &4363442
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -296,6 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 1245906206}
@@ -304,7 +305,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &18006871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -429,6 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1967094956}
   nextCells:
@@ -438,7 +439,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &25638464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -666,6 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -673,7 +674,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &38116546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -906,6 +906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 25638463}
   nextCells:
@@ -915,7 +916,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &46494542
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1049,6 +1049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -1056,7 +1057,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &62234786
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1175,6 +1175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -1182,7 +1183,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &71061017
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1286,6 +1286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1934091274}
   nextCells:
@@ -1295,7 +1296,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &73458752
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1429,6 +1429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -1436,7 +1437,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &81677591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1555,6 +1555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 25638463}
   nextCells:
@@ -1564,7 +1565,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &110298994
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1683,6 +1683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -1690,7 +1691,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &122813804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1809,6 +1809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -1816,7 +1817,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &133359709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1935,6 +1935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -1942,7 +1943,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &165243925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2046,6 +2046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1286401900}
   nextCells:
@@ -2055,7 +2056,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &180496508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2189,6 +2189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -2196,7 +2197,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &199915633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2315,6 +2315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -2322,7 +2323,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &213835582
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2441,6 +2441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -2448,7 +2449,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &217907363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2567,6 +2567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -2574,7 +2575,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &232820988
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2693,6 +2693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -2700,7 +2701,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &257872682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2819,6 +2819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -2826,7 +2827,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &284005270
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2945,6 +2945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -2952,7 +2953,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &305719567
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3056,6 +3056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1080434076}
   nextCells:
@@ -3065,7 +3066,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &308253545
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3184,6 +3184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 1229378018}
@@ -3192,7 +3193,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &334287392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3326,6 +3326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -3333,7 +3334,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &339485066
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3452,6 +3452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -3459,7 +3460,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &356837266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3578,6 +3578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -3585,7 +3586,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &365767755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3766,6 +3766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -3773,7 +3774,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &390498660
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3877,6 +3877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1752857094}
   nextCells:
@@ -3886,7 +3887,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &411056214
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4020,6 +4020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -4027,7 +4028,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &425394504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4179,6 +4179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -4186,7 +4187,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &471713880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4290,6 +4290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 308253544}
   nextCells:
@@ -4299,7 +4300,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &507330129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4433,6 +4433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -4440,7 +4441,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &510543984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4559,6 +4559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -4566,7 +4567,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &512909370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4638,6 +4638,94 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512909367}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &523986683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 523986684}
+  - component: {fileID: 523986687}
+  - component: {fileID: 523986686}
+  - component: {fileID: 523986685}
+  m_Layer: 5
+  m_Name: TeamUnselectPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &523986684
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523986683}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7334266050538743727}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -470.1842, y: -152.41241}
+  m_SizeDelta: {x: -940.3683, y: -304.8248}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &523986685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523986683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d70a98d5ff6e78a47bd18fe734d02304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &523986686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523986683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &523986687
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523986683}
+  m_CullTransparentMesh: 1
 --- !u!1 &531387821
 GameObject:
   m_ObjectHideFlags: 0
@@ -4685,6 +4773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -4692,7 +4781,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &531387824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4811,6 +4899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -4818,7 +4907,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &533178409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4922,6 +5010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 637748237}
   nextCells:
@@ -4931,7 +5020,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &541482877
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5050,6 +5138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 541482876}
   nextCells:
@@ -5059,7 +5148,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &544693345
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5193,6 +5281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -5200,7 +5289,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &548096320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5319,6 +5407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -5326,7 +5415,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &580306754
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5445,6 +5533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -5452,7 +5541,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &591960285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5571,6 +5659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -5578,7 +5667,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &593032880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5697,6 +5785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -5704,7 +5793,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &610900247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5823,6 +5911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -5830,7 +5919,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &615053071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5968,6 +6056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 843200674}
   nextCells:
@@ -5977,7 +6066,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &619966159
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6096,6 +6184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 110298993}
   nextCells:
@@ -6105,7 +6194,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &637748238
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6224,6 +6312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 1377772745}
@@ -6232,7 +6321,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &655777977
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6489,6 +6577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -6496,7 +6585,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &715458444
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6615,6 +6703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -6622,7 +6711,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &733217388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6741,6 +6829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1081021172}
   nextCells:
@@ -6750,7 +6839,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &742515868
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6854,6 +6942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 1386413304}
@@ -6862,7 +6951,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &766058823
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6996,6 +7084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -7003,7 +7092,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &777468562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7122,6 +7210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -7129,7 +7218,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &789595708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7248,6 +7336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -7255,7 +7344,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &794657534
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7359,6 +7447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 1439865784}
@@ -7367,7 +7456,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &799673287
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7501,6 +7589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -7508,7 +7597,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &804565572
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7628,6 +7716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 1339333322}
@@ -7636,7 +7725,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &820429990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7771,6 +7859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1990874249}
   nextCells:
@@ -7780,7 +7869,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &843200675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7899,6 +7987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -7906,7 +7995,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &865400975
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8025,6 +8113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -8032,7 +8121,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &882533214
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8181,6 +8269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 46494541}
   nextCells:
@@ -8190,7 +8279,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &900576180
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8324,6 +8412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -8331,7 +8420,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &902646730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8435,6 +8523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1245906206}
   nextCells:
@@ -8444,7 +8533,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &912740644
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8578,6 +8666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -8585,7 +8674,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &920523679
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8704,6 +8792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -8711,7 +8800,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &995367846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8815,6 +8903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 1275151783}
@@ -8824,7 +8913,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &999397828
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8958,6 +9046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -8965,7 +9054,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1001418022
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9084,6 +9172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -9091,7 +9180,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1010481151
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9210,6 +9298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -9217,7 +9306,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1018341755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9471,6 +9559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1665318508}
   nextCells:
@@ -9480,7 +9569,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1080434077
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9599,6 +9687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 619966158}
   nextCells:
@@ -9608,7 +9697,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1081021173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9742,6 +9830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -9749,7 +9838,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1082938850
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9853,6 +9941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1339333322}
   nextCells:
@@ -9862,7 +9951,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1098939512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9996,6 +10084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -10003,7 +10092,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1148655093
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10107,6 +10195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 544693344}
   nextCells: []
@@ -10115,7 +10204,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1156768678
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10249,6 +10337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -10256,7 +10345,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1156785210
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10375,6 +10463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -10382,7 +10471,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1195188063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10501,6 +10589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -10508,7 +10597,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1198852045
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10627,6 +10715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -10634,7 +10723,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1207992034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10753,6 +10841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -10760,7 +10849,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1225864357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10864,6 +10952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 799673286}
@@ -10872,7 +10961,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1229378019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11006,6 +11094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -11013,7 +11102,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1240474854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11117,6 +11205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 18006870}
   nextCells:
@@ -11126,7 +11215,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1245906207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11245,6 +11333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 999397827}
   nextCells:
@@ -11254,7 +11343,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1275151784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11441,6 +11529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1385837039}
   nextCells:
@@ -11450,7 +11539,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1286401901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11584,6 +11672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -11591,7 +11680,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1303178670
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11695,6 +11783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1275151783}
   nextCells:
@@ -11704,7 +11793,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1326909677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11823,6 +11911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 820429989}
   nextCells:
@@ -11832,7 +11921,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1339333323
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11951,6 +12039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 766058822}
@@ -11959,7 +12048,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1377772746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12078,6 +12166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 2138116807}
   nextCells:
@@ -12087,7 +12176,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1385837040
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12206,6 +12294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 334287391}
@@ -12214,7 +12303,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1386413305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12348,6 +12436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -12355,7 +12444,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1399320473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12474,6 +12562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -12481,7 +12570,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1408845446
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12600,6 +12688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -12607,7 +12696,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1424204578
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12726,6 +12814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -12733,7 +12822,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1434984215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12837,6 +12925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 1449234990}
@@ -12845,7 +12934,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1439865785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12964,6 +13052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -12971,7 +13060,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1449234991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13105,6 +13193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -13112,7 +13201,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1449928410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13292,6 +13380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -13299,7 +13388,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1469947344
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13418,6 +13506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -13425,7 +13514,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1486249964
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13544,6 +13632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -13551,7 +13640,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1491792418
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13670,6 +13758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -13677,7 +13766,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1591005941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13796,6 +13884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -13803,7 +13892,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1593967550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13922,6 +14010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -13929,7 +14018,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1610752379
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14048,6 +14136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -14055,7 +14144,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1613564737
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14174,6 +14262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -14181,7 +14270,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1635934965
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14285,6 +14373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 912740643}
   nextCells:
@@ -14294,7 +14383,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1665318509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14413,6 +14501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1326909676}
   nextCells:
@@ -14422,7 +14511,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1693152428
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14556,6 +14644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -14563,7 +14652,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1699827195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14682,6 +14770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -14689,7 +14778,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1711889446
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14808,6 +14896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -14815,7 +14904,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1715314773
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14934,6 +15022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -14941,7 +15030,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1729583083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15060,6 +15148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -15067,7 +15156,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1737413015
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15296,6 +15384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 507330128}
   nextCells:
@@ -15305,7 +15394,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1752857095
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15439,6 +15527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -15446,7 +15535,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1760947437
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15565,6 +15653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -15572,7 +15661,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1771238902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15691,6 +15779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -15698,7 +15787,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1796528048
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15817,6 +15905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -15824,7 +15913,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1871915563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15928,6 +16016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 2099213566}
   nextCells:
@@ -15937,7 +16026,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1873822713
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16056,6 +16144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 900576179}
   nextCells:
@@ -16065,7 +16154,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1934091275
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16199,6 +16287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -16206,7 +16295,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1943565121
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16325,6 +16413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -16332,7 +16421,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1953572024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16452,6 +16540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells:
   - {fileID: 655777976}
@@ -16460,7 +16549,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &1965188375
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16580,6 +16668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1873822712}
   nextCells:
@@ -16589,7 +16678,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1967094957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16708,6 +16796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 411056213}
   nextCells:
@@ -16717,7 +16806,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &1990874250
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16851,6 +16939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -16858,7 +16947,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &2049476088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16962,6 +17050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 180496507}
   nextCells: []
@@ -16970,7 +17059,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &2067455878
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17104,6 +17192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells: []
   nextCells: []
   showConnections: 0
@@ -17111,7 +17200,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 0
 --- !u!65 &2082231482
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17215,6 +17303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1098939511}
   nextCells:
@@ -17224,7 +17313,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &2099213567
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17384,6 +17472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4483a4fbfa4dc3b7d5b69461c01ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   previousCells:
   - {fileID: 1693152427}
   nextCells:
@@ -17393,7 +17482,6 @@ MonoBehaviour:
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blockType: 1
 --- !u!65 &2138116808
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17706,9 +17794,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6983134694620423013, guid: 24ff109a3ef6a1e47992ed5047d885d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 523986684}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24ff109a3ef6a1e47992ed5047d885d5, type: 3}
+--- !u!224 &7334266050538743727 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6983134694620423013, guid: 24ff109a3ef6a1e47992ed5047d885d5, type: 3}
+  m_PrefabInstance: {fileID: 7334266050538743726}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7583066299098768759
 PrefabInstance:
   m_ObjectHideFlags: 0

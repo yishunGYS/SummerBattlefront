@@ -1,6 +1,7 @@
 using Gameplay.Enemy;
 using Gameplay.Features.EnemyFeature;
 using Systems;
+using Team;
 using UnityEngine;
 using Utilities;
 
@@ -21,6 +22,8 @@ namespace Managers
 			
 			InitCsvReader();
 			InitEnemy(EnemyContainer.transform);
+
+			CardManager.Instance.OnStart();
 		}
 		
 		

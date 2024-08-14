@@ -1,25 +1,27 @@
 using Managers;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Utilities;
 
-public class CardManager : MonoBehaviour
+namespace Team
 {
-    //public RectTransform TeamUnselectedPanel;
-    void Start() 
+    public class CardManager : Singleton<CardManager>
     {
-        GenerateCards();
-    }
-
-    void GenerateCards() 
-    {
-        foreach (var item in DataManager.Instance.GetSoliderBaseModels().Values)
+        //public RectTransform TeamUnselectedPanel;
+        public void OnStart() 
         {
-            var prefabPath = item.uiPrefabPath;
-            var prefab = Resources.Load<GameObject>(prefabPath);
-            GameObject card = Instantiate(prefab, transform);
+            GenerateCards();
         }
-    }
+
+        private void GenerateCards() 
+        {
+            foreach (var item in DataManager.Instance.GetSoliderBaseModels().Values)
+            {
+                var prefabPath = item.uiPrefabPath;
+                var prefab = Resources.Load<GameObject>(prefabPath);
+                GameObject card = Instantiate(prefab, transform);
+            }
+        }
     
+    }
 }
 
