@@ -15,15 +15,16 @@ namespace Managers
 		//public GameObject completeLevelUI;
 		private CsvReader csvReader;
 
-		public GameObject EnemyContainer;
+		private GameObject EnemyContainer;
 		void Start ()
 		{
 			//GameIsOver = false;
-			
+			EnemyContainer = GameObject.Find("EnemyContainer");
 			InitCsvReader();
 			InitEnemy(EnemyContainer.transform);
 
-			//CardManager.Instance.OnStart();
+			UIManager.Instance.OnStart();
+			SpawnManager.Instance.OnStart();
 		}
 		
 		
