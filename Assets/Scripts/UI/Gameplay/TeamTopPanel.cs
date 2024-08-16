@@ -24,6 +24,7 @@ namespace UI.Gameplay
             var uiPlacedCmpt = card.GetComponent<UIPlaced>();
             uiPlacedCmpt.InitInTeamPanel(data);
             uiPlacedCmpt.connectCardInLeftPanel = connectCard;
+            uiPlacedCmpt.view.SetCostText(data.cost);
             spawnDicts[id] = uiPlacedCmpt;
             
             IncreaseSelectCount();

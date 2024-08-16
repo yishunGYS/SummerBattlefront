@@ -1,6 +1,7 @@
 using DG.Tweening;
 using Gameplay.Player;
 using Managers;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -13,8 +14,8 @@ namespace UI.Gameplay
         InGamePanel
     }
 
-
-    public class UIPlaced : MonoBehaviour, IPointerClickHandler
+    [RequireComponent(typeof(UIPlacedView))]
+    public class UIPlaced : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
     {
         private SoliderModelBase soliderData;
 
@@ -22,11 +23,8 @@ namespace UI.Gameplay
         private TeamTopPanel teamTopPanel;
         private SpawnSoliderPanel spawnSoliderPanel;
 
-        private Image img;
-        private Color originalColor;
-        private Color darkenedColor;
-
-        public UIPlaced connectCardInLeftPanel;
+        [HideInInspector]public UIPlacedView view;
+        [HideInInspector]public UIPlaced connectCardInLeftPanel;
         private CardState curState;
 
         public void InitInTeamPanel(SoliderModelBase data)
@@ -34,10 +32,8 @@ namespace UI.Gameplay
             teamLeftPanel = FindObjectOfType<TeamLeftPanel>();
             teamTopPanel = FindObjectOfType<TeamTopPanel>();
             soliderData = data;
-            img = GetComponent<Image>();
-            originalColor = img.color;
-            darkenedColor = originalColor * 0.1f;
-
+            view = GetComponent<UIPlacedView>();
+            view.OnInit(this);
             curState = CardState.InTeamPanel;
         }
 
@@ -45,7 +41,7 @@ namespace UI.Gameplay
         {
             spawnSoliderPanel = FindObjectOfType<SpawnSoliderPanel>();
             soliderData = data;
-
+            view.OnInit(this);
             curState = CardState.InGamePanel;
         }
 
@@ -63,7 +59,7 @@ namespace UI.Gameplay
                 {
                     teamTopPanel.SpawnCardInTopPanel(soliderData.soliderId, this);
                     //自己变暗
-                    img.color = darkenedColor;
+                    view.ChangeUIColor(true);
                 }
             }
             else if (curState == CardState.InTeamPanel &&
@@ -71,7 +67,7 @@ namespace UI.Gameplay
                          Input.mousePosition))
             {
                 //在上边栏时
-                connectCardInLeftPanel.img.color = originalColor;
+                connectCardInLeftPanel.view.ChangeUIColor(false);
                 teamTopPanel.DestroySpawnedCard(soliderData.soliderId);
             }
             else if (curState == CardState.InGamePanel &&
@@ -82,6 +78,17 @@ namespace UI.Gameplay
                 SpawnManager.Instance.ChangeSelectSolider(soliderData.soliderId);
                 spawnSoliderPanel.OnSelectCard(GetComponent<RectTransform>());
             }
+        }
+        
+        
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            view.OnHoverUI(soliderData.soliderName, soliderData.soliderDes);
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            view.OnExitHover();
         }
     }
 }

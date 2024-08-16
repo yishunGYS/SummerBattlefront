@@ -13,13 +13,14 @@ namespace UI.Gameplay
         {
             base.OpenPanel();
 
-            foreach (var item in DataManager.Instance.GetRuntimeSoliderModel().Values)
+            foreach (var data in DataManager.Instance.GetRuntimeSoliderModel().Values)
             {
-                var prefabPath = item.uiPrefabPath;
+                var prefabPath = data.uiPrefabPath;
                 var prefab = Resources.Load<GameObject>(prefabPath);
                 GameObject card = Instantiate(prefab, transform);
                 var uiPlacedCmpt = card.GetComponent<UIPlaced>();
-                uiPlacedCmpt.InitInTeamPanel(item);
+                uiPlacedCmpt.InitInTeamPanel(data);
+                uiPlacedCmpt.view.SetCostText(data.cost);
             }
             
             teamTopPanel = FindObjectOfType<TeamTopPanel>();

@@ -1,5 +1,6 @@
 using System;
 using Gameplay.Player;
+using Ilumisoft.Health_System.Scripts.UI;
 using Managers;
 using UnityEngine;
 using Utilities;
@@ -55,6 +56,11 @@ namespace Gameplay.Enemy
         public override int GetMaxHp()
         {
             return enemyModel.maxHp;
+        }
+
+        public override void InitHealthBar()
+        {
+           transform.Find("HealthbarRed").GetComponent<Healthbar>().OnInit(this);
         }
     }
 }

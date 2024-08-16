@@ -35,7 +35,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 222461890503779319}
+  - {fileID: 6276056437664465748}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4221039637250498506
@@ -156,7 +156,7 @@ MonoBehaviour:
   healingFormula: 0
   baseAttackPercentage: 0.5
   baseMaxHpPercentage: 0
---- !u!1001 &5390865813612518439
+--- !u!1001 &2224615625218243716
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -206,15 +206,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316046413323435999, guid: 351baf954590df348a71254a311227b1, type: 3}
       propertyPath: m_Name
-      value: Healthbar
+      value: HealthbarRed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 351baf954590df348a71254a311227b1, type: 3}
---- !u!4 &222461890503779319 stripped
+--- !u!4 &6276056437664465748 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5316046413323435984, guid: 351baf954590df348a71254a311227b1, type: 3}
-  m_PrefabInstance: {fileID: 5390865813612518439}
+  m_PrefabInstance: {fileID: 2224615625218243716}
   m_PrefabAsset: {fileID: 0}
