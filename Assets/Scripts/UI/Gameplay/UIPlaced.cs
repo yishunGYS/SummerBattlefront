@@ -41,6 +41,7 @@ namespace UI.Gameplay
         {
             spawnSoliderPanel = FindObjectOfType<SpawnSoliderPanel>();
             soliderData = data;
+            view = GetComponent<UIPlacedView>();
             view.OnInit(this);
             curState = CardState.InGamePanel;
         }

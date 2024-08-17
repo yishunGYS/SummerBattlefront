@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7747116291038743707}
   - component: {fileID: 6425060511249867181}
   m_Layer: 6
-  m_Name: RangeGoding
+  m_Name: RangeGodingSingle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -51,14 +51,15 @@ namespace Managers
             {
                 var id = selectedCharacter.soliderId;
                 var tempSoliderModel = DataManager.Instance.GetSoliderDataById(id);
-                if (tempSoliderModel.spawnNum <= 1)
-                {
-                    SpawnSingle(block, tempSoliderModel.cost);
-                }
-                else
-                {
-                    StartCoroutine(SpawnMultiple(block, tempSoliderModel.spawnNum, tempSoliderModel.cost));
-                }
+                SpawnSingle(block, tempSoliderModel.cost);
+                // if (tempSoliderModel.spawnNum <= 1)
+                // {
+                //     SpawnSingle(block, tempSoliderModel.cost);
+                // }
+                // else
+                // {
+                //     StartCoroutine(SpawnMultiple(block, tempSoliderModel.spawnNum, tempSoliderModel.cost));
+                // }
             }
             else
             {
@@ -73,9 +74,6 @@ namespace Managers
                 Debug.Log("资源不够!");
                 return;
             }
-
-
-            
             SoliderAgent spawnedCharacter = Instantiate(selectedCharacter, block.transform.position + Vector3.up, block.transform.rotation);
             if (SoliderContainer != null)
             {
@@ -85,8 +83,28 @@ namespace Managers
                 spawnedCharacter.soliderLogic.InitBirthPointData(block);
             }
 
+            InitSoliderFellow(spawnedCharacter.transform, block);
             PlayerStats.Money -= cost;
             // 设置路径编号
+        }
+
+        private void InitSoliderFellow(Transform solider,GridCell block)
+        {
+            foreach (Transform child in solider.transform)
+            {
+                var soliderAgent = child.GetComponent<SoliderAgent>();
+                if (soliderAgent!= null)
+                {
+                    soliderAgent.transform.SetParent(SoliderContainer.transform);
+                    soliderAgent.OnInit();
+                    soliderAgent.soliderLogic.InitBlockData(block);
+                    soliderAgent.soliderLogic.InitBirthPointData(block);
+                }
+                
+                InitSoliderFellow(child,block);
+            }
+            
+            
         }
 
         private IEnumerator SpawnMultiple(GridCell block, int spawnNum, int cost)
