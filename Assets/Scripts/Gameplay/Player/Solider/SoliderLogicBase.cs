@@ -28,11 +28,14 @@ namespace Gameplay.Player
         protected SoliderAgent soliderAgent;
         protected SoliderModelBase soliderModel;
 
-        private const float frontCheckDistance = 2f;
+        private float frontCheckDistance;
 
         public List<UnitAgent> attackTargets = new List<UnitAgent>(); //在攻击的目标:可以是敌人也可以是友方
         private HashSet<UnitAgent> attackers = new HashSet<UnitAgent>(); //在对自己攻击的敌方
 
+        //移动
+        private Vector3 moveDir;
+        
         //攻击
         private float attackTimer = 1000f;
         public bool isAttackReady = true;
@@ -52,6 +55,7 @@ namespace Gameplay.Player
             soliderAgent = agent;
             soliderModel = soliderAgent.soliderModel;
             //playerBuffManager = new BuffManager(soliderAgent);
+            frontCheckDistance = (soliderModel.attackRange<1? soliderModel.attackRange - 0.05f : 1- 0.05f);
         }
         
         public void InitBlockData(GridCell block)
@@ -85,9 +89,9 @@ namespace Gameplay.Player
             var nextTarget = nextBlock[0];
             var nextPoint = (nextTarget.transform.position + new Vector3(0f, nextTarget.transform.localScale.y, 0f));
 
-            Vector3 dir = nextPoint - soliderAgent.transform.position;
+            moveDir= nextPoint - soliderAgent.transform.position;
 
-            soliderAgent.transform.Translate(soliderModel.moveSpeed * Time.deltaTime * dir.normalized, Space.World);
+            soliderAgent.transform.Translate(soliderModel.moveSpeed * Time.deltaTime * moveDir.normalized, Space.World);
 
             if (Vector3.Distance(soliderAgent.transform.position, nextPoint) <= 0.4f)
             {
@@ -131,11 +135,16 @@ namespace Gameplay.Player
 
             if (currentBlock == null || nextBlock == null || nextBlock.Count != 1) return false;
 
-            Vector3 dir = nextBlock[0].transform.position - soliderAgent.transform.position;
-            RaycastHit hit;
-            Debug.DrawRay(soliderAgent.transform.position, dir.normalized * frontCheckDistance, Color.red);
+            var nextTarget = nextBlock[0];
+            var nextPoint = nextTarget.transform.position ;
 
-            if (Physics.Raycast(soliderAgent.transform.position, dir.normalized, out hit, frontCheckDistance))
+            moveDir= nextPoint - (soliderAgent.transform.position- new Vector3(0f, soliderAgent.transform.localScale.y, 0f));
+            //Vector3 dir = nextBlock[0].transform.position - soliderAgent.transform.position;
+            RaycastHit hit;
+            Vector3 startPoint = soliderAgent.transform.position;
+            Debug.DrawRay(startPoint, moveDir.normalized * frontCheckDistance, Color.red);
+
+            if (Physics.Raycast(startPoint, moveDir.normalized, out hit, frontCheckDistance))
             {
                 EnemyAgent enemyAgent = hit.collider.gameObject.GetComponent<EnemyAgent>();
                 if (enemyAgent != null)

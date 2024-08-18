@@ -17,6 +17,10 @@ namespace UI.Gameplay
             {
                 var prefabPath = data.uiPrefabPath;
                 var prefab = Resources.Load<GameObject>(prefabPath);
+                if (prefab==null)
+                {
+                    continue;
+                }
                 GameObject card = Instantiate(prefab, transform);
                 var uiPlacedCmpt = card.GetComponent<UIPlaced>();
                 uiPlacedCmpt.InitInTeamPanel(data);
@@ -31,8 +35,12 @@ namespace UI.Gameplay
         {
             var battleSoliderData = DataManager.Instance.GetSolidersInBattle();
             
-            battleSoliderData.Add(7); //默认要加炸弹车
-            battleSoliderData.AddRange(teamTopPanel.GetSoliderList());
+            //battleSoliderData.Add(7); //默认要加炸弹车
+            foreach (var soliderId in teamTopPanel.GetSoliderList())
+            {
+                battleSoliderData.Add(soliderId);
+            }
+            
 
             UIManager.Instance.OnCloseTeamPanel();
             UIManager.Instance.OnOpenSoliderPlacePanel();
