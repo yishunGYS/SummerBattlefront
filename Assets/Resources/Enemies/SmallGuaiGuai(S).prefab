@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fa70d06cded769443a2420526a2987c4, type: 2}
+  - {fileID: 2100000, guid: 74ec9526016521347a0e73bca2234200, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,8 +97,10 @@ GameObject:
   - component: {fileID: 4811349893932386337}
   - component: {fileID: 5447982034920911513}
   - component: {fileID: 1954448989288956259}
+  - component: {fileID: 1787908243548739360}
+  - component: {fileID: 1135323383224882248}
   m_Layer: 7
-  m_Name: SmallGuaiGuai
+  m_Name: SmallGuaiGuai(S)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,6 +226,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curHp: 0
   enemyId: 1001
+--- !u!114 &1787908243548739360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855114071636747005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62aeb1a91338a8446888249ae118f94a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healingFormula: 0
+  baseAttackPercentage: 0.5
+  baseMaxHpPercentage: 0
+--- !u!114 &1135323383224882248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855114071636747005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b431d5b7fa78ca147a418550410d7a99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  campPrefab: {fileID: 0}
+  currentBlock: {fileID: 0}
+  lastCamp: {fileID: 0}
 --- !u!1001 &5390865813612518439
 PrefabInstance:
   m_ObjectHideFlags: 0
