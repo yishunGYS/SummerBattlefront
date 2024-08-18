@@ -54,5 +54,10 @@ namespace Gameplay.Player
         {
             return soliderModel.maxHp;
         }
+
+        public override void InitHealthBar()
+        {
+            transform.Find("HealthbarGreen").GetComponent<Healthbar>().OnInit(this);
+        }
     }
 }

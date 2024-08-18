@@ -134,11 +134,11 @@ namespace Systems.Camera
         {
             if (Input.mouseScrollDelta.y > 0)
             {
-                curFov = virtualCamera.m_Lens.FieldOfView + zoomSpeed;
+                curFov = virtualCamera.m_Lens.FieldOfView - zoomSpeed;
             }
             else if (Input.mouseScrollDelta.y < 0)
             {
-                curFov = virtualCamera.m_Lens.FieldOfView - zoomSpeed;
+                curFov = virtualCamera.m_Lens.FieldOfView + zoomSpeed;
             }
 
             virtualCamera.m_Lens.FieldOfView = Math.Clamp(curFov, minFov, maxFov);

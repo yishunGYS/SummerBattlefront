@@ -96,7 +96,7 @@ namespace Gameplay.Features.EnemyFeature
 
         public void setCampDate(StartPoint start)
         {
-            if (start==null)
+            if (start==null || start.previousCamps == null)
             {
                 return;
             }

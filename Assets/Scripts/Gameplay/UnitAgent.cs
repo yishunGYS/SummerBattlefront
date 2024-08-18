@@ -39,9 +39,9 @@ namespace Gameplay.Player
             
         }
 
-        private void InitHealthBar()
+        public virtual void InitHealthBar()
         {
-            transform.Find("Healthbar").GetComponent<Healthbar>().OnInit(this);
+            
         }
         
         

@@ -8,44 +8,41 @@ using System.Collections.Generic;
 using Systems;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Utilities;
 
 namespace Managers
 {
-    public class SpawnManager : MonoBehaviour
+    public class SpawnManager : Singleton<SpawnManager>
     {
-        public static SpawnManager instance;
-
-        public List<GameObject> characters = new List<GameObject>();
-        public GameObject SoliderContainer;
+       // public List<GameObject> characters = new List<GameObject>();
+        private GameObject SoliderContainer;
 
         // 当前选中的角色
-        public SoliderAgent selectedCharacter;
-
+        private SoliderAgent selectedCharacter;
+        private int selectId;
+        
         //鼠标悬浮/点击地块
         public LayerMask groundLayer;
         private GameObject hoveredObject; // 当前悬浮的物体
-        
-        
-        private void Awake()
-        {
-            if (instance != null)
-            {
-                Debug.LogError("More than one SpawnManager in scene!");
-                return;
-            }
-            instance = this;
-        }
 
+
+        public void OnStart()
+        {
+            SoliderContainer = GameObject.Find("SoliderContainer");
+        }
 
         private void Update()
         {
             DetectMouseClick();
             DetectMouseHover();
         }
+        
 
-        public void ChangeSpawnCharacter(SoliderAgent chara)
+        public void ChangeSelectSolider(int id)
         {
-            selectedCharacter = chara;
+            var soliderModel = DataManager.Instance.GetSoliderDataById(id);
+            selectedCharacter = Resources.Load<SoliderAgent>(soliderModel.scenePrefabPath);
+            
         }
 
         private void SpawnCharacter(GridCell block)
@@ -54,15 +51,15 @@ namespace Managers
             {
                 var id = selectedCharacter.soliderId;
                 var tempSoliderModel = DataManager.Instance.GetSoliderDataById(id);
-                if (tempSoliderModel.spawnNum <= 1)
-                {
-                    SpawnSingle(block, tempSoliderModel.cost);
-                }
-                else
-                {
-                    var tempSolider = selectedCharacter;
-                    StartCoroutine(SpawnMultiple(block, tempSolider, tempSoliderModel.spawnNum, tempSoliderModel.cost));
-                }
+                SpawnSingle(block, tempSoliderModel.cost);
+                // if (tempSoliderModel.spawnNum <= 1)
+                // {
+                //     SpawnSingle(block, tempSoliderModel.cost);
+                // }
+                // else
+                // {
+                //     StartCoroutine(SpawnMultiple(block, tempSoliderModel.spawnNum, tempSoliderModel.cost));
+                // }
             }
             else
             {
@@ -77,7 +74,6 @@ namespace Managers
                 Debug.Log("资源不够!");
                 return;
             }
-
             SoliderAgent spawnedCharacter = Instantiate(selectedCharacter, block.transform.position + Vector3.up, block.transform.rotation);
             if (SoliderContainer != null)
             {
@@ -87,11 +83,31 @@ namespace Managers
                 spawnedCharacter.soliderLogic.InitBirthPointData(block);
             }
 
+            InitSoliderFellow(spawnedCharacter.transform, block);
             PlayerStats.Money -= cost;
             // 设置路径编号
         }
 
-        private IEnumerator SpawnMultiple(GridCell block, SoliderAgent soliderAgent , int spawnNum, int cost)
+        private void InitSoliderFellow(Transform solider,GridCell block)
+        {
+            foreach (Transform child in solider.transform)
+            {
+                var soliderAgent = child.GetComponent<SoliderAgent>();
+                if (soliderAgent!= null)
+                {
+                    soliderAgent.transform.SetParent(SoliderContainer.transform);
+                    soliderAgent.OnInit();
+                    soliderAgent.soliderLogic.InitBlockData(block);
+                    soliderAgent.soliderLogic.InitBirthPointData(block);
+                }
+                
+                InitSoliderFellow(child,block);
+            }
+            
+            
+        }
+
+        private IEnumerator SpawnMultiple(GridCell block, int spawnNum, int cost)
         {
             for (int i = 0; i < spawnNum; i++)
             {
@@ -100,7 +116,7 @@ namespace Managers
                     Debug.Log("资源不够!");
                     yield break;
                 }
-
+                
                 SoliderAgent spawnedCharacter = Instantiate(selectedCharacter, block.transform.position + new Vector3(0f, block.transform.localScale.y, 0f), block.transform.rotation);
                 if (SoliderContainer != null)
                 {
