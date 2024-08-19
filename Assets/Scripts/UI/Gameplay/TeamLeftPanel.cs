@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Managers;
+using Systems;
 using UnityEngine;
 
 namespace UI.Gameplay
@@ -44,6 +45,8 @@ namespace UI.Gameplay
 
             UIManager.Instance.OnCloseTeamPanel();
             UIManager.Instance.OnOpenSoliderPlacePanel();
+
+            PlayerStats.Instance.StartLevel();
         }
     }
 }

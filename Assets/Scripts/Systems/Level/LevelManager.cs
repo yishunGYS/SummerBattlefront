@@ -14,6 +14,7 @@ namespace Systems.Level
 		
 		public int nowLevelId;
 		public string nowLevelName;
+		public float nowLevelTime;
 		
 		public SceneFader fader;
 
@@ -44,6 +45,7 @@ namespace Systems.Level
 
 			nowLevelId = levelInfo.levelID;
 			nowLevelName = levelInfo.levelName;
+			nowLevelTime = levelInfo.levelTime;
 		}
 		//关卡通过,切换场景
 		public void LevelEnd()
@@ -58,5 +60,15 @@ namespace Systems.Level
 			}
 			fader.ChangeScene("LevelSelect");
 		}
-	}
+
+		public void LevelFail()
+		{
+			fader.ChangeScene("LevelSelect");
+		}
+
+        public float GetCurrentLevelTime()
+        {
+            return nowLevelTime;
+        }
+    }
 }

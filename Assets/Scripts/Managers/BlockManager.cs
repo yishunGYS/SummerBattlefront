@@ -22,6 +22,8 @@ namespace Managers
         public Dictionary<GridCell, int> canPlaceBlocks = new Dictionary<GridCell, int>();
 
         public static UnityAction OnAddStartPoint;
+
+        //public static UnityAction OnAddEndBlock;
         private void Awake()
         {
             if (instance != null)

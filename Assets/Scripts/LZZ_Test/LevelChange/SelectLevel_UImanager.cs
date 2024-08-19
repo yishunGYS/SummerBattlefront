@@ -41,10 +41,10 @@ public class SelectLevel_UImanager : Singleton<SelectLevel_UImanager>
         levelIntro.text = levelInfoSO.levelIntro;
         levelName.text = levelInfoSO.levelName;
 
-        foreach (Image enemy in levelInfoSO.enemies)
-        {
-            Instantiate(enemy, enemies);
-        }
+        //foreach (image enemy in levelinfoso.enemies)
+        //{
+        //    instantiate(enemy, enemies);
+        //}
     }
     //选择关卡按钮被按下
     public void SelectLevelBtnClick(LevelInformationSO levelInfoSO)
@@ -62,6 +62,7 @@ public class SelectLevel_UImanager : Singleton<SelectLevel_UImanager>
 
         LevelManager.Instance.nowLevelId = -1;
         LevelManager.Instance.nowLevelName = null;
+        LevelManager.Instance.nowLevelTime = -1;
 			
         this.enterLevelBtn.onClick.RemoveListener(LevelManager.Instance.EnterLevel);
 
