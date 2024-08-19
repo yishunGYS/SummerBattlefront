@@ -82,7 +82,7 @@ namespace Gameplay.Enemy
 
         private void ClearTarget()
         {
-            attackTargets.Clear();
+            //attackTargets.Clear();
         }
 
         public virtual void RemoveAttackTarget(UnitAgent target)

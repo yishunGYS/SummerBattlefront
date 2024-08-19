@@ -42,6 +42,10 @@ namespace Gameplay.Player.Solider.Attacker
             SortMultiTargetsByDistance(tempAttackTargets);
             for (int i = 0; i < soliderModel.attackNum; i++)
             {
+                if (i> tempAttackTargets.Count - 1)
+                {
+                    break;
+                }
                 attackTargets.Add(tempAttackTargets[i].target);
             }
         }

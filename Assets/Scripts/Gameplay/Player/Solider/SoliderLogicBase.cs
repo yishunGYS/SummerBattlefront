@@ -107,18 +107,18 @@ namespace Gameplay.Player
 
             if (currentBlock == null || nextBlock == null || nextBlock.Count != 1)
             {
-                if (BlockManager.instance.headSoliderBlocks.ContainsKey(soliderAgent))
-                {
-                    BlockManager.instance.OnHeadSoliderDestory(soliderAgent);
-                }
+                // if (BlockManager.instance.headSoliderBlocks.ContainsKey(soliderAgent))
+                // {
+                //     BlockManager.instance.OnHeadSoliderDestory(soliderAgent);
+                // }
 
                 if (currentBlock.gameObject.GetComponent<StartPoint>())
                 {
                     Debug.Log("返回费用");
                 }
-
-                GameObject.Destroy(soliderAgent.gameObject);
-                return;
+                
+                Die(); //Die有包括排头兵
+                
             }
         }
 
