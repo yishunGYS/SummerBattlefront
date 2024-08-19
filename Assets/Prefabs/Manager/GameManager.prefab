@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3019302581070511748}
   - component: {fileID: 7713696816304975947}
   - component: {fileID: 3182939697578728789}
+  - component: {fileID: 4638141426478718118}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,7 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bf5b9b70d005b40b70c0fd56f05cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyContainer: {fileID: 4273978296954889216, guid: caa4dab5688cca944875d1831cc934ce, type: 3}
 --- !u!114 &3182939697578728789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,9 +58,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499b17d53dc5ad745821cf58aaacc103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 400
+  startMoney: 10
   startLives: 20
   currentRegainRate: 0
   currentLimit: 10
-  regainPhase: 
-  limitPhase: 0a000000
+  regainPhase: 01000000
+  limitPhase: 64000000
+  levelTimeLimit: 300
+  timeText: {fileID: 0}
+  isEnterEnd: 0
+  timeTextPrefab: {fileID: 8441238356475177337, guid: 017424b1fd649f6419f5b5f16d87a37e, type: 3}
+--- !u!114 &4638141426478718118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5948660862465402647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b70ea3da61b71428a58b54bcc07003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []

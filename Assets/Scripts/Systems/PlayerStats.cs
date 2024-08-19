@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Systems.Level;
 using TMPro; // 引入TextMeshPro的命名空间
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Systems
 {
@@ -27,7 +28,7 @@ namespace Systems
         [Header("当前的上限")]
         public int currentLimit;
 
-        [Header("经过多长时间切换到下一个阶段")]
+        //[Header("经过多长时间切换到下一个阶段")]
         //public int switchPhase;
 
         [Header("回复速度")]
@@ -56,6 +57,12 @@ namespace Systems
         //[HideInInspector]
         public bool isEnterEnd = false;
 
+        // 你可以在这里指定时间文本预制件
+        [Header("时间文本预制件")]
+        public GameObject timeTextPrefab;
+
+        private float regainTimeScale = 1f;
+
         void Awake()
         {
             // 初始化实例
@@ -64,6 +71,21 @@ namespace Systems
 
         void Start()
         {
+            GameObject canvasObject = new GameObject("TimeTextCanvas");
+            Canvas canvas = canvasObject.AddComponent<Canvas>();
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            canvasObject.AddComponent<CanvasScaler>();
+
+            if (timeTextPrefab != null)
+            {
+                GameObject timeTextInstance = Instantiate(timeTextPrefab, canvasObject.transform);
+                timeText = timeTextInstance.GetComponent<TextMeshProUGUI>();
+            }
+            else
+            {
+                Debug.LogError("Time Text Prefab 未设置！");
+            }
+
             // 获取关卡时间限制
             if (LevelManager.Instance != null)
             {
@@ -93,7 +115,6 @@ namespace Systems
             UpdateTimeText(); // 初始时间显示
         }
 
-
         void FixedUpdate()
         {
             if (isLevelStarted)
@@ -117,7 +138,7 @@ namespace Systems
 
         void RegainMoneyOverTime()
         {
-            regainTimer += Time.fixedDeltaTime;
+            regainTimer += Time.fixedDeltaTime * regainTimeScale;
 
             if (regainTimer >= 1f)
             {
@@ -159,7 +180,7 @@ namespace Systems
 
         public void CheckVictoryCondition()
         {
-            if (isEnterEnd)
+            if (isEnterEnd && remainingTime > 0f)
             {
                 isLevelStarted = false;
                 Debug.Log("关卡成功！");
@@ -167,22 +188,19 @@ namespace Systems
             }
         }
 
-        // void SwitchPhaseOverTime()
-        // {
-        //     switchTimer += Time.fixedDeltaTime;
-        //
-        //     if (switchTimer >= switchPhase)
-        //     {
-        //         currentPhaseIndex++;
-        //
-        //         if (currentPhaseIndex < regainPhase.Count && currentPhaseIndex < limitPhase.Count)
-        //         {
-        //             currentRegainRate = regainPhase[currentPhaseIndex];
-        //             currentLimit = limitPhase[currentPhaseIndex];
-        //         }
-        //
-        //         switchTimer = 0f;
-        //     }
-        // }
+        public void SetRaginTimeScale(float num)
+        {
+            regainTimeScale = num;
+        }
+
+        public void RiseRagineRate(int num)
+        {
+            currentRegainRate += num;
+        }
+
+        public void RiseLimit(int num)
+        {
+            currentLimit += num;
+        }
     }
 }

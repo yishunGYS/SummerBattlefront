@@ -50,7 +50,7 @@ namespace Gameplay.Player
 
         //从哪个出生点出生的
         public StartPoint birthPoint;
-
+        public GridCell birthCell;
         public SoliderLogicBase(SoliderAgent agent)
         {
             soliderAgent = agent;
@@ -72,6 +72,10 @@ namespace Gameplay.Player
             if (birthPoint == null)
             {
                 birthPoint = currentBlock.previousCells[0].GetComponent<StartPoint>();
+                if (birthPoint != null)
+                {
+                    birthCell = currentBlock;
+                }
             }
         }
 

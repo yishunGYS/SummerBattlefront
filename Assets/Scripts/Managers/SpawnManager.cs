@@ -9,6 +9,7 @@ using Systems;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Utilities;
+using Gameplay.Item;
 
 namespace Managers
 {
@@ -74,6 +75,7 @@ namespace Managers
                 Debug.Log("资源不够!");
                 return;
             }
+
             SoliderAgent spawnedCharacter = Instantiate(selectedCharacter, block.transform.position + Vector3.up, block.transform.rotation);
             if (SoliderContainer != null)
             {
@@ -81,11 +83,13 @@ namespace Managers
                 spawnedCharacter.OnInit();
                 spawnedCharacter.soliderLogic.InitBlockData(block);
                 spawnedCharacter.soliderLogic.InitBirthPointData(block);
+
+                // 在士兵生成后提升属性
+                ItemManager.instance.RiseSoliderStats(spawnedCharacter);
             }
 
             InitSoliderFellow(spawnedCharacter.transform, block);
             PlayerStats.Money -= cost;
-            // 设置路径编号
         }
 
         private void InitSoliderFellow(Transform solider,GridCell block)

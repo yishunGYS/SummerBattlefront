@@ -8,9 +8,6 @@ namespace Ilumisoft.Health_System.Scripts.UI
     [AddComponentMenu("Health System/UI/Healthbar")]
     public class Healthbar : MonoBehaviour
     {
-        //[field:SerializeField]
-        //public HealthComponent Health { get; set; }
-
         [SerializeField]
         Canvas canvas;
 
@@ -20,14 +17,13 @@ namespace Ilumisoft.Health_System.Scripts.UI
         [SerializeField, Tooltip("Whether the healthbar should be hidden when health is empty")]
         bool hideEmpty = false;
 
-        [SerializeField, Tooltip("Makes the healthbar being aligned with the camera")]
-        bool alignWithCamera = false;
-
         [SerializeField, Min(0.1f), Tooltip("Controls how fast changes will be animated in points/second")]
         float changeSpeed = 100;
 
-        float currentValue;
+        [SerializeField, Tooltip("The base angle for the healthbar's x-rotation when close to the camera")]
+        float baseAngle = 500f;
 
+        float currentValue;
         private float maxValue;
         private UnitAgent agent;
 
@@ -45,27 +41,29 @@ namespace Ilumisoft.Health_System.Scripts.UI
                 return;
             }
 
-            if (alignWithCamera)
-            {
-                AlignWithCamera();
-            }
+            // Update the rotation of the Canvas
+            SetRotationBasedOnDistance();
 
             currentValue = Mathf.MoveTowards(currentValue, agent.curHp, Time.deltaTime * changeSpeed);
             UpdateFillbar();
             UpdateVisibility();
         }
 
-        private void AlignWithCamera()
+        void SetRotationBasedOnDistance()
         {
             if (Camera.main != null)
             {
-                // 计算相对于相机的方向
-                Vector3 direction = Camera.main.transform.position - transform.position;
-                direction.y = 0; // 忽略Y轴旋转
-                
-                // 设置旋转角度使其面向相机
-                Quaternion rotation = Quaternion.LookRotation(direction);
-                canvas.transform.rotation = rotation;
+                // 计算摄像机与Healthbar之间的Z轴位移
+                float zOffset = Camera.main.transform.position.z - transform.position.z;
+
+                // 计算距离摄像机的总距离
+                float distanceToCamera = Vector3.Distance(Camera.main.transform.position, transform.position);
+
+                // 基于距离计算旋转角度
+                float targetXRotation = baseAngle / distanceToCamera;
+
+                // 应用rotation.x，并保持y和z为0
+                canvas.transform.rotation = Quaternion.Euler(targetXRotation, 0f, 0f);
             }
         }
 

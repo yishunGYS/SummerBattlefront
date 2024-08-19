@@ -142,6 +142,7 @@ namespace Gameplay.Enemy
                 if (eliteCmpt)
                 {
                     eliteCmpt.lastCamp = soliderAgent.soliderLogic.birthPoint;
+                    eliteCmpt.lastPath = soliderAgent.soliderLogic.birthCell;
                 }
 
                 Die();
