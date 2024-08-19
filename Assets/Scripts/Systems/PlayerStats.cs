@@ -188,6 +188,11 @@ namespace Systems
             }
         }
 
+
+        public void GainMoney(int num)
+        {
+            Money += num;
+        }
         public void SetRaginTimeScale(float num)
         {
             regainTimeScale = num;
@@ -201,6 +206,11 @@ namespace Systems
         public void RiseLimit(int num)
         {
             currentLimit += num;
+        }
+
+        public int CurrentMoney()
+        {
+            return Money;
         }
     }
 }

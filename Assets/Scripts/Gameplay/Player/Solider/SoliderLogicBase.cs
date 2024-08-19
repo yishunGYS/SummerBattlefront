@@ -122,6 +122,8 @@ namespace Gameplay.Player
                 if (currentBlock.gameObject.GetComponent<StartPoint>())
                 {
                     Debug.Log("返回费用");
+                    PlayerStats.Instance.GainMoney(soliderModel.cost);
+                    Debug.Log("目前的钱为:" + PlayerStats.Instance.CurrentMoney() );
                 }
 
                 if (currentBlock.gameObject.GetComponent<EndBlock>())
