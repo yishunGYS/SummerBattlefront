@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bf5b9b70d005b40b70c0fd56f05cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyContainer: {fileID: 4273978296954889216, guid: caa4dab5688cca944875d1831cc934ce, type: 3}
 --- !u!114 &3182939697578728789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,3 +63,6 @@ MonoBehaviour:
   currentLimit: 10
   regainPhase: 
   limitPhase: 0a000000
+  levelTimeLimit: 300
+  timeText: {fileID: 3993700742128236435, guid: 72b0739c778b5c3478be052775a15d78, type: 3}
+  isEnterEnd: 0

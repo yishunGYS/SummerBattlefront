@@ -163,6 +163,7 @@ namespace Systems
             {
                 isLevelStarted = false;
                 Debug.Log("关卡成功！");
+                Time.timeScale = 0;
                 UIManager.Instance.OpenEndLevelPanel();
             }
         }
