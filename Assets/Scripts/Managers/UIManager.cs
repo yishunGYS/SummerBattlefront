@@ -24,6 +24,7 @@ namespace Managers
             UIRoot = Instantiate(UIRoot);
                 
             InitPanels();
+
             //TipText.alpha = 0;
         }
 
@@ -48,6 +49,16 @@ namespace Managers
             // {
             //     OpenPanel("SpawnSoliderPanel");
             // }
+        }
+
+        public void OpenEndLevelPanel()
+        {
+            OpenPanel("LevelEndPanel");
+        }
+
+        public void OpenLevelFailPanel()
+        {
+            OpenPanel("LevelFailPanel");
         }
 
         private void InitPanels()

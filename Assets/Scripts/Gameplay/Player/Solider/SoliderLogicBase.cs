@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using _3DlevelEditor_GYS;
 using Gameplay.Enemy;
 using Managers;
+using Systems;
 using UnityEngine;
 using UnityEngine.Events;
 using Object = UnityEngine.Object;
@@ -105,6 +106,8 @@ namespace Gameplay.Player
             currentBlock = nextBlock[0];
             nextBlock = currentBlock.nextCells;
 
+
+
             if (currentBlock == null || nextBlock == null || nextBlock.Count != 1)
             {
                 // if (BlockManager.instance.headSoliderBlocks.ContainsKey(soliderAgent))
@@ -117,8 +120,18 @@ namespace Gameplay.Player
                     Debug.Log("返回费用");
                 }
                 
-                Die(); //Die有包括排头兵
                 
+                
+
+                if (currentBlock.gameObject.GetComponent<EndBlock>())
+                {
+                    PlayerStats.Instance.isEnterEnd = true;
+                    PlayerStats.Instance.CheckVictoryCondition();
+                    //Debug.Log("找到EndBlock");
+                }
+
+                Die(); //Die有包括排头兵
+                //GameObject.Destroy(soliderAgent.gameObject);
             }
         }
 
