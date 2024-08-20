@@ -19,6 +19,8 @@ namespace Gameplay.Features.EnemyFeature
 
         public StartPoint lastCamp;
 
+        public GridCell lastPath;
+
         private void Awake()
         {
             agent = GetComponent<EnemyAgent>();
@@ -94,6 +96,21 @@ namespace Gameplay.Features.EnemyFeature
 
         }
 
+        public void setLastPathUnActive()
+        {
+            if (BlockManager.instance.canPlaceBlocks.ContainsKey(lastPath))
+            {
+                BlockManager.instance.canPlaceBlocks.Remove(lastPath);
+                lastPath.canPlace = false;
+                lastPath.OnCanPlaceChange(false);
+            }
+
+            if (BlockManager.instance.startPointBlocks[lastCamp].Contains(lastPath))
+            {
+                BlockManager.instance.startPointBlocks[lastCamp].Remove(lastPath);
+            }
+        }
+
         public void setCampDate(StartPoint start)
         {
             if (start==null || start.previousCamps == null)
@@ -107,7 +124,7 @@ namespace Gameplay.Features.EnemyFeature
         {
             Debug.Log("Crossroad detected");
             SpawnCamp(currentBlock);
-            setLastCampUnActive();
+            setLastPathUnActive();
             BlockManager.instance.CheckAllStartPoint();
             BlockManager.instance.CheckCanPlace();
         }

@@ -50,7 +50,7 @@ namespace Gameplay.Player
 
         //从哪个出生点出生的
         public StartPoint birthPoint;
-
+        public GridCell birthCell;
         public SoliderLogicBase(SoliderAgent agent)
         {
             soliderAgent = agent;
@@ -72,6 +72,10 @@ namespace Gameplay.Player
             if (birthPoint == null)
             {
                 birthPoint = currentBlock.previousCells[0].GetComponent<StartPoint>();
+                if (birthPoint != null)
+                {
+                    birthCell = currentBlock;
+                }
             }
         }
 
@@ -118,6 +122,8 @@ namespace Gameplay.Player
                 if (currentBlock.gameObject.GetComponent<StartPoint>())
                 {
                     Debug.Log("返回费用");
+                    PlayerStats.Instance.GainMoney(soliderModel.cost);
+                    Debug.Log("目前的钱为:" + PlayerStats.Instance.CurrentMoney() );
                 }
                 
                 

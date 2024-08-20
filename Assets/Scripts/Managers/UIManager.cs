@@ -25,30 +25,37 @@ namespace Managers
                 
             InitPanels();
 
+            OpenPanel("StartTeamingPanel");
             //TipText.alpha = 0;
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.T))
-            {
-                if (isOpenTeam)
-                {
-                    ClosePanel("TeamTopPanel");
-                    ClosePanel("TeamLeftPanel");
-                    isOpenTeam = true;
-                }
-                else
-                {
-                    OpenPanel("TeamTopPanel");
-                    OpenPanel("TeamLeftPanel");
-                }
-            }
+            //if (Input.GetKeyDown(KeyCode.T))
+            //{
+
+            //}
 
             // if (Input.GetKeyDown(KeyCode.P))
             // {
             //     OpenPanel("SpawnSoliderPanel");
             // }
+        }
+
+        public void OpenTeamPanel()
+        {
+            if (isOpenTeam)
+            {
+                ClosePanel("TeamTopPanel");
+                ClosePanel("TeamLeftPanel");
+                isOpenTeam = true;
+            }
+            else
+            {
+                OpenPanel("TeamTopPanel");
+                OpenPanel("TeamLeftPanel");
+                ClosePanel("StartTeamingPanel");
+            }
         }
 
         public void OpenEndLevelPanel()

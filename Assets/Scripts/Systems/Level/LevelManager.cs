@@ -50,7 +50,7 @@ namespace Systems.Level
 		//关卡通过,切换场景
 		public void LevelEnd()
 		{
-			if (nowLevelId > maxLevelId)
+            if (nowLevelId > maxLevelId)
 			{
 				levelReached++;
 				maxLevelId = nowLevelId;
