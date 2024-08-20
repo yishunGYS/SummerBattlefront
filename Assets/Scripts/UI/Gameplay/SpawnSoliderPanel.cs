@@ -11,6 +11,8 @@ namespace UI.Gameplay
         public override void OpenPanel()
         {
             base.OpenPanel();
+
+
             var soliderList = DataManager.Instance.GetSolidersInBattle();
             foreach (var id in soliderList)
             {
@@ -21,6 +23,10 @@ namespace UI.Gameplay
                 var uiPlacedCmpt = card.GetComponent<UIPlaced>();
                 uiPlacedCmpt.InitInGamePanel(soliderData);
             }
+
+            // 清理面板中已有的士兵卡片
+            DataManager.Instance.ClearSolidersInBattle();
+
         }
 
         public void OnSelectCard(RectTransform newCard)

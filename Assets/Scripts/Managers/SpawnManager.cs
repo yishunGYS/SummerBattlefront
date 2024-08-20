@@ -16,7 +16,7 @@ namespace Managers
     public class SpawnManager : Singleton<SpawnManager>
     {
        // public List<GameObject> characters = new List<GameObject>();
-        private GameObject SoliderContainer;
+        public GameObject SoliderContainer;
 
         // 当前选中的角色
         private SoliderAgent selectedCharacter;
@@ -154,10 +154,17 @@ namespace Managers
                 {
                     // 在地块上生成士兵
                     GameObject hitObject = hit.collider.gameObject;
-                    GridCell block = hitObject.GetComponent<GridCell>();
-                    if ( block.canPlace)
+                    if (hitObject != null)
                     {
-                        SpawnCharacter(block);
+                        GridCell block = hitObject.GetComponent<GridCell>();
+                        if (block != null) 
+                        {
+                            if (block.canPlace)
+                            {
+                                SpawnCharacter(block);
+                            }
+                        }
+
                     }
                 }
             }

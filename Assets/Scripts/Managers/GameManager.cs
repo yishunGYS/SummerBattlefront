@@ -1,5 +1,6 @@
 using Gameplay.Enemy;
 using Gameplay.Features.EnemyFeature;
+using Gameplay.Item;
 using Systems;
 using Team;
 using UnityEngine;
@@ -19,17 +20,39 @@ namespace Managers
 		void Start ()
 		{
 			//GameIsOver = false;
-			EnemyContainer = GameObject.Find("EnemyContainer");
-			InitCsvReader();
-			InitEnemy(EnemyContainer.transform);
+			//EnemyContainer = GameObject.Find("EnemyContainer");
+			//InitCsvReader();
+			//InitEnemy(EnemyContainer.transform);
 
-			UIManager.Instance.OnStart();
-			SpawnManager.Instance.OnStart();
+			//UIManager.Instance.OnStart();
+			//SpawnManager.Instance.OnStart();
 		}
-		
-		
-		// Update is called once per frame
-		void Update () {
+
+        public void OnLevelStart()
+        {
+            EnemyContainer = GameObject.Find("EnemyContainer");
+            InitCsvReader();
+            InitEnemy(EnemyContainer.transform);
+
+            UIManager.Instance.OnStart();
+            SpawnManager.Instance.OnStart();
+            ItemManager.instance.OnStart();
+
+            if (PlayerStats.Instance != null)
+            {
+                // 先重置状态
+                PlayerStats.Instance.ResetPlayerStats();
+
+                // 然后初始化关卡相关的数据
+                PlayerStats.Instance.OnLevelStart();
+
+                Debug.Log("PlayerStats.Instance != null");
+            }
+        }
+
+
+        // Update is called once per frame
+        void Update () {
 			//if (GameIsOver)
 			//	return;
 
