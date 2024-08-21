@@ -12,14 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelect.unity
     guid: 81357d86a3a13f64cae06c521774f1ee
   - enabled: 1
-    path: Assets/Scripts/LZZ_Test/LevelChange/TestLevel01.unity
-    guid: f75e0c27ab8cd4d4dab7a6e6ad4a6603
-  - enabled: 1
-    path: Assets/Scripts/LZZ_Test/LevelChange/TestLevel02.unity
-    guid: e075a5fef1c7b7e4b9afe1945df214b4
-  - enabled: 1
-    path: Assets/Scripts/LZZ_Test/LevelChange/TestLevel03.unity
-    guid: 116d176d97b4ab64dbdd1e6f749b3d4e
+    path: Assets/Scenes/GYS_Level/GYS_Level_001_Test.unity
+    guid: 024271dc02997b6478e4f08bd7dcf350
   - enabled: 1
     path: Assets/Scenes/GYS_Level/GYS_Level_003.unity
     guid: 63298b3dfe348fb46a4220fe3c399574
