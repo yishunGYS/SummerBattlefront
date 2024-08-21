@@ -58,12 +58,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499b17d53dc5ad745821cf58aaacc103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 1
+  startMoney: 5
   startLives: 20
   currentRegainRate: 0.5
   currentLimit: 10
   regainPhase:
-  - 0.5
+  - 1
   limitPhase: 0a000000
   timeText: {fileID: 0}
   isEnterEnd: 0

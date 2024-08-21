@@ -14,10 +14,10 @@ namespace Systems
         public static PlayerStats Instance;
 
         [ShowInInspector]
-        public static float Money;
+        [HideInInspector]public static float Money = 0;
         public int startMoney = 400;
 
-        public static int Lives;
+        //public static int Lives;
         public int startLives = 20;
 
         //public static int Rounds;
@@ -88,7 +88,7 @@ namespace Systems
             }
 
             Money = startMoney;
-            Lives = startLives;
+            //Lives = startLives;
 
             if (regainPhase != null && limitPhase != null && regainPhase.Count > 0 && limitPhase.Count > 0)
             {
@@ -201,7 +201,7 @@ namespace Systems
         public void ResetPlayerStats()
         {
             Money = startMoney;
-            Lives = startLives;
+            //Lives = startLives;
             //Rounds = 0;
 
             if (regainPhase != null && limitPhase != null && regainPhase.Count > 0 && limitPhase.Count > 0)
