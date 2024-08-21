@@ -17,9 +17,9 @@ namespace Managers
 
 
         public Dictionary<SoliderAgent, List<GridCell>> headSoliderBlocks = new Dictionary<SoliderAgent, List<GridCell>>();
-        public Dictionary<StartPoint, List<GridCell>> startPointBlocks = new Dictionary<StartPoint, List<GridCell>>();
+        public SerializableDictionary<StartPoint, List<GridCell>> startPointBlocks = new SerializableDictionary<StartPoint, List<GridCell>>();
 
-        public Dictionary<GridCell, int> canPlaceBlocks = new Dictionary<GridCell, int>();
+        public SerializableDictionary<GridCell, int> canPlaceBlocks = new SerializableDictionary<GridCell, int>();
 
         public static UnityAction OnAddStartPoint;
 
