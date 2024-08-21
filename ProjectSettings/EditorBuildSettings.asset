@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scripts/LZZ_Test/LevelChange/TestLevel03.unity
     guid: 116d176d97b4ab64dbdd1e6f749b3d4e
   - enabled: 1
-    path: Assets/Scenes/GYS_Level/GYS_001.unity
+    path: Assets/Scenes/GYS_Level/GYS_Level_001.unity
     guid: 63298b3dfe348fb46a4220fe3c399574
+  - enabled: 1
+    path: Assets/Scenes/GYS_Level/GYS_Level_002.unity
+    guid: 318e388150343914abaac23aff589fbc
   m_configObjects: {}

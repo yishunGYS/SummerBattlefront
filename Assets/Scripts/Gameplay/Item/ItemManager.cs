@@ -22,7 +22,7 @@ namespace Gameplay.Item
             instance = this;
         }
 
-        private void Start()
+        public void OnStart()
         {
             SoliderContainer = GameObject.Find("SoliderContainer");
         }

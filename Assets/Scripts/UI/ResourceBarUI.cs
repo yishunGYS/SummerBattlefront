@@ -12,15 +12,13 @@ public class ResourceBarUI : MonoBehaviour
 
     void Start()
     {
-        // 监听OnMoneyChanged事件
-        PlayerStats.OnMoneyChanged += UpdateResourceBar;
-
-        CreateGrids(PlayerStats.Instance.currentLimit);
+        CreateGrids(Mathf.CeilToInt(PlayerStats.Instance.currentLimit)); // 向上取整创建格子
     }
 
-    void OnDisable()
+    void Update()
     {
-        PlayerStats.OnMoneyChanged -= UpdateResourceBar;
+        // 在每一帧更新资源条
+        UpdateResourceBar(PlayerStats.Instance.CurrentMoney(), PlayerStats.Instance.currentLimit);
     }
 
     void CreateGrids(int maxMoney)
@@ -40,24 +38,30 @@ public class ResourceBarUI : MonoBehaviour
         }
     }
 
-    void UpdateResourceBar(int currentMoney, int maxMoney)
+    void UpdateResourceBar(float currentMoney, int maxMoney)
     {
         // 如果上限改变，重新生成格子
-        if (grids.Count != maxMoney)
+        if (grids.Count != Mathf.CeilToInt(maxMoney))
         {
-            CreateGrids(maxMoney);
+            CreateGrids(Mathf.CeilToInt(maxMoney));
         }
 
         // 更新每个格子的填充状态
         for (int i = 0; i < grids.Count; i++)
         {
-            if (i < currentMoney)
+            float fillAmount = currentMoney - i;
+
+            if (fillAmount >= 1f)
             {
-                grids[i].fillAmount = 1f;
+                grids[i].fillAmount = 1f;  // 完全填充
+            }
+            else if (fillAmount > 0f)
+            {
+                grids[i].fillAmount = fillAmount;  // 部分填充
             }
             else
             {
-                grids[i].fillAmount = 0f;
+                grids[i].fillAmount = 0f;  // 没有填充
             }
         }
     }
