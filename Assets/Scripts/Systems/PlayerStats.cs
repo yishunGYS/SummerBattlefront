@@ -20,7 +20,7 @@ namespace Systems
         public static int Lives;
         public int startLives = 20;
 
-        public static int Rounds;
+        //public static int Rounds;
 
         [Header("当前回复速率")]
         public float currentRegainRate;
@@ -101,7 +101,7 @@ namespace Systems
                 Debug.LogError("没有设置回复速度和上限");
             }
 
-            Rounds = 0;
+            //Rounds = 0;
             switchTimer = 0f;
             regainTimer = 0f;
         }
@@ -202,7 +202,7 @@ namespace Systems
         {
             Money = startMoney;
             Lives = startLives;
-            Rounds = 0;
+            //Rounds = 0;
 
             if (regainPhase != null && limitPhase != null && regainPhase.Count > 0 && limitPhase.Count > 0)
             {

@@ -43,7 +43,8 @@ namespace Managers
 
                 panelSpawnDict.Clear();
                 panelOpenDict.Clear();
-
+                isOpenTeam = false;
+                
                 InitPanels();
                 OpenPanel("StartTeamingPanel");
 
@@ -138,6 +139,12 @@ namespace Managers
         public void OnOpenSoliderPlacePanel()
         {
             OpenPanel("SpawnSoliderPanel");
+        }
+
+
+        private void RestData()
+        {
+            
         }
     }
 }
