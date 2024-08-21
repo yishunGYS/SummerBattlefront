@@ -168,7 +168,6 @@ namespace Systems
             {
                 isLevelStarted = false;
                 Debug.Log("关卡成功！");
-                Time.timeScale = 0;
                 UIManager.Instance.OpenEndLevelPanel();
             }
         }
@@ -204,16 +203,16 @@ namespace Systems
             Lives = startLives;
             //Rounds = 0;
 
-            if (regainPhase != null && limitPhase != null && regainPhase.Count > 0 && limitPhase.Count > 0)
-            {
-                currentPhaseIndex = 0;
-                currentLimit = limitPhase[currentPhaseIndex];
-                currentRegainRate = regainPhase[currentPhaseIndex];
-            }
-            else
-            {
-                Debug.LogError("没有设置回复速度和上限");
-            }
+            //if (regainPhase != null && limitPhase != null && regainPhase.Count > 0 && limitPhase.Count > 0)
+            //{
+            //    currentPhaseIndex = 0;
+            //    currentLimit = limitPhase[currentPhaseIndex];
+            //    currentRegainRate = regainPhase[currentPhaseIndex];
+            //}
+            //else
+            //{
+            //    Debug.LogError("没有设置回复速度和上限");
+            //}
 
             regainTimer = 0f;
             switchTimer = 0f;

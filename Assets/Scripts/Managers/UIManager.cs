@@ -21,10 +21,13 @@ namespace Managers
         // 添加 isOpenTeam 变量
         private bool isOpenTeam = false;
 
-        private void Awake()
+        protected override void Awake()
         {
             base.Awake();
-            SceneManager.sceneLoaded += OnSceneLoaded; // 订阅场景加载事件
+            if (_instance == this)
+            {
+                SceneManager.sceneLoaded += OnSceneLoaded; // 订阅场景加载事件
+            }
         }
 
         private void OnDestroy()

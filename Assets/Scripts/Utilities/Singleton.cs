@@ -4,7 +4,7 @@ namespace Utilities
 {
     public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
-        private static T _instance;
+        protected static T _instance;
 
         public static T Instance
         {
@@ -19,7 +19,7 @@ namespace Utilities
             }
         }
 
-        protected void Awake()
+        protected virtual void Awake()
         {
             if (_instance == null)
             {
