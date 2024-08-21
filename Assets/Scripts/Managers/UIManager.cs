@@ -40,10 +40,8 @@ namespace Managers
             {
                 UIRoot = Resources.Load<Transform>("UIPanel/MainCanvas");
                 UIRoot = Instantiate(UIRoot);
+                RestData();
 
-                panelSpawnDict.Clear();
-                panelOpenDict.Clear();
-                isOpenTeam = false;
                 
                 InitPanels();
                 OpenPanel("StartTeamingPanel");
@@ -140,7 +138,7 @@ namespace Managers
         {
             OpenPanel("SpawnSoliderPanel");
         }
-
+        
 
         public void OnHoverUIPlaced(Vector3 position,string soliderName,string des)
         {
@@ -152,6 +150,14 @@ namespace Managers
         public void OnHoverUIExit()
         {
             ClosePanel("UnitHoverPanel");
+        }
+
+
+        private void RestData()
+        {
+            panelSpawnDict.Clear();
+            panelOpenDict.Clear();
+            isOpenTeam = false;
         }
     }
 }

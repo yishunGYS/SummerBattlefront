@@ -23,10 +23,10 @@ namespace Systems
         //public static int Rounds;
 
         [Header("当前回复速率")]
-        public float currentRegainRate;
+        [HideInInspector]public float currentRegainRate;
 
         [Header("当前的上限")]
-        public int currentLimit;
+        [HideInInspector]public int currentLimit;
 
         [Header("回复速度")]
         public List<float> regainPhase;
@@ -35,7 +35,7 @@ namespace Systems
         public List<int> limitPhase;
 
         [Header("关卡时间限制（秒）")]
-        public float levelTimeLimit = 300f;
+        private float levelTimeLimit = 300f;
 
         private float remainingTime;
         private float switchTimer;
