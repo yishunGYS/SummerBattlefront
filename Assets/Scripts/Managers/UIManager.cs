@@ -142,9 +142,16 @@ namespace Managers
         }
 
 
-        private void RestData()
+        public void OnHoverUIPlaced(Vector3 position,string soliderName,string des)
         {
-            
+            OpenPanel("UnitHoverPanel");
+            UnitHoverPanel hoverPanel = panelOpenDict["UnitHoverPanel"] as UnitHoverPanel;
+            if (hoverPanel != null) hoverPanel.OnHoverEnter(position,soliderName,des);
+        }
+
+        public void OnHoverUIExit()
+        {
+            ClosePanel("UnitHoverPanel");
         }
     }
 }

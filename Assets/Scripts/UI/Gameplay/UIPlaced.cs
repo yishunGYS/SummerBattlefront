@@ -33,7 +33,7 @@ namespace UI.Gameplay
             teamTopPanel = FindObjectOfType<TeamTopPanel>();
             soliderData = data;
             view = GetComponent<UIPlacedView>();
-            view.OnInit(this);
+            view.OnInit();
             curState = CardState.InTeamPanel;
         }
 
@@ -42,7 +42,7 @@ namespace UI.Gameplay
             spawnSoliderPanel = FindObjectOfType<SpawnSoliderPanel>();
             soliderData = data;
             view = GetComponent<UIPlacedView>();
-            view.OnInit(this);
+            view.OnInit();
             curState = CardState.InGamePanel;
         }
 
@@ -84,12 +84,16 @@ namespace UI.Gameplay
         
         public void OnPointerEnter(PointerEventData eventData)
         {
-            view.OnHoverUI(soliderData.soliderName, soliderData.soliderDes);
+            var pos = GetComponent<RectTransform>().position;
+            UIManager.Instance.OnHoverUIPlaced(pos,soliderData.soliderName, soliderData.soliderDes);
+            //view.OnHoverUI(soliderData.soliderName, soliderData.soliderDes);
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            view.OnExitHover();
+            UIManager.Instance.OnHoverUIExit();
+            //view.OnExitHover();
+            
         }
     }
 }

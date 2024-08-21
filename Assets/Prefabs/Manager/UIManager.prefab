@@ -52,4 +52,11 @@ MonoBehaviour:
       Value: UIPanel/TeamLeftPanel
     - Key: SpawnSoliderPanel
       Value: UIPanel/SpawnSoliderPanel
-  UIRoot: {fileID: 6020586605221035809, guid: 7804c5102d5c1a44a854c0698ecb290d, type: 3}
+    - Key: LevelEndPanel
+      Value: UIPanel/LevelEndPanel
+    - Key: LevelFailPanel
+      Value: UIPanel/LevelFailPanel
+    - Key: StartTeamingPanel
+      Value: UIPanel/StartTeamingPanel
+    - Key: UnitHoverPanel
+      Value: UIPanel/UnitHoverPanel
