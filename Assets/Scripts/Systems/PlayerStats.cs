@@ -18,7 +18,7 @@ namespace Systems
         public int startMoney = 400;
 
         //public static int Lives;
-        public int startLives = 20;
+        //public int startLives = 20;
 
         //public static int Rounds;
 

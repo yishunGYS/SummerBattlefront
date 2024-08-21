@@ -64,7 +64,7 @@ MonoBehaviour:
   currentLimit: 10
   regainPhase:
   - 1
-  limitPhase: 0a000000
+  limitPhase: 08000000
   timeText: {fileID: 0}
   isEnterEnd: 0
   timeTextPrefab: {fileID: 8441238356475177337, guid: 017424b1fd649f6419f5b5f16d87a37e, type: 3}
