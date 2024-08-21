@@ -13,16 +13,16 @@ namespace Systems
         public static int Money;
         public int startMoney = 400;
 
-        public static int Lives;
-        public int startLives = 20;
+        //public static int Lives;
+        //public int startLives = 20;
 
         public static int Rounds;
 
         [Header("当前回复速率")]
-        public int currentRegainRate;
+        private int currentRegainRate;
 
         [Header("当前的上限")]
-        public int currentLimit;
+        [HideInInspector]public int currentLimit;
 
         [Header("经过多长时间切换到下一个阶段")]
         //public int switchPhase;
@@ -49,7 +49,7 @@ namespace Systems
         void Start()
         {
             Money = startMoney;
-            Lives = startLives;
+            //Lives = startLives;
 
             if (regainPhase != null && limitPhase != null && regainPhase.Count > 0 && limitPhase.Count > 0)
             {
