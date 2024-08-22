@@ -1,3 +1,4 @@
+using Managers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,21 +11,22 @@ namespace UI.Gameplay
         private Color originalColor;
         private Color darkenedColor;
         private TextMeshProUGUI  costText;
-        private RectTransform hoverPanel;
-        private TextMeshProUGUI unitName;
-        private TextMeshProUGUI unitDescribe;
-        public void OnInit(UIPlaced uiPlaced)
+        // private RectTransform hoverPanel;
+        // private TextMeshProUGUI unitName;
+        // private TextMeshProUGUI unitDescribe;
+        public void OnInit()
         {
             img = GetComponent<Image>();
             originalColor = img.color;
             darkenedColor = originalColor * 0.1f;
             costText = transform.Find("Cost").GetComponent<TextMeshProUGUI>();
 
-            hoverPanel = Resources.Load<RectTransform>("UIPanel/UnitHoverPanel");
-            hoverPanel = Instantiate(hoverPanel, uiPlaced.transform);
-            hoverPanel.gameObject.SetActive(false);
-            unitName = hoverPanel.transform.Find("SoliderName").GetComponent<TextMeshProUGUI>();
-            unitDescribe = hoverPanel.transform.Find("SoliderDes").GetComponent<TextMeshProUGUI>();
+            // hoverPanel = Resources.Load<RectTransform>("UIPanel/UnitHoverPanel");
+            // hoverPanel = Instantiate(hoverPanel);
+            //
+            // hoverPanel.gameObject.SetActive(false);
+            // unitName = hoverPanel.transform.Find("SoliderName").GetComponent<TextMeshProUGUI>();
+            // unitDescribe = hoverPanel.transform.Find("SoliderDes").GetComponent<TextMeshProUGUI>();
         }
 
         public void ChangeUIColor(bool isSelect)
@@ -39,14 +41,16 @@ namespace UI.Gameplay
 
         public void OnHoverUI(string thisName,string des)
         {
-            hoverPanel.gameObject.SetActive(true);
-            unitName.text = thisName;
-            unitDescribe.text = des;
+            //hoverPanel.gameObject.SetActive(true);
+            //unitName.text = thisName;
+            //unitDescribe.text = des;
+            
+            
         }
 
         public void OnExitHover()
         {
-            hoverPanel.gameObject.SetActive(false);
+            //hoverPanel.gameObject.SetActive(false);
         }
     }
     

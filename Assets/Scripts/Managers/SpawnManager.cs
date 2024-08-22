@@ -9,13 +9,14 @@ using Systems;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Utilities;
+using Gameplay.Item;
 
 namespace Managers
 {
     public class SpawnManager : Singleton<SpawnManager>
     {
        // public List<GameObject> characters = new List<GameObject>();
-        private GameObject SoliderContainer;
+        public GameObject SoliderContainer;
 
         // 当前选中的角色
         private SoliderAgent selectedCharacter;
@@ -74,6 +75,7 @@ namespace Managers
                 Debug.Log("资源不够!");
                 return;
             }
+
             SoliderAgent spawnedCharacter = Instantiate(selectedCharacter, block.transform.position + Vector3.up, block.transform.rotation);
             if (SoliderContainer != null)
             {
@@ -81,11 +83,13 @@ namespace Managers
                 spawnedCharacter.OnInit();
                 spawnedCharacter.soliderLogic.InitBlockData(block);
                 spawnedCharacter.soliderLogic.InitBirthPointData(block);
+
+                // 在士兵生成后提升属性
+                ItemManager.instance.RiseSoliderStats(spawnedCharacter);
             }
 
             InitSoliderFellow(spawnedCharacter.transform, block);
             PlayerStats.Money -= cost;
-            // 设置路径编号
         }
 
         private void InitSoliderFellow(Transform solider,GridCell block)
@@ -150,10 +154,17 @@ namespace Managers
                 {
                     // 在地块上生成士兵
                     GameObject hitObject = hit.collider.gameObject;
-                    GridCell block = hitObject.GetComponent<GridCell>();
-                    if ( block.canPlace)
+                    if (hitObject != null)
                     {
-                        SpawnCharacter(block);
+                        GridCell block = hitObject.GetComponent<GridCell>();
+                        if (block != null) 
+                        {
+                            if (block.canPlace)
+                            {
+                                SpawnCharacter(block);
+                            }
+                        }
+
                     }
                 }
             }

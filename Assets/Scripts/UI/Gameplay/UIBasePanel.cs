@@ -18,5 +18,6 @@ namespace UI.Gameplay
         {
             gameObject.SetActive(false);
         }
+        
     }
 }

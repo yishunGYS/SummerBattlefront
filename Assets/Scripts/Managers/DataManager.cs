@@ -37,6 +37,11 @@ namespace Managers
             return SolidersInBattle;
         }
 
+        public void ClearSolidersInBattle()
+        {
+            SolidersInBattle.Clear();
+        }
+
         public SoliderModelBase GetSoliderDataById(int id) 
         {
             SoliderBaseModels.TryGetValue(id,out SoliderModelBase model);

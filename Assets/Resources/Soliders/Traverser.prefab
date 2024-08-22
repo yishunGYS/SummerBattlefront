@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curHp: 0
-  soliderId: 1
+  soliderId: 7
 --- !u!114 &3406041880844526187
 MonoBehaviour:
   m_ObjectHideFlags: 0

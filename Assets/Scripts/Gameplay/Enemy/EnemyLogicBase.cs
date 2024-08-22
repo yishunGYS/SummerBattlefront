@@ -82,7 +82,7 @@ namespace Gameplay.Enemy
 
         private void ClearTarget()
         {
-            attackTargets.Clear();
+            //attackTargets.Clear();
         }
 
         public virtual void RemoveAttackTarget(UnitAgent target)
@@ -142,6 +142,7 @@ namespace Gameplay.Enemy
                 if (eliteCmpt)
                 {
                     eliteCmpt.lastCamp = soliderAgent.soliderLogic.birthPoint;
+                    eliteCmpt.lastPath = soliderAgent.soliderLogic.birthCell;
                 }
 
                 Die();
