@@ -164,6 +164,21 @@ namespace Managers
             ClosePanel("UnitHoverPanel");
         }
 
+        public void OnOpenTimeLeftPanel()
+        {
+            OpenPanel("TimeLeftPanel");
+        }
+
+        public void OnUpdateTimeLeftPanel(float leftTime)
+        {
+            TimeLeftPanel timeLeftPanel = panelOpenDict["TimeLeftPanel"] as TimeLeftPanel;
+            if (timeLeftPanel != null) timeLeftPanel.UpdateTime(leftTime);
+        }
+
+        public void OnCloseTimeLeftPanel()
+        {
+            ClosePanel("TimeLeftPanel");
+        }
 
         private void RestData()
         {

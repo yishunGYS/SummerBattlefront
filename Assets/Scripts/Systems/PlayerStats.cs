@@ -15,9 +15,6 @@ namespace Systems
         [HideInInspector]public static float Money = 0;
         public int startMoney = 400;
 
-        //public static int Lives;
-        //public int startLives = 20;
-
         [Header("当前回复速率")]
         public float currentRegainRate = 5f;
 
@@ -25,16 +22,16 @@ namespace Systems
         public int currentLimit = 100;
 
         [Header("关卡时间限制（秒）")]
-        private float levelTimeLimit = 300f;
+        public float levelTimeLimit = 300f;
 
-        private float remainingTime;
+        public float remainingTime;
         private float regainTimer;
 
         [ShowInInspector]
         private bool isLevelStarted = false;
 
         [Header("时间显示组件")]
-        public TextMeshProUGUI timeText;
+       // public TextMeshProUGUI timeText;
 
         public bool isEnterEnd = false;
 
@@ -51,23 +48,22 @@ namespace Systems
 
         public void OnLevelStart()
         {
-            isEnterEnd = false;
-            isLevelStarted = false;
+            
 
-            GameObject canvasObject = new GameObject("TimeTextCanvas");
-            Canvas canvas = canvasObject.AddComponent<Canvas>();
-            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-            canvasObject.AddComponent<CanvasScaler>();
-
-            if (timeTextPrefab != null)
-            {
-                GameObject timeTextInstance = Instantiate(timeTextPrefab, canvasObject.transform);
-                timeText = timeTextInstance.GetComponent<TextMeshProUGUI>();
-            }
-            else
-            {
-                Debug.LogError("Time Text Prefab 未设置！");
-            }
+            // GameObject canvasObject = new GameObject("TimeTextCanvas");
+            // Canvas canvas = canvasObject.AddComponent<Canvas>();
+            // canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            // canvasObject.AddComponent<CanvasScaler>();
+            //
+            // if (timeTextPrefab != null)
+            // {
+            //     GameObject timeTextInstance = Instantiate(timeTextPrefab, canvasObject.transform);
+            //     timeText = timeTextInstance.GetComponent<TextMeshProUGUI>();
+            // }
+            // else
+            // {
+            //     Debug.LogError("Time Text Prefab 未设置！");
+            // }
 
             // 获取关卡时间限制
             if (LevelManager.Instance != null)
@@ -75,9 +71,8 @@ namespace Systems
                 levelTimeLimit = LevelManager.Instance.GetCurrentLevelTime();
             }
 
-            Money = startMoney;
-            Lives = startLives;
-            regainTimer = 0f;
+            UIManager.Instance.OnOpenTimeLeftPanel();
+            
         }
 
         void FixedUpdate()
@@ -123,28 +118,33 @@ namespace Systems
                 remainingTime = 0f;
                 isLevelStarted = false;
                 UIManager.Instance.OpenLevelFailPanel();
+                UIManager.Instance.OnCloseTimeLeftPanel();
+                SpawnManager.Instance.isLevelStarted = false;
                 Debug.Log("关卡失败：时间耗尽！");
             }
 
-            UpdateTimeText();
+            //UpdateTimeText();
+            UIManager.Instance.OnUpdateTimeLeftPanel(remainingTime);
         }
 
-        void UpdateTimeText()
-        {
-            if (timeText != null)
-            {
-                timeText.text = $"Time Left: {remainingTime:F2} s";
-            }
-        }
+        // void UpdateTimeText()
+        // {
+        //     if (timeText != null)
+        //     {
+        //         timeText.text = $"Time Left: {remainingTime:F2} s";
+        //     }
+        // }
 
         public void CheckVictoryCondition()
         {
             if (isEnterEnd && remainingTime > 0f)
             {
                 isLevelStarted = false;
-                timeText = null;
+                //timeText.text = "";
                 Debug.Log("关卡成功！");
                 UIManager.Instance.OpenEndLevelPanel();
+                UIManager.Instance.OnCloseTimeLeftPanel();
+                SpawnManager.Instance.isLevelStarted = false;
             }
         }
 
@@ -176,11 +176,11 @@ namespace Systems
         public void ResetPlayerStats()
         {
             Money = startMoney;
-            Lives = startLives;
             regainTimer = 0f;
-            isLevelStarted = false;
             remainingTime = levelTimeLimit;
             regainTimeScale = 1f;
+            isEnterEnd = false;
+            isLevelStarted = false;
         }
     }
 }

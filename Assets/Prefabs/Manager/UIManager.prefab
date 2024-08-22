@@ -60,3 +60,5 @@ MonoBehaviour:
       Value: UIPanel/StartTeamingPanel
     - Key: UnitHoverPanel
       Value: UIPanel/UnitHoverPanel
+    - Key: TimeLeftPanel
+      Value: UIPanel/TimeLeftPanel
