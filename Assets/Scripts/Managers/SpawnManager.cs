@@ -80,7 +80,18 @@ namespace Managers
                 spawnedCharacter.OnInit();
                 spawnedCharacter.soliderLogic.InitBlockData(block);
                 spawnedCharacter.soliderLogic.InitBirthPointData(block);
-
+                foreach (Transform child in spawnedCharacter.transform)
+                {
+                    var childSoliderCmpt = child.GetComponent<SoliderAgent>();
+                    if (childSoliderCmpt!= null)
+                    {
+                        //childSoliderCmpt.transform.SetParent(SoliderContainer.transform);
+                        childSoliderCmpt.OnInit();
+                        childSoliderCmpt.soliderLogic.InitBlockData(block);
+                        childSoliderCmpt.soliderLogic.InitBirthPointData(block);
+                        ItemManager.instance.RiseSoliderStats(spawnedCharacter);
+                    }
+                }
                 // 在士兵生成后提升属性
                 ItemManager.instance.RiseSoliderStats(spawnedCharacter);
             }
