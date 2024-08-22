@@ -60,6 +60,10 @@ namespace Gameplay.Enemy
 
         public override void InitHealthBar()
         {
+            if (transform.Find("HealthbarRed") == null)
+            {
+                return;
+            }
            transform.Find("HealthbarRed").GetComponent<Healthbar>().OnInit(this);
         }
     }
