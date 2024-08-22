@@ -6,6 +6,7 @@ using UnityEngine;
 using Utilities;
 using UnityEngine.SceneManagement;
 using Systems;
+using Gameplay.Item;
 
 namespace Managers
 {
@@ -77,6 +78,14 @@ namespace Managers
                 ClosePanel("StartTeamingPanel");
                 isOpenTeam = true;
             }
+        }
+
+        public void BackToStart()
+        {
+            ClosePanel("TeamTopPanel");
+            ClosePanel("TeamLeftPanel");
+            isOpenTeam = false;
+            OpenPanel("StartTeamingPanel");
         }
 
         public void OpenEndLevelPanel()
@@ -155,6 +164,21 @@ namespace Managers
             ClosePanel("UnitHoverPanel");
         }
 
+        public void OnOpenTimeLeftPanel()
+        {
+            OpenPanel("TimeLeftPanel");
+        }
+
+        public void OnUpdateTimeLeftPanel(float leftTime)
+        {
+            TimeLeftPanel timeLeftPanel = panelOpenDict["TimeLeftPanel"] as TimeLeftPanel;
+            if (timeLeftPanel != null) timeLeftPanel.UpdateTime(leftTime);
+        }
+
+        public void OnCloseTimeLeftPanel()
+        {
+            ClosePanel("TimeLeftPanel");
+        }
 
         private void RestData()
         {

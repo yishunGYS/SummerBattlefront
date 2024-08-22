@@ -34,21 +34,21 @@ namespace Managers
             InitCsvReader();
             InitEnemy(EnemyContainer.transform);
 
-            UIManager.Instance.OnStart();
-            SpawnManager.Instance.OnStart();
-            ItemManager.instance.OnStart();
+			UIManager.Instance.OnStart();
+			SpawnManager.Instance.OnStart();
+			ItemManager.instance.OnStart();
 
-            if (PlayerStats.Instance != null)
-            {
-                // 先重置状态
-                PlayerStats.Instance.ResetPlayerStats();
+			if (PlayerStats.Instance != null)
+			{
+				// 先重置状态
+				PlayerStats.Instance.ResetPlayerStats();
 
-                // 然后初始化关卡相关的数据
-                PlayerStats.Instance.OnLevelStart();
+				// 然后初始化关卡相关的数据
+				PlayerStats.Instance.OnLevelStart();
 
-                Debug.Log("PlayerStats.Instance != null");
-            }
-        }
+				Debug.Log("PlayerStats.Instance != null");
+			}
+		}
 
 
         // Update is called once per frame

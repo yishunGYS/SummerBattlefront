@@ -1,5 +1,4 @@
 using System;
-using _3DlevelEditor_GYS;
 using Gameplay;
 using Gameplay.Enemy;
 using Gameplay.Player;
@@ -10,26 +9,28 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Utilities;
 using Gameplay.Item;
+using _3DlevelEditor_GYS;
 
 namespace Managers
 {
     public class SpawnManager : Singleton<SpawnManager>
     {
-       // public List<GameObject> characters = new List<GameObject>();
         public GameObject SoliderContainer;
 
         // 当前选中的角色
         private SoliderAgent selectedCharacter;
         private int selectId;
-        
+
         //鼠标悬浮/点击地块
         public LayerMask groundLayer;
         private GameObject hoveredObject; // 当前悬浮的物体
 
+        public bool isLevelStarted = false;
 
         public void OnStart()
         {
             SoliderContainer = GameObject.Find("SoliderContainer");
+            isLevelStarted = false;
         }
 
         private void Update()
@@ -37,13 +38,11 @@ namespace Managers
             DetectMouseClick();
             DetectMouseHover();
         }
-        
 
         public void ChangeSelectSolider(int id)
         {
             var soliderModel = DataManager.Instance.GetSoliderDataById(id);
             selectedCharacter = Resources.Load<SoliderAgent>(soliderModel.scenePrefabPath);
-            
         }
 
         private void SpawnCharacter(GridCell block)
@@ -53,14 +52,6 @@ namespace Managers
                 var id = selectedCharacter.soliderId;
                 var tempSoliderModel = DataManager.Instance.GetSoliderDataById(id);
                 SpawnSingle(block, tempSoliderModel.cost);
-                // if (tempSoliderModel.spawnNum <= 1)
-                // {
-                //     SpawnSingle(block, tempSoliderModel.cost);
-                // }
-                // else
-                // {
-                //     StartCoroutine(SpawnMultiple(block, tempSoliderModel.spawnNum, tempSoliderModel.cost));
-                // }
             }
             else
             {
@@ -74,6 +65,12 @@ namespace Managers
             {
                 Debug.Log("资源不够!");
                 return;
+            }
+
+            if (!isLevelStarted)
+            {
+                PlayerStats.Instance.StartLevel();
+                isLevelStarted = true;
             }
 
             SoliderAgent spawnedCharacter = Instantiate(selectedCharacter, block.transform.position + Vector3.up, block.transform.rotation);
@@ -92,59 +89,31 @@ namespace Managers
             PlayerStats.Money -= cost;
         }
 
-        private void InitSoliderFellow(Transform solider,GridCell block)
+        private void InitSoliderFellow(Transform solider, GridCell block)
         {
             foreach (Transform child in solider.transform)
             {
                 var soliderAgent = child.GetComponent<SoliderAgent>();
-                if (soliderAgent!= null)
+                if (soliderAgent != null)
                 {
                     soliderAgent.transform.SetParent(SoliderContainer.transform);
                     soliderAgent.OnInit();
                     soliderAgent.soliderLogic.InitBlockData(block);
                     soliderAgent.soliderLogic.InitBirthPointData(block);
                 }
-                
-                InitSoliderFellow(child,block);
-            }
-            
-            
-        }
 
-        private IEnumerator SpawnMultiple(GridCell block, int spawnNum, int cost)
-        {
-            for (int i = 0; i < spawnNum; i++)
-            {
-                if (PlayerStats.Money < cost)
-                {
-                    Debug.Log("资源不够!");
-                    yield break;
-                }
-                
-                SoliderAgent spawnedCharacter = Instantiate(selectedCharacter, block.transform.position + new Vector3(0f, block.transform.localScale.y, 0f), block.transform.rotation);
-                if (SoliderContainer != null)
-                {
-                    spawnedCharacter.transform.SetParent(SoliderContainer.transform);
-                    spawnedCharacter.OnInit();
-                    spawnedCharacter.soliderLogic.InitBlockData(block);
-                    spawnedCharacter.soliderLogic.InitBirthPointData(block);
-                }
-
-                PlayerStats.Money -= cost;
-
-                yield return new WaitForSeconds(0.5f); // 延时0.5秒
+                InitSoliderFellow(child, block);
             }
         }
-        
 
         public SoliderAgent GetSolider()
         {
             return selectedCharacter;
         }
 
-
         private void DetectMouseClick()
-        {            //检测鼠标点击地块
+        {
+            // 检测鼠标点击地块
             if (Input.GetMouseButtonDown(0))
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -157,14 +126,13 @@ namespace Managers
                     if (hitObject != null)
                     {
                         GridCell block = hitObject.GetComponent<GridCell>();
-                        if (block != null) 
+                        if (block != null)
                         {
                             if (block.canPlace)
                             {
                                 SpawnCharacter(block);
                             }
                         }
-
                     }
                 }
             }
@@ -206,8 +174,7 @@ namespace Managers
                 }
             }
         }
-        
-        
+
         void OnMouseEnterBlock(GridCell block)
         {
             // 鼠标悬浮于地块的逻辑
