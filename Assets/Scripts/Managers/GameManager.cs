@@ -9,24 +9,9 @@ using Utilities;
 namespace Managers
 {
 	public class GameManager : Singleton<GameManager> {
-
-		//public static bool GameIsOver;
-
-		//public GameObject gameOverUI;
-		//public GameObject completeLevelUI;
 		private CsvReader csvReader;
 
 		private GameObject EnemyContainer;
-		void Start ()
-		{
-			//GameIsOver = false;
-			//EnemyContainer = GameObject.Find("EnemyContainer");
-			//InitCsvReader();
-			//InitEnemy(EnemyContainer.transform);
-
-			//UIManager.Instance.OnStart();
-			//SpawnManager.Instance.OnStart();
-		}
 
         public void OnLevelStart()
         {
@@ -49,31 +34,7 @@ namespace Managers
 				Debug.Log("PlayerStats.Instance != null");
 			}
 		}
-
-
-        // Update is called once per frame
-        void Update () {
-			//if (GameIsOver)
-			//	return;
-
-			//if (PlayerStats.Lives <= 0)
-			//{
-			//	EndGame();
-			//}
-		}
-
-		void EndGame ()
-		{
-			//GameIsOver = true;
-			//gameOverUI.SetActive(true);
-		}
-
-		public void WinLevel ()
-		{
-			//GameIsOver = true;
-			//completeLevelUI.SetActive(true);
-		}
-
+        
 
 		private void InitCsvReader()
 		{
