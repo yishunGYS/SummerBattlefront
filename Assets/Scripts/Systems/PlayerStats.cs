@@ -12,11 +12,11 @@ namespace Systems
         public static PlayerStats Instance;
 
         [ShowInInspector]
-        public static float Money;
+        [HideInInspector]public static float Money = 0;
         public int startMoney = 400;
 
-        public static int Lives;
-        public int startLives = 20;
+        //public static int Lives;
+        //public int startLives = 20;
 
         [Header("当前回复速率")]
         public float currentRegainRate = 5f;
