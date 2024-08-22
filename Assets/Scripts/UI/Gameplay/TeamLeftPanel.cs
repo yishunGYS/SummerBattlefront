@@ -1,52 +1,93 @@
-using System.Collections.Generic;
 using Managers;
-using Systems;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace UI.Gameplay
 {
     public class TeamLeftPanel : UIBasePanel
     {
-        
         private TeamTopPanel teamTopPanel;
+
+        public Button BackButton;
+
+        // 用于跟踪已生成的按钮
+        private bool buttonsGenerated = false;
+
+        void Start()
+        {
+            InitializeButton();
+
+            // 监听场景加载事件
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        }
+
+        void InitializeButton()
+        {
+            if (BackButton != null)
+            {
+                BackButton.onClick.AddListener(StartTeamingPanelClicked);
+            }
+            else
+            {
+                Debug.LogError("未找到BackButton按钮！");
+            }
+        }
+
+        void StartTeamingPanelClicked()
+        {
+            UIManager.Instance.BackToStart();
+        }
 
         public override void OpenPanel()
         {
             base.OpenPanel();
 
-            foreach (var data in DataManager.Instance.GetRuntimeSoliderModel().Values)
+            // 检查按钮是否已经生成
+            if (!buttonsGenerated)
             {
-                var prefabPath = data.uiPrefabPath;
-                var prefab = Resources.Load<GameObject>(prefabPath);
-                if (prefab==null)
+                foreach (var data in DataManager.Instance.GetRuntimeSoliderModel().Values)
                 {
-                    continue;
+                    var prefabPath = data.uiPrefabPath;
+                    var prefab = Resources.Load<GameObject>(prefabPath);
+                    if (prefab == null)
+                    {
+                        continue;
+                    }
+                    GameObject card = Instantiate(prefab, transform);
+                    var uiPlacedCmpt = card.GetComponent<UIPlaced>();
+                    uiPlacedCmpt.InitInTeamPanel(data);
+                    uiPlacedCmpt.view.SetCostText(data.cost);
                 }
-                GameObject card = Instantiate(prefab, transform);
-                var uiPlacedCmpt = card.GetComponent<UIPlaced>();
-                uiPlacedCmpt.InitInTeamPanel(data);
-                uiPlacedCmpt.view.SetCostText(data.cost);
+
+                // 标记按钮已生成
+                buttonsGenerated = true;
             }
-            
+
             teamTopPanel = FindObjectOfType<TeamTopPanel>();
         }
 
+        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            buttonsGenerated = false;
+        }
 
         public void OnClickBattleStart()
         {
             var battleSoliderData = DataManager.Instance.GetSolidersInBattle();
-            
-            //battleSoliderData.Add(7); //默认要加炸弹车
+
             foreach (var soliderId in teamTopPanel.GetSoliderList())
             {
                 battleSoliderData.Add(soliderId);
             }
-            
 
             UIManager.Instance.OnCloseTeamPanel();
             UIManager.Instance.OnOpenSoliderPlacePanel();
+        }
 
-            PlayerStats.Instance.StartLevel();
+        private void OnDestroy()
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
         }
     }
 }

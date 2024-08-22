@@ -1,7 +1,5 @@
 using Managers;
 using Sirenix.OdinInspector;
-using System;
-using System.Collections.Generic;
 using Systems.Level;
 using TMPro;
 using UnityEngine;
@@ -20,27 +18,17 @@ namespace Systems
         public static int Lives;
         public int startLives = 20;
 
-        //public static int Rounds;
-
         [Header("当前回复速率")]
-        [HideInInspector]public float currentRegainRate;
+        public float currentRegainRate = 5f;
 
         [Header("当前的上限")]
-        [HideInInspector]public int currentLimit;
-
-        [Header("回复速度")]
-        public List<float> regainPhase;
-
-        [Header("资源上限")]
-        public List<int> limitPhase;
+        public int currentLimit = 100;
 
         [Header("关卡时间限制（秒）")]
         private float levelTimeLimit = 300f;
 
         private float remainingTime;
-        private float switchTimer;
         private float regainTimer;
-        private int currentPhaseIndex;
 
         [ShowInInspector]
         private bool isLevelStarted = false;
@@ -89,28 +77,15 @@ namespace Systems
 
             Money = startMoney;
             Lives = startLives;
-
-            if (regainPhase != null && limitPhase != null && regainPhase.Count > 0 && limitPhase.Count > 0)
-            {
-                currentPhaseIndex = 0;
-                currentLimit = limitPhase[currentPhaseIndex];
-                currentRegainRate = regainPhase[currentPhaseIndex];
-            }
-            else
-            {
-                Debug.LogError("没有设置回复速度和上限");
-            }
-
-            //Rounds = 0;
-            switchTimer = 0f;
             regainTimer = 0f;
         }
 
         void FixedUpdate()
         {
+            RegainMoneyOverTime();
+
             if (isLevelStarted)
             {
-                RegainMoneyOverTime();
                 UpdateLevelTime();
             }
         }
@@ -167,6 +142,7 @@ namespace Systems
             if (isEnterEnd && remainingTime > 0f)
             {
                 isLevelStarted = false;
+                timeText = null;
                 Debug.Log("关卡成功！");
                 UIManager.Instance.OpenEndLevelPanel();
             }
@@ -201,21 +177,7 @@ namespace Systems
         {
             Money = startMoney;
             Lives = startLives;
-            //Rounds = 0;
-
-            //if (regainPhase != null && limitPhase != null && regainPhase.Count > 0 && limitPhase.Count > 0)
-            //{
-            //    currentPhaseIndex = 0;
-            //    currentLimit = limitPhase[currentPhaseIndex];
-            //    currentRegainRate = regainPhase[currentPhaseIndex];
-            //}
-            //else
-            //{
-            //    Debug.LogError("没有设置回复速度和上限");
-            //}
-
             regainTimer = 0f;
-            switchTimer = 0f;
             isLevelStarted = false;
             remainingTime = levelTimeLimit;
             regainTimeScale = 1f;

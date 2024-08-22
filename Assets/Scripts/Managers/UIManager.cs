@@ -6,6 +6,7 @@ using UnityEngine;
 using Utilities;
 using UnityEngine.SceneManagement;
 using Systems;
+using Gameplay.Item;
 
 namespace Managers
 {
@@ -77,6 +78,14 @@ namespace Managers
                 ClosePanel("StartTeamingPanel");
                 isOpenTeam = true;
             }
+        }
+
+        public void BackToStart()
+        {
+            ClosePanel("TeamTopPanel");
+            ClosePanel("TeamLeftPanel");
+            isOpenTeam = false;
+            OpenPanel("StartTeamingPanel");
         }
 
         public void OpenEndLevelPanel()

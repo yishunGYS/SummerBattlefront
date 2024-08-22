@@ -25,6 +25,7 @@ namespace Gameplay.Item
         public void OnStart()
         {
             SoliderContainer = GameObject.Find("SoliderContainer");
+            ClearItems();
         }
 
         public void AddItem(RiseSoliderStatsItem item)
@@ -62,6 +63,11 @@ namespace Gameplay.Item
             {
                 ApplyItemEffect(soliderAgent, item);
             }
+        }
+        
+        public void ClearItems()
+        {
+            items.Clear();
         }
 
         private void ApplyItemEffect(SoliderAgent soliderAgent, RiseSoliderStatsItem item)
