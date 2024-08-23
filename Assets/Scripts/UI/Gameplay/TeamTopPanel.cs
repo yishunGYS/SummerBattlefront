@@ -6,7 +6,7 @@ namespace UI.Gameplay
 {
     public class TeamTopPanel : UIBasePanel
     {
-        public int maxTeamCount = 4;
+        public int maxTeamCount = 7;
         private int curSelectCount;
 
         private Dictionary<int,UIPlaced> spawnDicts = new Dictionary<int,UIPlaced>();

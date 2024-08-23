@@ -62,3 +62,5 @@ MonoBehaviour:
       Value: UIPanel/UnitHoverPanel
     - Key: TimeLeftPanel
       Value: UIPanel/TimeLeftPanel
+    - Key: TipPanel
+      Value: UIPanel/TipPanel
