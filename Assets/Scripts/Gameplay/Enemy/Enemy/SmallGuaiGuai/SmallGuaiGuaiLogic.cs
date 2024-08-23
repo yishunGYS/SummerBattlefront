@@ -14,6 +14,7 @@ namespace Gameplay.Enemy.Enemy.SmallGuaiGuai
         {
             base.GetTarget();
             GetFocusTarget();
+            Debug.Log("GetTarget");
         }
 
         public override void Attack()
