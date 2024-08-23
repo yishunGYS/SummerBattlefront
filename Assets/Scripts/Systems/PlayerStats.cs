@@ -54,6 +54,7 @@ namespace Systems
             if (isLevelStarted)
             {
                 UpdateLevelTime();
+                UIManager.Instance.OnUpdateResourcePanel();
             }
         }
 
@@ -61,7 +62,7 @@ namespace Systems
         {
             remainingTime = levelTimeLimit;
             isLevelStarted = true;
-
+            UIManager.Instance.OnOpenResourcePanel();
             Debug.Log("关卡开始！");
         }
 
@@ -79,6 +80,8 @@ namespace Systems
                     Money = currentLimit;
                 }
             }
+
+            
         }
 
         void UpdateLevelTime()
@@ -93,6 +96,7 @@ namespace Systems
                 UIManager.Instance.OnCloseTimeLeftPanel();
                 SpawnManager.Instance.isLevelStarted = false;
                 Debug.Log("关卡失败：时间耗尽！");
+                UIManager.Instance.OnCloseResourcePanel();
             }
 
             //UpdateTimeText();
@@ -109,6 +113,7 @@ namespace Systems
                 UIManager.Instance.OpenEndLevelPanel();
                 UIManager.Instance.OnCloseTimeLeftPanel();
                 SpawnManager.Instance.isLevelStarted = false;
+                UIManager.Instance.OnCloseResourcePanel();
             }
         }
 
