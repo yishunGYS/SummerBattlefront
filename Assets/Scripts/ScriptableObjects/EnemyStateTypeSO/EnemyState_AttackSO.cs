@@ -23,7 +23,6 @@ namespace ScriptableObjects.EnemyStateTypeSO
             {
                 fsm.ChangeState(UnitStateType.Idle);
             }
-            
             enemyAgent.enemyLogic.Attack();
         }
 

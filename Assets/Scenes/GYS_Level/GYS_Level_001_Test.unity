@@ -2743,6 +2743,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8744579409802178309, guid: 7602f463a782eb449a034da789141208, type: 3}
   m_PrefabInstance: {fileID: 772602483}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &821097746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6855114071636747005, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
+  m_PrefabInstance: {fileID: 1839471196}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &823927874
 GameObject:
   m_ObjectHideFlags: 0
@@ -7211,13 +7216,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6855114071636747005, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1839471203}
   m_SourcePrefab: {fileID: 100100000, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
 --- !u!4 &1839471197 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8744579409802178309, guid: f033290d00e974f4f893d0c1850eb8d5, type: 3}
   m_PrefabInstance: {fileID: 1839471196}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1839471203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821097746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ce102d3faa0604ca72773aaaa83c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetDistance: 0.5
+  maxOffsetDistance: 2
+  duration: 1
+  currentCell: {fileID: 0}
 --- !u!1 &1855575675
 GameObject:
   m_ObjectHideFlags: 0
@@ -8133,7 +8157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 1
   RiseStats: 0
-  RiseAmount: 10000
+  RiseAmount: -40
 --- !u!4 &2434513040072885990
 Transform:
   m_ObjectHideFlags: 0
@@ -8169,7 +8193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!33 &8996585257762589502
 MeshFilter:
   m_ObjectHideFlags: 0
