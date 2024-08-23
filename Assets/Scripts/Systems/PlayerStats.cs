@@ -48,11 +48,10 @@ namespace Systems
 
         void FixedUpdate()
         {
-            RegainMoneyOverTime();
-
             
             if (isLevelStarted)
             {
+                RegainMoneyOverTime();
                 UpdateLevelTime();
                 UIManager.Instance.OnUpdateResourcePanel();
             }
