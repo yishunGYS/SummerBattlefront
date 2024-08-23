@@ -35,15 +35,13 @@ namespace Systems
 
         public void OnLevelStart()
         {
-
             // 获取关卡时间限制
             if (LevelManager.Instance != null)
             {
                 levelTimeLimit = LevelManager.Instance.GetCurrentLevelTime();
             }
-
             UIManager.Instance.OnOpenTimeLeftPanel();
-            
+            UIManager.Instance.OnOpenResourcePanel();
         }
 
         void FixedUpdate()
@@ -61,7 +59,6 @@ namespace Systems
         {
             remainingTime = levelTimeLimit;
             isLevelStarted = true;
-            UIManager.Instance.OnOpenResourcePanel();
             Debug.Log("关卡开始！");
         }
 
