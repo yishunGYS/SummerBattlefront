@@ -10,11 +10,11 @@ namespace Gameplay.Player
 
         protected override void Die()
         {
-            base.Die();
             if (BlockManager.instance.headSoliderBlocks.ContainsKey(soliderAgent))
             {
                 BlockManager.instance.OnHeadSoliderDestory(soliderAgent);
             }
+            base.Die();
         }
     }
 }
