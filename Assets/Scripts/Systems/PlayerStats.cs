@@ -4,13 +4,12 @@ using Systems.Level;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Utilities;
 
 namespace Systems
 {
-    public class PlayerStats : MonoBehaviour
+    public class PlayerStats : Singleton<PlayerStats>
     {
-        public static PlayerStats Instance;
-
         [ShowInInspector]
         [HideInInspector]public static float Money = 0;
         public int startMoney = 400;
@@ -30,40 +29,12 @@ namespace Systems
         [ShowInInspector]
         private bool isLevelStarted = false;
 
-        [Header("时间显示组件")]
-       // public TextMeshProUGUI timeText;
-
         public bool isEnterEnd = false;
-
-        [Header("时间文本预制件")]
-        public GameObject timeTextPrefab;
 
         private float regainTimeScale = 1f;
 
-        void Awake()
-        {
-            // 初始化实例
-            Instance = this;
-        }
-
         public void OnLevelStart()
         {
-            
-
-            // GameObject canvasObject = new GameObject("TimeTextCanvas");
-            // Canvas canvas = canvasObject.AddComponent<Canvas>();
-            // canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-            // canvasObject.AddComponent<CanvasScaler>();
-            //
-            // if (timeTextPrefab != null)
-            // {
-            //     GameObject timeTextInstance = Instantiate(timeTextPrefab, canvasObject.transform);
-            //     timeText = timeTextInstance.GetComponent<TextMeshProUGUI>();
-            // }
-            // else
-            // {
-            //     Debug.LogError("Time Text Prefab 未设置！");
-            // }
 
             // 获取关卡时间限制
             if (LevelManager.Instance != null)
@@ -79,6 +50,7 @@ namespace Systems
         {
             RegainMoneyOverTime();
 
+            
             if (isLevelStarted)
             {
                 UpdateLevelTime();
@@ -126,21 +98,13 @@ namespace Systems
             //UpdateTimeText();
             UIManager.Instance.OnUpdateTimeLeftPanel(remainingTime);
         }
-
-        // void UpdateTimeText()
-        // {
-        //     if (timeText != null)
-        //     {
-        //         timeText.text = $"Time Left: {remainingTime:F2} s";
-        //     }
-        // }
+        
 
         public void CheckVictoryCondition()
         {
             if (isEnterEnd && remainingTime > 0f)
             {
                 isLevelStarted = false;
-                //timeText.text = "";
                 Debug.Log("关卡成功！");
                 UIManager.Instance.OpenEndLevelPanel();
                 UIManager.Instance.OnCloseTimeLeftPanel();

@@ -21,7 +21,6 @@ namespace Gameplay.Player.Solider.Attacker.MeleeGodling
             base.Attack();
             MeleeAttack();
             
-            
         }
 
 

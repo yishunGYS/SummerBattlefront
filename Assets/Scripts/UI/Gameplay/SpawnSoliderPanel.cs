@@ -11,8 +11,6 @@ namespace UI.Gameplay
         public override void OpenPanel()
         {
             base.OpenPanel();
-
-
             var soliderList = DataManager.Instance.GetSolidersInBattle();
             foreach (var id in soliderList)
             {

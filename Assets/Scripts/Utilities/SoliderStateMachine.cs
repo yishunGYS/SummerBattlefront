@@ -21,7 +21,12 @@ public class SoliderStateMachine : StateMachine
                 Debug.LogError($"Failed to create StateSO for {item.stateType}.");
                 continue;
             }
-            runtimeStateDict.Add(item.stateType, tempSo);
+
+            if (!runtimeStateDict.ContainsKey(item.stateType))
+            {
+                runtimeStateDict.Add(item.stateType, tempSo);
+            }
+           
         }
     }
 }

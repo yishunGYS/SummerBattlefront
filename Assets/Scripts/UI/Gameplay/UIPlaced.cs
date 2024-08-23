@@ -27,6 +27,7 @@ namespace UI.Gameplay
         [HideInInspector]public UIPlaced connectCardInLeftPanel;
         private CardState curState;
 
+        private bool isClickInLeftPanel;
         public void InitInTeamPanel(SoliderModelBase data)
         {
             teamLeftPanel = FindObjectOfType<TeamLeftPanel>();
@@ -56,11 +57,12 @@ namespace UI.Gameplay
                     Input.mousePosition))
             {
                 //在左边栏时
-                if (teamTopPanel.CheckCanPlaceInTopPanel())
+                if (teamTopPanel.CheckCanPlaceInTopPanel()&&!isClickInLeftPanel)
                 {
                     teamTopPanel.SpawnCardInTopPanel(soliderData.soliderId, this);
                     //自己变暗
                     view.ChangeUIColor(true);
+                    isClickInLeftPanel = true;
                 }
             }
             else if (curState == CardState.InTeamPanel &&
@@ -69,6 +71,7 @@ namespace UI.Gameplay
             {
                 //在上边栏时
                 connectCardInLeftPanel.view.ChangeUIColor(false);
+                connectCardInLeftPanel.isClickInLeftPanel = false;
                 teamTopPanel.DestroySpawnedCard(soliderData.soliderId);
             }
             else if (curState == CardState.InGamePanel &&
