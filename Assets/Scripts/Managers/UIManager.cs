@@ -8,6 +8,7 @@ using Utilities;
 using UnityEngine.SceneManagement;
 using Systems;
 using Gameplay.Item;
+using UI;
 
 namespace Managers
 {
@@ -194,6 +195,24 @@ namespace Managers
                 await Task.Delay(1500);
                 ClosePanel("TipPanel");
             }
+        }
+
+
+        public void OnOpenResourcePanel()
+        {
+            OpenPanel("ResourceBarPanel");
+        }
+
+        public void OnUpdateResourcePanel()
+        {
+
+            ResourceBarPanel resourceBarPanel = panelOpenDict["ResourceBarPanel"] as ResourceBarPanel;
+            if (resourceBarPanel != null) resourceBarPanel.OnUpdateResource();
+        }
+
+        public void OnCloseResourcePanel()
+        {
+            ClosePanel("ResourceBarPanel");
         }
 
         private void RestData()
