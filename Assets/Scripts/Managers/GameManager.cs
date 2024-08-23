@@ -19,10 +19,11 @@ namespace Managers
             InitCsvReader();
             InitEnemy(EnemyContainer.transform);
 
+            DataManager.Instance.OnStart();
 			UIManager.Instance.OnStart();
 			SpawnManager.Instance.OnStart();
 			ItemManager.instance.OnStart();
-
+			
 			if (PlayerStats.Instance != null)
 			{
 				// ÏÈÖØÖÃ×´Ì¬

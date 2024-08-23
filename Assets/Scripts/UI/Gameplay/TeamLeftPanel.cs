@@ -75,7 +75,13 @@ namespace UI.Gameplay
         public void OnClickBattleStart()
         {
             var battleSoliderData = DataManager.Instance.GetSolidersInBattle();
-
+            var soliderLists = teamTopPanel.GetSoliderList();
+            if (soliderLists.Count<=0)
+            {
+                UIManager.Instance.OnShowTipPanel("请选择出战角色");
+                return;
+            }
+            
             foreach (var soliderId in teamTopPanel.GetSoliderList())
             {
                 battleSoliderData.Add(soliderId);

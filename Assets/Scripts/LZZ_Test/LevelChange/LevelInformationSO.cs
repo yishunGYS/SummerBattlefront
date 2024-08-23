@@ -14,6 +14,7 @@ namespace ScriptableObjects
         public string levelName;
         public string levelIntro;
         public List<Image> enemies;
+        public int unlockSoliderId = -1;
     }
 }
 

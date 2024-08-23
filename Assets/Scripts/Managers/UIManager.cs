@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using TMPro;
 using UI.Gameplay;
 using UnityEngine;
@@ -21,7 +22,7 @@ namespace Managers
 
         // ÃÌº” isOpenTeam ±‰¡ø
         private bool isOpenTeam = false;
-
+        private bool isShowTip;
         protected override void Awake()
         {
             base.Awake();
@@ -178,6 +179,21 @@ namespace Managers
         public void OnCloseTimeLeftPanel()
         {
             ClosePanel("TimeLeftPanel");
+        }
+
+
+        public async void OnShowTipPanel(string texts)
+        {
+            if (!isShowTip)
+            {
+                OpenPanel("TipPanel");
+                TipPanel tipPanel = panelOpenDict["TipPanel"] as TipPanel;
+                if (tipPanel != null) tipPanel.OnShowText(texts);
+                isShowTip = false;
+                
+                await Task.Delay(1500);
+                ClosePanel("TipPanel");
+            }
         }
 
         private void RestData()

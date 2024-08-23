@@ -16,6 +16,14 @@ namespace Managers
         private Dictionary<int,EnemyModelBase> EnemyBaseModels = new Dictionary<int, EnemyModelBase>();
         
         private List<int> SolidersInBattle = new List<int>();
+
+
+        public void OnStart()
+        {
+            //初始有一个角色
+            RuntimeSoliderModels.TryAdd(1, SoliderBaseModels[1]);
+        }
+
         public Dictionary<int, SoliderModelBase> GetSoliderBaseModels()
         {
             return SoliderBaseModels;

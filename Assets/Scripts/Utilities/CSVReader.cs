@@ -73,14 +73,14 @@ namespace Utilities
                     var soliderDatabase = DataManager.Instance.GetSoliderBaseModels();
                     soliderDatabase.TryAdd(soliderModel.soliderId, soliderModel);
 
-                    var runtimeSolider = DataManager.Instance.GetRuntimeSoliderModel();
-                    foreach (var item in DataManager.Instance.InitSoliderIds)
-                    {
-                        if (soliderModel.soliderId == item)
-                        {
-                            runtimeSolider.TryAdd(soliderModel.soliderId, soliderModel);
-                        }
-                    }
+                    // var runtimeSolider = DataManager.Instance.GetRuntimeSoliderModel();
+                    // foreach (var item in DataManager.Instance.InitSoliderIds)
+                    // {
+                    //     if (soliderModel.soliderId == item)
+                    //     {
+                    //         runtimeSolider.TryAdd(soliderModel.soliderId, soliderModel);
+                    //     }
+                    // }
                 }
             }
         }

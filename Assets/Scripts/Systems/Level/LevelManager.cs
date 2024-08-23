@@ -16,7 +16,7 @@ namespace Systems.Level
         public int nowLevelId;
         public string nowLevelName;
         public float nowLevelTime;
-
+        public int nowUnlockSoliderId;
         public SceneFader fader;
 
         private void Awake()
@@ -51,6 +51,7 @@ namespace Systems.Level
             nowLevelId = levelInfo.levelID;
             nowLevelName = levelInfo.levelName;
             nowLevelTime = levelInfo.levelTime;
+            nowUnlockSoliderId = levelInfo.unlockSoliderId;
         }
 
         // 关卡通过，切换场景
@@ -61,9 +62,17 @@ namespace Systems.Level
                 levelReached++;
                 maxLevelId = nowLevelId;
                 PlayerPrefs.SetInt("LevelReached", levelReached);
-
                 Debug.Log(PlayerPrefs.GetInt("LevelReached"));
             }
+
+            //解锁兵种
+            if (nowLevelId !=-1)
+            {
+                var runtimeSoliderDict = DataManager.Instance.GetRuntimeSoliderModel();
+                runtimeSoliderDict.TryAdd(nowUnlockSoliderId,
+                    DataManager.Instance.GetSoliderDataById(nowUnlockSoliderId));
+            }
+            
             fader.ChangeScene("LevelSelect");
         }
 

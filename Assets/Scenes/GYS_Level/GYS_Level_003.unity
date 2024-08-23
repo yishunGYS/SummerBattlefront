@@ -1416,6 +1416,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8677023741821847926, guid: 28f13ddd5d04ab34d87639ee4c156668, type: 3}
       propertyPath: InitSoliderIds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677023741821847926, guid: 28f13ddd5d04ab34d87639ee4c156668, type: 3}
+      propertyPath: InitSoliderIds.Array.data[1]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677023741821847926, guid: 28f13ddd5d04ab34d87639ee4c156668, type: 3}
+      propertyPath: InitSoliderIds.Array.data[2]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677023741821847926, guid: 28f13ddd5d04ab34d87639ee4c156668, type: 3}
+      propertyPath: InitSoliderIds.Array.data[3]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677023741821847926, guid: 28f13ddd5d04ab34d87639ee4c156668, type: 3}
+      propertyPath: InitSoliderIds.Array.data[4]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677023741821847926, guid: 28f13ddd5d04ab34d87639ee4c156668, type: 3}
+      propertyPath: InitSoliderIds.Array.data[5]
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8677023741821847926, guid: 28f13ddd5d04ab34d87639ee4c156668, type: 3}
