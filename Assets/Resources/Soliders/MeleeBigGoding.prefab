@@ -12,11 +12,10 @@ GameObject:
   - component: {fileID: 5536557329824037928}
   - component: {fileID: 7242060906805538017}
   - component: {fileID: 3258390813702686429}
-  - component: {fileID: 6345732500387732083}
+  - component: {fileID: 2302560973402218857}
   - component: {fileID: 6425060511249867181}
-  - component: {fileID: 6452188077693735800}
   m_Layer: 6
-  m_Name: HeadSolider
+  m_Name: MeleeBigGoding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +34,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 8319558543109115199}
+  - {fileID: 4819778417473849785}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5536557329824037928
@@ -109,7 +108,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6345732500387732083
+--- !u!114 &2302560973402218857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,11 +117,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8861984038093239496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f3b8931f778fa24e8dd9ce10786e566, type: 3}
+  m_Script: {fileID: 11500000, guid: 43d624d785995f545b2e230b8773d683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   curHp: 0
-  soliderId: 10
+  soliderId: 4
 --- !u!114 &6425060511249867181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,23 +137,12 @@ MonoBehaviour:
   stateDicts:
     list:
     - Key: 0
-      Value: {fileID: 11400000, guid: 8a05d29d15af27e46b3f897fb34eff71, type: 2}
+      Value: {fileID: 11400000, guid: 84eff5f6000f84144b16b5ed1413c318, type: 2}
     - Key: 1
-      Value: {fileID: 11400000, guid: 35a340229f033a241b0555862a1ab506, type: 2}
---- !u!114 &6452188077693735800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8861984038093239496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32e130e9e0d03ca4c95f5423afdc394e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startPoint: {fileID: 0}
---- !u!1001 &4229837065882448623
+      Value: {fileID: 11400000, guid: cbe63a50b10a6c3448cd6f786b10ce5c, type: 2}
+    - Key: 2
+      Value: {fileID: 11400000, guid: 0e52b69940ce2774293d22128b125f03, type: 2}
+--- !u!1001 &803099661823800937
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -211,8 +199,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 559e433c8f46da5418e18200a337114a, type: 3}
---- !u!4 &8319558543109115199 stripped
+--- !u!4 &4819778417473849785 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5316046413323435984, guid: 559e433c8f46da5418e18200a337114a, type: 3}
-  m_PrefabInstance: {fileID: 4229837065882448623}
+  m_PrefabInstance: {fileID: 803099661823800937}
   m_PrefabAsset: {fileID: 0}

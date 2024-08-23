@@ -8,7 +8,7 @@ namespace ScriptableObjects
     [CreateAssetMenu(fileName = "LevelInformationSO", menuName = "ScriptableObjects/LevelInformationSO")]
     public class LevelInformationSO : ScriptableObject
     {
-        public int sceneId;
+        //public int sceneId;
         public int levelID;
         public float levelTime;
         public string levelName;

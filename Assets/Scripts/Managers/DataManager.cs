@@ -21,7 +21,11 @@ namespace Managers
         public void OnStart()
         {
             //初始有一个角色
-            RuntimeSoliderModels.TryAdd(1, SoliderBaseModels[1]);
+            //RuntimeSoliderModels.TryAdd(1, SoliderBaseModels[1]);
+            
+            
+            //Test
+            RuntimeSoliderModels = SoliderBaseModels;
         }
 
         public Dictionary<int, SoliderModelBase> GetSoliderBaseModels()
