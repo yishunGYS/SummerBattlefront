@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2302560973402218857}
   - component: {fileID: 6425060511249867181}
   m_Layer: 6
-  m_Name: MeleeGoding
+  m_Name: MeleeMidGoding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curHp: 0
-  soliderId: 1
+  soliderId: 3
 --- !u!114 &6425060511249867181
 MonoBehaviour:
   m_ObjectHideFlags: 0
