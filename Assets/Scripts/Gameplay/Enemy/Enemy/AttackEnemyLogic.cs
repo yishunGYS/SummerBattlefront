@@ -78,6 +78,10 @@ namespace Gameplay.Enemy.Enemy
             SortMultiTargetsByDistance(tempDistanceTargets);
             for (int i = 0; i < remainTargetNum; i++)
             {
+                if (i>= tempDistanceTargets.Count)
+                {
+                    return;
+                }
                 attackTargets.Add(tempDistanceTargets[i].target);
             }
         }

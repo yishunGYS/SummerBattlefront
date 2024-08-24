@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4984523176865173247}
   - component: {fileID: 4256663162189188329}
   - component: {fileID: 9214749219670528866}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 148021486225145700}
   - component: {fileID: 7707548595896094898}
   - component: {fileID: 9121022850471041372}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 4989456166885442298}
   - component: {fileID: 7431170287595390826}
   - component: {fileID: 2079510889903253585}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 5447982034920911513}
   - component: {fileID: 1954448989288956259}
   - component: {fileID: 3305241706278150544}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: DiciGuai
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -458,7 +458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curHp: 0
-  enemyId: 1001
+  enemyId: 1008
 --- !u!114 &3305241706278150544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 5269147218707445724}
   - component: {fileID: 8116733096846450126}
   - component: {fileID: 8733453189034874890}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

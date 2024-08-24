@@ -67,6 +67,10 @@ namespace Gameplay.Features.EnemyFeature
             int targetsToAdd = Mathf.Min(enemyAgent.enemyModel.attackNum - enemyLogic.attackTargets.Count, potentialTargets.Count);
             for (int i = 0; i < targetsToAdd; i++)
             {
+                if (i>= potentialTargets.Count)
+                {
+                    return;
+                }
                 enemyLogic.attackTargets.Add(potentialTargets[i]);
             }
 
