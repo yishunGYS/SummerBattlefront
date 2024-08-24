@@ -2747,7 +2747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9021402096762491608, guid: 98b4766a4e7c9794f8aef526322669ea, type: 3}
       propertyPath: RiseAmount
-      value: 1000
+      value: 10000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

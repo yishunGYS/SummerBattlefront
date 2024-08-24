@@ -13,13 +13,14 @@ namespace Gameplay.Enemy.Enemy.SmallGuaiGuai
         public override void GetTarget()
         {
             base.GetTarget();
-            GetFocusTarget();
+            enemyGetTargetFeature.GetTarget();
+            Debug.Log("GetTarget");
         }
 
         public override void Attack()
         {
             base.Attack();
-            FocusAttack();
+            NormalAttack();
         }
     }
 }

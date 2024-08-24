@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3556501214494482419}
   - component: {fileID: 2884510733954221944}
   - component: {fileID: 4093549229105949304}
+  - component: {fileID: 3227745532258123601}
   m_Layer: 7
   m_Name: Aeche
   m_TagString: Enemy
@@ -140,6 +141,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curHp: 0
   enemyId: 1003
+--- !u!114 &3227745532258123601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4040144547606602119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 043392240c5b42e0930fd8690d7cdcc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4855506166706676011
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +200,7 @@ GameObject:
   - component: {fileID: 5138948867346264379}
   - component: {fileID: 5535300725609889364}
   - component: {fileID: 925938156643231569}
+  - component: {fileID: 3089850720908163549}
   m_Layer: 7
   m_Name: Arche
   m_TagString: Enemy
@@ -313,6 +327,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curHp: 0
   enemyId: 1003
+--- !u!114 &3089850720908163549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7715584334651550498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 043392240c5b42e0930fd8690d7cdcc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5260829221390225829
 PrefabInstance:
   m_ObjectHideFlags: 0
