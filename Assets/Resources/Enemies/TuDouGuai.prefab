@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 5447982034920911513}
   - component: {fileID: 1954448989288956259}
   - component: {fileID: 2837450652847023469}
+  - component: {fileID: 4478595560713093222}
   m_Layer: 7
   m_Name: TuDouGuai
   m_TagString: Enemy
@@ -260,3 +261,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boomRange: 3
   explosionDelay: 1.5
+--- !u!114 &4478595560713093222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855114071636747005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 043392240c5b42e0930fd8690d7cdcc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

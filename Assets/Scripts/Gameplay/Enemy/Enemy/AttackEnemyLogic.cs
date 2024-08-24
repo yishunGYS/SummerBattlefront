@@ -1,116 +1,94 @@
 using System.Collections.Generic;
+using Gameplay.Features.EnemyFeature;
 using Gameplay.Player;
+using Sirenix.OdinInspector.Editor.Drawers;
 using UnityEngine;
 
 namespace Gameplay.Enemy.Enemy
 {
     public class AttackEnemyLogic : EnemyLogicBase
     {
+        
         protected AttackEnemyLogic(EnemyAgent agent) : base(agent)
         {
+ ;
         }
 
+        
+        
         #region 获取目标
-        
-        protected void DistanceBasedEnemyGetTarget()
-        {
-            List<AttackSoliderTarget> tempDistanceTargets = new List<AttackSoliderTarget>();
-        
-            Collider[] hitColliders =
-                Physics.OverlapSphere(enemyAgent.transform.position, enemyModel.attackRange,
-                    LayerMask.GetMask("Solider"));
-            foreach (var collider in hitColliders)
-            {
-                var tempDis = Vector3.Distance(enemyAgent.transform.position, collider.transform.position);
-                var temp = collider.GetComponent<SoliderAgent>();
-                if (!CheckMatchAttackType(temp))
-                {
-                    continue;
-                }
-        
-                var tempTarget = new AttackSoliderTarget(tempDis, temp);
-                tempDistanceTargets.Add(tempTarget);
-            }
-        
-            SortMultiTargetsByDistance(tempDistanceTargets);
-            for (int i = 0; i < enemyModel.attackNum; i++)
-            {
-                attackTargets.Add(tempDistanceTargets[i].target);
-            }
-        }
-
         
         //GetFocusTarget逻辑有点问题：若目标有三个，其中一个死了，只需要换一个目标，但逻辑会清空所有目标。
         //todo 待测
-        protected void GetFocusTarget()
-        {
-            if (HasFocusTarget())
-                return;
-
-            var remainTargetNum = CalculateRemainTargetNum();
-            
-            var minDis = 10000f;
-            SoliderAgent singleTarget = null;
-            List<AttackSoliderTarget> tempDistanceTargets = new List<AttackSoliderTarget>();
-            Collider[] hitColliders =
-                Physics.OverlapSphere(enemyAgent.transform.position, enemyModel.attackRange,
-                    LayerMask.GetMask("Solider"));
-
-
-            foreach (var collider in hitColliders)
-            {
-                var tempDis = Vector3.Distance(enemyAgent.transform.position, collider.transform.position);
-                var temp = collider.GetComponent<SoliderAgent>();
-                if (!CheckMatchAttackType(temp))
-                {
-                    continue;
-                }
-
-                if (attackTargets.Contains(temp))
-                {
-                    continue;
-                }
-
-                var tempTarget = new AttackSoliderTarget(tempDis, temp);
-                tempDistanceTargets.Add(tempTarget);
-            }
-
-            SortMultiTargetsByDistance(tempDistanceTargets);
-            for (int i = 0; i < remainTargetNum; i++)
-            {
-                if (i>= tempDistanceTargets.Count)
-                {
-                    return;
-                }
-                attackTargets.Add(tempDistanceTargets[i].target);
-            }
-        }
-
-        private void SortMultiTargetsByDistance(List<AttackSoliderTarget> distanceTargets)
-        {
-            distanceTargets.Sort((a, b) => a.dis.CompareTo(b.dis));
-        }
+        // protected void GetFocusTarget()
+        // {
+        //     if (HasFocusTarget())
+        //         return;
+        //
+        //     var remainTargetNum = CalculateRemainTargetNum();
+        //     
+        //     var minDis = 10000f;
+        //     SoliderAgent singleTarget = null;
+        //     List<AttackSoliderTarget> tempDistanceTargets = new List<AttackSoliderTarget>();
+        //     Collider[] hitColliders =
+        //         Physics.OverlapSphere(enemyAgent.transform.position, enemyModel.attackRange,
+        //             LayerMask.GetMask("Solider"));
+        //
+        //
+        //     foreach (var collider in hitColliders)
+        //     {
+        //         var tempDis = Vector3.Distance(enemyAgent.transform.position, collider.transform.position);
+        //         var temp = collider.GetComponent<SoliderAgent>();
+        //         if (!CheckMatchAttackType(temp))
+        //         {
+        //             continue;
+        //         }
+        //
+        //         if (attackTargets.Contains(temp))
+        //         {
+        //             continue;
+        //         }
+        //
+        //         var tempTarget = new AttackSoliderTarget(tempDis, temp);
+        //         tempDistanceTargets.Add(tempTarget);
+        //     }
+        //
+        //     SortMultiTargetsByDistance(tempDistanceTargets);
+        //     for (int i = 0; i < remainTargetNum; i++)
+        //     {
+        //         if (i>= tempDistanceTargets.Count)
+        //         {
+        //             return;
+        //         }
+        //         attackTargets.Add(tempDistanceTargets[i].target);
+        //     }
+        // }
+        //
+        // private void SortMultiTargetsByDistance(List<AttackSoliderTarget> distanceTargets)
+        // {
+        //     distanceTargets.Sort((a, b) => a.dis.CompareTo(b.dis));
+        // }
         
-        private bool HasFocusTarget()
-        {
-            if (attackTargets.Count >= enemyModel.attackNum)
-                return true;
-            return false;
-        }
+        // private bool HasFocusTarget()
+        // {
+        //     if (attackTargets.Count >= enemyModel.attackNum)
+        //         return true;
+        //     return false;
+        // }
 
-        private int CalculateRemainTargetNum()
-        {
-            return enemyModel.attackNum - attackTargets.Count;
-        }
+        // private int CalculateRemainTargetNum()
+        // {
+        //     return enemyModel.attackNum - attackTargets.Count;
+        // }
 
-        private bool CheckMatchAttackType(SoliderAgent target)
-        {
-            if ((enemyModel.attackSoliderType & target.soliderModel.soliderType) == UnitType.None)
-            {
-                return false;
-            }
-            return true;
-        }
+        // private bool CheckMatchAttackType(SoliderAgent target)
+        // {
+        //     if ((enemyModel.attackSoliderType & target.soliderModel.soliderType) == UnitType.None)
+        //     {
+        //         return false;
+        //     }
+        //     return true;
+        // }
 
 
         protected override bool HasAttackTarget()
@@ -159,7 +137,7 @@ namespace Gameplay.Enemy.Enemy
         #region 攻击
         
         //锁定攻击
-        protected void FocusAttack()
+        protected void NormalAttack()
         {
             if (isAttackReady)
             {

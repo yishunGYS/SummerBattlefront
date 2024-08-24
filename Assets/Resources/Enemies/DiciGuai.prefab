@@ -330,6 +330,7 @@ GameObject:
   - component: {fileID: 5447982034920911513}
   - component: {fileID: 1954448989288956259}
   - component: {fileID: 3305241706278150544}
+  - component: {fileID: 3991095595141428816}
   m_Layer: 0
   m_Name: DiciGuai
   m_TagString: Enemy
@@ -469,6 +470,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e166f0f31079d5a4887b295a94b925af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3991095595141428816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855114071636747005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 043392240c5b42e0930fd8690d7cdcc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6935541623927037635

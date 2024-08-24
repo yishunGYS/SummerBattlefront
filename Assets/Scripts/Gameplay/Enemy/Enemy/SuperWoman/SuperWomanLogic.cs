@@ -13,13 +13,13 @@ namespace Gameplay.Enemy.Enemy.SuperWoman
         public override void GetTarget()
         {
             base.GetTarget();
-            GetFocusTarget();
+            enemyGetTargetFeature.GetTarget();
         }
 
         public override void Attack()
         {
             base.Attack();
-            FocusAttack();
+            MeleeAOE();
         }
     }
 }

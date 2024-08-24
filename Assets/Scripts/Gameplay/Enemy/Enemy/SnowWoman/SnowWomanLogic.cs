@@ -9,7 +9,7 @@ namespace Gameplay.Enemy.Enemy.SnowWoman
         public override void GetTarget()
         {
             base.GetTarget();
-            GetFocusTarget();
+            enemyGetTargetFeature.GetTarget();
         }
 
         public override void Attack()

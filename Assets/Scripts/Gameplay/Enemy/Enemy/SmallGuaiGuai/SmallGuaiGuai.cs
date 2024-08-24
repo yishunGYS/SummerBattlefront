@@ -6,6 +6,7 @@ namespace Gameplay.Enemy.Enemy.SmallGuaiGuai
         {
             base.OnInit();
             enemyLogic = new SmallGuaiGuaiLogic(this);
+            enemyLogic.OnInitEnemyFeatures();
         }
     }
 }
