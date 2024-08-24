@@ -33,7 +33,7 @@ public class SelectLevel_UImanager : Singleton<SelectLevel_UImanager>
         }
     }
     //关卡简介界面初始化,绑定点击事件
-    public void Init(LevelInformationSO levelInfoSO)
+    public void Init(LevelInformationSo levelInfoSO)
     {
         //为开始关卡按钮增加点击事件
         enterLevelBtn.onClick.AddListener(LevelManager.Instance.EnterLevel);
@@ -47,7 +47,7 @@ public class SelectLevel_UImanager : Singleton<SelectLevel_UImanager>
         //}
     }
     //选择关卡按钮被按下
-    public void SelectLevelBtnClick(LevelInformationSO levelInfoSO)
+    public void SelectLevelBtnClick(LevelInformationSo levelInfoSO)
     {
         LevelManager.Instance.ShowLevelIntro(levelInfoSO);
         

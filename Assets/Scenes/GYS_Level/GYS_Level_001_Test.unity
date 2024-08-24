@@ -8133,7 +8133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 1
   RiseStats: 0
-  RiseAmount: -40
+  RiseAmount: 1000
 --- !u!4 &2434513040072885990
 Transform:
   m_ObjectHideFlags: 0

@@ -26,6 +26,7 @@ namespace Managers
         private GameObject hoveredObject; // 当前悬浮的物体
 
         public bool isLevelStarted = false;
+        public bool canPlace = false;
 
         public void OnStart()
         {
@@ -61,19 +62,20 @@ namespace Managers
 
         private void SpawnSingle(GridCell block, int cost)
         {
+            if (!isLevelStarted)
+            {
+                return;
+            }
+
             if (PlayerStats.Money < cost)
             {
                 Debug.Log("资源不够!");
                 return;
             }
-
-            if (!isLevelStarted)
-            {
-                PlayerStats.Instance.StartLevel();
-                isLevelStarted = true;
-            }
-
-            SoliderAgent spawnedCharacter = Instantiate(selectedCharacter, block.transform.position + Vector3.up, block.transform.rotation);
+            PlayerStats.Instance.StartLevel();
+            
+            SoliderAgent spawnedCharacter = Instantiate(selectedCharacter, block.transform.position + Vector3.up,
+                block.transform.rotation);
             if (SoliderContainer != null)
             {
                 spawnedCharacter.transform.SetParent(SoliderContainer.transform);
@@ -83,7 +85,7 @@ namespace Managers
                 foreach (Transform child in spawnedCharacter.transform)
                 {
                     var childSoliderCmpt = child.GetComponent<SoliderAgent>();
-                    if (childSoliderCmpt!= null)
+                    if (childSoliderCmpt != null)
                     {
                         //childSoliderCmpt.transform.SetParent(SoliderContainer.transform);
                         childSoliderCmpt.OnInit();
@@ -92,6 +94,7 @@ namespace Managers
                         ItemManager.instance.RiseSoliderStats(spawnedCharacter);
                     }
                 }
+
                 // 在士兵生成后提升属性
                 ItemManager.instance.RiseSoliderStats(spawnedCharacter);
             }
@@ -169,6 +172,7 @@ namespace Managers
                             // 之前悬浮的物体执行离开悬浮的逻辑
                             OnMouseExitBlock(hoveredObject.GetComponent<GridCell>());
                         }
+
                         // 当前悬浮的物体
                         hoveredObject = hitObject;
                         OnMouseEnterBlock(block);

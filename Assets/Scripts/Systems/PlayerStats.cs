@@ -46,7 +46,6 @@ namespace Systems
 
         void FixedUpdate()
         {
-            
             if (isLevelStarted)
             {
                 RegainMoneyOverTime();

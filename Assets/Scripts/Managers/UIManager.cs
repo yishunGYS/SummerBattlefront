@@ -60,10 +60,7 @@ namespace Managers
             }
         }
 
-        public void OnStart()
-        {
-            // 不再需要这里的初始化，因为场景加载时会进行初始化
-        }
+
 
         public void OpenTeamPanel()
         {

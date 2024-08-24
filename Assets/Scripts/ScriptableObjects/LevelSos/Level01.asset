@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23b884ee243340149b78b4bd37231969, type: 3}
   m_Name: Level01
   m_EditorClassIdentifier: 
-  sceneId: 2
   levelID: 1
   levelTime: 60
   levelName: GYS_Level_001_Test
@@ -20,4 +19,5 @@ MonoBehaviour:
   enemies:
   - {fileID: 7502317580413784757, guid: c8c1c485768af5947837f3f9f4cfb30d, type: 3}
   - {fileID: 7502317580413784757, guid: 635ec51b2551d4741b32740942f8a3cd, type: 3}
-  unlockSoliderId: 2
+  unlockSoliderId: 02000000
+  lockSoliderIds: 

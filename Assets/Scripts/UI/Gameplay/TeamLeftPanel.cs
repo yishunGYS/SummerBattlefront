@@ -89,6 +89,7 @@ namespace UI.Gameplay
 
             UIManager.Instance.OnCloseTeamPanel();
             UIManager.Instance.OnOpenSoliderPlacePanel();
+            SpawnManager.Instance.isLevelStarted = true;
         }
 
         private void OnDestroy()
