@@ -11,22 +11,12 @@ namespace UI.Gameplay
         private Color originalColor;
         private Color darkenedColor;
         private TextMeshProUGUI  costText;
-        // private RectTransform hoverPanel;
-        // private TextMeshProUGUI unitName;
-        // private TextMeshProUGUI unitDescribe;
         public void OnInit()
         {
             img = GetComponent<Image>();
             originalColor = img.color;
             darkenedColor = originalColor * 0.1f;
             costText = transform.Find("Cost").GetComponent<TextMeshProUGUI>();
-
-            // hoverPanel = Resources.Load<RectTransform>("UIPanel/UnitHoverPanel");
-            // hoverPanel = Instantiate(hoverPanel);
-            //
-            // hoverPanel.gameObject.SetActive(false);
-            // unitName = hoverPanel.transform.Find("SoliderName").GetComponent<TextMeshProUGUI>();
-            // unitDescribe = hoverPanel.transform.Find("SoliderDes").GetComponent<TextMeshProUGUI>();
         }
 
         public void ChangeUIColor(bool isSelect)

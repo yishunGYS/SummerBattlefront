@@ -20,6 +20,7 @@ namespace UI.Gameplay
                 GameObject card = Instantiate(prefab, transform);
                 var uiPlacedCmpt = card.GetComponent<UIPlaced>();
                 uiPlacedCmpt.InitInGamePanel(soliderData);
+                uiPlacedCmpt.view.SetCostText(soliderData.cost);
             }
 
             // 清理面板中已有的士兵卡片
