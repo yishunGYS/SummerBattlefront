@@ -15,7 +15,7 @@ namespace Gameplay.Enemy.Enemy.SnowWoman
         public override void Attack()
         {
             base.Attack();
-            MeleeAOE();
+            NormalAttack();
         }
     }
 }

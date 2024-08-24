@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SoliderState_RangeIdleSO
   m_EditorClassIdentifier: 
   stateType: 0
-  waitTime: 1
+  waitTime: 0.4

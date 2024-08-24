@@ -8,24 +8,24 @@ namespace Managers
 {
     public class DataManager : Singleton<DataManager>
     {
-        public List<int> InitSoliderIds = new List<int>();
-        
         private Dictionary<int,SoliderModelBase> SoliderBaseModels = new Dictionary<int, SoliderModelBase>();
-        private Dictionary<int, SoliderModelBase> RuntimeSoliderModels = new Dictionary<int, SoliderModelBase>();
+        public Dictionary<int, SoliderModelBase> RuntimeSoliderModels = new Dictionary<int, SoliderModelBase>();
         
         private Dictionary<int,EnemyModelBase> EnemyBaseModels = new Dictionary<int, EnemyModelBase>();
         
         private List<int> SolidersInBattle = new List<int>();
-
+        private bool isStart;
 
         public void OnStart()
         {
             //初始有一个角色
-            //RuntimeSoliderModels.TryAdd(1, SoliderBaseModels[1]);
-            
-            
-            //Test
-            RuntimeSoliderModels = SoliderBaseModels;
+            if (!isStart)
+            {
+                //Test
+                //RuntimeSoliderModels = SoliderBaseModels;
+                RuntimeSoliderModels.TryAdd(1, SoliderBaseModels[1]);
+                isStart = true;
+            }
         }
 
         public Dictionary<int, SoliderModelBase> GetSoliderBaseModels()
