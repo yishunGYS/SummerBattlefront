@@ -471,7 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d396def0ba315e48b39a6467411484f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boomRange: 3
+  boomRange: 0.5
   explosionDelay: 1.5
 --- !u!1 &6935541623927037635
 GameObject:
