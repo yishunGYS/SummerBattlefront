@@ -166,8 +166,13 @@ namespace Gameplay.Player
             if (Physics.Raycast(startPoint, moveDir.normalized, out hit, frontCheckDistance))
             {
                 EnemyAgent enemyAgent = hit.collider.gameObject.GetComponent<EnemyAgent>();
+
                 if (enemyAgent != null)
                 {
+                    if (enemyAgent.CompareTag("Untargetable"))
+                    {
+                        return false;
+                    }
                     int enemyBlockNum = enemyAgent.enemyModel.blockNum;
                     if (enemyAgent.enemyLogic.blockSoilders.Count < enemyBlockNum &&
                         !enemyAgent.enemyLogic.blockSoilders.Contains(soliderAgent))

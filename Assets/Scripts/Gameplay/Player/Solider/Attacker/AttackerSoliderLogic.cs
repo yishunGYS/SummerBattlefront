@@ -28,7 +28,7 @@ namespace Gameplay.Player.Solider.Attacker
                 if (temp == null)
                 {
                     Debug.Log("temp is null");
-                    return;
+                    continue;
                 }
                 if (!CheckMatchAttackType(temp))
                 {

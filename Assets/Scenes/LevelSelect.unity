@@ -765,6 +765,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 11400000, guid: f6f988bc8ff3b554a9d36757fb3c0980, type: 2}
+    - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: ScriptableObjects.LevelInformationSo, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 224305341502267110, guid: 3d90679390670c24790f2c49ad22bf95, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1829,6 +1833,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 11400000, guid: 19319f971db89d4439dd36213c4ea89a, type: 2}
+    - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: ScriptableObjects.LevelInformationSo, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 224305341502267110, guid: 3d90679390670c24790f2c49ad22bf95, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2344,6 +2352,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 345312454}
+    - target: {fileID: 114165832186565126, guid: 3d90679390670c24790f2c49ad22bf95, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: ScriptableObjects.LevelInformationSo, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 224305341502267110, guid: 3d90679390670c24790f2c49ad22bf95, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

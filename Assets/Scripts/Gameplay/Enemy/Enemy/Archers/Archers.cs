@@ -6,6 +6,7 @@ namespace Gameplay.Enemy.Enemy.Archers
         {
             base.OnInit();
             enemyLogic = new ArchersLogic(this);
+            enemyLogic.OnInitEnemyFeatures();
         }
     }
 }

@@ -4,20 +4,18 @@ namespace Gameplay.Enemy.Enemy.Archers
     {
         public ArchersLogic(EnemyAgent agent) : base(agent)
         {
-    
-    
         }
 
         public override void GetTarget()
         {
             base.GetTarget();
-            GetFocusTarget();
+            enemyGetTargetFeature.GetTarget();
         }
 
         public override void Attack()
         {
             base.Attack();
-            FocusAttack();
+            NormalAttack();
         }
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 namespace ScriptableObjects
 {
     [CreateAssetMenu(fileName = "LevelInformationSO", menuName = "ScriptableObjects/LevelInformationSO")]
-    public class LevelInformationSO : ScriptableObject
+    public class LevelInformationSo : ScriptableObject
     {
         //public int sceneId;
         public int levelID;
@@ -14,7 +14,8 @@ namespace ScriptableObjects
         public string levelName;
         public string levelIntro;
         public List<Image> enemies;
-        public int unlockSoliderId = -1;
+        public List<int> unlockSoliderId = new List<int>();
+        public List<int> lockSoliderIds = new List<int>();
     }
 }
 

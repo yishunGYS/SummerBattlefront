@@ -6,6 +6,7 @@ namespace Gameplay.Enemy.Enemy.SnowWoman
         {
             base.OnInit();
             enemyLogic = new SnowWomanLogic(this);
+            enemyLogic.OnInitEnemyFeatures();
         }
     }
 }

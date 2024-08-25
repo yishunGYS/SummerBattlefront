@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using _3DlevelEditor_GYS;
+using DG.Tweening;
 using Gameplay.Features;
 using Gameplay.Features.EnemyFeature;
 using Gameplay.Player;
@@ -41,7 +43,7 @@ namespace Gameplay.Enemy
 
         //BuffManager
         //public BuffManager enemyBuffManager;
-
+        protected EnemyGetTargetFeatureBase enemyGetTargetFeature;
         protected EnemyLogicBase(EnemyAgent agent)
         {
             enemyAgent = agent;
@@ -51,6 +53,15 @@ namespace Gameplay.Enemy
             //enemyBuffManager = new BuffManager(enemyAgent);
         }
 
+        public void OnInitEnemyFeatures()
+        {
+            enemyGetTargetFeature = enemyAgent.GetComponent<EnemyGetTargetFeatureBase>();
+            if (enemyGetTargetFeature != null)
+            {
+                enemyGetTargetFeature.OnInit();
+            }
+            
+        }
 
         #region 攻击判定
 
@@ -79,12 +90,7 @@ namespace Gameplay.Enemy
 
             //子类override
         }
-
-        private void ClearTarget()
-        {
-            //attackTargets.Clear();
-        }
-
+        
         public virtual void RemoveAttackTarget(UnitAgent target)
         {
 
@@ -280,5 +286,6 @@ namespace Gameplay.Enemy
         }
 
         #endregion
+
     }
 }

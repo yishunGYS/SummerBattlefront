@@ -2152,6 +2152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridPrefab: {fileID: 6059457237279058214, guid: c248944487e7cab45be0487ef143f075, type: 3}
   container: {fileID: 925185309}
+  isStartToRegain: 0
 --- !u!114 &925185311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3935,7 +3936,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1903957192
 Transform:
   m_ObjectHideFlags: 0
