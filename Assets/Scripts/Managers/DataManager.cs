@@ -22,8 +22,8 @@ namespace Managers
             if (!isStart)
             {
                 //Test
-                //RuntimeSoliderModels = SoliderBaseModels;
-                RuntimeSoliderModels.TryAdd(1, SoliderBaseModels[1]);
+                RuntimeSoliderModels = SoliderBaseModels;
+                //RuntimeSoliderModels.TryAdd(1, SoliderBaseModels[1]);
                 isStart = true;
             }
         }

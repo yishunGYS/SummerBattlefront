@@ -232,7 +232,7 @@ namespace Gameplay.Player
         }
 
 
-        protected virtual bool CheckMatchAttackType(EnemyAgent target)
+        public virtual bool CheckMatchAttackType(EnemyAgent target)
         {
             return true;
         }

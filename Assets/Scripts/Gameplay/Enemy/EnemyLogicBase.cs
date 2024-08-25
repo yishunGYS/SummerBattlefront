@@ -7,6 +7,7 @@ using DG.Tweening;
 using Gameplay.Features;
 using Gameplay.Features.EnemyFeature;
 using Gameplay.Player;
+using Gameplay.Player.Solider.Attacker;
 using ScriptableObjects.SoliderStateTypeSO;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -190,6 +191,12 @@ namespace Gameplay.Enemy
             List<EnemyAgent> aoeTargets = GetAOETargets(enemyAgent.transform.position, aoeRange);
             foreach (var enemy in aoeTargets)
             {
+                //check unitType
+                SoliderLogicBase soliderLogic = soliderAgent.soliderLogic ;
+                if (!soliderLogic.CheckMatchAttackType(enemy))
+                {
+                    continue;
+                }
                 enemy.enemyLogic.OnTakeDamage(soliderAgent);
             }
 
