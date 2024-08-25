@@ -56,7 +56,7 @@ namespace Gameplay.Player.Solider.Attacker
         }
 
         //用于判别地面不能打敌人Tower
-        protected override bool CheckMatchAttackType(EnemyAgent target)
+        public override bool CheckMatchAttackType(EnemyAgent target)
         {
             //todo 若attackEnemyType是多种，那么----待扩展
             if ((soliderModel.attackEnemyType & target.enemyModel.enemyType) == UnitType.None)
@@ -128,7 +128,7 @@ namespace Gameplay.Player.Solider.Attacker
                     {
                         enemyAgent.enemyLogic.OnTakeAOEDamage(
                             soliderAgent,
-                            5);
+                            soliderModel.attackAoeRange);
                     }
                 }
             }
