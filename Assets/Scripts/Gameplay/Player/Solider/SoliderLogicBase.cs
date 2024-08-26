@@ -364,12 +364,12 @@ namespace Gameplay.Player
 
         #region 死亡
 
-        protected virtual async void Die()
+        protected virtual  void Die()
         {
-            if (isDead)
-            {
-                return;
-            }
+            // if (isDead)
+            // {
+            //     return;
+            // }
             soliderAgent.StopAllCoroutines();
             Debug.Log($"{soliderModel.soliderName} has died!");
             Renderer renderer = soliderAgent.GetComponent<Renderer>();
@@ -400,7 +400,7 @@ namespace Gameplay.Player
 
             
             isDead = true;
-            await Task.Delay(300);
+            //await Task.Delay(300);
             Object.Destroy(soliderAgent.gameObject);
         }
 
