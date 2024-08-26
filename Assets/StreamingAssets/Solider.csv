@@ -4,7 +4,7 @@ int,string,string,UnitType,int,float,int,int,int,float,float,float,float,int,flo
 2,远兵,脆皮远程,1,4,55,1,30,0,0,0,1,2.5,1,0,0,1|2,1,0,Soliders/RangeGodings,UIUnit/Solider/SoliderUI_2
 3,中兵兵,较肉近战,1,4,550,1,70,0,0,0,1,1.2,1,0,0,1,1,0,Soliders/MeleeMidGoding,UIUnit/Solider/SoliderUI_3
 4,大兵兵,巨肉近战,1,8,1200,1,70,0,0,0,1,1.2,1,0,0,1,1,0,Soliders/MeleeBigGoding,UIUnit/Solider/SoliderUI_4
-5,女武神,会aoe的士兵,1,5,550,1,70,0,0,0,1,1,1,3.6,0,1,2,0,Soliders/Valkyrie,UIUnit/Solider/SoliderUI_5
+5,女武神,会aoe的士兵,1,5,550,1,70,0,0,0,1,1,1,1.6,0,1,2,0,Soliders/Valkyrie,UIUnit/Solider/SoliderUI_5
 6,骷髅军团,堆量的脆皮士兵团,1,2,110,5,30,0,0,0,1,0.4,1,0,0,1,1,0,Soliders/Skeletons,UIUnit/Solider/SoliderUI_6
 7,天使,普攻能够治疗友方单体,1,4,220,1,30,0,0,0,1,4,999,0,1,1,2,0,Soliders/Angel,UIUnit/Solider/SoliderUI_7
 8,爆炸兵,在攻击范围内自爆,1,4,110,1,1000,0,0,0,-1,1,1,2.4,0,1|2,4,0,Soliders/Exploder,UIUnit/Solider/SoliderUI_8
