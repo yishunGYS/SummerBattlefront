@@ -84,6 +84,10 @@ namespace Systems
 
         void UpdateLevelTime()
         {
+            if (!isLevelStarted)
+            {
+                return;
+            }
             remainingTime -= Time.fixedDeltaTime;
 
             if (remainingTime <= 0f)
@@ -96,9 +100,10 @@ namespace Systems
                 Debug.Log("关卡失败：时间耗尽！");
                 UIManager.Instance.OnCloseResourcePanel();
             }
-
-            //UpdateTimeText();
-            UIManager.Instance.OnUpdateTimeLeftPanel(remainingTime);
+            else
+            {
+                UIManager.Instance.OnUpdateTimeLeftPanel(remainingTime);
+            }
         }
         
 
