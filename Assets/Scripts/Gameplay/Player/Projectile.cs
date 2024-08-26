@@ -11,7 +11,6 @@ namespace Gameplay.Player
         private UnitAgent beAtkAgent;
         //private Vector3 moveDir;
         public float moveSpeed;
-
         public void OnInit(UnitAgent atkAgent,UnitAgent beAtkAgent)
         {
             this.atkAgent = atkAgent;
@@ -22,6 +21,7 @@ namespace Gameplay.Player
         private void Update()
         {
             Move();
+            DetectCollide();
         }
 
         //Õ∂÷¿ŒÔ∑…––
@@ -36,7 +36,8 @@ namespace Gameplay.Player
             transform.position += moveSpeed * Time.deltaTime * dir;
         }
 
-        private void OnTriggerEnter(Collider other)
+
+        public void DetectCollide()
         {
             if (!atkAgent)
             {
@@ -46,25 +47,39 @@ namespace Gameplay.Player
             if (atkAgent.transform.CompareTag("Solider"))
             {
                 SoliderAgent soliderAgent = atkAgent as SoliderAgent;
-                var enemyCmpt =  other.GetComponent<EnemyAgent>();
-                if (enemyCmpt)
+                Collider[] hitColliders =
+                    Physics.OverlapSphere(transform.position, transform.localScale.x/2,
+                        LayerMask.GetMask("Enemy"));
+                foreach (var collider in hitColliders)
                 {
-                    enemyCmpt.enemyLogic.OnTakeDamage(soliderAgent);
-                    Destroy(gameObject);
+                    var enemyCmpt = collider.GetComponent<EnemyAgent>();
+                    if (enemyCmpt)
+                    {
+                        enemyCmpt.enemyLogic.OnTakeDamage(soliderAgent);
+                        Destroy(gameObject);
+                        break;
+                    }
                 }
-
             }
 
             if (atkAgent.transform.CompareTag("Enemy"))
             {
                 EnemyAgent enemyAgent = atkAgent as EnemyAgent;
-                var soliderCmpt =  other.GetComponent<SoliderAgent>();
-                if (soliderCmpt)
+                Collider[] hitColliders =
+                    Physics.OverlapSphere(transform.position, transform.localScale.x/2,
+                        LayerMask.GetMask("Solider"));
+                foreach (var collider in hitColliders)
                 {
-                    soliderCmpt.soliderLogic.OnTakeDamage(enemyAgent);
-                    Destroy(gameObject);
+                    var soliderCmpt = collider.GetComponent<SoliderAgent>();
+                    if (soliderCmpt)
+                    {
+                        soliderCmpt.soliderLogic.OnTakeDamage(enemyAgent);
+                        Destroy(gameObject);
+                        break;
+                    }
                 }
             }
         }
+        
     }
 }
