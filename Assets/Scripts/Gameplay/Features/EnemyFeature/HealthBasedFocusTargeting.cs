@@ -14,8 +14,9 @@ namespace Gameplay.Features.EnemyFeature
         public override void GetTarget()
         {
             base.GetTarget();
-            if (HasFocusTarget())
-                return;
+            // if (HasFocusTarget())
+            //     return;
+            m_enemyLogic.attackTargets.Clear();
             List<SoliderAgent> potentialTargets = new List<SoliderAgent>();
             Collider[] hitColliders = Physics.OverlapSphere(enemyAgent.transform.position, enemyAgent.enemyModel.attackRange, LayerMask.GetMask("Solider"));
 
@@ -34,7 +35,7 @@ namespace Gameplay.Features.EnemyFeature
                 potentialTargets.Add(solider);
             }
 
-            potentialTargets.Sort((a, b) => a.curHp.CompareTo(b.curHp));
+            potentialTargets.Sort((a, b) => a.GetMaxHp().CompareTo(b.GetMaxHp()));
 
             int targetsToAdd = CalculateRemainTargetToAdd(potentialTargets.Count);
             for (int i = 0; i < targetsToAdd; i++)
