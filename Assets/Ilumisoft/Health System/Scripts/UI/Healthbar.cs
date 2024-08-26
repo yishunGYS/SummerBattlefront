@@ -34,19 +34,22 @@ namespace Ilumisoft.Health_System.Scripts.UI
             maxValue = agent.GetMaxHp();
         }
 
-        private void LateUpdate()
+        private void Update()
         {
             if (!agent)
             {
                 return;
             }
-
-            // Update the rotation of the Canvas
-            SetRotationBasedOnDistance();
-
             currentValue = Mathf.MoveTowards(currentValue, agent.curHp, Time.deltaTime * changeSpeed);
             UpdateFillbar();
             UpdateVisibility();
+        }
+
+        private void LateUpdate()
+        {
+
+            // Update the rotation of the Canvas
+            SetRotationBasedOnDistance();
         }
 
         void SetRotationBasedOnDistance()
