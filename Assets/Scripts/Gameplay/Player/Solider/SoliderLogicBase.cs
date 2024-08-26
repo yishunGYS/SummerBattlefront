@@ -41,6 +41,8 @@ namespace Gameplay.Player
         private float attackTimer = 1000f;
         public bool isAttackReady = true;
 
+        //死亡
+        private bool isDead;
         //阻挡的敌人
         public EnemyAgent blocker;
 
@@ -362,10 +364,16 @@ namespace Gameplay.Player
 
         #region 死亡
 
-        protected virtual void Die()
+        protected virtual async void Die()
         {
+            if (isDead)
+            {
+                return;
+            }
+            soliderAgent.StopAllCoroutines();
             Debug.Log($"{soliderModel.soliderName} has died!");
-
+            Renderer renderer = soliderAgent.GetComponent<Renderer>();
+            renderer.material.color = Color.black;
             foreach (var agent in attackers)
             {
                 //通知在打他的敌人，他死了
@@ -390,7 +398,9 @@ namespace Gameplay.Player
                 blocker.enemyLogic.RemoveBlockTargets(soliderAgent);
             }
 
-            soliderAgent.StopAllCoroutines();
+            
+            isDead = true;
+            await Task.Delay(300);
             Object.Destroy(soliderAgent.gameObject);
         }
 
