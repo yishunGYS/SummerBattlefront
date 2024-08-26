@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3618351148407141835}
   - component: {fileID: 8934469475710412567}
   m_Layer: 8
-  m_Name: Mao
+  m_Name: SoliderMao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

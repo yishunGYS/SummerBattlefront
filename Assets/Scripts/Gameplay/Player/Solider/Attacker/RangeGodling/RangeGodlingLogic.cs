@@ -28,7 +28,7 @@ namespace Gameplay.Player.Solider.Attacker.RangeGodling
                 {
                     Debug.Log("攻击！！！");
                     var go =  GameObject.Instantiate(rangeGodlingAgent.projectile, rangeGodlingAgent.transform.position, Quaternion.identity);
-                    go.OnInit(attackTargets[i].transform.position,rangeGodlingAgent);
+                    go.OnInit(rangeGodlingAgent,attackTargets[i]);
                 }
             }
         }
