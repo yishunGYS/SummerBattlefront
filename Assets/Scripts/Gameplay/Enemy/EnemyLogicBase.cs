@@ -45,6 +45,7 @@ namespace Gameplay.Enemy
         //BuffManager
         //public BuffManager enemyBuffManager;
         protected EnemyGetTargetFeatureBase enemyGetTargetFeature;
+       // protected RangeViewFeature rangeViewFeature;
         protected EnemyLogicBase(EnemyAgent agent)
         {
             enemyAgent = agent;
@@ -62,6 +63,11 @@ namespace Gameplay.Enemy
                 enemyGetTargetFeature.OnInit();
             }
             
+            var rangeViewFeature = enemyAgent.GetComponent<RangeViewFeature>();
+            if (rangeViewFeature != null)
+            {
+                rangeViewFeature.OnInit();
+            }
         }
 
         #region 攻击判定
