@@ -40,7 +40,8 @@ namespace Ilumisoft.Health_System.Scripts.UI
             {
                 return;
             }
-            currentValue = Mathf.MoveTowards(currentValue, agent.curHp, Time.deltaTime * changeSpeed);
+            //currentValue = Mathf.MoveTowards(currentValue, agent.curHp, Time.deltaTime * changeSpeed);
+            currentValue = agent.curHp;
             UpdateFillbar();
             UpdateVisibility();
         }
