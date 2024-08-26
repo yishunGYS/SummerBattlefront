@@ -27,6 +27,11 @@ namespace Gameplay.Player
         //Õ∂÷¿ŒÔ∑…––
         private void Move()
         {
+            if (!beAtkAgent)
+            {
+                Destroy(gameObject);
+                return;
+            }
             var dir = beAtkAgent.transform.position - transform.position;
             transform.position += moveSpeed * Time.deltaTime * dir;
         }
