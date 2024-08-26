@@ -27,7 +27,7 @@ namespace Gameplay.Player
         //Õ∂÷¿ŒÔ∑…––
         private void Move()
         {
-            if (!beAtkAgent)
+            if (beAtkAgent == null)
             {
                 Destroy(gameObject);
                 return;
@@ -39,7 +39,7 @@ namespace Gameplay.Player
 
         public void DetectCollide()
         {
-            if (!atkAgent)
+            if (atkAgent == null)
             {
                 return;
             }
