@@ -38,6 +38,10 @@ namespace Gameplay.Player
 
         private void OnTriggerEnter(Collider other)
         {
+            if (!atkAgent)
+            {
+                return;
+            }
             
             if (atkAgent.transform.CompareTag("Solider"))
             {
