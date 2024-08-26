@@ -1,9 +1,13 @@
+using UnityEngine;
+
 namespace Gameplay.Enemy.Enemy.Archers
 {
     public class ArchersLogic : AttackEnemyLogic
     {
+        private Archers archerAgent;
         public ArchersLogic(EnemyAgent agent) : base(agent)
         {
+            archerAgent = agent as Archers;
         }
 
         public override void GetTarget()
@@ -15,7 +19,18 @@ namespace Gameplay.Enemy.Enemy.Archers
         public override void Attack()
         {
             base.Attack();
-            NormalAttack();
+            if (isAttackReady)
+            {
+                CalculateCd();
+                //·¢ÉäÍ¶ÖÀÎï
+                for (int i = attackTargets.Count-1; i >= 0; i--)
+                {
+                    Debug.Log("¹¥»÷£¡£¡£¡");
+                    var go =  GameObject.Instantiate(archerAgent.projectile, archerAgent.transform.position, Quaternion.identity);
+                    go.OnInit(archerAgent, attackTargets[i]);
+                }
+            }
+            //NormalAttack();
         }
     }
 }

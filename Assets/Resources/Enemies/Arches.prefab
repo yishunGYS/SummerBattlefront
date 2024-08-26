@@ -141,6 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curHp: 0
   enemyId: 1003
+  projectile: {fileID: -3618351148407141835, guid: 4fbac868351783d4d9a57668f810249a, type: 3}
 --- !u!114 &3227745532258123601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,6 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curHp: 0
   enemyId: 1003
+  projectile: {fileID: -3618351148407141835, guid: 4fbac868351783d4d9a57668f810249a, type: 3}
 --- !u!114 &3089850720908163549
 MonoBehaviour:
   m_ObjectHideFlags: 0
