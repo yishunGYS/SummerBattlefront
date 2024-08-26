@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7944709177387410397}
   m_Layer: 6
   m_Name: SkeletonSingle
-  m_TagString: Untagged
+  m_TagString: Solider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

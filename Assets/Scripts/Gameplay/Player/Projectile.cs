@@ -1,18 +1,19 @@
 using System;
 using Gameplay.Enemy;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
 namespace Gameplay.Player
 {
     public class Projectile : MonoBehaviour
     {
-        private SoliderAgent soliderAgent;
+        private UnitAgent unitAgent;
         private Vector3 moveDir;
         public float moveSpeed;
 
-        public void OnInit(Vector3 targetPosition,SoliderAgent soliderAgent)
+        public void OnInit(Vector3 targetPosition,UnitAgent agent)
         {
-            this.soliderAgent = soliderAgent;
+            unitAgent = agent;
             moveDir = targetPosition - transform.position;
         }
 
@@ -32,7 +33,9 @@ namespace Gameplay.Player
             
             if (other.CompareTag("Enemy"))
             {
+                SoliderAgent soliderAgent = unitAgent as SoliderAgent;
                 var enemyCmpt =  other.GetComponent<EnemyAgent>();
+                
                 enemyCmpt.enemyLogic.OnTakeDamage(soliderAgent);
                 Destroy(gameObject);
             }
