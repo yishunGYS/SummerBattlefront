@@ -56,9 +56,12 @@ namespace Systems
 
         public void StartLevel()
         {
-            remainingTime = levelTimeLimit;
-            isLevelStarted = true;
-            Debug.Log("关卡开始！");
+            if (!isLevelStarted)
+            {
+                remainingTime = levelTimeLimit;
+                isLevelStarted = true;
+                Debug.Log("关卡开始！");
+            }
         }
 
         void RegainMoneyOverTime()
