@@ -6,6 +6,7 @@ namespace Gameplay.Enemy.Enemy.SuperWoman
         {
             base.OnInit();
             enemyLogic = new SuperWomanLogic(this);
+            enemyLogic.OnInitEnemyFeatures();
         }
     }
 }

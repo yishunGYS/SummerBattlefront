@@ -82,43 +82,30 @@ namespace Managers
                 spawnedCharacter.OnInit();
                 spawnedCharacter.soliderLogic.InitBlockData(block);
                 spawnedCharacter.soliderLogic.InitBirthPointData(block);
+                ItemManager.instance.RiseSoliderStats(spawnedCharacter);
+
+                List<SoliderAgent> tempChilds = new List<SoliderAgent>();
                 foreach (Transform child in spawnedCharacter.transform)
-                {
+                { 
                     var childSoliderCmpt = child.GetComponent<SoliderAgent>();
                     if (childSoliderCmpt != null)
                     {
-                        //childSoliderCmpt.transform.SetParent(SoliderContainer.transform);
-                        childSoliderCmpt.OnInit();
-                        childSoliderCmpt.soliderLogic.InitBlockData(block);
-                        childSoliderCmpt.soliderLogic.InitBirthPointData(block);
-                        ItemManager.instance.RiseSoliderStats(spawnedCharacter);
+                        tempChilds.Add(childSoliderCmpt);
                     }
                 }
-
-                // 在士兵生成后提升属性
-                ItemManager.instance.RiseSoliderStats(spawnedCharacter);
+                foreach (var solider in tempChilds)
+                {
+                    solider.transform.SetParent(SoliderContainer.transform);
+                    solider.OnInit();
+                    solider.soliderLogic.InitBlockData(block);
+                    solider.soliderLogic.InitBirthPointData(block);
+                    ItemManager.instance.RiseSoliderStats(spawnedCharacter);
+                }
             }
-
-            InitSoliderFellow(spawnedCharacter.transform, block);
+            
             PlayerStats.Money -= cost;
         }
-
-        private void InitSoliderFellow(Transform solider, GridCell block)
-        {
-            foreach (Transform child in solider.transform)
-            {
-                var soliderAgent = child.GetComponent<SoliderAgent>();
-                if (soliderAgent != null)
-                {
-                    soliderAgent.transform.SetParent(SoliderContainer.transform);
-                    soliderAgent.OnInit();
-                    soliderAgent.soliderLogic.InitBlockData(block);
-                    soliderAgent.soliderLogic.InitBirthPointData(block);
-                }
-
-                InitSoliderFellow(child, block);
-            }
-        }
+        
 
         public SoliderAgent GetSolider()
         {
