@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curHp: 0
-  soliderId: 6
+  soliderId: 8
   bomb: {fileID: 4717568731557150635, guid: c688948d5554ca4408caa7604595d43a, type: 3}
 --- !u!1001 &4306643063235993891
 PrefabInstance:
