@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5946230307731814584}
   - component: {fileID: 817126554873219354}
   m_Layer: 6
-  m_Name: RangeGodings
+  m_Name: RangeGodingsPlus
   m_TagString: Solider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b2051f2370fbe3748903453043a22aa0, type: 2}
+  - {fileID: 2100000, guid: 49e192b58ab530949871106971e13456, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curHp: 0
-  soliderId: 2
+  soliderId: 11
   projectile: {fileID: -3618351148407141835, guid: 2db63ad894e9b1a47913e3d331d1144b, type: 3}
 --- !u!114 &817126554873219354
 MonoBehaviour:
@@ -236,6 +236,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8497608816264984915}
     m_Modifications:
+    - target: {fileID: -7747116291038743707, guid: 427d525df0ed3244cab1e5b77c3d406c, type: 3}
+      propertyPath: soliderId
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5022474881247193319, guid: 427d525df0ed3244cab1e5b77c3d406c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1700002
@@ -280,6 +284,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.364
       objectReference: {fileID: 0}
+    - target: {fileID: 7242060906805538017, guid: 427d525df0ed3244cab1e5b77c3d406c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49e192b58ab530949871106971e13456, type: 2}
     - target: {fileID: 8861984038093239496, guid: 427d525df0ed3244cab1e5b77c3d406c, type: 3}
       propertyPath: m_Name
       value: RangeGoding

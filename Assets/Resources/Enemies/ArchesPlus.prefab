@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5103291751367099956}
   m_Layer: 0
-  m_Name: Arches
+  m_Name: ArchesPlus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -267,7 +267,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bf850b765ae003c46841862eb83f621b, type: 2}
+  - {fileID: 2100000, guid: a57346f84af35d349acc293f7d269a52, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curHp: 0
-  enemyId: 1012
+  enemyId: 1003
   projectile: {fileID: -3618351148407141835, guid: 4fbac868351783d4d9a57668f810249a, type: 3}
 --- !u!114 &3089850720908163549
 MonoBehaviour:

@@ -18,6 +18,9 @@ namespace Systems.Level
         public int nowLevelId;
         public string nowLevelName;
         public float nowLevelTime;
+
+        public float nowLevelResource;
+        
         public List<int> nowUnlockSoliderIds = new List<int>();
         public List<int> nowLockedSoliderIds = new List<int>();
         public SceneFader fader;
@@ -97,5 +100,10 @@ namespace Systems.Level
         {
             return nowLevelTime;
         }
+
+        // public float GetCurrentLevelResource()
+        // {
+        //     
+        // }
     }
 }

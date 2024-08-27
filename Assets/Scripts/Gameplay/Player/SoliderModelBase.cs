@@ -9,6 +9,7 @@ namespace Gameplay.Player
         None = 0,
         Ground = 1 << 0, //1
         Tower = 1 << 1, //2
+        Block = 1<<2   //4
     }
 
     public enum AttackTargetType
