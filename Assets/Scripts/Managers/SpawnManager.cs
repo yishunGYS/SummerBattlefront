@@ -69,7 +69,7 @@ namespace Managers
 
             if (PlayerStats.Money < cost)
             {
-                Debug.Log("资源不够!");
+                UIManager.Instance.OnShowTipPanel("资源耗尽惹");
                 return;
             }
             PlayerStats.Instance.StartLevel();

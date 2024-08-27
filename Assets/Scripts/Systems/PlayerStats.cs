@@ -75,6 +75,10 @@ namespace Systems
 
         void RegainMoneyOverTime()
         {
+            if (remainingResource<=0)
+            {
+                return;
+            }
             if (Money >= currentLimit)
             {
                 return;
@@ -94,6 +98,11 @@ namespace Systems
 
                 remainingResource -= currentRegainRate;
                 UIManager.Instance.OnUpdateResourceLeftPanel(remainingResource);
+                
+                if (remainingResource<=0)
+                {
+                    UIManager.Instance.OnShowTipPanel("资源耗尽惹");
+                }
             }
         }
         
