@@ -62,7 +62,7 @@ public class SelectLevel_UImanager : Singleton<SelectLevel_UImanager>
 
         LevelManager.Instance.nowLevelId = -1;
         LevelManager.Instance.nowLevelName = null;
-        LevelManager.Instance.nowLevelTime = -1;
+        //LevelManager.Instance.nowLevelTime = -1;
 			
         this.enterLevelBtn.onClick.RemoveListener(LevelManager.Instance.EnterLevel);
 

@@ -10,7 +10,8 @@ namespace ScriptableObjects
     {
         //public int sceneId;
         public int levelID;
-        public float levelTime;
+        //public float levelTime;
+        public float levelResource;
         public string levelName;
         public string levelIntro;
         public List<Image> enemies;
