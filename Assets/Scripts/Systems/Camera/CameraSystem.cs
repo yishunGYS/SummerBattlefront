@@ -59,7 +59,7 @@ namespace Systems.Camera
                 if (mouseDelta.magnitude < 100)
                 {
                     inputDir.x -= mouseDelta.x * mouseSensitivity;
-                    inputDir.y -= mouseDelta.y* mouseSensitivity;
+                    inputDir.y -= mouseDelta.y* mouseSensitivity*15;
                 }
 
                 lastMousePosition = currentMousePosition;
@@ -75,15 +75,16 @@ namespace Systems.Camera
             }
             if (Input.GetKey(KeyCode.W))
             {
-                inputDir.y += 0.2f;
+                inputDir.y += 3f;
             }
             if (Input.GetKey(KeyCode.S))
             {
-                inputDir.y -= 0.2f;
+                inputDir.y -= 3f;
             }
 
-            var moveDir = transform.forward * inputDir.y + transform.right * inputDir.x;
-            transform.position += Time.deltaTime * dragSpeed * moveDir;
+            Vector3 horizontalMove = transform.right * inputDir.x + transform.forward * inputDir.y;
+            horizontalMove.y = 0;  // 确保不影响 y 轴
+            transform.position += Time.deltaTime * dragSpeed * horizontalMove;
         }
         // private void HandleCameraMove()
         // {
