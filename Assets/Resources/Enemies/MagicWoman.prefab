@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8235220761539673862}
   - component: {fileID: 5615886019789500264}
   - component: {fileID: 2351816608717872585}
+  - component: {fileID: 2300850882446534479}
   m_Layer: 7
   m_Name: MagicWoman
   m_TagString: Enemy
@@ -153,6 +154,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 043392240c5b42e0930fd8690d7cdcc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2300850882446534479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235258182517410980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5cf84f7ee0842bdb70f5bf91b5f774b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6184552604370814426

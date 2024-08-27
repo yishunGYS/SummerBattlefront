@@ -1032,6 +1032,7 @@ GameObject:
   - component: {fileID: 872006798351944593}
   - component: {fileID: 4931350110560903274}
   - component: {fileID: 949575799359266579}
+  - component: {fileID: 1468225244781662332}
   m_Layer: 7
   m_Name: SnowWoman
   m_TagString: Enemy
@@ -1165,6 +1166,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b37b4651023c0341abcc776f19e0b86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1468225244781662332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8370425632030017347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5cf84f7ee0842bdb70f5bf91b5f774b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8946013116616016359
