@@ -15,12 +15,17 @@ namespace Systems.Camera
         public float maxFov;
         public float minFov;
 
+        public float curSize;
+        public float maxSize;
+        public float minSize;
+        
         private Vector2 lastMousePosition;
         private bool isDragging;
         public float mouseSensitivity = 0.02f; // 调整鼠标移动的灵敏度
         private void Start()
         {
             curFov = virtualCamera.m_Lens.FieldOfView;
+            curSize = virtualCamera.m_Lens.OrthographicSize;
         }
 
         private void Update()
@@ -134,14 +139,18 @@ namespace Systems.Camera
         {
             if (Input.mouseScrollDelta.y > 0)
             {
-                curFov = virtualCamera.m_Lens.FieldOfView - zoomSpeed;
+                //curFov = virtualCamera.m_Lens.FieldOfView - zoomSpeed;
+                curSize = virtualCamera.m_Lens.OrthographicSize - zoomSpeed;
+                
             }
             else if (Input.mouseScrollDelta.y < 0)
             {
-                curFov = virtualCamera.m_Lens.FieldOfView + zoomSpeed;
+                //curFov = virtualCamera.m_Lens.FieldOfView + zoomSpeed;
+                curSize = virtualCamera.m_Lens.OrthographicSize + zoomSpeed;
             }
 
-            virtualCamera.m_Lens.FieldOfView = Math.Clamp(curFov, minFov, maxFov);
+            //virtualCamera.m_Lens.FieldOfView = Math.Clamp(curFov, minFov, maxFov);
+            virtualCamera.m_Lens.OrthographicSize = Math.Clamp(curSize, minSize, maxSize);
         }
     }
 }

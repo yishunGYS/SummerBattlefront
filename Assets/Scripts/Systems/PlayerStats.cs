@@ -23,6 +23,9 @@ namespace Systems
         [Header("关卡时间限制（秒）")]
         public float levelTimeLimit = 300f;
 
+        [Header("关卡资源上限")]
+        public float levelResourceLimit;
+        
         public float remainingTime;
         private float regainTimer;
 
@@ -39,6 +42,8 @@ namespace Systems
             if (LevelManager.Instance != null)
             {
                 levelTimeLimit = LevelManager.Instance.GetCurrentLevelTime();
+                
+                levelResourceLimit =  LevelManager.Instance.GetCurrentLevelTime();
             }
             UIManager.Instance.OnOpenTimeLeftPanel();
             UIManager.Instance.OnOpenResourcePanel();
