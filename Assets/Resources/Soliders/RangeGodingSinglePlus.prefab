@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: -7747116291038743707}
   - component: {fileID: 6425060511249867181}
   m_Layer: 6
-  m_Name: RangeGodingSingle
+  m_Name: RangeGodingSinglePlus
   m_TagString: Solider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curHp: 0
-  soliderId: 2
+  soliderId: 11
   projectile: {fileID: -3618351148407141835, guid: 2db63ad894e9b1a47913e3d331d1144b, type: 3}
 --- !u!114 &6425060511249867181
 MonoBehaviour:
