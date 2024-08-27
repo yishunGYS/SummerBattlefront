@@ -17,7 +17,7 @@ namespace Systems.Level
 
         public int nowLevelId;
         public string nowLevelName;
-        public float nowLevelTime;
+        //public float nowLevelTime;
 
         public float nowLevelResource;
         
@@ -56,7 +56,7 @@ namespace Systems.Level
 
             nowLevelId = levelInfo.levelID;
             nowLevelName = levelInfo.levelName;
-            nowLevelTime = levelInfo.levelTime;
+            //nowLevelTime = levelInfo.levelTime;
             nowUnlockSoliderIds = levelInfo.unlockSoliderId;
             nowLockedSoliderIds = levelInfo.lockSoliderIds;
         }
@@ -96,14 +96,14 @@ namespace Systems.Level
             fader.ChangeScene("LevelSelect");
         }
 
-        public float GetCurrentLevelTime()
-        {
-            return nowLevelTime;
-        }
-
-        // public float GetCurrentLevelResource()
+        // public float GetCurrentLevelTime()
         // {
-        //     
+        //     return nowLevelTime;
         // }
+
+        public float GetCurrentLevelResource()
+        {
+            return nowLevelResource;
+        }
     }
 }

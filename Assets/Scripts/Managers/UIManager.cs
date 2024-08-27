@@ -168,10 +168,16 @@ namespace Managers
             OpenPanel("TimeLeftPanel");
         }
 
-        public void OnUpdateTimeLeftPanel(float leftTime)
+        // public void OnUpdateTimeLeftPanel(float leftTime)
+        // {
+        //     TimeLeftPanel timeLeftPanel = panelOpenDict["TimeLeftPanel"] as TimeLeftPanel;
+        //     if (timeLeftPanel != null) timeLeftPanel.UpdateTime(leftTime);
+        // }
+
+        public void OnUpdateResourceLeftPanel(float leftMoney)
         {
             TimeLeftPanel timeLeftPanel = panelOpenDict["TimeLeftPanel"] as TimeLeftPanel;
-            if (timeLeftPanel != null) timeLeftPanel.UpdateTime(leftTime);
+            if (timeLeftPanel != null) timeLeftPanel.UpdateTime(leftMoney);
         }
 
         public void OnCloseTimeLeftPanel()
