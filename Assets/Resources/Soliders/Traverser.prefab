@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2993134213074138798}
   - component: {fileID: 4291657592806310302}
   - component: {fileID: 384989504089614383}
-  - component: {fileID: 8264248010974913806}
   - component: {fileID: 3406041880844526187}
+  - component: {fileID: 727659630315981557}
   m_Layer: 6
   m_Name: Traverser
   m_TagString: Solider
@@ -129,20 +129,6 @@ MonoBehaviour:
       Value: {fileID: 11400000, guid: 016496da9a7898046802a51a22374e16, type: 2}
     - Key: 2
       Value: {fileID: 11400000, guid: fc56f61d9024cd24c905b83208c99521, type: 2}
---- !u!114 &8264248010974913806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3589540611993590642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1537b356e3675644d80ebddba95560a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curHp: 0
-  soliderId: 9
 --- !u!114 &3406041880844526187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +148,20 @@ MonoBehaviour:
   preSpeed: 0
   preEnemy: {fileID: 0}
   traverSpeed: 25
+--- !u!114 &727659630315981557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3589540611993590642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d624d785995f545b2e230b8773d683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curHp: 0
+  soliderId: 9
 --- !u!1001 &1398721333062853552
 PrefabInstance:
   m_ObjectHideFlags: 0

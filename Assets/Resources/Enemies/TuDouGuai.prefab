@@ -117,10 +117,7 @@ GameObject:
   - component: {fileID: 4221039637250498506}
   - component: {fileID: 1133122149253624418}
   - component: {fileID: 4811349893932386337}
-  - component: {fileID: 5447982034920911513}
-  - component: {fileID: 1954448989288956259}
   - component: {fileID: 2837450652847023469}
-  - component: {fileID: 4478595560713093222}
   m_Layer: 7
   m_Name: TuDouGuai
   m_TagString: Enemy
@@ -215,38 +212,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5447982034920911513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6855114071636747005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 078b6bc1e2ede2047a8e30ce07c60969, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stateDicts:
-    list:
-    - Key: 0
-      Value: {fileID: 11400000, guid: bafe3a3c8f6486243be6a11b858a084e, type: 2}
-    - Key: 2
-      Value: {fileID: 11400000, guid: 7132f25e7a3967743894cb6c70bbc897, type: 2}
---- !u!114 &1954448989288956259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6855114071636747005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdec71822649d4f41814e92a45931cc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curHp: 0
-  enemyId: 1001
 --- !u!114 &2837450652847023469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,17 +224,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d396def0ba315e48b39a6467411484f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boomRange: 0.5
-  explosionDelay: 1.5
---- !u!114 &4478595560713093222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6855114071636747005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 043392240c5b42e0930fd8690d7cdcc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  boomRange: 1.25
+  explosionDelay: 0.3
