@@ -53,7 +53,7 @@ namespace Gameplay.Player
                 foreach (var collider in hitColliders)
                 {
                     var enemyCmpt = collider.GetComponent<EnemyAgent>();
-                    if (enemyCmpt)
+                    if (enemyCmpt&& soliderAgent.soliderLogic.attackTargets.Contains(enemyCmpt))
                     {
                         enemyCmpt.enemyLogic.OnTakeDamage(soliderAgent);
                         Destroy(gameObject);
