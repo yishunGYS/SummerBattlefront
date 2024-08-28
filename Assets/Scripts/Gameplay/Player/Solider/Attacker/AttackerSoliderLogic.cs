@@ -73,8 +73,21 @@ namespace Gameplay.Player.Solider.Attacker
             Collider[] hitColliders =
                 Physics.OverlapSphere(soliderAgent.transform.position, soliderModel.attackRange,
                     LayerMask.GetMask("Enemy"));
-
-            if (hitColliders.Length <= 0)
+            var count = hitColliders.Length;
+            foreach (var collider in hitColliders)
+            {
+                var temp = collider.GetComponent<EnemyAgent>();
+                if (temp == null)
+                {
+                    continue;
+                }
+                if (!CheckMatchAttackType(temp))
+                {
+                    count -= 1;
+                }
+            }
+            
+            if (count <= 0)
             {
                 return false;
             }
