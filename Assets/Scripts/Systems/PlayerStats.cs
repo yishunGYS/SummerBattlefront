@@ -98,11 +98,6 @@ namespace Systems
 
                 remainingResource -= currentRegainRate;
                 UIManager.Instance.OnUpdateResourceLeftPanel(remainingResource);
-                
-                if (remainingResource<=0)
-                {
-                    UIManager.Instance.OnShowTipPanel("资源耗尽惹");
-                }
             }
         }
         
