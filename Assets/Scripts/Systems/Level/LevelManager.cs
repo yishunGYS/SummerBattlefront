@@ -19,7 +19,7 @@ namespace Systems.Level
         public string nowLevelName;
         //public float nowLevelTime;
 
-        public float nowLevelResource;
+        public int nowLevelResource;
         
         public List<int> nowUnlockSoliderIds = new List<int>();
         public List<int> nowLockedSoliderIds = new List<int>();
@@ -57,6 +57,7 @@ namespace Systems.Level
             nowLevelId = levelInfo.levelID;
             nowLevelName = levelInfo.levelName;
             //nowLevelTime = levelInfo.levelTime;
+            nowLevelResource = levelInfo.levelResource;
             nowUnlockSoliderIds = levelInfo.unlockSoliderId;
             nowLockedSoliderIds = levelInfo.lockSoliderIds;
         }
@@ -101,7 +102,7 @@ namespace Systems.Level
         //     return nowLevelTime;
         // }
 
-        public float GetCurrentLevelResource()
+        public int GetCurrentLevelResource()
         {
             return nowLevelResource;
         }
