@@ -39,8 +39,13 @@ namespace Systems.Level
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                SelectLevel_UImanager.Instance.enterLevelBtn.onClick.RemoveListener(this.EnterLevel);
+                //SelectLevel_UImanager.Instance.enterLevelBtn.onClick.RemoveListener(this.EnterLevel);
                 fader.ChangeScene(nowLevelName);
+            }
+
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                LevelEnd();
             }
         }
 
