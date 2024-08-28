@@ -13,7 +13,7 @@ namespace Systems
     {
         [ShowInInspector]
         [HideInInspector]public static float Money = 0;
-        public int startMoney;
+        [HideInInspector]public int startMoney;
 
         [Header("当前回复速率")]
         [HideInInspector]public float currentRegainRate;
@@ -25,7 +25,7 @@ namespace Systems
         //public float levelTimeLimit = 300f;
 
         [Header("关卡资源上限")]
-        public float levelResourceLimit;
+        public int levelResourceLimit;
         
         //public float remainingTime;
         public float remainingResource;
@@ -44,9 +44,11 @@ namespace Systems
             // 获取关卡时间限制
             if (LevelManager.Instance != null)
             {
-                //levelTimeLimit = LevelManager.Instance.GetCurrentLevelTime();
                 
-                levelResourceLimit =  LevelManager.Instance.GetCurrentLevelResource();
+                //Test
+                //levelResourceLimit =  LevelManager.Instance.GetCurrentLevelResource();
+                
+                remainingResource = levelResourceLimit;
             }
             UIManager.Instance.OnOpenTimeLeftPanel();
             UIManager.Instance.OnOpenResourcePanel();
@@ -58,6 +60,7 @@ namespace Systems
             {
                 RegainMoneyOverTime();
                 //UpdateLevelTime();
+                UIManager.Instance.OnUpdateResourceLeftPanel(remainingResource+Money);
                 UIManager.Instance.OnUpdateResourcePanel();
             }
         }
@@ -67,10 +70,15 @@ namespace Systems
             if (!isLevelStarted)
             {
                 //remainingTime = levelTimeLimit;
-                remainingResource = levelResourceLimit;
                 isLevelStarted = true;
                 Debug.Log("关卡开始！");
             }
+        }
+
+        private void CalculateMoneyAndRemainingResource()
+        {
+            Money = levelResourceLimit<=10 ? levelResourceLimit : 10;
+            remainingResource = levelResourceLimit - Money;
         }
 
         void RegainMoneyOverTime()
@@ -97,8 +105,9 @@ namespace Systems
                 }
 
                 remainingResource -= currentRegainRate;
-                UIManager.Instance.OnUpdateResourceLeftPanel(remainingResource);
             }
+            
+            
         }
         
 
@@ -176,13 +185,14 @@ namespace Systems
 
         public void ResetPlayerStats()
         {
-            Money = startMoney;
+            //Money = startMoney;
             regainTimer = 0f;
             //remainingTime = levelTimeLimit;
             remainingResource = levelResourceLimit;
             regainTimeScale = 1f;
             isEnterEnd = false;
             isLevelStarted = false;
+            CalculateMoneyAndRemainingResource();
         }
     }
 }
