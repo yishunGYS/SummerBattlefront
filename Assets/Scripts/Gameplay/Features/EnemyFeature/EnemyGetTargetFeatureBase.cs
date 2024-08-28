@@ -51,7 +51,12 @@ namespace Gameplay.Features.EnemyFeature
         protected bool HasFocusTarget()
         {
             if (m_enemyLogic.attackTargets.Count >= enemyModel.attackNum)
+            {
+                Debug.Log("has focus target");
                 return true;
+            }
+
+            Debug.Log("no focus target");
             return false;
         }
     }
