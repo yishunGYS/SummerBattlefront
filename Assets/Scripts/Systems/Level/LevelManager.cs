@@ -35,6 +35,15 @@ namespace Systems.Level
             fader.FadeTo("LevelSelect");
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SelectLevel_UImanager.Instance.enterLevelBtn.onClick.RemoveListener(this.EnterLevel);
+                fader.ChangeScene(nowLevelName);
+            }
+        }
+
         // 开始关卡按钮被按下，切换场景
         public void EnterLevel()
         {

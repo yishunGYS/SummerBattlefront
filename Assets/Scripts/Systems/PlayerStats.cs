@@ -46,9 +46,9 @@ namespace Systems
             {
                 
                 //Test
-                //levelResourceLimit =  LevelManager.Instance.GetCurrentLevelResource();
+                levelResourceLimit =  LevelManager.Instance.GetCurrentLevelResource();
                 
-                remainingResource = levelResourceLimit;
+                //remainingResource = levelResourceLimit;
             }
             UIManager.Instance.OnOpenTimeLeftPanel();
             UIManager.Instance.OnOpenResourcePanel();
