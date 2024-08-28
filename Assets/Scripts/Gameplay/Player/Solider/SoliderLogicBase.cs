@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using _3DlevelEditor_GYS;
 using Gameplay.Enemy;
@@ -199,7 +200,7 @@ namespace Gameplay.Player
 
         public bool CheckCanAttack()
         {
-            if (HasAttackTarget() && isAttackReady)
+            if (attackTargets.Contains(blocker)||(HasAttackTarget() && isAttackReady))
             {
                 return true;
             }
@@ -217,10 +218,7 @@ namespace Gameplay.Player
         }
 
 
-        private void ClearTarget()
-        {
-            attackTargets.Clear();
-        }
+
 
         public virtual void RemoveTarget(UnitAgent target)
         {
@@ -228,12 +226,20 @@ namespace Gameplay.Player
 
         public virtual void GetTarget()
         {
+            if (attackTargets.Contains(blocker))
+            {
+                return;
+            }
             //每次获取新的目标前，先把已有的目标清除
             ClearTarget();
             //子类override
         }
 
-
+        private void ClearTarget()
+        {
+            attackTargets.Clear();
+        }
+        
         public virtual bool CheckMatchAttackType(EnemyAgent target)
         {
             return true;

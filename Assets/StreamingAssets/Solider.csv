@@ -1,13 +1,13 @@
-½ÇÉ«Id,½ÇÉ«Ãû³Æ,½ÇÉ«¼ò½é,½ÇÉ«ÀàĞÍ,ºÄÄÜ,ÑªÁ¿,¸öÌåÊıÁ¿,Îï¹¥,Ä§¹¥,ÎïÀíÉËº¦¼õÃâ°Ù·Ö±È,Ä§·À·¨ÊõÉËº¦¼õÃâ°Ù·Ö±È,¹¥»÷¼ä¸ô£¨Ãë£©,¹¥»÷·¶Î§,¹¥»÷Ä¿±êÊıÁ¿,¹¥»÷Aoe·¶Î§,¹¥»÷×÷ÓÃ¶ÔÏó,¹¥»÷Ä¿±êÀàĞÍ,ÒÆËÙ£¨m/s£©,ÏÂ´Î²¿ÊğÀäÈ´Ê±¼ä,³¡¾°Ä£ĞÍÂ·¾¶,UIÄ£ĞÍÂ·¾¶
+è§’è‰²Id,è§’è‰²åç§°,è§’è‰²ç®€ä»‹,è§’è‰²ç±»å‹,è€—èƒ½,è¡€é‡,ä¸ªä½“æ•°é‡,ç‰©æ”»,é­”æ”»,ç‰©ç†ä¼¤å®³å‡å…ç™¾åˆ†æ¯”,é­”é˜²æ³•æœ¯ä¼¤å®³å‡å…ç™¾åˆ†æ¯”,æ”»å‡»é—´éš”ï¼ˆç§’ï¼‰,æ”»å‡»èŒƒå›´,æ”»å‡»ç›®æ ‡æ•°é‡,æ”»å‡»AoeèŒƒå›´,æ”»å‡»ä½œç”¨å¯¹è±¡,æ”»å‡»ç›®æ ‡ç±»å‹,ç§»é€Ÿï¼ˆm/sï¼‰,ä¸‹æ¬¡éƒ¨ç½²å†·å´æ—¶é—´,åœºæ™¯æ¨¡å‹è·¯å¾„,UIæ¨¡å‹è·¯å¾„
 int,string,string,UnitType,int,float,int,int,int,float,float,float,float,int,float,AttackTargetType,UnitType,float,float,string,string
-1,Ğ¡±ø±ø,´àÆ¤½üÕ½,1,1,1,1,0,0,0,0,0,0,1,0,0,1|3,2,0,Soliders/MeleeSmallGoding,UIUnit/Solider/SoliderUI_1
-2,Ô¶±ø,´àÆ¤Ô¶³Ì,1,4,1,1,2,0,0,0,1,2.5,1,0,0,2,1,0,Soliders/RangeGodings,UIUnit/Solider/SoliderUI_2
-3,ÖĞ±ø±ø,½ÏÈâ½üÕ½,1,4,20,1,1,0,0,0,1,1,1,0,0,1|3,1,0,Soliders/MeleeMidGoding,UIUnit/Solider/SoliderUI_3
-4,´ó±ø±ø,Îï·À¸ßµÄ½üÕ½,1,7,60,1,0,0,0.5,0,1,1,1,0,0,1|3,1,0,Soliders/MeleeBigGoding,UIUnit/Solider/SoliderUI_4
-5,Å®ÎäÉñ,»áaoeµÄÊ¿±ø,1,7,30,1,1,0,0,0,1,1,1,1.6,0,1|3,1,0,Soliders/Valkyrie,UIUnit/Solider/SoliderUI_5
-6,÷¼÷Ã¾üÍÅ,¶ÑÁ¿µÄ´àÆ¤Ê¿±øÍÅ,1,4,1,5,1,0,0,0,1,0.4,1,0,0,3,1,0,Soliders/Skeletons,UIUnit/Solider/SoliderUI_6
-7,ÌìÊ¹,ÆÕ¹¥ÄÜ¹»ÖÎÁÆÓÑ·½µ¥Ìå,1,4,1,1,1,0,0,0,1,2,1,0,1,1,1,0,Soliders/Angel,UIUnit/Solider/SoliderUI_7
-8,±¬Õ¨±ø,ÔÚ¹¥»÷·¶Î§ÄÚ×Ô±¬,1,10,1,1,10,0,0,0,-1,1,1,2.4,0,1|2,1,0,Soliders/Exploder,UIUnit/Solider/SoliderUI_8
-9,´©Ô½±ø,ÄÜ´©Ô½µÚÒ»¸öµĞÈË,1,5,20,1,1,0,0,0,1,1,1,0,0,1|3,1,0,Soliders/Traverser,UIUnit/Solider/SoliderUI_9
-10,ÅÅÍ·±ø,ÄÜÈÃºóÃæµÄÊ¿±ø·ÅÖÃÔÚËü¾­¹ıµÄÂ·ÉÏ,2,4,1,1,1,0,0,0,-1,0,0,0,0,0,1,0,Soliders/HeadSolider,UIUnit/Solider/SoliderUI_10
-11,Ô¶±øPlus,Ô¶³ÌÊä³ö,1,4,1,1,2,0,0,0,1,4,1,0,0,2,1,0,Soliders/RangeGodingsPlus,UIUnit/Solider/SoliderUI_11
+1,å°å…µå…µ,è„†çš®è¿‘æˆ˜,1,1,1,1,0,0,0,0,0,0,1,0,0,1|3,2,0,Soliders/MeleeSmallGoding,UIUnit/Solider/SoliderUI_1
+2,è¿œå…µ,è„†çš®è¿œç¨‹,1,4,1,1,2,0,0,0,1,2.5,1,0,0,2,1,0,Soliders/RangeGodings,UIUnit/Solider/SoliderUI_2
+3,ä¸­å…µå…µ,è¾ƒè‚‰è¿‘æˆ˜,1,4,20,1,1,0,0,0,1,1,1,0,0,1|3,1,0,Soliders/MeleeMidGoding,UIUnit/Solider/SoliderUI_3
+4,å¤§å…µå…µ,ç‰©é˜²é«˜çš„è¿‘æˆ˜,1,7,60,1,0,0,0.5,0,1,1,1,0,0,1|3,1,0,Soliders/MeleeBigGoding,UIUnit/Solider/SoliderUI_4
+5,å¥³æ­¦ç¥,ä¼šaoeçš„å£«å…µ,1,7,30,1,1,0,0,0,1,1,1,1.6,0,1|3,1,0,Soliders/Valkyrie,UIUnit/Solider/SoliderUI_5
+6,éª·é«…å†›å›¢,å †é‡çš„è„†çš®å£«å…µå›¢,1,4,1,5,1,0,0,0,1,0.4,1,0,0,3,1,0,Soliders/Skeletons,UIUnit/Solider/SoliderUI_6
+7,å¤©ä½¿,æ™®æ”»èƒ½å¤Ÿæ²»ç–—å‹æ–¹å•ä½“,1,4,1,1,1,0,0,0,1,2,1,0,1,1,1,0,Soliders/Angel,UIUnit/Solider/SoliderUI_7
+8,çˆ†ç‚¸å…µ,åœ¨æ”»å‡»èŒƒå›´å†…è‡ªçˆ†,1,10,1,1,10,0,0,0,-1,1,1,2.4,0,1|2,1,0,Soliders/Exploder,UIUnit/Solider/SoliderUI_8
+9,ç©¿è¶Šå…µ,èƒ½ç©¿è¶Šç¬¬ä¸€ä¸ªæ•Œäºº,1,5,20,1,1,0,0,0,1,1,1,0,0,1|3,1,0,Soliders/Traverser,UIUnit/Solider/SoliderUI_9
+10,æ’å¤´å…µ,èƒ½è®©åé¢çš„å£«å…µæ”¾ç½®åœ¨å®ƒç»è¿‡çš„è·¯ä¸Š,2,4,1,1,1,0,0,0,-1,0,0,0,0,0,1,0,Soliders/HeadSolider,UIUnit/Solider/SoliderUI_10
+11,è¿œå…µPlus,è¿œç¨‹è¾“å‡º,1,4,1,1,2,0,0,0,1,4,1,0,0,2,1,0,Soliders/RangeGodingsPlus,UIUnit/Solider/SoliderUI_11
