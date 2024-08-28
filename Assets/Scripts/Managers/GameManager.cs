@@ -2,6 +2,7 @@ using Gameplay.Enemy;
 using Gameplay.Features.EnemyFeature;
 using Gameplay.Item;
 using Systems;
+using Systems.Edu;
 using Team;
 using UnityEngine;
 using Utilities;
@@ -33,6 +34,12 @@ namespace Managers
 				PlayerStats.Instance.OnLevelStart();
 
 				Debug.Log("PlayerStats.Instance != null");
+			}
+
+
+			if (EduSystem.Instance)
+			{
+				EduSystem.Instance.OnTeachClickTeamAssemble();
 			}
 		}
         

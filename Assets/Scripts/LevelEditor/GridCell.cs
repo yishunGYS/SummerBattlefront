@@ -33,6 +33,7 @@ namespace _3DlevelEditor_GYS
             //startPointPrefab = Resources.Load<GameObject>("BlockPrefab/SpawnPoint");
         }
 
+#if UNITY_EDITOR
         private void OnDrawGizmos()
         {
             if (showConnections)
@@ -63,7 +64,7 @@ namespace _3DlevelEditor_GYS
             Handles.DrawAAPolyLine(width, new Vector3[] { start, end });
         }
         
-
+#endif
         public void OnCanPlaceChange(bool can)
         {
             if (can == true)

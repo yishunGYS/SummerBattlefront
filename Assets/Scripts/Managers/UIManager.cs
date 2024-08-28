@@ -186,7 +186,7 @@ namespace Managers
         }
 
 
-        public async void OnShowTipPanel(string texts)
+        public async Task OnShowTipPanel(string texts,int delayTime)
         {
             if (!isShowTip)
             {
@@ -195,7 +195,7 @@ namespace Managers
                 if (tipPanel != null) tipPanel.OnShowText(texts);
                 isShowTip = false;
                 
-                await Task.Delay(1500);
+                await Task.Delay(delayTime);
                 ClosePanel("TipPanel");
             }
         }

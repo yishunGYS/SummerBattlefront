@@ -1,6 +1,7 @@
 using System;
 using Managers;
 using Sirenix.OdinInspector;
+using Systems.Edu;
 using Systems.Level;
 using TMPro;
 using UnityEngine;
@@ -44,10 +45,8 @@ namespace Systems
             // 获取关卡时间限制
             if (LevelManager.Instance != null)
             {
-                
                 //Test
                 levelResourceLimit =  LevelManager.Instance.GetCurrentLevelResource();
-                
                 //remainingResource = levelResourceLimit;
             }
             UIManager.Instance.OnOpenTimeLeftPanel();
@@ -59,7 +58,6 @@ namespace Systems
             if (isLevelStarted)
             {
                 RegainMoneyOverTime();
-                //UpdateLevelTime();
                 UIManager.Instance.OnUpdateResourceLeftPanel(remainingResource+Money);
                 UIManager.Instance.OnUpdateResourcePanel();
             }
@@ -69,9 +67,14 @@ namespace Systems
         {
             if (!isLevelStarted)
             {
-                //remainingTime = levelTimeLimit;
                 isLevelStarted = true;
                 Debug.Log("关卡开始！");
+            }
+            
+            if (EduSystem.Instance)
+            {
+                EduSystem.Instance.isInEdu = true;
+                EduSystem.Instance.OnTeachResourceLimit();
             }
         }
 
@@ -111,31 +114,6 @@ namespace Systems
         }
         
 
-        // void UpdateLevelTime()
-        // {
-        //     if (!isLevelStarted)
-        //     {
-        //         return;
-        //     }
-        //     //remainingTime -= Time.fixedDeltaTime;
-        //
-        //     if (remainingTime <= 0f)
-        //     {
-        //         remainingTime = 0f;
-        //         isLevelStarted = false;
-        //         UIManager.Instance.OpenLevelFailPanel();
-        //         UIManager.Instance.OnCloseTimeLeftPanel();
-        //         SpawnManager.Instance.isLevelStarted = false;
-        //         Debug.Log("关卡失败：时间耗尽！");
-        //         UIManager.Instance.OnCloseResourcePanel();
-        //     }
-        //     else
-        //     {
-        //         UIManager.Instance.OnUpdateTimeLeftPanel(remainingTime);
-        //     }
-        // }
-        
-
         public void CheckVictoryCondition()
         {
             if (isEnterEnd)
@@ -147,15 +125,6 @@ namespace Systems
                 SpawnManager.Instance.isLevelStarted = false;
                 UIManager.Instance.OnCloseResourcePanel();
             }
-            // if (isEnterEnd && remainingTime > 0f)
-            // {
-            //     isLevelStarted = false;
-            //     Debug.Log("关卡成功！");
-            //     UIManager.Instance.OpenEndLevelPanel();
-            //     UIManager.Instance.OnCloseTimeLeftPanel();
-            //     SpawnManager.Instance.isLevelStarted = false;
-            //     UIManager.Instance.OnCloseResourcePanel();
-            // }
         }
 
         public void GainMoney(float num)
@@ -185,9 +154,7 @@ namespace Systems
 
         public void ResetPlayerStats()
         {
-            //Money = startMoney;
             regainTimer = 0f;
-            //remainingTime = levelTimeLimit;
             remainingResource = levelResourceLimit;
             regainTimeScale = 1f;
             isEnterEnd = false;

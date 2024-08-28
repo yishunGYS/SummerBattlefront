@@ -1,6 +1,7 @@
 using DG.Tweening;
 using Gameplay.Player;
 using Managers;
+using Systems.Edu;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -28,6 +29,9 @@ namespace UI.Gameplay
         private CardState curState;
 
         private bool isClickInLeftPanel;
+
+        private bool isFirstEduTeam;
+        private bool isFirstEduPlace;
         public void InitInTeamPanel(SoliderModelBase data)
         {
             teamLeftPanel = FindObjectOfType<TeamLeftPanel>();
@@ -57,6 +61,11 @@ namespace UI.Gameplay
                     Input.mousePosition))
             {
                 //在左边栏时
+                if (EduSystem.Instance&&!isFirstEduTeam)
+                {
+                    EduSystem.Instance.OnTeachTeamCancelAssemble();
+                    isFirstEduTeam = true;
+                }
                 if (teamTopPanel.CheckCanPlaceInTopPanel()&&!isClickInLeftPanel)
                 {
                     teamTopPanel.SpawnCardInTopPanel(soliderData.soliderId, this);
@@ -79,6 +88,12 @@ namespace UI.Gameplay
                          Input.mousePosition))
             {
                 //在派兵栏时 派兵逻辑
+                if (EduSystem.Instance&&!isFirstEduPlace)
+                {
+                    EduSystem.Instance.OnTeachPlace();
+                    isFirstEduPlace = true;
+                }
+                
                 SpawnManager.Instance.ChangeSelectSolider(soliderData.soliderId);
                 spawnSoliderPanel.OnSelectCard(GetComponent<RectTransform>());
             }

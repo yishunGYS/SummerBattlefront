@@ -10,6 +10,7 @@ using UnityEngine.EventSystems;
 using Utilities;
 using Gameplay.Item;
 using _3DlevelEditor_GYS;
+using Systems.Edu;
 
 namespace Managers
 {
@@ -62,6 +63,11 @@ namespace Managers
 
         private void SpawnSingle(GridCell block, int cost)
         {
+            if (EduSystem.Instance && EduSystem.Instance.isInEdu)
+            {
+                return;
+            }
+            
             if (!isLevelStarted)
             {
                 return;
@@ -69,10 +75,10 @@ namespace Managers
 
             if (PlayerStats.Money < cost)
             {
-                UIManager.Instance.OnShowTipPanel("目前资源不够惹");
+                UIManager.Instance.OnShowTipPanel("目前资源不够惹",2000);
                 return;
             }
-            PlayerStats.Instance.StartLevel();
+            //PlayerStats.Instance.StartLevel();
             
             SoliderAgent spawnedCharacter = Instantiate(selectedCharacter, block.transform.position + Vector3.up,
                 block.transform.rotation);
