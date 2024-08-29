@@ -210,7 +210,17 @@ namespace Gameplay.Enemy
 
         private IEnumerator FlashRed()
         {
-            Renderer renderer = enemyAgent.GetComponent<Renderer>();
+            MeshFilter meshFilter = enemyAgent.GetComponent<MeshFilter>();
+            Renderer renderer;
+            if (meshFilter)
+            {
+                renderer = meshFilter.GetComponent<Renderer>();
+            }
+            else
+            {
+                renderer = enemyAgent.transform.Find("Cube").GetComponentInChildren<Renderer>();
+            }
+            //renderer = enemyAgent.GetComponent<Renderer>();
             if (renderer == null)
             {
                 Debug.LogError("Renderer component not found.");
