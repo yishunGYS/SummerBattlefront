@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8963697562178715558}
   - component: {fileID: 1305034242398386329}
   - component: {fileID: 8235220761539673862}
-  - component: {fileID: 5615886019789500264}
   - component: {fileID: 2351816608717872585}
   - component: {fileID: 2300850882446534479}
+  - component: {fileID: 5704201670789241369}
   m_Layer: 7
   m_Name: MagicWoman
   m_TagString: Enemy
@@ -130,20 +130,6 @@ MonoBehaviour:
       Value: {fileID: 11400000, guid: bafe3a3c8f6486243be6a11b858a084e, type: 2}
     - Key: 2
       Value: {fileID: 11400000, guid: 7132f25e7a3967743894cb6c70bbc897, type: 2}
---- !u!114 &5615886019789500264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235258182517410980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f15cad05bf539c46a520f08267fe39a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curHp: 0
-  enemyId: 1009
 --- !u!114 &2351816608717872585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +154,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5cf84f7ee0842bdb70f5bf91b5f774b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5704201670789241369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235258182517410980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdec71822649d4f41814e92a45931cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curHp: 0
+  enemyId: 1009
 --- !u!1 &6184552604370814426
 GameObject:
   m_ObjectHideFlags: 0
