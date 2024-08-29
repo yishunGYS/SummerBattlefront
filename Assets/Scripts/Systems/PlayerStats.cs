@@ -46,11 +46,11 @@ namespace Systems
             if (LevelManager.Instance != null)
             {
                 //Test
-                levelResourceLimit =  LevelManager.Instance.GetCurrentLevelResource();
-                //remainingResource = levelResourceLimit;
+                //levelResourceLimit =  LevelManager.Instance.GetCurrentLevelResource();
+                remainingResource = levelResourceLimit;
             }
-            UIManager.Instance.OnOpenTimeLeftPanel();
-            UIManager.Instance.OnOpenResourcePanel();
+            UIManager.Instance.OnOpenResourceLeftPanel();
+            
         }
 
         void FixedUpdate()
@@ -68,6 +68,7 @@ namespace Systems
             if (!isLevelStarted)
             {
                 isLevelStarted = true;
+                UIManager.Instance.OnOpenResourcePanel();
                 Debug.Log("关卡开始！");
             }
             

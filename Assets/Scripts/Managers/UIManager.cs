@@ -163,7 +163,7 @@ namespace Managers
             ClosePanel("UnitHoverPanel");
         }
 
-        public void OnOpenTimeLeftPanel()
+        public void OnOpenResourceLeftPanel()
         {
             OpenPanel("TimeLeftPanel");
         }
