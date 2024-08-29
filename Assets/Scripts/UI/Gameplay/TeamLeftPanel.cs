@@ -1,4 +1,6 @@
 using Managers;
+using Systems;
+using Systems.Edu;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -64,6 +66,11 @@ namespace UI.Gameplay
                 buttonsGenerated = true;
             }
 
+            if (EduSystem.Instance)
+            {
+                EduSystem.Instance.OnTeachTeamAssemble();
+            }
+            
             teamTopPanel = FindObjectOfType<TeamTopPanel>();
         }
 
@@ -78,7 +85,7 @@ namespace UI.Gameplay
             var soliderLists = teamTopPanel.GetSoliderList();
             if (soliderLists.Count<=0)
             {
-                UIManager.Instance.OnShowTipPanel("请选择出战角色");
+                UIManager.Instance.OnShowTipPanel("请选择出战角色",2000);
                 return;
             }
             
@@ -90,6 +97,8 @@ namespace UI.Gameplay
             UIManager.Instance.OnCloseTeamPanel();
             UIManager.Instance.OnOpenSoliderPlacePanel();
             SpawnManager.Instance.isLevelStarted = true;
+            
+            PlayerStats.Instance.StartLevel();
         }
 
         private void OnDestroy()

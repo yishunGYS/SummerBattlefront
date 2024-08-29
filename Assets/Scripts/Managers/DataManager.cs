@@ -23,7 +23,7 @@ namespace Managers
             {
                 //Test
                 RuntimeSoliderModels = SoliderBaseModels;
-                //RuntimeSoliderModels.TryAdd(1, SoliderBaseModels[1]);
+                //RuntimeSoliderModels.TryAdd(3, SoliderBaseModels[3]);
                 isStart = true;
             }
         }
