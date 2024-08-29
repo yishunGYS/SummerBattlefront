@@ -33,7 +33,7 @@ namespace Gameplay.Player
                 return;
             }
             var dir = beAtkAgent.transform.position - transform.position;
-            transform.position += moveSpeed * Time.deltaTime * dir;
+            transform.position += moveSpeed * Time.deltaTime * dir.normalized;
         }
 
 
