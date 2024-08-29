@@ -30,8 +30,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _Distort: 1
-    - _Fresnel: 3
-    - _FresnelWidth: 0.87
+    - _Fresnel: 13
+    - _FresnelWidth: 0.46
     - _IntersectionPower: 0
     - _IntersectionThreshold: 0.1
     - _RimPower: 1
