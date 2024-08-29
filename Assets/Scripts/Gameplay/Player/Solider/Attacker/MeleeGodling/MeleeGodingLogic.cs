@@ -11,6 +11,10 @@ namespace Gameplay.Player.Solider.Attacker.MeleeGodling
         public override void GetTarget()
         {
             base.GetTarget();
+            if (attackTargets.Contains(blocker))
+            {
+                return;
+            }
             DistanceBasedGetTarget();
         }
 

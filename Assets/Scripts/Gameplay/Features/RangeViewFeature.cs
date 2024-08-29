@@ -20,10 +20,8 @@ namespace Gameplay.Features
             
             rangeViewPrefab = Resources.Load<GameObject>("RangeView/SphereView");
             rangeViewPrefab = Instantiate(rangeViewPrefab, enemyAgent.transform);
-            rangeViewPrefab.transform.localScale = new Vector3(enemyModel.attackRange * 2, 0.001f, enemyModel.attackRange * 2);
+            rangeViewPrefab.transform.localScale = new Vector3(enemyModel.attackRange * 2*1.1f, 0.001f, enemyModel.attackRange * 2*1.1f);
             
-            var pos = rangeViewPrefab.transform.position - new Vector3(0, 0.5f, 0);
-            rangeViewPrefab.transform.position = pos;
             rangeViewPrefab.SetActive(false);
         }
 
