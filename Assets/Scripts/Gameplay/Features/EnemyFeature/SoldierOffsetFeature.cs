@@ -3,6 +3,7 @@ using UnityEngine;
 using DG.Tweening;
 using Gameplay.Player;
 using _3DlevelEditor_GYS;
+using Gameplay.Features;
 
 namespace Gameplay.Enemy
 {
@@ -47,6 +48,10 @@ namespace Gameplay.Enemy
 
             foreach (var soldier in soldiers)
             {
+                if (soldier.GetComponent<TraverserFeature>())
+                {
+                    continue;
+                }
                 float angle = 360f / soldiers.Count * index;
                 Vector3 offset = new Vector3(Mathf.Sin(Mathf.Deg2Rad * angle), 0, Mathf.Cos(Mathf.Deg2Rad * angle)) * offsetDistance;
 
