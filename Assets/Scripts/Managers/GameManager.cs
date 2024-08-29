@@ -3,6 +3,7 @@ using Gameplay.Features.EnemyFeature;
 using Gameplay.Item;
 using Systems;
 using Systems.Edu;
+using Systems.ShortCut;
 using Team;
 using UnityEngine;
 using Utilities;
@@ -41,7 +42,7 @@ namespace Managers
 			{
 				EduSystem.Instance.OnTeachClickTeamAssemble();
 			}
-		}
+        }
         
 
 		private void InitCsvReader()

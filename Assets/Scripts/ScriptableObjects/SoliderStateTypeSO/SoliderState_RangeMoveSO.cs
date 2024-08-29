@@ -10,7 +10,7 @@ namespace ScriptableObjects.SoliderStateTypeSO
     public class SoliderState_RangeMoveSO: SoliderStateSO
     {
         private const float enterToMoveTime = 0.2f;
-        private bool canMove = false;
+        //private bool canMove = false;
         
        
         public SoliderState_RangeMoveSO()
@@ -20,8 +20,8 @@ namespace ScriptableObjects.SoliderStateTypeSO
         public override async void OnEnter()
         {
             Debug.Log("½øÈëÒÆ¶¯×´Ì¬");
-            await Delay(enterToMoveTime);
-            canMove = true;
+            // await Delay(enterToMoveTime);
+            // canMove = true;
         }
 
         public override async void OnUpdate()
@@ -39,10 +39,11 @@ namespace ScriptableObjects.SoliderStateTypeSO
                 fsm.ChangeState(UnitStateType.Attack);
             }
 
-            if (canMove)
-            {
-                soliderAgent.soliderLogic.Move();
-            }
+            // if (canMove)
+            // {
+            //     soliderAgent.soliderLogic.Move();
+            // }
+            soliderAgent.soliderLogic.Move();
             
         }
 
@@ -53,7 +54,7 @@ namespace ScriptableObjects.SoliderStateTypeSO
 
         public override void OnExit()
         {
-            canMove = false;
+            //canMove = false;
         }
 
         private async Task Delay(float time)
