@@ -54,6 +54,7 @@ namespace Gameplay.Player
         //从哪个出生点出生的
         public StartPoint birthPoint;
         public GridCell birthCell;
+        
         public SoliderLogicBase(SoliderAgent agent)
         {
             soliderAgent = agent;
