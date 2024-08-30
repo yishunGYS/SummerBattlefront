@@ -10,6 +10,8 @@ namespace UI.Gameplay
     {
         private RectTransform curSelectCard;
         public List<UIPlaced> soliderUILists = new List<UIPlaced>();
+        
+        public bool isPlaceEdued;
         public override void OpenPanel()
         {
             base.OpenPanel();

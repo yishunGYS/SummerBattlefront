@@ -32,7 +32,7 @@ namespace Systems.Level
 
             PlayerPrefs.SetInt("LevelReached", 0); // 测试用
 
-            fader.FadeTo("LevelSelect");
+            //fader.FadeTo("LevelSelect");
         }
 
         private void Update()

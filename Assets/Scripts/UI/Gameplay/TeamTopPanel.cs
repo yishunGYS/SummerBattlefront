@@ -11,6 +11,7 @@ namespace UI.Gameplay
 
         private Dictionary<int,UIPlaced> spawnDicts = new Dictionary<int,UIPlaced>();
 
+        public bool isTeamCancelEdued;
         public override void OpenPanel()
         {
             base.OpenPanel();
