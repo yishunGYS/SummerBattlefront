@@ -25,7 +25,7 @@ namespace Gameplay.Enemy.Enemy.Archers
                 //·¢ÉäÍ¶ÖÀÎï
                 for (int i = attackTargets.Count-1; i >= 0; i--)
                 {
-                    Debug.Log("¹¥»÷£¡£¡£¡");
+                    Debug.Log("Enemy¹¥»÷£¡£¡£¡");
                     var go =  GameObject.Instantiate(archerAgent.projectile, archerAgent.transform.position, Quaternion.identity);
                     go.OnInit(archerAgent, attackTargets[i]);
                 }

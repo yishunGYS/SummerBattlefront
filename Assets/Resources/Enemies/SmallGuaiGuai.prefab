@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 1954448989288956259}
   - component: {fileID: 2856530125469041904}
   - component: {fileID: 8134639406846339625}
+  - component: {fileID: 261671240714145120}
   m_Layer: 7
   m_Name: SmallGuaiGuai
   m_TagString: Enemy
@@ -250,6 +251,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5cf84f7ee0842bdb70f5bf91b5f774b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &261671240714145120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855114071636747005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ce102d3faa0604ca72773aaaa83c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetDistance: 0.5
+  duration: 0.5
+  currentCell: {fileID: 0}
 --- !u!1001 &4491063821871591446
 PrefabInstance:
   m_ObjectHideFlags: 0
