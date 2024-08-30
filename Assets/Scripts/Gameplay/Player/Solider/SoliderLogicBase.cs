@@ -81,6 +81,10 @@ namespace Gameplay.Player
                     birthCell = currentBlock;
                 }
             }
+            else
+            {
+                birthCell = BlockManager.instance.ReturnHeadGridCell(block);
+            }    
         }
 
         //BuffManager
