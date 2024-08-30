@@ -113,11 +113,13 @@ namespace Gameplay.Player.Solider.Attacker
         //最基础的近战
         protected void MeleeAttack()
         {
+            Debug.Log("Enter MeleeAttack");
             if (isAttackReady)
             {
                 CalculateCd();
                 for (int i = attackTargets.Count - 1; i >= 0; i--)
                 {
+                    Debug.Log($"{attackTargets.Count}InLoop");
                     EnemyAgent enemyAgent = attackTargets[i] as EnemyAgent;
                     if (enemyAgent != null)
                     {

@@ -10,6 +10,14 @@ namespace UI.Gameplay
         private int curSelectCount;
 
         private Dictionary<int,UIPlaced> spawnDicts = new Dictionary<int,UIPlaced>();
+
+        public bool isTeamCancelEdued;
+        public override void OpenPanel()
+        {
+            base.OpenPanel();
+            DataManager.Instance.ClearSolidersInBattle();
+        }
+
         public bool CheckCanPlaceInTopPanel()
         {
             return curSelectCount < maxTeamCount;

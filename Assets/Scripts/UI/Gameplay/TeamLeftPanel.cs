@@ -1,4 +1,6 @@
 using Managers;
+using Systems;
+using Systems.Edu;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,6 +16,8 @@ namespace UI.Gameplay
         // 用于跟踪已生成的按钮
         private bool buttonsGenerated = false;
 
+        //edu
+        public bool isTeamClickEdued;
         void Start()
         {
             InitializeButton();
@@ -63,8 +67,15 @@ namespace UI.Gameplay
                 // 标记按钮已生成
                 buttonsGenerated = true;
             }
-
+            
             teamTopPanel = FindObjectOfType<TeamTopPanel>();
+            
+            
+            //edu
+            if (FindObjectOfType<EduSystem>())
+            {
+                UIManager.Instance.OnShowEduPanel();
+            }
         }
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -74,11 +85,12 @@ namespace UI.Gameplay
 
         public void OnClickBattleStart()
         {
+
             var battleSoliderData = DataManager.Instance.GetSolidersInBattle();
             var soliderLists = teamTopPanel.GetSoliderList();
             if (soliderLists.Count<=0)
             {
-                UIManager.Instance.OnShowTipPanel("请选择出战角色");
+                UIManager.Instance.OnShowTipPanel("请选择出战角色",2000);
                 return;
             }
             
@@ -90,6 +102,16 @@ namespace UI.Gameplay
             UIManager.Instance.OnCloseTeamPanel();
             UIManager.Instance.OnOpenSoliderPlacePanel();
             SpawnManager.Instance.isLevelStarted = true;
+            
+            PlayerStats.Instance.StartLevel();
+            
+            if (FindObjectOfType<EduSystem>())
+            {
+                UIManager.Instance.OnChangeEduState(EduState.InBattle);
+                UIManager.Instance.OnCloseEduPanel();
+                UIManager.Instance.OnShowEduPanel();
+            }
+            
         }
 
         private void OnDestroy()

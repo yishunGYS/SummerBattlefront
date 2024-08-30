@@ -33,7 +33,7 @@ namespace Gameplay.Player
                 return;
             }
             var dir = beAtkAgent.transform.position - transform.position;
-            transform.position += moveSpeed * Time.deltaTime * dir;
+            transform.position += moveSpeed * Time.deltaTime * dir.normalized;
         }
 
 
@@ -53,7 +53,7 @@ namespace Gameplay.Player
                 foreach (var collider in hitColliders)
                 {
                     var enemyCmpt = collider.GetComponent<EnemyAgent>();
-                    if (enemyCmpt)
+                    if (enemyCmpt&& soliderAgent.soliderLogic.attackTargets.Contains(enemyCmpt))
                     {
                         enemyCmpt.enemyLogic.OnTakeDamage(soliderAgent);
                         Destroy(gameObject);
@@ -71,7 +71,7 @@ namespace Gameplay.Player
                 foreach (var collider in hitColliders)
                 {
                     var soliderCmpt = collider.GetComponent<SoliderAgent>();
-                    if (soliderCmpt)
+                    if (soliderCmpt&& enemyAgent.enemyLogic.attackTargets.Contains(soliderCmpt))
                     {
                         soliderCmpt.soliderLogic.OnTakeDamage(enemyAgent);
                         Destroy(gameObject);

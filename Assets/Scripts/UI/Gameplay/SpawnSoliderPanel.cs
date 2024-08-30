@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DG.Tweening;
 using Managers;
 using UnityEngine;
@@ -8,6 +9,9 @@ namespace UI.Gameplay
     public class SpawnSoliderPanel : UIBasePanel
     {
         private RectTransform curSelectCard;
+        public List<UIPlaced> soliderUILists = new List<UIPlaced>();
+        
+        public bool isPlaceEdued;
         public override void OpenPanel()
         {
             base.OpenPanel();
@@ -21,10 +25,12 @@ namespace UI.Gameplay
                 var uiPlacedCmpt = card.GetComponent<UIPlaced>();
                 uiPlacedCmpt.InitInGamePanel(soliderData);
                 uiPlacedCmpt.view.SetCostText(soliderData.cost);
+                
+                soliderUILists.Add(uiPlacedCmpt);
             }
 
             // 清理面板中已有的士兵卡片
-            DataManager.Instance.ClearSolidersInBattle();
+            
 
         }
 

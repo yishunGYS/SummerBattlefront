@@ -22,9 +22,9 @@ namespace UI
 
         public override void OpenPanel()
         {
+            base.OpenPanel();
             UpdateResourceBar(PlayerStats.Instance.CurrentMoney(), PlayerStats.Instance.currentLimit);
             isStartToRegain = true;
-            base.OpenPanel();
         }
 
         public void OnUpdateResource()

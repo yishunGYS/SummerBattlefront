@@ -2,7 +2,7 @@ using UnityEditor;
 using UnityEngine;
 using System.Collections.Generic;
 using LevelEditor;
-
+#if UNITY_EDITOR
 namespace _3DlevelEditor_GYS
 {
     public class LevelEditorWindow : EditorWindow
@@ -19,6 +19,8 @@ namespace _3DlevelEditor_GYS
         private GridCell selectedGridCell;
         private GridCell previousSelectedGridCell;
         private List<GridCell> selectableCells = new List<GridCell>();
+
+        
 
         [MenuItem("Window/Level Editor")]
         public static void ShowWindow()
@@ -371,3 +373,4 @@ namespace _3DlevelEditor_GYS
         }
     }
 }
+#endif

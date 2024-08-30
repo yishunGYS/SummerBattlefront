@@ -2,6 +2,8 @@ using Gameplay.Enemy;
 using Gameplay.Features.EnemyFeature;
 using Gameplay.Item;
 using Systems;
+using Systems.Edu;
+using Systems.ShortCut;
 using Team;
 using UnityEngine;
 using Utilities;
@@ -12,7 +14,7 @@ namespace Managers
 		private CsvReader csvReader;
 
 		private GameObject EnemyContainer;
-
+		
         public void OnLevelStart()
         {
             EnemyContainer = GameObject.Find("EnemyContainer");
@@ -34,7 +36,12 @@ namespace Managers
 
 				Debug.Log("PlayerStats.Instance != null");
 			}
-		}
+			if (FindObjectOfType<EduSystem>())
+			{
+				UIManager.Instance.OnShowEduPanel();
+			}
+			
+        }
         
 
 		private void InitCsvReader()

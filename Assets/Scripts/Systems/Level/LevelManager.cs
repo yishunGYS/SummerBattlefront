@@ -19,7 +19,7 @@ namespace Systems.Level
         public string nowLevelName;
         //public float nowLevelTime;
 
-        public float nowLevelResource;
+        public int nowLevelResource;
         
         public List<int> nowUnlockSoliderIds = new List<int>();
         public List<int> nowLockedSoliderIds = new List<int>();
@@ -32,7 +32,21 @@ namespace Systems.Level
 
             PlayerPrefs.SetInt("LevelReached", 0); // 测试用
 
-            fader.FadeTo("LevelSelect");
+            //fader.FadeTo("LevelSelect");
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                //SelectLevel_UImanager.Instance.enterLevelBtn.onClick.RemoveListener(this.EnterLevel);
+                fader.ChangeScene(nowLevelName);
+            }
+
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                LevelEnd();
+            }
         }
 
         // 开始关卡按钮被按下，切换场景
@@ -57,6 +71,7 @@ namespace Systems.Level
             nowLevelId = levelInfo.levelID;
             nowLevelName = levelInfo.levelName;
             //nowLevelTime = levelInfo.levelTime;
+            nowLevelResource = levelInfo.levelResource;
             nowUnlockSoliderIds = levelInfo.unlockSoliderId;
             nowLockedSoliderIds = levelInfo.lockSoliderIds;
         }
@@ -101,7 +116,7 @@ namespace Systems.Level
         //     return nowLevelTime;
         // }
 
-        public float GetCurrentLevelResource()
+        public int GetCurrentLevelResource()
         {
             return nowLevelResource;
         }

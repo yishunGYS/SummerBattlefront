@@ -163,7 +163,7 @@ namespace Managers
             ClosePanel("UnitHoverPanel");
         }
 
-        public void OnOpenTimeLeftPanel()
+        public void OnOpenResourceLeftPanel()
         {
             OpenPanel("TimeLeftPanel");
         }
@@ -186,7 +186,7 @@ namespace Managers
         }
 
 
-        public async void OnShowTipPanel(string texts)
+        public async Task OnShowTipPanel(string texts,int delayTime)
         {
             if (!isShowTip)
             {
@@ -195,12 +195,12 @@ namespace Managers
                 if (tipPanel != null) tipPanel.OnShowText(texts);
                 isShowTip = false;
                 
-                await Task.Delay(1500);
+                await Task.Delay(delayTime);
                 ClosePanel("TipPanel");
             }
         }
-
-
+        
+        
         public void OnOpenResourcePanel()
         {
             OpenPanel("ResourceBarPanel");
@@ -208,7 +208,6 @@ namespace Managers
 
         public void OnUpdateResourcePanel()
         {
-
             ResourceBarPanel resourceBarPanel = panelOpenDict["ResourceBarPanel"] as ResourceBarPanel;
             if (resourceBarPanel != null) resourceBarPanel.OnUpdateResource();
         }
@@ -216,6 +215,29 @@ namespace Managers
         public void OnCloseResourcePanel()
         {
             ClosePanel("ResourceBarPanel");
+        }
+
+
+
+        public void OnShowEduPanel()
+        {
+            OpenPanel("EduPanel");
+        }
+
+        public void OnChangeEduPanelText()
+        {
+            EduPanel eduPanel = panelOpenDict["EduPanel"] as EduPanel;
+            if (eduPanel != null) eduPanel.OnDoRightThing();
+        }
+        public void OnChangeEduState(EduState state)
+        {
+            EduPanel eduPanel = panelOpenDict["EduPanel"] as EduPanel;
+            if (eduPanel != null) eduPanel.curState = state;
+        }
+        
+        public void OnCloseEduPanel()
+        {
+            ClosePanel("EduPanel");
         }
 
         private void RestData()

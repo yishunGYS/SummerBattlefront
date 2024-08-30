@@ -1,6 +1,7 @@
 using DG.Tweening;
 using Gameplay.Player;
 using Managers;
+using Systems.Edu;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -28,6 +29,7 @@ namespace UI.Gameplay
         private CardState curState;
 
         private bool isClickInLeftPanel;
+        
         public void InitInTeamPanel(SoliderModelBase data)
         {
             teamLeftPanel = FindObjectOfType<TeamLeftPanel>();
@@ -64,15 +66,28 @@ namespace UI.Gameplay
                     view.ChangeUIColor(true);
                     isClickInLeftPanel = true;
                 }
+                //Edu
+                if (FindObjectOfType<EduSystem>()&&! teamLeftPanel.isTeamClickEdued)
+                {
+                    UIManager.Instance.OnChangeEduPanelText();
+                    teamLeftPanel.isTeamClickEdued = true;
+                }
             }
             else if (curState == CardState.InTeamPanel &&
                      RectTransformUtility.RectangleContainsScreenPoint(teamTopPanel.GetComponent<RectTransform>(),
                          Input.mousePosition))
             {
-                //在上边栏时
                 connectCardInLeftPanel.view.ChangeUIColor(false);
                 connectCardInLeftPanel.isClickInLeftPanel = false;
                 teamTopPanel.DestroySpawnedCard(soliderData.soliderId);
+                
+                //Edu
+                //在上边栏时
+                if (FindObjectOfType<EduSystem>() && !teamTopPanel.isTeamCancelEdued)
+                {
+                    UIManager.Instance.OnChangeEduPanelText();
+                    teamTopPanel.isTeamCancelEdued = true;
+                }
             }
             else if (curState == CardState.InGamePanel &&
                      RectTransformUtility.RectangleContainsScreenPoint(spawnSoliderPanel.GetComponent<RectTransform>(),
@@ -81,6 +96,12 @@ namespace UI.Gameplay
                 //在派兵栏时 派兵逻辑
                 SpawnManager.Instance.ChangeSelectSolider(soliderData.soliderId);
                 spawnSoliderPanel.OnSelectCard(GetComponent<RectTransform>());
+                //Edu
+                if (FindObjectOfType<EduSystem>() && !spawnSoliderPanel.isPlaceEdued)
+                {
+                    UIManager.Instance.OnChangeEduPanelText();
+                    spawnSoliderPanel.isPlaceEdued = true;
+                }
             }
         }
         
