@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Gameplay.Enemy;
 using Gameplay.Player;
+using Gameplay.Player.Solider.Attacker.Traverser;
 using UnityEngine;
 
 namespace Gameplay.Features.EnemyFeature
@@ -29,7 +30,6 @@ namespace Gameplay.Features.EnemyFeature
                 {
                     continue;
                 }
-
                 if (m_enemyLogic.attackTargets.Contains(temp))
                 {
                     continue;
