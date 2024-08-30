@@ -29,9 +29,7 @@ namespace UI.Gameplay
         private CardState curState;
 
         private bool isClickInLeftPanel;
-
-        private bool isFirstEduTeam;
-        private bool isFirstEduPlace;
+        
         public void InitInTeamPanel(SoliderModelBase data)
         {
             teamLeftPanel = FindObjectOfType<TeamLeftPanel>();
@@ -61,11 +59,6 @@ namespace UI.Gameplay
                     Input.mousePosition))
             {
                 //在左边栏时
-                if (EduSystem.Instance&&!isFirstEduTeam)
-                {
-                    EduSystem.Instance.OnTeachTeamCancelAssemble();
-                    isFirstEduTeam = true;
-                }
                 if (teamTopPanel.CheckCanPlaceInTopPanel()&&!isClickInLeftPanel)
                 {
                     teamTopPanel.SpawnCardInTopPanel(soliderData.soliderId, this);
@@ -73,29 +66,42 @@ namespace UI.Gameplay
                     view.ChangeUIColor(true);
                     isClickInLeftPanel = true;
                 }
+                //Edu
+                if (FindObjectOfType<EduSystem>()&&! teamLeftPanel.isTeamClickEdued)
+                {
+                    UIManager.Instance.OnChangeEduPanelText();
+                    teamLeftPanel.isTeamClickEdued = true;
+                }
             }
             else if (curState == CardState.InTeamPanel &&
                      RectTransformUtility.RectangleContainsScreenPoint(teamTopPanel.GetComponent<RectTransform>(),
                          Input.mousePosition))
             {
-                //在上边栏时
                 connectCardInLeftPanel.view.ChangeUIColor(false);
                 connectCardInLeftPanel.isClickInLeftPanel = false;
                 teamTopPanel.DestroySpawnedCard(soliderData.soliderId);
+                
+                //Edu
+                //在上边栏时
+                if (FindObjectOfType<EduSystem>() && !teamTopPanel.isTeamCancelEdued)
+                {
+                    UIManager.Instance.OnChangeEduPanelText();
+                    teamTopPanel.isTeamCancelEdued = true;
+                }
             }
             else if (curState == CardState.InGamePanel &&
                      RectTransformUtility.RectangleContainsScreenPoint(spawnSoliderPanel.GetComponent<RectTransform>(),
                          Input.mousePosition))
             {
                 //在派兵栏时 派兵逻辑
-                if (EduSystem.Instance&&!isFirstEduPlace)
-                {
-                    EduSystem.Instance.OnTeachPlace();
-                    isFirstEduPlace = true;
-                }
-                
                 SpawnManager.Instance.ChangeSelectSolider(soliderData.soliderId);
                 spawnSoliderPanel.OnSelectCard(GetComponent<RectTransform>());
+                //Edu
+                if (FindObjectOfType<EduSystem>() && !spawnSoliderPanel.isPlaceEdued)
+                {
+                    UIManager.Instance.OnChangeEduPanelText();
+                    spawnSoliderPanel.isPlaceEdued = true;
+                }
             }
         }
         

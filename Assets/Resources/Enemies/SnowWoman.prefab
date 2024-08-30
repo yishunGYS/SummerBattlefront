@@ -1030,9 +1030,9 @@ GameObject:
   - component: {fileID: 3173502451934631407}
   - component: {fileID: 7480812588154384231}
   - component: {fileID: 872006798351944593}
-  - component: {fileID: 4931350110560903274}
   - component: {fileID: 949575799359266579}
   - component: {fileID: 1468225244781662332}
+  - component: {fileID: 2470484001289385038}
   m_Layer: 7
   m_Name: SnowWoman
   m_TagString: Enemy
@@ -1048,7 +1048,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8370425632030017347}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 1
@@ -1142,20 +1142,6 @@ MonoBehaviour:
       Value: {fileID: 11400000, guid: bafe3a3c8f6486243be6a11b858a084e, type: 2}
     - Key: 2
       Value: {fileID: 11400000, guid: 7132f25e7a3967743894cb6c70bbc897, type: 2}
---- !u!114 &4931350110560903274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8370425632030017347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93be8ee4b5ba1a149a9cc474b242c2b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curHp: 0
-  enemyId: 1013
 --- !u!114 &949575799359266579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1180,6 +1166,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5cf84f7ee0842bdb70f5bf91b5f774b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2470484001289385038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8370425632030017347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345f0203fe4e5c444bba867da135d948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curHp: 0
+  enemyId: 1013
+  projectile: {fileID: -3618351148407141835, guid: 4fbac868351783d4d9a57668f810249a, type: 3}
 --- !u!1 &8946013116616016359
 GameObject:
   m_ObjectHideFlags: 0

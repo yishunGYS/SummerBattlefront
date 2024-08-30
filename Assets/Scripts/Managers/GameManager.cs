@@ -14,7 +14,7 @@ namespace Managers
 		private CsvReader csvReader;
 
 		private GameObject EnemyContainer;
-
+		
         public void OnLevelStart()
         {
             EnemyContainer = GameObject.Find("EnemyContainer");
@@ -36,12 +36,11 @@ namespace Managers
 
 				Debug.Log("PlayerStats.Instance != null");
 			}
-
-
-			if (EduSystem.Instance)
+			if (FindObjectOfType<EduSystem>())
 			{
-				EduSystem.Instance.OnTeachClickTeamAssemble();
+				UIManager.Instance.OnShowEduPanel();
 			}
+			
         }
         
 

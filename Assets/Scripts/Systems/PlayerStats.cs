@@ -72,10 +72,9 @@ namespace Systems
                 Debug.Log("关卡开始！");
             }
             
-            if (EduSystem.Instance)
+            if (FindObjectOfType<EduSystem>())
             {
-                EduSystem.Instance.isInEdu = true;
-                EduSystem.Instance.OnTeachResourceLimit();
+                UIManager.Instance.OnShowEduPanel();
             }
         }
 

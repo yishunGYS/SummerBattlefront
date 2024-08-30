@@ -6,13 +6,14 @@ namespace UI.Canvas
 {
 	public class MainMenu : MonoBehaviour {
 
-		public string levelToLoad = "MainLevel";
+		public string levelToLoad;
 
 		public SceneFader sceneFader;
 
 		public void Play ()
 		{
-			sceneFader.FadeTo(levelToLoad);
+			//sceneFader.FadeTo(levelToLoad);
+			sceneFader.ChangeScene(levelToLoad);
 		}
 
 		public void Quit ()
