@@ -81,6 +81,10 @@ namespace Gameplay.Player
                     birthCell = currentBlock;
                 }
             }
+            else
+            {
+                birthCell = BlockManager.instance.ReturnHeadGridCell(block);
+            }    
         }
 
         //BuffManager
@@ -201,7 +205,11 @@ namespace Gameplay.Player
 
         public bool CheckCanAttack()
         {
-            if (attackTargets.Contains(blocker)||(HasAttackTarget() && isAttackReady))
+            if (!isAttackReady)
+            {
+                return false;
+            }
+            if (attackTargets.Contains(blocker)||HasAttackTarget())
             {
                 return true;
             }

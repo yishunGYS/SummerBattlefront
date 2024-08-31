@@ -10,9 +10,9 @@ namespace Gameplay.Features.EnemyFeature
     {
         public override void GetTarget()
         {
-            base.GetTarget();
-            if (HasFocusTarget())
-                return;
+            base.GetTarget(); 
+            // if (HasFocusTarget()&&m_enemyLogic.CheckCanAttack() )
+            //     return;
             
             var minDis = 10000f;
             SoliderAgent singleTarget = null;
@@ -20,7 +20,6 @@ namespace Gameplay.Features.EnemyFeature
             Collider[] hitColliders =
                 Physics.OverlapSphere(enemyAgent.transform.position, enemyModel.attackRange,
                     LayerMask.GetMask("Solider"));
-
 
             foreach (var collider in hitColliders)
             {

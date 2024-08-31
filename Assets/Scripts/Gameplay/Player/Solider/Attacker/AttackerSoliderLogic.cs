@@ -113,7 +113,7 @@ namespace Gameplay.Player.Solider.Attacker
         //最基础的近战
         protected void MeleeAttack()
         {
-            Debug.Log("Enter MeleeAttack");
+            Debug.Log($"Enter MeleeAttack__{isAttackReady}");
             if (isAttackReady)
             {
                 CalculateCd();
@@ -132,11 +132,17 @@ namespace Gameplay.Player.Solider.Attacker
 
         protected void MeleeAOE()
         {
+            Debug.Log($"Enter MeleeAttack__{isAttackReady}");
             if (isAttackReady)
             {
                 CalculateCd();
+                if (attackTargets.Count==2)
+                {
+                    Debug.Log("lll");
+                }
                 for (int i = attackTargets.Count - 1; i >= 0; i--)
                 {
+                    Debug.Log($"{attackTargets.Count}InLoop");
                     EnemyAgent enemyAgent = attackTargets[i] as EnemyAgent;
                     Debug.Log("单体AOE攻击！！！");
                     if (enemyAgent != null)

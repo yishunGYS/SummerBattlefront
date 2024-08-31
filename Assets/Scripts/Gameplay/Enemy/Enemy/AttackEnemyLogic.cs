@@ -96,15 +96,35 @@ namespace Gameplay.Enemy.Enemy
                     LayerMask.GetMask("Solider"));
 
             int soliderCount = 0;
+
+            List<SoliderAgent> temps = new List<SoliderAgent>();
             foreach (var hitCollider in hitColliders)
             {
+                var temp = hitCollider.GetComponent<SoliderAgent>();
                 // 过滤掉自己的碰撞体
                 if (hitCollider.gameObject != enemyAgent.gameObject)
                 {
                     soliderCount++;
                     // 在这里可以实现攻击逻辑
                 }
+                temps.Add(temp);
             }
+            
+            var toRemove = new List<SoliderAgent>();
+            foreach (var solider in attackTargets)
+            {
+                var soliderAgent = solider as SoliderAgent;
+                if (!temps.Contains(soliderAgent))
+                {
+                    toRemove.Add(soliderAgent);
+                }
+            }
+
+            foreach (var solider in toRemove)
+            {
+                attackTargets.Remove(solider);
+            }
+
 
             if (soliderCount <= 0)
             {

@@ -13,6 +13,10 @@ namespace Gameplay.Player.Solider.Attacker.RangeGodling
         public override void GetTarget()
         {
             base.GetTarget();
+            if (attackTargets.Contains(blocker))
+            {
+                return;
+            }
             DistanceBasedGetTarget();
         }
         
