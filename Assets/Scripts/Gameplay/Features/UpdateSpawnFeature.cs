@@ -26,9 +26,7 @@ namespace Gameplay.Player
             if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 10f))
             {
                 GridCell currentCell = hit.collider.GetComponent<GridCell>();
-
                 initBlock = currentCell;
-
                 startPoint = initBlock.previousCells[0].GetComponent<StartPoint>();
             }
         }

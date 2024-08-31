@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 1954448989288956259}
   - component: {fileID: 2856530125469041904}
   - component: {fileID: 8134639406846339625}
-  - component: {fileID: 2281910315592741771}
+  - component: {fileID: 261671240714145120}
   m_Layer: 7
   m_Name: SmallGuaiGuai
   m_TagString: Enemy
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5cf84f7ee0842bdb70f5bf91b5f774b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2281910315592741771
+--- !u!114 &261671240714145120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

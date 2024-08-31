@@ -66,3 +66,5 @@ MonoBehaviour:
       Value: UIPanel/TipPanel
     - Key: ResourceBarPanel
       Value: UIPanel/ResourceBarPanel
+    - Key: EduPanel
+      Value: UIPanel/EduPanel

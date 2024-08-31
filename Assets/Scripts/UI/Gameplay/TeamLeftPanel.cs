@@ -16,6 +16,8 @@ namespace UI.Gameplay
         // 用于跟踪已生成的按钮
         private bool buttonsGenerated = false;
 
+        //edu
+        public bool isTeamClickEdued;
         void Start()
         {
             InitializeButton();
@@ -65,13 +67,15 @@ namespace UI.Gameplay
                 // 标记按钮已生成
                 buttonsGenerated = true;
             }
-
-            if (EduSystem.Instance)
-            {
-                EduSystem.Instance.OnTeachTeamAssemble();
-            }
             
             teamTopPanel = FindObjectOfType<TeamTopPanel>();
+            
+            
+            //edu
+            if (FindObjectOfType<EduSystem>())
+            {
+                UIManager.Instance.OnShowEduPanel();
+            }
         }
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -81,6 +85,7 @@ namespace UI.Gameplay
 
         public void OnClickBattleStart()
         {
+
             var battleSoliderData = DataManager.Instance.GetSolidersInBattle();
             var soliderLists = teamTopPanel.GetSoliderList();
             if (soliderLists.Count<=0)
@@ -99,6 +104,14 @@ namespace UI.Gameplay
             SpawnManager.Instance.isLevelStarted = true;
             
             PlayerStats.Instance.StartLevel();
+            
+            if (FindObjectOfType<EduSystem>())
+            {
+                UIManager.Instance.OnChangeEduState(EduState.InBattle);
+                UIManager.Instance.OnCloseEduPanel();
+                UIManager.Instance.OnShowEduPanel();
+            }
+            
         }
 
         private void OnDestroy()
