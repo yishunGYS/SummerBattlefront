@@ -46,8 +46,9 @@ namespace Systems
             if (LevelManager.Instance != null)
             {
                 //Test
-                //levelResourceLimit =  LevelManager.Instance.GetCurrentLevelResource();
-                remainingResource = levelResourceLimit;
+                levelResourceLimit =  LevelManager.Instance.GetCurrentLevelResource();
+                ResetPlayerStats();
+                //remainingResource = levelResourceLimit;
             }
             UIManager.Instance.OnOpenResourceLeftPanel();
             
@@ -155,7 +156,7 @@ namespace Systems
         public void ResetPlayerStats()
         {
             regainTimer = 0f;
-            remainingResource = levelResourceLimit;
+            //remainingResource = levelResourceLimit;
             regainTimeScale = 1f;
             isEnterEnd = false;
             isLevelStarted = false;

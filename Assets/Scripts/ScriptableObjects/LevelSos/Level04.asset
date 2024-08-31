@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level04
   m_EditorClassIdentifier: 
   levelID: 4
-  levelResource: 12
+  levelResource: 16
   levelName: Final_Level_004_DYC
   levelIntro: "\u8FD9\u662F\u5173\u53614\u5173\u53614"
   enemies:

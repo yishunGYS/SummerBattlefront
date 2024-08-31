@@ -829,6 +829,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5045766574905753028, guid: 6827628cac529e346a5487265e6afc91, type: 3}
+      propertyPath: fader
+      value: 
+      objectReference: {fileID: 941394122}
     - target: {fileID: 7857812870548474872, guid: 6827628cac529e346a5487265e6afc91, type: 3}
       propertyPath: m_Name
       value: LevelSelector

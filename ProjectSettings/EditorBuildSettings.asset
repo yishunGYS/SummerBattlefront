@@ -42,6 +42,9 @@ EditorBuildSettings:
     path: Assets/Scenes/FinalLevel/Final_Level_010_DYC.unity
     guid: d7dcdc36b99a25c418bb52a0b1294255
   - enabled: 1
+    path: Assets/Scenes/FinalLevel/Final_Level_011_DYC.unity
+    guid: 2e4fcd73d43fb174c8c414b95fb01570
+  - enabled: 1
     path: Assets/Scenes/FinalLevel/Final_Level_012_DYC.unity
     guid: df52c9ed9a63f5d489e5c06d1fd5d744
   - enabled: 1

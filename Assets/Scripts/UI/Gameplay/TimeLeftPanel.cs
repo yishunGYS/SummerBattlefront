@@ -17,13 +17,13 @@ namespace UI.Gameplay
         public override void OpenPanel()
         {
             base.OpenPanel();
-            timeLeftText.text = $"Resource Left: \n {PlayerStats.Instance.levelResourceLimit:F2}";
+            timeLeftText.text = $"Resource Left: \n {PlayerStats.Instance.levelResourceLimit}";
         }
 
 
         public void UpdateTime(float time)
         {
-            timeLeftText.text = $"Resource Left: \n {time:F2}";
+            timeLeftText.text = $"Resource Left: \n {time}";
         }
     }
 }
