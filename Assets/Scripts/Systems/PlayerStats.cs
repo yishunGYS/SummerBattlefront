@@ -46,9 +46,9 @@ namespace Systems
             if (LevelManager.Instance != null)
             {
                 //Test
-                levelResourceLimit =  LevelManager.Instance.GetCurrentLevelResource();
+                //levelResourceLimit =  LevelManager.Instance.GetCurrentLevelResource();
                 ResetPlayerStats();
-                //remainingResource = levelResourceLimit;
+                remainingResource = levelResourceLimit;
             }
             UIManager.Instance.OnOpenResourceLeftPanel();
             
