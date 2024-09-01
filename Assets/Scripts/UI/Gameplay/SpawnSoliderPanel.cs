@@ -8,7 +8,7 @@ namespace UI.Gameplay
 {
     public class SpawnSoliderPanel : UIBasePanel
     {
-        private RectTransform curSelectCard;
+        private UIPlacedView curSelectCard;
         public List<UIPlaced> soliderUILists = new List<UIPlaced>();
         
         public bool isPlaceEdued;
@@ -34,15 +34,18 @@ namespace UI.Gameplay
 
         }
 
-        public void OnSelectCard(RectTransform newCard)
+        public void OnSelectCard(UIPlacedView newCard)
         {
             
             if (curSelectCard!=null)
             {
-                curSelectCard.GetComponent<Image>().color *= 2f;
+                curSelectCard.OnSelectInBattle(false);
+                //curSelectCard.GetComponent<Image>().color *= 2f;
             }
-            newCard.GetComponent<Image>().color *= 0.5f;
             curSelectCard = newCard;
+            curSelectCard.OnSelectInBattle(true);
+            //newCard.GetComponent<Image>().color *= 0.5f;
+            
         }
     }
 }

@@ -19,13 +19,13 @@ namespace UI.Gameplay
         {
             base.OpenPanel();
             resourceLimit = PlayerStats.Instance.levelResourceLimit;
-            timeLeftText.text = $"{resourceLimit}/{resourceLimit}";
+            timeLeftText.text = $"{resourceLimit}";
         }
 
 
         public void UpdateTime(float time)
         {
-            timeLeftText.text = $"{time}/{resourceLimit}";
+            timeLeftText.text = $"{time}";
         }
     }
 }
