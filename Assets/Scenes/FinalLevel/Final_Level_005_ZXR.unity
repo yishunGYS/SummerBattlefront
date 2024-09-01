@@ -428,6 +428,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arches (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4855506166706676011, guid: 2e989875022c7bc448bb19df91cc414c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5103291751367099956, guid: 2e989875022c7bc448bb19df91cc414c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.94
@@ -1633,7 +1637,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 0}
-  previousCells: []
+  previousCells:
+  - {fileID: 871561646}
   nextCells:
   - {fileID: 136613362}
   showConnections: 0
@@ -2016,6 +2021,10 @@ PrefabInstance:
     - target: {fileID: 4855506166706676011, guid: 2e989875022c7bc448bb19df91cc414c, type: 3}
       propertyPath: m_Name
       value: Arches (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855506166706676011, guid: 2e989875022c7bc448bb19df91cc414c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5103291751367099956, guid: 2e989875022c7bc448bb19df91cc414c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3142,6 +3151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arches (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4855506166706676011, guid: 2e989875022c7bc448bb19df91cc414c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5103291751367099956, guid: 2e989875022c7bc448bb19df91cc414c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.93
@@ -3382,10 +3395,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 0}
-  previousCells: []
+  previousCells:
+  - {fileID: 1820771616}
   nextCells:
   - {fileID: 426622865}
-  showConnections: 0
+  showConnections: 1
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
@@ -6339,6 +6353,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arches (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4855506166706676011, guid: 2e989875022c7bc448bb19df91cc414c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5103291751367099956, guid: 2e989875022c7bc448bb19df91cc414c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.95
@@ -7297,8 +7315,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 375036691}
   - {fileID: 925692671}
+  - {fileID: 375036691}
   - {fileID: 1120899340}
   - {fileID: 68424698}
   - {fileID: 2128583690}
