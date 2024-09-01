@@ -8,7 +8,7 @@ namespace Gameplay.Enemy
         public string enemyName;
         public string enemyDes;
         public UnitType enemyType;
-        public int maxHp;
+        public float maxHp;
         public int spawnNum;
         public int attackPoint;
         public int magicAttackPoint;

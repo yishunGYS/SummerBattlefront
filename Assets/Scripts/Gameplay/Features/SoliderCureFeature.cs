@@ -42,7 +42,7 @@ namespace Gameplay.Features
                 {
                     if (targetAgent.curHp < targetAgent.soliderModel.maxHp)
                     {
-                        int newHp = targetAgent.curHp + CalculateCureAmount();
+                        float newHp = targetAgent.curHp + CalculateCureAmount();
                         targetAgent.curHp = Math.Clamp(newHp, 0, targetAgent.soliderModel.maxHp);
                         Debug.Log("治疗"+targetAgent.name+" "+CalculateCureAmount());
                     }

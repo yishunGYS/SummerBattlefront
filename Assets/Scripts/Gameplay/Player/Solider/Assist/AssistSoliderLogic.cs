@@ -5,10 +5,10 @@ namespace Gameplay.Player.Solider.Assist
 {
     class CureSoliderTarget
     {
-        public int hp;
+        public float hp;
         public SoliderAgent target;
 
-        public CureSoliderTarget(int hp, SoliderAgent target)
+        public CureSoliderTarget(float hp, SoliderAgent target)
         {
             this.hp = hp;
             this.target = target;

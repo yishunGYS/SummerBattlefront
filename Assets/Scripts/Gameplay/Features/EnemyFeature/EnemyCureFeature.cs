@@ -36,7 +36,7 @@ namespace Gameplay.Features.EnemyFeature
                 {
                     if (targetAgent.curHp < targetAgent.enemyModel.maxHp)
                     {
-                        int newHp = targetAgent.curHp + CalculateCureAmount();
+                        float newHp = targetAgent.curHp + CalculateCureAmount();
                         targetAgent.curHp = Math.Clamp(newHp, 0, targetAgent.enemyModel.maxHp);
                         Debug.Log("жнаф"+targetAgent.name+" "+CalculateCureAmount());
                     }

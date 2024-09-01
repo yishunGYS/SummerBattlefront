@@ -82,7 +82,7 @@ public class BuffManager
     }
 
 
-    public int CalculateDamage(DamageInfo damageInfo)
+    public float CalculateDamage(DamageInfo damageInfo)
     {
         var attackData = CalculateAttack(damageInfo.attacker);
 
@@ -91,7 +91,7 @@ public class BuffManager
                    attackData.magicAttackPoint * (1 - defendData.magicDefendReducePercent);
 
 
-        return (int)Math.Floor(temp);
+        return (float)Math.Floor(temp);
     }
 
 
@@ -108,12 +108,12 @@ public class BuffManager
             {
                 if (attackerAttackData.attackPoint != 0)
                 {
-                    tempAttackData.attackPoint *= (int)item.buffInfo.attackGainEffect;
+                    tempAttackData.attackPoint *= item.buffInfo.attackGainEffect;
                 }
 
                 if (attackerAttackData.magicAttackPoint != 0)
                 {
-                    tempAttackData.magicAttackPoint *= (int)item.buffInfo.attackGainEffect;
+                    tempAttackData.magicAttackPoint *= item.buffInfo.attackGainEffect;
                 }
             }
         }
