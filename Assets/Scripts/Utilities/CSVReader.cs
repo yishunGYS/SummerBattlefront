@@ -50,7 +50,7 @@ namespace Utilities
                     
                     soliderModel.soliderType = (UnitType)ParseInt(value[3]);
                     soliderModel.cost = ParseInt(value[4]);
-                    soliderModel.maxHp = ParseInt(value[5]);
+                    soliderModel.maxHp = ParseFloat(value[5]);
                     soliderModel.spawnNum = ParseInt(value[6]);
                     soliderModel.attackPoint = ParseInt(value[7]);
                     soliderModel.magicAttackPoint = ParseInt(value[8]);
@@ -101,7 +101,7 @@ namespace Utilities
                     enemyModel.enemyDes = value[2];
 
                     enemyModel.enemyType = (UnitType)ParseInt(value[3]);
-                    enemyModel.maxHp = ParseInt(value[4]);
+                    enemyModel.maxHp = ParseFloat(value[4]);
                     enemyModel.spawnNum = ParseInt(value[5]);
                     enemyModel.attackPoint = ParseInt(value[6]);
                     enemyModel.magicAttackPoint = ParseInt(value[7]);

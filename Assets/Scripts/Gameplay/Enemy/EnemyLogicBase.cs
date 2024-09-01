@@ -39,7 +39,7 @@ namespace Gameplay.Enemy
         public bool isAttackReady = true;
 
         //阻挡
-        public HashSet<SoliderAgent> blockSoilders = new HashSet<SoliderAgent>();
+        public List<SoliderAgent> blockSoilders = new List<SoliderAgent>();
 
         //BuffManager
         //public BuffManager enemyBuffManager;

@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 8963697562178715558}
   - component: {fileID: 1305034242398386329}
   - component: {fileID: 8235220761539673862}
-  - component: {fileID: 5615886019789500264}
   - component: {fileID: 2351816608717872585}
   - component: {fileID: 8635318219177816992}
+  - component: {fileID: 7126341984094394065}
+  - component: {fileID: 8563615208132543056}
   m_Layer: 7
   m_Name: SuperWoman
   m_TagString: Enemy
@@ -130,20 +131,6 @@ MonoBehaviour:
       Value: {fileID: 11400000, guid: bafe3a3c8f6486243be6a11b858a084e, type: 2}
     - Key: 2
       Value: {fileID: 11400000, guid: 7132f25e7a3967743894cb6c70bbc897, type: 2}
---- !u!114 &5615886019789500264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235258182517410980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f15cad05bf539c46a520f08267fe39a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curHp: 0
-  enemyId: 1014
 --- !u!114 &2351816608717872585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +155,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5cf84f7ee0842bdb70f5bf91b5f774b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7126341984094394065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235258182517410980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ce102d3faa0604ca72773aaaa83c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetDistance: 0.3
+  duration: 0.5
+  currentCell: {fileID: 0}
+--- !u!114 &8563615208132543056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235258182517410980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345f0203fe4e5c444bba867da135d948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curHp: 0
+  enemyId: 1014
+  projectile: {fileID: -3618351148407141835, guid: 5ddb2971c66e7b9459fe4601de1013d7, type: 3}
 --- !u!1 &1376596230188795502
 GameObject:
   m_ObjectHideFlags: 0

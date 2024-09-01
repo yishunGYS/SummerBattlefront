@@ -26,7 +26,7 @@ namespace Gameplay.Player
         public string soliderDes;
         public UnitType soliderType;
         public int cost;
-        public int maxHp;
+        public float maxHp;
         public int spawnNum;
         public int attackPoint;
         public int magicAttackPoint;

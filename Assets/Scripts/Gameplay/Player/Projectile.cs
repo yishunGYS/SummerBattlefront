@@ -7,6 +7,8 @@ namespace Gameplay.Player
 {
     public class Projectile : MonoBehaviour
     {
+        public bool isAOE;
+        //public PrejectileAoe aoePrefab;
         private UnitAgent atkAgent;
         private UnitAgent beAtkAgent;
         //private Vector3 moveDir;
@@ -15,7 +17,6 @@ namespace Gameplay.Player
         {
             this.atkAgent = atkAgent;
             this.beAtkAgent = beAtkAgent;
-            //moveDir = targetPosition - transform.position;
         }
 
         private void Update()
@@ -55,7 +56,17 @@ namespace Gameplay.Player
                     var enemyCmpt = collider.GetComponent<EnemyAgent>();
                     if (enemyCmpt&& soliderAgent.soliderLogic.attackTargets.Contains(enemyCmpt))
                     {
-                        enemyCmpt.enemyLogic.OnTakeDamage(soliderAgent);
+                        if (isAOE)
+                        {
+                            enemyCmpt.enemyLogic.OnTakeAOEDamage(
+                                soliderAgent,
+                                soliderAgent.soliderModel.attackAoeRange);
+                        }
+                        else
+                        {
+                            enemyCmpt.enemyLogic.OnTakeDamage(soliderAgent);
+                        }
+                        //enemyCmpt.enemyLogic.OnTakeDamage(soliderAgent);
                         Destroy(gameObject);
                         break;
                     }
@@ -73,7 +84,19 @@ namespace Gameplay.Player
                     var soliderCmpt = collider.GetComponent<SoliderAgent>();
                     if (soliderCmpt&& enemyAgent.enemyLogic.attackTargets.Contains(soliderCmpt))
                     {
-                        soliderCmpt.soliderLogic.OnTakeDamage(enemyAgent);
+                        if (isAOE)
+                        {
+                            // PrejectileAoe go =Instantiate(aoePrefab,soliderCmpt.transform.position -new Vector3(0,0.5f,0),Quaternion.identity);
+                            // go.OnInit(enemyAgent);
+                            soliderCmpt.soliderLogic.OnTakeAOEDamage(
+                                enemyAgent,
+                                enemyAgent.enemyModel.attackAoeRange);
+                        }
+                        else
+                        {
+                            soliderCmpt.soliderLogic.OnTakeDamage(enemyAgent);
+                        }
+                        //soliderCmpt.soliderLogic.OnTakeDamage(enemyAgent);
                         Destroy(gameObject);
                         break;
                     }

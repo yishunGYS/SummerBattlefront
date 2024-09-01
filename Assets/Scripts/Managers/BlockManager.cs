@@ -54,6 +54,22 @@ namespace Managers
 
             return null;
         }
+
+        public GridCell ReturnHeadGridCell(GridCell block)
+        {
+            SoliderAgent headSolider;
+            foreach (List<GridCell> cells in headSoliderBlocks.Values)
+            {
+                if (cells.Contains(block))
+                {
+                    headSolider = headSoliderBlocks.FirstOrDefault(x => x.Value == cells).Key;
+                    var agent = headSolider.GetComponent<SoliderAgent>();
+                    return agent.soliderLogic.birthCell;
+                }
+            }
+
+            return null;
+        }
         
         
         private void OnInit()
