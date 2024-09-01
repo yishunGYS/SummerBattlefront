@@ -2,8 +2,8 @@ namespace Gameplay
 {
     public class UnitAttackData
     {
-        public int attackPoint;
-        public int magicAttackPoint;
+        public float attackPoint;
+        public float magicAttackPoint;
 
         public UnitAttackData(int attackPoint, int magicAttackPoint)
         {

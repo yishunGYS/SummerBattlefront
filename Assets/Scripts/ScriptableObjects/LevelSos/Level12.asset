@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b884ee243340149b78b4bd37231969, type: 3}
+  m_Name: Level12
+  m_EditorClassIdentifier: 
+  levelID: 12
+  levelResource: 23
+  levelName: Final_Level_012_DYC
+  levelIntro: "\u8FD9\u662F\u5173\u536112\u5173\u536112"
+  enemies:
+  - {fileID: 7502317580413784757, guid: c8c1c485768af5947837f3f9f4cfb30d, type: 3}
+  - {fileID: 7502317580413784757, guid: 635ec51b2551d4741b32740942f8a3cd, type: 3}
+  - {fileID: 7502317580413784757, guid: c0268db37a3fc864da79e71d07365f7a, type: 3}
+  unlockSoliderId: 06000000
+  lockSoliderIds: 

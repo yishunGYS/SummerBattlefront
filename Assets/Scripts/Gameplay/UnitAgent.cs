@@ -8,14 +8,14 @@ namespace Gameplay.Player
 
     public abstract class UnitAgent : MonoBehaviour
     {
-        [HideInInspector]public int curHp;
+        [HideInInspector]public float curHp;
         public BuffManager buffManager;
         private StateMachine fsm;
         public abstract UnitAttackData GetAttackPoint();
         
         public abstract UnitDefendData GetDefendPoint();
 
-        public abstract int GetMaxHp();
+        public abstract float GetMaxHp();
 
         public virtual void OnInit()
         {

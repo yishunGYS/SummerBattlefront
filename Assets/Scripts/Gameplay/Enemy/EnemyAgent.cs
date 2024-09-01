@@ -53,7 +53,7 @@ namespace Gameplay.Enemy
             return new UnitDefendData(enemyModel.defendReducePercent, enemyModel.magicDefendReducePercent);
         }
 
-        public override int GetMaxHp()
+        public override float GetMaxHp()
         {
             return enemyModel.maxHp;
         }

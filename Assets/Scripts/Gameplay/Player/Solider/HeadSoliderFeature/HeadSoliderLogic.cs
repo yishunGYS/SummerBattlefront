@@ -1,8 +1,9 @@
+using Gameplay.Player.Solider.Attacker;
 using Managers;
 
 namespace Gameplay.Player
 {
-    public class HeadSoliderLogic : SoliderLogicBase
+    public class HeadSoliderLogic : AttackerSoliderLogic
     {
         public HeadSoliderLogic(SoliderAgent agent) : base(agent)
         {
