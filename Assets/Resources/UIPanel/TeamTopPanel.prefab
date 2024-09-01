@@ -113,5 +113,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b281dbb10f9c49ef885c4ea161203692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTeamCount: 4
+  maxTeamCount: 7
   isTeamCancelEdued: 0
