@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level14
   m_EditorClassIdentifier: 
   levelID: 14
-  levelResource: 20
+  levelResource: 24
   levelName: Final_Level_014_ZXR
   levelIntro: "\u8FD9\u662F\u5173\u536114\u5173\u536114"
   enemies:

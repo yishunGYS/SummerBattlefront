@@ -51,9 +51,9 @@ EditorBuildSettings:
     path: Assets/Scenes/FinalLevel/Final_Level_013_GYS.unity
     guid: 890a1bdb104ff54408a439487669e3b3
   - enabled: 1
-    path: Assets/Scenes/FinalLevel/Final_Level_014_ZXR.unity
+    path: Assets/Scenes/FinalLevel/Final_Level_013_ZXR.unity
     guid: 4ee6f06bd31f3a14babc4ef73345fe4e
   - enabled: 1
-    path: Assets/Scenes/FinalLevel/Final_Level_015_ZXR.unity
+    path: Assets/Scenes/FinalLevel/Final_Level_014_ZXR.unity
     guid: a373db37aea237045876e4450d403f38
   m_configObjects: {}

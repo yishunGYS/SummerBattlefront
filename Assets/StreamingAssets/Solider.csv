@@ -1,11 +1,11 @@
 角色Id,角色名称,角色简介,角色类型,耗能,血量,个体数量,物攻,魔攻,物理伤害减免百分比,魔防法术伤害减免百分比,攻击间隔（秒）,攻击范围,攻击目标数量,攻击Aoe范围,攻击作用对象,攻击目标类型,移速（m/s）,下次部署冷却时间,场景模型路径,UI模型路径
 int,string,string,UnitType,int,float,int,int,int,float,float,float,float,int,float,AttackTargetType,UnitType,float,float,string,string
-1,小兵兵,脆皮近战,1,1,1,1,0,0,0,0,1,1,1,0,0,1|3,2,0,Soliders/MeleeSmallGoding,UIUnit/Solider/SoliderUI_1
+1,小兵兵,脆皮近战,1,1,0.5,1,0,0,0,0,1,1,1,0,0,1|3,2,0,Soliders/MeleeSmallGoding,UIUnit/Solider/SoliderUI_1
 2,远兵,脆皮远程,1,4,1,1,2,0,0,0,1,2.5,1,0,0,2,0.8,0,Soliders/RangeGodings,UIUnit/Solider/SoliderUI_2
 3,中兵兵,较肉近战,1,4,20,1,1,0,0,0,1,1,1,0,0,1|3,1,0,Soliders/MeleeMidGoding,UIUnit/Solider/SoliderUI_3
 4,大兵兵,物防高的近战,1,7,60,1,0,0,0.5,-4,1,1,1,0,0,1|3,1,0,Soliders/MeleeBigGoding,UIUnit/Solider/SoliderUI_4
 5,女武神,会aoe的士兵,1,7,30,1,1,0,0,0,1.75,1,1,1.6,0,1|3,1,0,Soliders/Valkyrie,UIUnit/Solider/SoliderUI_5
-6,骷髅军团,堆量的脆皮士兵团,1,4,1,5,1,0,0,0,1,0.4,1,0,0,3,1,0,Soliders/Skeletons,UIUnit/Solider/SoliderUI_6
+6,骷髅军团,堆量的脆皮士兵团,1,4,0.6,5,1,0,0,0,1,0.4,1,0,0,3,1,0,Soliders/Skeletons,UIUnit/Solider/SoliderUI_6
 7,天使,普攻能够治疗友方单体,1,4,1,1,1,0,0,0,1,2,1,0,1,1,1,0,Soliders/Angel,UIUnit/Solider/SoliderUI_7
 8,爆炸兵,在攻击范围内自爆,1,10,1,1,10,0,0,0,-1,1,1,2.4,0,1|2,1,0,Soliders/Exploder,UIUnit/Solider/SoliderUI_8
 9,穿越兵,能穿越第一个敌人,1,6,20,1,1,0,0,0,1,1.5,1,0,0,1|3,1,0,Soliders/Traverser,UIUnit/Solider/SoliderUI_9

@@ -50,7 +50,7 @@ namespace Gameplay.Player
             return new UnitDefendData(soliderModel.defendReducePercent, soliderModel.magicDefendReducePercent);
         }
 
-        public override int GetMaxHp()
+        public override float GetMaxHp()
         {
             return soliderModel.maxHp;
         }
