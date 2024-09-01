@@ -26,7 +26,7 @@ namespace Systems.ShortCut
                     var soliderInBattle = DataManager.Instance.GetSolidersInBattle();
                     var soliderId = soliderInBattle[i];
                     SpawnManager.Instance.ChangeSelectSolider(soliderId);
-                    spawnSoliderPanel.OnSelectCard(spawnSoliderPanel.soliderUILists[i].GetComponent<RectTransform>());
+                    spawnSoliderPanel.OnSelectCard(spawnSoliderPanel.soliderUILists[i].view);
                 }
             }
 

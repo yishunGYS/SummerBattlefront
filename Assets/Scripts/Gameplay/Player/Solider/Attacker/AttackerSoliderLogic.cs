@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Gameplay.Enemy;
+using Gameplay.Features.EnemyFeature;
 using UnityEngine;
 
 namespace Gameplay.Player.Solider.Attacker
@@ -78,6 +79,11 @@ namespace Gameplay.Player.Solider.Attacker
             {
                 var temp = collider.GetComponent<EnemyAgent>();
                 if (temp == null)
+                {
+                    continue;
+                }
+
+                if (temp.GetComponent<PotatoMine>())
                 {
                     continue;
                 }

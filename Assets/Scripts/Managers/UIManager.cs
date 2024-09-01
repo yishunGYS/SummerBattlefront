@@ -240,6 +240,19 @@ namespace Managers
             ClosePanel("EduPanel");
         }
 
+
+        public void OnReachMax()
+        {
+            ResourceBarPanel resourceBarPanel = panelOpenDict["ResourceBarPanel"] as ResourceBarPanel;
+            if (resourceBarPanel != null) resourceBarPanel.OnReachMaxShow();
+        }
+
+        public void OnNotReachMax()
+        {
+            ResourceBarPanel resourceBarPanel = panelOpenDict["ResourceBarPanel"] as ResourceBarPanel;
+            if (resourceBarPanel != null) resourceBarPanel.OnReachMaxHide();
+        }
+
         private void RestData()
         {
             panelSpawnDict.Clear();

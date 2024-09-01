@@ -95,7 +95,9 @@ namespace UI.Gameplay
             {
                 //在派兵栏时 派兵逻辑
                 SpawnManager.Instance.ChangeSelectSolider(soliderData.soliderId);
-                spawnSoliderPanel.OnSelectCard(GetComponent<RectTransform>());
+                spawnSoliderPanel.OnSelectCard(view);
+                
+                
                 //Edu
                 if (FindObjectOfType<EduSystem>() && !spawnSoliderPanel.isPlaceEdued)
                 {

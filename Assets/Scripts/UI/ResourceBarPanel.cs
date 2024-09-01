@@ -14,6 +14,9 @@ namespace UI
         private List<Image> grids = new List<Image>();
 
         public bool isStartToRegain;
+
+        public Image normalResource;
+        public Image maxResource;
         public override void Init()
         {
             base.Init();
@@ -85,6 +88,16 @@ namespace UI
                     grids[i].fillAmount = 0f;  // Ã»ÓÐÌî³ä
                 }
             }
+        }
+
+        public void OnReachMaxShow()
+        {
+            maxResource.gameObject.SetActive(false);
+        }
+        
+        public void OnReachMaxHide()
+        {
+            maxResource.gameObject.SetActive(true);
         }
     }
 }
