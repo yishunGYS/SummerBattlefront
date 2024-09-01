@@ -43,7 +43,6 @@ namespace Managers
             return EnemyBaseModels;
         }
 
-
         public List<int> GetSolidersInBattle()
         {
             return SolidersInBattle;
@@ -63,6 +62,12 @@ namespace Managers
         public SoliderModelBase GetRuntimeSoliderDataById(int id) 
         {
             RuntimeSoliderModels.TryGetValue(id,out SoliderModelBase model);
+            return model;
+        }
+        
+        public EnemyModelBase GetEnemyDataById(int id)
+        {
+            EnemyBaseModels.TryGetValue(id,out EnemyModelBase model);
             return model;
         }
     }

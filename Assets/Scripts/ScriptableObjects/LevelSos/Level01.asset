@@ -16,8 +16,6 @@ MonoBehaviour:
   levelResource: 8
   levelName: Final_Level_001_DYC
   levelIntro: "\u8FD9\u662F\u5173\u53611\u5173\u53611"
-  enemies:
-  - {fileID: 7502317580413784757, guid: c8c1c485768af5947837f3f9f4cfb30d, type: 3}
-  - {fileID: 7502317580413784757, guid: 635ec51b2551d4741b32740942f8a3cd, type: 3}
+  unlockEnemyId: f3030000
   unlockSoliderId: 
   lockSoliderIds: 

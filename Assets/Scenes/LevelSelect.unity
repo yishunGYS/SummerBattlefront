@@ -716,7 +716,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -760,6 +760,7 @@ MonoBehaviour:
   levelIntro: {fileID: 1548842515}
   levelName: {fileID: 1812250549}
   enemies: {fileID: 1269452437}
+  enemyPrefab: {fileID: 1412864789961552734, guid: c8c1c485768af5947837f3f9f4cfb30d, type: 3}
   enterLevelBtn: {fileID: 955022325}
 --- !u!1001 &432792995
 PrefabInstance:
@@ -3122,7 +3123,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 10
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 100, y: 100}

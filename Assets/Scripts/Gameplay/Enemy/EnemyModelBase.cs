@@ -26,7 +26,7 @@ namespace Gameplay.Enemy
 
         public int deadCoin;
         public string scenePrefabPath;
-        public string uiPrefabPath;
+        public string uiSpritePath;
         public EnemyModelBase DeepCopy()
         {
             return new EnemyModelBase
@@ -50,7 +50,7 @@ namespace Gameplay.Enemy
                 blockNum = this.blockNum,
                 deadCoin = this.deadCoin,
                 scenePrefabPath = this.scenePrefabPath,
-                uiPrefabPath = this.uiPrefabPath
+                uiSpritePath = this.uiSpritePath
             };
         }
     }

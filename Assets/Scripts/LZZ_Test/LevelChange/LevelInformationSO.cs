@@ -14,7 +14,7 @@ namespace ScriptableObjects
         public int levelResource;
         public string levelName;
         public string levelIntro;
-        public List<Image> enemies;
+        public List<int> unlockEnemyId;
         public List<int> unlockSoliderId = new List<int>();
         public List<int> lockSoliderIds = new List<int>();
     }

@@ -38,6 +38,7 @@ namespace UI.Gameplay
                 UIManager.Instance.OnChangeEduPanelText();
                 isClickEdued = true;
             }
+            UIManager.Instance.OnOpenResourceLeftPanel();
         }
     }
 }

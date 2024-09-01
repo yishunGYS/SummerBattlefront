@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Managers;
 using ScriptableObjects;
 using Systems.Level;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -17,6 +19,7 @@ public class SelectLevel_UImanager : Singleton<SelectLevel_UImanager>
     public Text levelIntro;
     public Text levelName;
     public Transform enemies;
+    public GameObject enemyPrefab;
     public Button enterLevelBtn;
     //根据当前通过关卡数,将部分关卡显示为灰,不可点击
     public void Awake()
@@ -41,10 +44,14 @@ public class SelectLevel_UImanager : Singleton<SelectLevel_UImanager>
         levelIntro.text = levelInfoSO.levelIntro;
         levelName.text = levelInfoSO.levelName;
 
-        //foreach (image enemy in levelinfoso.enemies)
-        //{
-        //    instantiate(enemy, enemies);
-        //}
+        foreach (int enemyId in levelInfoSO.unlockEnemyId)
+        {
+            var enemyModel = DataManager.Instance.GetEnemyDataById(enemyId);
+            GameObject go = Instantiate(enemyPrefab, enemies);
+            go.GetComponent<Image>().sprite = Resources.Load<Sprite>(enemyModel.uiSpritePath);
+            go.transform.Find("Des").GetComponent<TextMeshProUGUI>().text = enemyModel.enemyDes;
+        }
+        
     }
     //选择关卡按钮被按下
     public void SelectLevelBtnClick(LevelInformationSo levelInfoSO)

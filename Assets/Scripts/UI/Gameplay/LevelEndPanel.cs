@@ -1,3 +1,4 @@
+using Managers;
 using Systems.Level;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,6 +32,7 @@ namespace UI.Gameplay
         void OnEndLevelButtonClicked()
         {
             LevelManager.Instance.LevelEnd();
+
         }
     }
 }

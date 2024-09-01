@@ -41,6 +41,7 @@ namespace UI.Gameplay
         void StartTeamingPanelClicked()
         {
             UIManager.Instance.BackToStart();
+            UIManager.Instance.OnCloseTimeLeftPanel();
         }
 
         public override void OpenPanel()

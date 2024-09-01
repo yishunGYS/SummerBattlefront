@@ -14,8 +14,13 @@ namespace Managers
 		private CsvReader csvReader;
 
 		private GameObject EnemyContainer;
-		
-        public void OnLevelStart()
+
+		public void OnMainMenuStart()
+		{
+			InitCsvReader();
+		}
+
+		public void OnLevelStart()
         {
             EnemyContainer = GameObject.Find("EnemyContainer");
             InitCsvReader();

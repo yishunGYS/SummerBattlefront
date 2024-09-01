@@ -58,6 +58,14 @@ namespace Managers
                     GameManager.Instance.OnLevelStart();
                 }
             }
+
+            if (scene.name == "MainMenu")
+            {
+                if (GameManager.Instance != null)
+                {
+                    GameManager.Instance.OnMainMenuStart();
+                }
+            }
         }
 
 

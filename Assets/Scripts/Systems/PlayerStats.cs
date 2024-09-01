@@ -46,11 +46,9 @@ namespace Systems
             if (LevelManager.Instance != null)
             {
                 //Test
-                //levelResourceLimit =  LevelManager.Instance.GetCurrentLevelResource();
+                levelResourceLimit =  LevelManager.Instance.GetCurrentLevelResource();
                 ResetPlayerStats();
-                remainingResource = levelResourceLimit;
             }
-            UIManager.Instance.OnOpenResourceLeftPanel();
             
         }
 
@@ -127,8 +125,8 @@ namespace Systems
                 isLevelStarted = false;
                 Debug.Log("关卡成功！");
                 UIManager.Instance.OpenEndLevelPanel();
-                UIManager.Instance.OnCloseTimeLeftPanel();
                 SpawnManager.Instance.isLevelStarted = false;
+                UIManager.Instance.OnCloseTimeLeftPanel();
                 UIManager.Instance.OnCloseResourcePanel();
             }
         }

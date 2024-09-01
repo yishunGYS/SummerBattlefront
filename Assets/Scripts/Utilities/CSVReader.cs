@@ -119,7 +119,7 @@ namespace Utilities
                     enemyModel.deadCoin = ParseInt(value[17]);
                     
                     enemyModel.scenePrefabPath = value[18];
-                    enemyModel.uiPrefabPath = value[19];
+                    enemyModel.uiSpritePath = value[19];
                     
                     var enemyDatabase = DataManager.Instance.GetEnemyBaseModels();
                     enemyDatabase.TryAdd(enemyModel.enemyId, enemyModel);
