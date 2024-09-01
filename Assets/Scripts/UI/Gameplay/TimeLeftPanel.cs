@@ -7,6 +7,7 @@ namespace UI.Gameplay
     {
         private TextMeshProUGUI timeLeftText;
 
+        private int resourceLimit;
 
         public override void Init()
         {
@@ -17,13 +18,14 @@ namespace UI.Gameplay
         public override void OpenPanel()
         {
             base.OpenPanel();
-            timeLeftText.text = $"Resource Left: \n {PlayerStats.Instance.levelResourceLimit}";
+            resourceLimit = PlayerStats.Instance.levelResourceLimit;
+            timeLeftText.text = $"{resourceLimit}/{resourceLimit}";
         }
 
 
         public void UpdateTime(float time)
         {
-            timeLeftText.text = $"Resource Left: \n {time}";
+            timeLeftText.text = $"{time}/{resourceLimit}";
         }
     }
 }
