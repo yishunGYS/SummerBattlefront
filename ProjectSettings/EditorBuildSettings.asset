@@ -27,10 +27,10 @@ EditorBuildSettings:
     path: Assets/Scenes/FinalLevel/Final_Level_005_ZXR.unity
     guid: 84ba8651191dda2418caeb3fa0844cfb
   - enabled: 1
-    path: Assets/Scenes/FinalLevel/Final_Level_006_DYC.unity
+    path: Assets/Scenes/FinalLevel/Final_Level_005_DYC.unity
     guid: f036b45e27591f14d8d7c2eded0557c2
   - enabled: 1
-    path: Assets/Scenes/FinalLevel/Final_Level_007_DYC.unity
+    path: Assets/Scenes/FinalLevel/Final_Level_006_DYC.unity
     guid: d7d22f82b0b9320459330b1058de2fd3
   - enabled: 1
     path: Assets/Scenes/FinalLevel/Final_Level_008_GYS.unity
@@ -51,9 +51,9 @@ EditorBuildSettings:
     path: Assets/Scenes/FinalLevel/Final_Level_013_GYS.unity
     guid: 890a1bdb104ff54408a439487669e3b3
   - enabled: 1
-    path: Assets/Scenes/FinalLevel/Final_Level_013_ZXR.unity
+    path: Assets/Scenes/ZXR_Level/level_03/ZXR_Level_004.unity
     guid: 4ee6f06bd31f3a14babc4ef73345fe4e
   - enabled: 1
-    path: Assets/Scenes/FinalLevel/Final_Level_014_ZXR.unity
+    path: Assets/Scenes/ZXR_Level/level_03/ZXR_Level_005.unity
     guid: a373db37aea237045876e4450d403f38
   m_configObjects: {}
