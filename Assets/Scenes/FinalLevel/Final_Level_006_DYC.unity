@@ -709,7 +709,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &60159390
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1523,7 +1523,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &247491700
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2036,7 +2036,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &391871495
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2415,7 +2415,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &464035262
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2542,7 +2542,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &528004283
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2860,7 +2860,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &639913482
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3113,7 +3113,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &674172281
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3271,7 +3271,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &750773540
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3494,7 +3494,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &778200582
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4180,7 +4180,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &923318656
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4283,6 +4283,8 @@ MonoBehaviour:
   gridPrefab: {fileID: 6059457237279058214, guid: c248944487e7cab45be0487ef143f075, type: 3}
   container: {fileID: 925185309}
   isStartToRegain: 0
+  normalResource: {fileID: 0}
+  maxResource: {fileID: 0}
 --- !u!114 &925185311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4425,7 +4427,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &945350756
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4595,7 +4597,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &967800531
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5032,7 +5034,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &999462859
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5770,7 +5772,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &1095414239
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6337,7 +6339,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &1250598208
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7232,7 +7234,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &1517689019
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7894,7 +7896,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &1558330251
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8199,7 +8201,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &1651454671
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9588,7 +9590,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &1892080410
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10219,7 +10221,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &2008160467
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10598,7 +10600,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &2054917051
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10762,7 +10764,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!23 &2113844150
 MeshRenderer:
   m_ObjectHideFlags: 0

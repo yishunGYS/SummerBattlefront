@@ -34,6 +34,7 @@ public class SelectLevel_UImanager : Singleton<SelectLevel_UImanager>
                 levelButtons[i].interactable = false;
             }
         }
+        Debug.Log("selectLevel_UImanager Awake");
     }
     //关卡简介界面初始化,绑定点击事件
     public void Init(LevelInformationSo levelInfoSO)
@@ -77,5 +78,21 @@ public class SelectLevel_UImanager : Singleton<SelectLevel_UImanager>
         {
             Destroy(enemies.GetChild(i).gameObject);
         }
+    }
+
+
+    public void UnlockAllLevel()
+    {
+        PlayerPrefs.SetInt("LevelReached", 28);
+        
+        var runtimeSoliderDict = DataManager.Instance.GetRuntimeSoliderModel();
+        List<int> allSoliderIds = new List<int>() { 2, 4, 6, 1, 10 };
+        foreach (var id in allSoliderIds)
+        {
+            runtimeSoliderDict.TryAdd(id,
+                DataManager.Instance.GetSoliderDataById(id));
+        }
+
+        LevelManager.Instance.LevelFail();
     }
 }

@@ -264,7 +264,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!65 &37711771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -391,7 +391,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!65 &83219389
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -701,7 +701,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!65 &147616964
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!65 &437703602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1658,7 +1658,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!65 &467151958
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1786,7 +1786,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!65 &504376906
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2009,7 +2009,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!65 &722910570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2476,7 +2476,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!65 &798955026
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2934,7 +2934,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!65 &886197092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3199,6 +3199,8 @@ MonoBehaviour:
   gridPrefab: {fileID: 6059457237279058214, guid: c248944487e7cab45be0487ef143f075, type: 3}
   container: {fileID: 925185309}
   isStartToRegain: 0
+  normalResource: {fileID: 0}
+  maxResource: {fileID: 0}
 --- !u!114 &925185311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5094,7 +5096,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!65 &1599299120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5954,7 +5956,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!65 &1903599316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6837,7 +6839,7 @@ MonoBehaviour:
   lineWidth: 5
   canPlace: 0
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  canSpawnColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  canSpawnColor: {r: 1, g: 0.38431373, b: 0, a: 1}
 --- !u!65 &2087590757
 BoxCollider:
   m_ObjectHideFlags: 0

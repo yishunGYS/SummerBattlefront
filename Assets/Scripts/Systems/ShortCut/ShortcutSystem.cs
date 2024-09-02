@@ -41,6 +41,11 @@ namespace Systems.ShortCut
             {
                 UIManager.Instance.OpenLevelFailPanel();
             }
+
+            if (Input.GetKeyDown(KeyCode.U))
+            {
+                SelectLevel_UImanager.Instance.UnlockAllLevel();
+            }
         }
     }
 }
