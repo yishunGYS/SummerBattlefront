@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23b884ee243340149b78b4bd37231969, type: 3}
-  m_Name: Level03
+  m_Name: Level16
   m_EditorClassIdentifier: 
-  levelID: 3
-  levelResource: 16
-  levelName: Final_Level_003_DYC
-  levelIntro: "\u8FD9\u662F\u5173\u53613\u5173\u53613"
-  unlockEnemyId: f4030000f3030000
+  levelID: 16
+  levelResource: 20
+  levelName: Final_Level_016_ZXR
+  levelIntro: "\u8FD9\u662F\u5173\u536115\u5173\u536115"
+  unlockEnemyId: ef030000f3030000f4030000
   unlockSoliderId: 
   lockSoliderIds: 
