@@ -28,6 +28,9 @@ namespace Managers
 
         public bool isLevelStarted = false;
         public bool canPlace = false;
+
+
+        private bool isEdued;
         public void OnStart()
         {
             SoliderContainer = GameObject.Find("SoliderContainer");
@@ -62,9 +65,10 @@ namespace Managers
 
         private void SpawnSingle(GridCell block, int cost)
         {
-            if (FindObjectOfType<EduSystem>())
+            if (FindObjectOfType<EduSystem>()&& !isEdued)
             {
                 UIManager.Instance.OnChangeEduPanelText();
+                isEdued = true;
             }
             
             if (!isLevelStarted)
