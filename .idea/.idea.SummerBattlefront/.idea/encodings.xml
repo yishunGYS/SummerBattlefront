@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Enemy/Enemy/AttackEnemyLogic.cs" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Features/EnemyFeature/EliteEnemyFeature.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Features/EnemyFeature/SoldierOffsetFeature.cs" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/TraverserStateTypeSO/TraverState_MoveSO.cs" charset="GBK" />
