@@ -110,6 +110,11 @@ namespace Systems
 
                 remainingResource -= currentRegainRate;
             }
+
+            if (Money>=currentLimit)
+            {
+                UIManager.Instance.OnReachMax();
+            }
             
             
         }

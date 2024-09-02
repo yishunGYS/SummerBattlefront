@@ -77,6 +77,11 @@ namespace Managers
                 UIManager.Instance.OnShowTipPanel("目前资源不够惹",2000);
                 return;
             }
+
+            if (Math.Abs(PlayerStats.Money - PlayerStats.Instance.currentLimit) < 0.01f)
+            {
+                UIManager.Instance.OnNotReachMax();
+            }
             //PlayerStats.Instance.StartLevel();
             
             SoliderAgent spawnedCharacter = Instantiate(selectedCharacter, block.transform.position + Vector3.up,

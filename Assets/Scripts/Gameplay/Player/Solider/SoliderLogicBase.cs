@@ -209,6 +209,7 @@ namespace Gameplay.Player
             {
                 return false;
             }
+            
             if (attackTargets.Contains(blocker)||HasAttackTarget())
             {
                 return true;
