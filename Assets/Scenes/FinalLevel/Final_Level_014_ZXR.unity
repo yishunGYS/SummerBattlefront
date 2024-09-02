@@ -6492,7 +6492,6 @@ MonoBehaviour:
   previousCells:
   - {fileID: 1672342138}
   nextCells:
-  - {fileID: 0}
   - {fileID: 1279343755}
   showConnections: 0
   lineWidth: 5

@@ -380,7 +380,7 @@ namespace Gameplay.Player
 
         #region 死亡
 
-        protected virtual  void Die()
+        public virtual  void Die()
         {
             // if (isDead)
             // {

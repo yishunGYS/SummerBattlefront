@@ -79,13 +79,13 @@ EditorBuildSettings:
     guid: a39db30dc31a65f479b0268f9af5ee87
   - enabled: 1
     path: Assets/Scenes/FinalLevel/Final_Level_023_GYS.unity
-    guid: 764bd03a9644ab045a2fd6833d7c5e79
-  - enabled: 1
-    path: Assets/Scenes/FinalLevel/Final_Level_024_GYS.unity
     guid: f30f7595d56855d44a91f11b61a01a43
   - enabled: 1
+    path: Assets/Scenes/FinalLevel/Final_Level_024_GYS.unity
+    guid: 5a09311a9d5c17841bbb62d1abe8c89e
+  - enabled: 1
     path: Assets/Scenes/FinalLevel/Final_Level_025_GYS.unity
-    guid: 63298b3dfe348fb46a4220fe3c399574
+    guid: 4a9085aaff0e88d40865569224f1d337
   - enabled: 1
     path: Assets/Scenes/FinalLevel/Final_Level_026_GYS.unity
     guid: 8b97ec0adb6907d4482b8e766349ae9d

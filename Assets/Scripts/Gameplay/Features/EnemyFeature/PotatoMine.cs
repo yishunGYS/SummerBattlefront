@@ -71,7 +71,7 @@ namespace Gameplay.Features.EnemyFeature
                 if (solider != null)
                 {
                     Debug.Log(solider.name + " ±»Õ¨»Ù");
-                    Destroy(solider.gameObject);
+                    solider.soliderLogic.Die();
                 }
             }
 

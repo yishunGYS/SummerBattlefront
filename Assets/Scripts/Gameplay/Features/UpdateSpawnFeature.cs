@@ -2,6 +2,7 @@ using _3DlevelEditor_GYS;
 using Managers;
 using System.Collections;
 using System.Collections.Generic;
+using Gameplay.Features.EnemyFeature;
 using UnityEngine;
 using static UnityEngine.UI.Image;
 
@@ -45,15 +46,20 @@ namespace Gameplay.Player
             // 执行射线检测
             if (Physics.Raycast(origin, direction, out RaycastHit hit, rayLength))
             {
+                if (hit.collider.GetComponent<UntargetableFeature>())
+                {
+                    return;
+                }
                 // 尝试从射线碰撞的对象中获取指定组件
                 GridCell currentCell = hit.collider.GetComponent<GridCell>();
 
                 if (currentCell != null)
                 {
-
+                    
                     // 仅当检测到的物体发生变化时才调用 UpdateCell
                     if (currentCell != lastDetectedCell)
                     {
+                        Debug.Log($"HeadSolider reach{currentCell.name}");
                         BlockManager.instance.UpdateCell(agent, currentCell);//放入字典
                         BlockManager.instance.CheckHeadSolider(currentCell);
                         BlockManager.instance.CheckAllStartPoint();

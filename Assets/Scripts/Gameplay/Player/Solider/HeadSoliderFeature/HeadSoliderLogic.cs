@@ -9,7 +9,7 @@ namespace Gameplay.Player
         {
         }
 
-        protected override void Die()
+        public override void Die()
         {
             if (BlockManager.instance.headSoliderBlocks.ContainsKey(soliderAgent))
             {
