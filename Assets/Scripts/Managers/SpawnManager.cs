@@ -19,7 +19,7 @@ namespace Managers
         public GameObject SoliderContainer;
 
         // 当前选中的角色
-        private SoliderAgent selectedCharacter;
+        public SoliderAgent selectedCharacter;
         private int selectId;
 
         //鼠标悬浮/点击地块

@@ -30,11 +30,15 @@ namespace UI.Gameplay
 
         private List<string> battleEduList = new List<string>()
         {
-            "注意啦，每一关都有资源限制,请看右下角  (1/5)",
-            "在下方是你的资源槽，资源槽的上限是10  (2/5)",
-            "到资源槽不满的时候，每秒会恢复1点资源  (3/5)",
-            "下方是你的派兵栏，请选择你要派出的士兵  (4/5)",
-            "好棒啊！现在点击地图上的高亮地块，即可派出士兵啦  (5/5)"
+            "注意啦，每一关都有资源限制,请看左上角  (1/9)",
+            "在资源下方是你的资源槽，资源槽的上限是10  (2/9)",
+            "当资源槽不满的时候，每秒会恢复1点资源  (3/9)",
+            "点击敌方单位，能够看到它的攻击范围   (4/9)",
+            "派兵拥有快捷键，例如现在你的中兵兵在派兵栏的第一个，那么选中它的快捷键就是'1' (5/9)",
+            "下方是你的派兵栏，请选择你要派出的士兵  (6/9)",
+            "派出士兵需要消耗其对应的资源数 (7/9)",
+            "现在点击地图上的高亮地块，即可派出士兵啦  (8/9)",
+            "对了，重开快捷键是'R'，跳过关卡的快捷键是'P'  (9/9)"
         };
 
 
@@ -96,9 +100,14 @@ namespace UI.Gameplay
             if (curState == EduState.InBattle)
             {
                 battleIndex++;
-                if (battleIndex == 3 )
+                if (battleIndex ==  5 || battleIndex == 7 )
                 {
                     okButton.gameObject.SetActive(false);
+                }
+
+                if (battleIndex == 6)
+                {
+                    okButton.gameObject.SetActive(true);
                 }
                 if (battleIndex == battleEduList.Count)
                 {

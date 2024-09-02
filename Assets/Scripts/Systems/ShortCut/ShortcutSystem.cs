@@ -30,6 +30,10 @@ namespace Systems.ShortCut
                 }
             }
 
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                UIManager.Instance.OpenLevelFailPanel();
+            }
         }
     }
 }

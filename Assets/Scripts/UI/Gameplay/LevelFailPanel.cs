@@ -1,3 +1,4 @@
+using System;
 using Systems.Level;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,7 @@ namespace UI.Gameplay
         {
             InitializeButton();
         }
+        
 
         void InitializeButton()
         {
@@ -27,6 +29,11 @@ namespace UI.Gameplay
         void OnFailLevelButtonClicked()
         {
             LevelManager.Instance.LevelFail();
+        }
+
+        public void OnClickReplay()
+        {
+            LevelManager.Instance.RePlay();
         }
     }
 }

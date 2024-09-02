@@ -118,6 +118,9 @@ namespace Managers
             {
                 item.Value.Init();
             }
+            
+            Transform hoverPanel = panelSpawnDict["UnitHoverPanel"].transform;
+            hoverPanel.SetSiblingIndex(hoverPanel.parent.childCount-1);
         }
 
         public void OpenPanel(string name)

@@ -164,6 +164,7 @@ namespace Systems
             isEnterEnd = false;
             isLevelStarted = false;
             CalculateMoneyAndRemainingResource();
+            SpawnManager.Instance.selectedCharacter = null;
         }
     }
 }
