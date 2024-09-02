@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23b884ee243340149b78b4bd37231969, type: 3}
-  m_Name: Level22
+  m_Name: Level28
   m_EditorClassIdentifier: 
-  levelID: 22
-  levelResource: 22
-  levelName: Final_Level_022_LJF
-  levelIntro: "\u540E\u9762\u7684\uFF0C\u522B\u6389\u961F\uFF01"
-  unlockEnemyId: f1030000f5030000f6030000f4030000
-  unlockSoliderId: 0a000000
+  levelID: 28
+  levelResource: 120
+  levelName: Final_Level_028_DYC
+  levelIntro: "\u611F\u8C22\u4F60\uFF0C\u6307\u6325\u5B98\uFF0C\u8FD9\u662F\u6211\u4EEC\u7684\u6700\u540E\u4E00\u96BE\uFF01\u52A0\u6CB9\uFF01"
+  unlockEnemyId: ef030000f1030000f3030000f4030000f5030000
+  unlockSoliderId: 
   lockSoliderIds: 

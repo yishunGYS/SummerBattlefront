@@ -15,7 +15,7 @@ MonoBehaviour:
   levelID: 15
   levelResource: 28
   levelName: Final_Level_015_GYS
-  levelIntro: "\u8FD9\u662F\u5173\u536115\u5173\u536115"
+  levelIntro: "\u5C0F\u5FC3\u654C\u65B9\u6709\u514B\u5236\u6211\u4EEC\u7FA4\u653B\u7684\u5175\u79CD"
   unlockEnemyId: ef030000f1030000f3030000f6030000
   unlockSoliderId: 
   lockSoliderIds: 

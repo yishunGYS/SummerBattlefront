@@ -15,7 +15,7 @@ MonoBehaviour:
   levelID: 10
   levelResource: 19
   levelName: Final_Level_010_DYC
-  levelIntro: "\u8FD9\u662F\u5173\u536110\u5173\u536110"
-  unlockEnemyId: f4030000f1030000
+  levelIntro: "\u52A0\u628A\u52B2\uFF0C\u6307\u6325\u5B98\uFF01"
+  unlockEnemyId: f1030000f4030000
   unlockSoliderId: 
   lockSoliderIds: 

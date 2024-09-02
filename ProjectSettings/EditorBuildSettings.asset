@@ -27,11 +27,11 @@ EditorBuildSettings:
     path: Assets/Scenes/FinalLevel/Final_Level_005_ZXR.unity
     guid: 84ba8651191dda2418caeb3fa0844cfb
   - enabled: 1
-    path: Assets/Scenes/FinalLevel/DYC_Level_005.unity
-    guid: f036b45e27591f14d8d7c2eded0557c2
+    path: Assets/Scenes/FinalLevel/Final_Level_006_DYC.unity
+    guid: 3064664eef3826b4db1bdc1b27ad288b
   - enabled: 1
-    path: Assets/Scenes/DYC_Level/DYC_Level_005.unity
-    guid: d7d22f82b0b9320459330b1058de2fd3
+    path: Assets/Scenes/FinalLevel/Final_Level_007_DYC.unity
+    guid: 6e6be895275bf6d4db01d1e969ef1e8d
   - enabled: 1
     path: Assets/Scenes/FinalLevel/Final_Level_008_GYS.unity
     guid: c62e47ad6e9cf994cb02809302baa59d
@@ -48,12 +48,51 @@ EditorBuildSettings:
     path: Assets/Scenes/FinalLevel/Final_Level_012_DYC.unity
     guid: df52c9ed9a63f5d489e5c06d1fd5d744
   - enabled: 1
-    path: Assets/Scenes/FinalLevel/Final_Level_013_GYS.unity
-    guid: 890a1bdb104ff54408a439487669e3b3
+    path: Assets/Scenes/FinalLevel/Final_Level_013_ZXR.unity
+    guid: a2ab100cee81f48488d9e6bfe64e5153
   - enabled: 1
-    path: Assets/Scenes/ZXR_Level/level_03/ZXR_Level_004.unity
-    guid: 4ee6f06bd31f3a14babc4ef73345fe4e
+    path: Assets/Scenes/FinalLevel/Final_Level_014_ZXR.unity
+    guid: 9587eea6255a4c641b487cfccfdf43b6
   - enabled: 1
-    path: Assets/Scenes/ZXR_Level/level_03/ZXR_Level_005.unity
-    guid: a373db37aea237045876e4450d403f38
+    path: Assets/Scenes/FinalLevel/Final_Level_015_GYS.unity
+    guid: af56bfb6c1ed2fb4692982ad92389b84
+  - enabled: 1
+    path: Assets/Scenes/FinalLevel/Final_Level_016_ZXR.unity
+    guid: ef7f4ee1803bfd445b2def5391676a2c
+  - enabled: 1
+    path: Assets/Scenes/FinalLevel/Final_Level_017_DYC.unity
+    guid: 151eaafdee98cb64c94ae8d269d85395
+  - enabled: 1
+    path: Assets/Scenes/FinalLevel/Final_Level_018_GYS.unity
+    guid: b4c3532ae83c6cf48bf78141a82182f3
+  - enabled: 1
+    path: Assets/Scenes/FinalLevel/Final_Level_019_ZXR.unity
+    guid: f7c8183a9af5c564598d68b9f7a9c788
+  - enabled: 1
+    path: Assets/Scenes/FinalLevel/Final_Level_020_ZXR.unity
+    guid: c50335efbe377374ab611e6eff644f08
+  - enabled: 1
+    path: Assets/Scenes/FinalLevel/Final_Level_021_LJF.unity
+    guid: 8b4b98bfaf702cb4bbd449e204a68c8f
+  - enabled: 1
+    path: Assets/Scenes/FinalLevel/Final_Level_022_LJF.unity
+    guid: a39db30dc31a65f479b0268f9af5ee87
+  - enabled: 1
+    path: Assets/Scenes/FinalLevel/Final_Level_023_GYS.unity
+    guid: 764bd03a9644ab045a2fd6833d7c5e79
+  - enabled: 1
+    path: Assets/Scenes/FinalLevel/Final_Level_024_GYS.unity
+    guid: f30f7595d56855d44a91f11b61a01a43
+  - enabled: 1
+    path: Assets/Scenes/FinalLevel/Final_Level_025_GYS.unity
+    guid: 63298b3dfe348fb46a4220fe3c399574
+  - enabled: 1
+    path: Assets/Scenes/FinalLevel/Final_Level_026_GYS.unity
+    guid: 8b97ec0adb6907d4482b8e766349ae9d
+  - enabled: 1
+    path: Assets/Scenes/FinalLevel/Final_Level_027_GYS.unity
+    guid: fe5991467a0ead748a8396b1a6d3109a
+  - enabled: 1
+    path: Assets/Scenes/FinalLevel/Final_Level_028_DYC.unity
+    guid: 08df8aff68dfc6147a4b404c915ded46
   m_configObjects: {}

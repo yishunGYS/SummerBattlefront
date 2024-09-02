@@ -15,7 +15,7 @@ MonoBehaviour:
   levelID: 21
   levelResource: 8
   levelName: Final_Level_021_LJF
-  levelIntro: "\u8FD9\u662F\u5173\u536115\u5173\u536115"
-  unlockEnemyId: f4030000f6030000
+  levelIntro: "\u84E6\u7136\u56DE\u9996\uFF0C\u6211\u4EEC\u5DF2\u7ECF\u8D70\u8FC7\u4E86\u8FD9\u4E48\u8FDC\u7684\u8DEF\u4E86"
+  unlockEnemyId: f6030000f4030000
   unlockSoliderId: 
   lockSoliderIds: 

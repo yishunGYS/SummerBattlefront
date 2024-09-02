@@ -15,7 +15,7 @@ MonoBehaviour:
   levelID: 26
   levelResource: 66
   levelName: Final_Level_026_GYS
-  levelIntro: "\u8FD9\u662F\u5173\u536115\u5173\u536115"
-  unlockEnemyId: ee030000ef030000f0030000f1030000f3030000f4030000f5030000f603000028230000
+  levelIntro: "\u4E00\u573A\u6076\u6218\uFF01"
+  unlockEnemyId: f0030000f7030000ef030000ee030000f1030000f5030000f6030000f3030000f4030000
   unlockSoliderId: 
   lockSoliderIds: 

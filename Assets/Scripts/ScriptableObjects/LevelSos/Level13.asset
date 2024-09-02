@@ -15,7 +15,7 @@ MonoBehaviour:
   levelID: 13
   levelResource: 20
   levelName: Final_Level_013_ZXR
-  levelIntro: "\u8FD9\u662F\u5173\u536113\u5173\u536113"
-  unlockEnemyId: f3030000f4030000ef030000
+  levelIntro: "\u6211\u4EEC\u6709\u89E3\u9501\u65B0\u5175\u79CD\uFF0C\u5FEB\u8BD5\u8BD5\u5427~"
+  unlockEnemyId: ef030000f3030000f4030000
   unlockSoliderId: 
   lockSoliderIds: 
