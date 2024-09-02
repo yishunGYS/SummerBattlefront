@@ -24,8 +24,10 @@ namespace UI.Gameplay
         public void OnHoverEnter(Vector3 pos,string soliderName,string des)
         {
             GetComponent<RectTransform>().position = pos;
+            string description = des.Replace("%%","\n");
+            Debug.Log(description);
             unitName.text = soliderName;
-            unitDescribe.text = des;
+            unitDescribe.text = description;
         }
 
         
