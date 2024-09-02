@@ -64,7 +64,7 @@ namespace Managers
         {
             if (FindObjectOfType<EduSystem>())
             {
-                UIManager.Instance.OnCloseEduPanel();
+                UIManager.Instance.OnChangeEduPanelText();
             }
             
             if (!isLevelStarted)
