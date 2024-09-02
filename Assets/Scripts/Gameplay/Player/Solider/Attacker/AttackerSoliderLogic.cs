@@ -80,11 +80,13 @@ namespace Gameplay.Player.Solider.Attacker
                 var temp = collider.GetComponent<EnemyAgent>();
                 if (temp == null)
                 {
+                    count -= 1;
                     continue;
                 }
 
                 if (temp.GetComponent<PotatoMine>())
                 {
+                    count -= 1;
                     continue;
                 }
                 if (!CheckMatchAttackType(temp))

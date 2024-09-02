@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ce102d3faa0604ca72773aaaa83c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetDistance: 0.3
+  offsetDistance: 0.05
   duration: 0.5
   currentCell: {fileID: 0}
 --- !u!114 &7482981698934119539
