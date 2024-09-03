@@ -11,6 +11,7 @@ using Utilities;
 using Gameplay.Item;
 using _3DlevelEditor_GYS;
 using Systems.Edu;
+using UI.Gameplay;
 
 namespace Managers
 {
@@ -67,8 +68,12 @@ namespace Managers
         {
             if (FindObjectOfType<EduSystem>()&& !isEdued)
             {
-                UIManager.Instance.OnChangeEduPanelText();
-                isEdued = true;
+                var eduPanel = UIManager.Instance.panelSpawnDict["EduPanel"] as EduPanel;
+                if (eduPanel && eduPanel.battleIndex == 6)
+                {
+                    UIManager.Instance.OnChangeEduPanelText();
+                    isEdued = true;
+                }
             }
             
             if (!isLevelStarted)

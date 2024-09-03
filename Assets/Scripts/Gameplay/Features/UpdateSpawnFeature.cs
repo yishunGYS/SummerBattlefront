@@ -28,7 +28,7 @@ namespace Gameplay.Player
             {
                 GridCell currentCell = hit.collider.GetComponent<GridCell>();
                 initBlock = currentCell;
-                startPoint = initBlock.previousCells[0].GetComponent<StartPoint>();
+                //startPoint = initBlock.previousCells[0].GetComponent<StartPoint>();
             }
         }
 

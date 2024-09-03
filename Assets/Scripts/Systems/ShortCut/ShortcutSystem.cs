@@ -31,8 +31,12 @@ namespace Systems.ShortCut
                     
                     if (FindObjectOfType<EduSystem>() && !spawnSoliderPanel.isPlaceEdued)
                     {
-                        UIManager.Instance.OnChangeEduPanelText();
-                        spawnSoliderPanel.isPlaceEdued = true;
+                        var eduPanel = UIManager.Instance.panelSpawnDict["EduPanel"] as EduPanel;
+                        if (eduPanel && eduPanel.battleIndex == 4)
+                        {
+                            UIManager.Instance.OnChangeEduPanelText();
+                            spawnSoliderPanel.isPlaceEdued = true;
+                        }
                     }
                 }
             }
